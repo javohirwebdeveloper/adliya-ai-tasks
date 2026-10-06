@@ -13,7 +13,7 @@ Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv
 
 ## Topshiriqdan tashqari qilinganlar
 
-**Savol-javob:** ovozli savol (o'zbekcha, internetsiz), bot qaysi savolni tushunganini ko'rsatadi va o'xshash savollarni tugma qilib beradi, qisqa savolda taxmin qilmay aniqlashtiradi, mavzular menyusi, «Foydali / Bu emas» baholari, admin sahifasi va **bot javob topa olmagan savollar ro'yxati** (bazaga qaysi javoblarni qo'shish kerakligini ko'rsatadi), Excel orqali bazani yangilash.
+**Savol-javob:** ovozli savol (o'zbekcha, internetsiz; nutq modeli 5 ta ochiq model ichidan haqiqiy Telegram ovozlarida o'lchab tanlangan, xato 59% dan 25% ga tushdi), bot qaysi savolni tushunganini ko'rsatadi va o'xshash savollarni tugma qilib beradi, qisqa savolda taxmin qilmay aniqlashtiradi, mavzular menyusi, «Foydali / Bu emas» baholari, admin sahifasi va **bot javob topa olmagan savollar ro'yxati** (bazaga qaysi javoblarni qo'shish kerakligini ko'rsatadi), Excel orqali bazani yangilash.
 
 **Hujjat tahlili:** natija hujjatning o'zida ko'rsatiladi (topshiriq bosilsa, qayerdan olingani belgilanadi), Excel'ga yuklab olish, muddatlarni kalendarga qo'shish (.ics), skaner sifati past bo'lsa ogohlantirish.
 
@@ -22,7 +22,7 @@ Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv
 - **Avval ma'lumotni o'rgandim.** 1-topshiriqda bazadagi savollar qolip bilan yasalganini va 10 juft javob deyarli bir xilligini topdim. 2-topshiriqda hujjatlarning ikki turi (qaror va xat) va topshiriq keladigan to'rt xil joy bor.
 - **Har bir g'oyani o'lchab qabul qildim.** Mantiqan to'g'ri ko'ringan ikki g'oya (bazadagi qolip so'zlarini tozalash, ColBERT) o'lchovda foyda bermadi va olib tashlandi. Bu README larda ochiq yozilgan.
 - **Natijani halol o'lchadim.** 1-topshiriqda tizim sozlab bo'lingach, alohida yozilgan «ko'r» test to'plamida faqat bir marta o'lchandi. 2-topshiriqda berilgan hujjatlardan tashqari boshqacha formatdagi hujjat ham sinaldi va unda topilgan xatolar ham yozildi.
-- **Avtomatik testlar:** 1-topshiriqda 13 ta, 2-topshiriqda 33 ta (`pytest`).
+- **Avtomatik testlar:** 1-topshiriqda 18 ta (ovozli savol bilan), 2-topshiriqda 33 ta (`pytest`).
 - **Xavfsizlik:** portlar faqat `127.0.0.1` ga ochiladi, tashqariga nginx orqali HTTPS, so'rovlar soni cheklangan, konteynerlar root emas, yuklangan hujjat diskka yozilmaydi, foydalanuvchi ID si jurnalda ochiq saqlanmaydi.
 
 ## Tez ishga tushirish

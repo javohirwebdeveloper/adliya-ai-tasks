@@ -2,7 +2,7 @@
 
 Asosiy so'rovlar:
   POST /ask                  savolga javob (yoki variantlar, yoki "topilmadi")
-  POST /stt                  ovozli xabar -> matn (Vosk, o'zbekcha, internetsiz)
+  POST /stt                  ovozli xabar -> matn (o'zbekcha, internetsiz; model: app/speech.py)
   POST /feedback             foydalanuvchi bahosi; "foydasiz" bo'lsa boshqa variantlar qaytadi
   GET  /answers/{id}         javob matni
   GET  /categories           mavzular ro'yxati, GET /categories/{id}?page=N mavzu ichidagi savollar
@@ -14,7 +14,6 @@ import hmac
 import io
 import json
 import os
-import subprocess
 import tempfile
 import threading
 import time
@@ -36,6 +35,7 @@ from .embedder import Embedder
 from .index import build
 from .rerank import Reranker
 from .search import Searcher
+from .speech import load_speech
 from .web import ADMIN_PAGE, PAGE
 
 HERE = Path(__file__).resolve().parent
@@ -58,26 +58,6 @@ def load_categories() -> dict[int, str]:
         return {}
 
 
-class Speech:
-    """Ovozli xabarni matnga aylantirish (Vosk, o'zbekcha kichik model, CPU da real vaqtdan tez)."""
-
-    def __init__(self, path: str):
-        from vosk import Model, SetLogLevel
-        SetLogLevel(-1)
-        self.model = Model(path)
-
-    def transcribe(self, data: bytes) -> str:
-        from vosk import KaldiRecognizer
-        with tempfile.NamedTemporaryFile(suffix=".audio") as f:
-            f.write(data)
-            f.flush()
-            pcm = subprocess.run(["ffmpeg", "-v", "quiet", "-i", f.name, "-t", "60", "-ar", "16000", "-ac", "1",
-                                  "-f", "s16le", "-"], capture_output=True, timeout=30).stdout
-        rec = KaldiRecognizer(self.model, 16000)
-        rec.AcceptWaveform(pcm)
-        return json.loads(rec.FinalResult()).get("text", "").strip()
-
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.pool = ConnectionPool(settings.database_url, min_size=1, max_size=8,
@@ -89,8 +69,7 @@ async def lifespan(app: FastAPI):
     app.state.reranker = Reranker() if settings.rerank else None
     app.state.searcher = Searcher(app.state.qdrant, app.state.embedder, reranker=app.state.reranker)
     app.state.categories = load_categories()
-    vosk = os.getenv("VOSK_MODEL", "")
-    app.state.speech = Speech(vosk) if vosk and os.path.isdir(vosk) else None
+    app.state.speech = load_speech(settings.torch_threads)
     app.state.job = {"state": "idle"}
     app.state.searcher._search("pasport almashtirish uchun qanday hujjatlar kerak", 3)   # birinchi foydalanuvchi kutmasin
     app.state.searcher._cache = {}
@@ -249,7 +228,7 @@ def health():
         {"answer": settings.t_answer, "suggest": settings.t_suggest}
     return {"ok": True, "db": c, "qdrant_points": points, "model": settings.model_name,
             "reranker": settings.rerank_model if app.state.reranker else None, "thresholds": thr,
-            "speech": app.state.speech is not None}
+            "speech": app.state.speech.name if app.state.speech else None}
 
 
 # ---------------- admin ----------------

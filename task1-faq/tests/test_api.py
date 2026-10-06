@@ -1,5 +1,6 @@
 """Ishlab turgan API ga qarshi sinov (API_URL, standart http://127.0.0.1:8000). API ishlamasa, o'tkazib yuboriladi."""
 import os
+from pathlib import Path
 
 import httpx
 import pytest
@@ -55,3 +56,23 @@ def test_categories():
 
 def test_admin_requires_token():
     assert c.get("/admin/data").status_code == 403
+
+
+def need_speech():
+    if not c.get("/health").json().get("speech"):
+        pytest.skip("ovozni tanish moduli o'rnatilmagan")
+
+
+def test_voice_question():
+    need_speech()
+    voice = (Path(__file__).parent / "data" / "fleurs_uz.ogg").read_bytes()     # 6 s, Telegram formatida
+    r = c.post("/stt", files={"file": ("voice.ogg", voice, "audio/ogg")})
+    assert r.status_code == 200
+    text = r.json()["text"].lower()
+    assert "gubernator" in text and "politsiya xodimlari" in text
+
+
+def test_voice_too_large():
+    need_speech()
+    r = c.post("/stt", files={"file": ("voice.ogg", b"0" * (3 * 1024 * 1024 + 1), "audio/ogg")})
+    assert r.status_code == 413

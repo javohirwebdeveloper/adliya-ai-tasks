@@ -4,7 +4,7 @@ Fuqaro savolni o'z so'zi bilan yozadi yoki ovozli aytadi: xato bilan, apostrofsi
 
 **Sinab ko'rish:** Telegram bot [@javi_faq_bot](https://t.me/javi_faq_bot) va veb-sahifa [javi.uz/adliya/savol-javob](https://javi.uz/adliya/savol-javob/).
 
-Stek: **bge-m3** (embedding), **Qdrant** (vektor baza), **PostgreSQL** (savol-javoblar, jurnal, baholar), **FastAPI**, **aiogram** (Telegram bot). Qo'shimcha: **bge-reranker-v2-m3** (ikkinchi bosqich), **Vosk** (o'zbekcha nutqni tanish, internetsiz).
+Stek: **bge-m3** (embedding), **Qdrant** (vektor baza), **PostgreSQL** (savol-javoblar, jurnal, baholar), **FastAPI**, **aiogram** (Telegram bot). Qo'shimcha: **bge-reranker-v2-m3** (ikkinchi bosqich), **GigaAM-Multilingual** (o'zbekcha nutqni tanish, ONNX, internetsiz).
 
 ## Natija qisqacha
 
@@ -29,7 +29,7 @@ Topshiriqda so'ralgan asosiy narsa savolga javob topish. Lekin bot real odamlar 
 - **Bot qaysi savolni tushunganini ko'rsatadi.** Javob ustida sarlavha turadi, masalan «Haydovchilik guvohnomasi muddati tugasa yoki yo'qolsa nima qilinadi?». Odam bot uni to'g'ri tushunganini darhol ko'radi.
 - **O'xshash savollar tugma bo'lib chiqadi.** Bot noto'g'ri tushunsa, odam bitta bosish bilan to'g'ri javobni oladi. Faqat haqiqatan yaqin savollar ko'rsatiladi, aloqasiz taklif chiqmaydi.
 - **Qisqa savolda taxmin qilinmaydi.** «prava», «muddat», «pasport» kabi bir-ikki so'zli savolga bot bitta javobni tanlab bermaydi, «Qaysi biri haqida so'rayapsiz?» deb variantlarni ko'rsatadi.
-- **Ovozli savol.** Telegram'da ovozli xabar yuborish yoki veb-sahifada mikrofon tugmasini bosish mumkin. Nutq serverning o'zida, internetsiz tanib olinadi (Vosk, o'zbekcha model). Bot nima eshitganini ham yozadi: «Eshitdim: ...». Bu yozishga qiynaladigan keksa odamlar uchun qulay.
+- **Ovozli savol.** Telegram'da ovozli xabar yuborish yoki veb-sahifada mikrofon tugmasini bosish mumkin. Nutq serverning o'zida, internetsiz tanib olinadi (GigaAM-Multilingual, beshta ochiq model ichidan o'lchab tanlangan, 4-bo'limga qarang). Bot nima eshitganini ham yozadi: «Eshitdim: ...». Bu yozishga qiynaladigan keksa odamlar uchun qulay.
 - **Mavzular menyusi.** Nima so'rashni bilmagan odam 9 ta mavzudan birini tanlab, savollar ro'yxatini varaqlaydi: «Pasport, propiska va FHDYo», «Notarius va meros», «Avtomobil va haydovchilik guvohnomasi» va hokazo.
 - **Baho.** Har javob ostida «Foydali» va «Bu emas» tugmalari bor. «Bu emas» bosilsa, bot boshqa variantlarni taklif qiladi. Baho jurnalga yoziladi.
 - **Salom va rahmat**ga oddiy odamdek javob beradi, «?» yoki tushunarsiz matnga «topilmadi» deydi.
@@ -56,7 +56,7 @@ Excel / CSV --> ingest --> PostgreSQL (javoblar, savollar, so'rovlar jurnali, ba
                                  |
                        Qdrant (har bir savol va har bir javob matni alohida nuqta)
 
-Ovozli xabar --> ffmpeg --> Vosk (o'zbekcha, internetsiz) --> matn
+Ovozli xabar --> ffmpeg --> GigaAM-Multilingual (ONNX, internetsiz) --> matn
 Savol --> tozalash: apostroflar, salom-rahmat, kirill -> lotin, so'zlashuv lug'ati
       --> 1-bosqich: bge-m3, Qdrant'dan eng yaqin 40 ta matn, ball = dense + 0.3 * sparse,
           javob bo'yicha guruhlash (har javobning eng mos savoli)
@@ -119,6 +119,20 @@ Metrikalar: **Hit@1** (to'g'ri javob birinchi o'rinda), **Hit@3** (birinchi ucht
 
 Natijalar va har bir xato: [eval/results_dev.md](eval/results_dev.md), [eval/results_final.md](eval/results_final.md). Avtomatik testlar: `tests/` (`pytest`).
 
+### Ovozli savol: nutqni tanish modeli o'lchab tanlandi
+
+Avval Vosk ishlatilgan edi. Sinovda u «pravamning muddati tugadi» ni «raqamning muddati tugadi» deb yozdi va bot boshqa javob berdi. Beshta ochiq model ikki to'plamda solishtirildi: haqiqiy Telegram ovozli xabarlari (Ovozify, 200 ta) va odamlar o'qigan gaplar (FLEURS, 150 ta). WER: 100 ta so'zdan nechtasi xato.
+
+| Model | Telegram ovozi, WER % | O'qilgan nutq, WER % | 3 s ovozni o'qish | Xotira |
+|---|---|---|---|---|
+| Vosk (avvalgi) | 59,1 | 27,4 | 1,0 s | 0,3 GB |
+| **GigaAM-Multilingual ctc (tanlandi)** | **25,0** | **14,5** | **0,27 s** | **1,7 GB** |
+| GigaAM-Multilingual large_ctc | 23,2 | 10,8 | 0,8 s | 2,6 GB |
+| NVIDIA FastConformer uz | 54,5 | 15,1 | 0,18 s | 1,3 GB |
+| Kotib (Whisper-medium) | o'lchab bo'lmadi: real vaqtdan sekin | | | |
+
+NVIDIA o'qilgan nutqda GigaAM bilan teng, lekin jonli Telegram ovozida Vosk darajasiga tushdi: faqat bitta toza to'plamda o'lchanganda noto'g'ri model tanlangan bo'lardi. GigaAM large biroz aniqroq, lekin 3 barobar sekin. Kotib (Whisper) bu protsessorda real vaqtdan sekin ishladi, unga GPU kerak. Uchta haqiqiy «pravamning muddati tugadi» xabarini GigaAM uchalasida ham so'zma-so'z to'g'ri yozdi. To'liq natija, usul va litsenziyalar: [eval/stt_results.md](eval/stt_results.md).
+
 ### Bazadagi ma'lumot sifati bo'yicha topilmalar
 
 - Savollar qolip bilan yasalgan, ba'zilari grammatik jihatdan xato («ID-karta kunda tayyor qanday?»). Real savollarga o'xshamaydi.
@@ -162,7 +176,7 @@ Xavfsizlik:
 - **Tezlik CPU ga bog'liq.** Modellar katta (har biri 568 mln parametr). GPU siz bitta yangi savolga o'rtacha 2,5 soniya ketadi, yuklama ostida undan ko'p (5-bo'lim). GPU bo'lsa, o'n barobardan ko'proq tezlashadi.
 - **Reranker ham adashadi.** Masalan, kirillcha «Паспортни қандай алмаштирса бўлади?» savoliga u «chet elda yashovchi fuqaro pasportni qanday almashtiradi» javobini birinchi qo'yadi. To'g'ri javob variant tugmasida chiqadi.
 - **Ruscha va uzun savollar** eng zaif joy. Uzun savolda shaxsiy hikoya asosiy savolni «suyultirib» yuboradi.
-- **Ovozni tanish** kichik o'zbekcha model bilan, shovqinli yozuvda xato qiladi. Shuning uchun bot nima eshitganini yozib ko'rsatadi.
+- **Ovozni tanish** eng yaxshi ochiq model bilan ham haqiqiy Telegram ovozida har to'rt so'zdan birida xato qiladi (ko'pincha qo'shimcha va ruscha so'zlarda). Shuning uchun bot nima eshitganini yozib ko'rsatadi. GigaAM ishlab chiqaruvchisi Sber AQSh sanksiya ro'yxatida, litsenziyasi esa MIT; tashkilot siyosati taqiqlasa, muqobil model bitta sozlama bilan qo'yiladi.
 - **Bazada yo'q, lekin mavzusi yaqin savollar** («ovchilik guvohnomasi» va «tug'ilganlik guvohnomasi») eng qiyin holat. Bunday savollarda tizim ko'pincha variant ko'rsatadi.
 
 ## 7. Qanday davom ettirardim
@@ -183,7 +197,7 @@ docker compose up -d api bot
 # veb-sahifa va API: http://127.0.0.1:8000  (Swagger: /docs), admin: /admin?token=ADMIN_TOKEN
 ```
 
-Birinchi ishga tushishda bge-m3 modeli yuklab olinadi (2,3 GB). Internetsiz muhitda uni oldindan `HF_CACHE` papkasiga joylab qo'yish kifoya. Ovozli savol uchun o'zbekcha Vosk modelini ([vosk-model-small-uz-0.22](https://alphacephei.com/vosk/models)) yuklab, `VOSK_DIR` da ko'rsating. Indeks qurish CPU da taxminan 15 daqiqa oladi.
+Birinchi ishga tushishda bge-m3 (2,3 GB), reranker (2,3 GB) va nutqni tanish modeli GigaAM (0,9 GB) yuklab olinadi. Internetsiz muhitda ularni oldindan `HF_CACHE` papkasiga joylab qo'yish kifoya. Nutq modeli `STT_MODEL` bilan almashtiriladi (`.env.example` ga qarang). Indeks qurish CPU da taxminan 15 daqiqa oladi.
 
 Excel fayldan yuklash:
 
@@ -212,7 +226,7 @@ curl -s http://127.0.0.1:8000/ask -H 'content-type: application/json' \
 
 Boshqa so'rovlar: `POST /stt` (ovozli fayl -> matn), `POST /feedback`, `GET /answers/{id}`, `GET /categories`, `GET /categories/{id}?page=N`, `GET /health`. Admin: `/admin`, `/admin/data`, `/admin/upload`, `/admin/reindex`.
 
-Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (13 ta).
+Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (18 ta). Nutq modellarini solishtirish: `python eval/stt_bench.py fleurs|dir ...` (usuli faylning boshida).
 
 ## Kod tuzilmasi
 
@@ -225,7 +239,8 @@ Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bil
 | `app/batching.py` | bir vaqtda kelgan savollarni paketlab kodlash |
 | `app/index.py` | Qdrant indeksini qurish |
 | `app/search.py` | qidiruv, qaror, qisqa savol qoidasi, kesh |
-| `app/api.py`, `app/web.py` | FastAPI, fuqaro va admin sahifalari, ovozni tanish |
+| `app/api.py`, `app/web.py` | FastAPI, fuqaro va admin sahifalari |
+| `app/speech.py` | ovozli xabarni matnga aylantirish (GigaAM yoki boshqa model, sozlamadan) |
 | `app/bot.py` | Telegram bot (aiogram): matn, ovoz, tugmalar, mavzular, baho |
-| `eval/` | test to'plamlari, baholash va tahlil skriptlari, natijalar |
+| `eval/` | test to'plamlari, baholash va tahlil skriptlari, natijalar; `eval/stt_bench.py` nutqni tanish modellarini solishtiradi |
 | `tests/` | avtomatik testlar |

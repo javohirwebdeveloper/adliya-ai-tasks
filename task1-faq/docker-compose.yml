@@ -38,7 +38,7 @@ services:
     volumes:
       - ${HF_CACHE:-hf-cache}:/models   # modellar bir marta yuklanadi (internetsiz muhitda oldindan joylanadi)
       - ./data:/srv/data:ro
-      - ${VOSK_DIR:-./models/vosk-model-small-uz-0.22}:/vosk:ro   # o'zbekcha nutqni tanish modeli (ixtiyoriy)
+      - ${VOSK_DIR:-./models/vosk-model-small-uz-0.22}:/vosk:ro   # faqat STT_MODEL=vosk bo'lsa kerak
     ports:
       - "127.0.0.1:${API_PORT:-8000}:8000"
     depends_on:
