@@ -1,0 +1,10 @@
+name: adliya-docs
+
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:8000"   # faqat shu kompyuterdan; tashqariga nginx orqali chiqariladi
+    environment:
+      OCR_WORKERS: ${OCR_WORKERS:-4}
+    restart: unless-stopped

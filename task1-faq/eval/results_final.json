@@ -1,0 +1,225 @@
+{
+ "set": "final",
+ "n_real": 120,
+ "n_neg": 60,
+ "steps": [
+  {
+   "name": "Dense qidiruv (bge-m3)",
+   "n": 120,
+   "hit@1": 0.775,
+   "hit@3": 0.9166666666666666,
+   "mrr": 0.8497319347319348
+  },
+  {
+   "name": "+ sparse (leksik) og'irliklar",
+   "n": 120,
+   "hit@1": 0.7666666666666667,
+   "hit@3": 0.9333333333333333,
+   "mrr": 0.8479563492063492
+  },
+  {
+   "name": "+ so'zlashuv so'zlari lug'ati (prava, propiska, ZAGS ...)",
+   "n": 120,
+   "hit@1": 0.75,
+   "hit@3": 0.9166666666666666,
+   "mrr": 0.8389285714285715
+  },
+  {
+   "name": "(sinov, rad etildi) lug'at + qolip so'zlari tozalangan indeks",
+   "n": 120,
+   "hit@1": 0.725,
+   "hit@3": 0.925,
+   "mrr": 0.8307638888888889
+  },
+  {
+   "name": "Yakuniy tizim (reranker so'rovlarning 87% ida ishladi)",
+   "n": 120,
+   "hit@1": 0.875,
+   "hit@3": 0.9166666666666666,
+   "mrr": 0.8944444444444444
+  }
+ ],
+ "styles": {
+  "colloquial": {
+   "n": 45,
+   "hit@1": 0.8444444444444444,
+   "hit@3": 0.9111111111111111,
+   "mrr": 0.8740740740740741
+  },
+  "cyrillic": {
+   "n": 15,
+   "hit@1": 0.8666666666666667,
+   "hit@3": 0.9333333333333333,
+   "mrr": 0.9
+  },
+  "keywords": {
+   "n": 15,
+   "hit@1": 0.9333333333333333,
+   "hit@3": 0.9333333333333333,
+   "mrr": 0.9333333333333333
+  },
+  "long": {
+   "n": 7,
+   "hit@1": 1.0,
+   "hit@3": 1.0,
+   "mrr": 1.0
+  },
+  "no_apostrophe": {
+   "n": 15,
+   "hit@1": 0.7333333333333333,
+   "hit@3": 0.8,
+   "mrr": 0.7666666666666667
+  },
+  "russian": {
+   "n": 8,
+   "hit@1": 0.875,
+   "hit@3": 0.875,
+   "mrr": 0.875
+  },
+  "typo": {
+   "n": 15,
+   "hit@1": 1.0,
+   "hit@3": 1.0,
+   "mrr": 1.0
+  }
+ },
+ "errors": [
+  {
+   "query": "Хочу купить квартиру на имя сына, ему 10 лет. Как правильно оформить такую сделку?",
+   "style": "russian",
+   "gold": "305: Voyaga yetmagan bola nomiga bitim qanday tuziladi?",
+   "pred": "107: Bino yoki xonadonni ijaraga berish shartnomasini ro'yxatdan o'tkazish kerakmi?",
+   "rank": null
+  },
+  {
+   "query": "Akamning mashinasini u yo'qligida minib yursam, yonimda qanday hujjat bo'lishi kerak?",
+   "style": "colloquial",
+   "gold": "317: Avtomobilni boshqarish uchun ishonchnoma kerakmi?",
+   "pred": "422: Transport vositasini xorijga olib chiqish uchun nima kerak?",
+   "rank": null
+  },
+  {
+   "query": "Sobiq erim bilan ajrashganmiz. Bolani o'zimning uyimga propiska qilmoqchiman, lekin u rozilik bermayapti. Usiz qilsa bo'ladimi?",
+   "style": "colloquial",
+   "gold": "395: Bolani ikkinchi ota-ona roziligisiz ro'yxatga olish mumkinmi?",
+   "pred": "295: Uy egasi ro'yxatga olishga rozilik bermasa nima qilinadi?",
+   "rank": 2
+  },
+  {
+   "query": "har safar bir xil spravkalarni yigib yurishim kerakmi yoki idoralar ozlari bir birlaridan olishadimi",
+   "style": "no_apostrophe",
+   "gold": "373: Bir arizada kerakli ma'lumotni idoralar o'zi olib beradimi?",
+   "pred": "137: Tibbiy ma'lumotnoma (spravka) qanday olinadi?",
+   "rank": 2
+  },
+  {
+   "query": "Bolam tugilganiga 2 oy boldi, hali ZAGSda royxatdan otkazmadik. Muddati otib ketmadimi?",
+   "style": "no_apostrophe",
+   "gold": "11: Tug'ilishni qayd etish muddati qancha?",
+   "pred": "190: Egizaklar tug'ilganda ro'yxatga olish qanday amalga oshiriladi?",
+   "rank": null
+  },
+  {
+   "query": "Erim vafot etdi, ikki kichkina farzandim bor. Bolalarga otasi uchun pensiya tayinlanadimi?",
+   "style": "colloquial",
+   "gold": "132: Boquvchisini yo'qotganlik pensiyasi kimga beriladi?",
+   "pred": "131: Nogironlik pensiyasi qanday tayinlanadi?",
+   "rank": null
+  },
+  {
+   "query": "Otamdan qolgan hovli hali ham uning nomida turibdi. Uni o'zimga qanday qilib rasmiylashtirsam bo'ladi?",
+   "style": "colloquial",
+   "gold": "212: Merosga o'tgan uyni o'z nomiga qanday o'tkaziladi?",
+   "pred": "391: Ota-ona vafot etgach bolaning hujjatlarini kim rasmiylashtiradi?",
+   "rank": null
+  },
+  {
+   "query": "Oyligim haqida spravka kerak edi, buni faqat ishxonadan olamanmi yoki mygovdan ham chiqarsa boladimi",
+   "style": "no_apostrophe",
+   "gold": "201: Daromad yoki ish haqi haqidagi ma'lumotnoma qanday olinadi?",
+   "pred": "137: Tibbiy ma'lumotnoma (spravka) qanday olinadi?",
+   "rank": null
+  },
+  {
+   "query": "YaTT faoliyatimni butunlay yopmoqchiman, nimadan boshlashim kerak?",
+   "style": "colloquial",
+   "gold": "122: Tadbirkorlik faoliyatini tugatish (yopish) tartibi qanday?",
+   "pred": "120: Yakka tartibdagi tadbirkor (YaTT) qanday ro'yxatdan o'tadi?",
+   "rank": null
+  },
+  {
+   "query": "Eski mashinamni utilizatsiyaga topshirib, uchyotdan butunlay chiqarmoqchiman. Qayerga murojaat qilaman?",
+   "style": "colloquial",
+   "gold": "177: Transport vositasini hisobdan chiqarish (utilizatsiya) tartibi qanday?",
+   "pred": "260: Chiqindini olib chiqish (maishiy chiqindi) xizmatidan norozi bo'lsam qayerga?",
+   "rank": 2
+  },
+  {
+   "query": "ikkinchi nikoh ZAGS hujjatlar ajrim guvohnomasi",
+   "style": "keywords",
+   "gold": "388: Takroriy (ikkinchi marta) nikoh qanday qayd etiladi?",
+   "pred": "291: Nikohdan ajralganlik (ajrim) guvohnomasi qanday olinadi?",
+   "rank": null
+  },
+  {
+   "query": "pravam yoqolib qoldi, qanday qilib tiklasam boladi",
+   "style": "no_apostrophe",
+   "gold": "54: Haydovchilik guvohnomasi muddati tugasa yoki yo'qolsa nima qilinadi?",
+   "pred": "23: Haydovchilik guvohnomasini qanday rasmiylashtirish mumkin?",
+   "rank": null
+  },
+  {
+   "query": "Uch oydan beri oylik berishmayapti. Qayerga arz qilsam bo'ladi?",
+   "style": "colloquial",
+   "gold": "126: Ish haqi kechiktirilsa yoki berilmasa qayerga murojaat qilinadi?",
+   "pred": "443: Nafaqa to'lovi to'xtab qolsa qayerga murojaat qilaman?",
+   "rank": 3
+  },
+  {
+   "query": "Ҳокимиятдан келган жавоб мени қониқтирмади. Яна қаерга ёзсам бўлади?",
+   "style": "cyrillic",
+   "gold": "484: Murojaat javobini qayta ko'rib chiqishni so'rash mumkinmi?",
+   "pred": "31: Murojaat yoki shikoyatni qayerga topshirish mumkin?",
+   "rank": null
+  },
+  {
+   "query": "Ҳокимликка интернет орқали ариза ёзиб юборса бўладими?",
+   "style": "cyrillic",
+   "gold": "483: Davlat organiga elektron murojaat qanday yuboriladi?",
+   "pred": "153: Sudga da'vo arizasi qanday topshiriladi?",
+   "rank": 2
+  }
+ ],
+ "config": {
+  "rerank": true,
+  "gray_t": 0.8,
+  "gray_m": 0.1,
+  "rerank_top": 3,
+  "rerank_chars": 300
+ },
+ "rerank_share": 0.872,
+ "thresholds": {
+  "answer": 0.25,
+  "suggest": 0.002
+ },
+ "final": {
+  "real": {
+   "not_found": 6,
+   "answered_ok": 76,
+   "unsure_ok": 28,
+   "unsure_wrong": 8,
+   "answered_wrong": 2
+  },
+  "negatives": {
+   "not_found": 45,
+   "unsure_wrong": 14,
+   "smalltalk": 1
+  }
+ },
+ "neg_errors": [],
+ "latency_ms": {
+  "median": 2439,
+  "p90": 3440,
+  "mean": 2502
+ }
+}

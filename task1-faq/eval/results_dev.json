@@ -1,0 +1,407 @@
+{
+ "set": "dev",
+ "n_real": 205,
+ "n_neg": 100,
+ "steps": [
+  {
+   "name": "Dense qidiruv (bge-m3)",
+   "n": 205,
+   "hit@1": 0.7463414634146341,
+   "hit@3": 0.8682926829268293,
+   "mrr": 0.8128398972301412
+  },
+  {
+   "name": "+ sparse (leksik) og'irliklar",
+   "n": 205,
+   "hit@1": 0.7463414634146341,
+   "hit@3": 0.8731707317073171,
+   "mrr": 0.8156312251434202
+  },
+  {
+   "name": "+ so'zlashuv so'zlari lug'ati (prava, propiska, ZAGS ...)",
+   "n": 205,
+   "hit@1": 0.8097560975609757,
+   "hit@3": 0.9073170731707317,
+   "mrr": 0.8610085172280294
+  },
+  {
+   "name": "(sinov, rad etildi) lug'at + qolip so'zlari tozalangan indeks",
+   "n": 205,
+   "hit@1": 0.7853658536585366,
+   "hit@3": 0.8780487804878049,
+   "mrr": 0.8404099558977608
+  },
+  {
+   "name": "Yakuniy tizim (reranker so'rovlarning 83% ida ishladi)",
+   "n": 205,
+   "hit@1": 0.8682926829268293,
+   "hit@3": 0.9073170731707317,
+   "mrr": 0.8837398373983739
+  }
+ ],
+ "styles": {
+  "colloquial": {
+   "n": 83,
+   "hit@1": 0.9156626506024096,
+   "hit@3": 0.9397590361445783,
+   "mrr": 0.927710843373494
+  },
+  "cyrillic": {
+   "n": 25,
+   "hit@1": 0.92,
+   "hit@3": 0.92,
+   "mrr": 0.92
+  },
+  "keywords": {
+   "n": 26,
+   "hit@1": 0.8461538461538461,
+   "hit@3": 0.9230769230769231,
+   "mrr": 0.8782051282051282
+  },
+  "long": {
+   "n": 15,
+   "hit@1": 0.7333333333333333,
+   "hit@3": 0.8,
+   "mrr": 0.7555555555555556
+  },
+  "no_apostrophe": {
+   "n": 21,
+   "hit@1": 0.9047619047619048,
+   "hit@3": 0.9047619047619048,
+   "mrr": 0.9047619047619048
+  },
+  "russian": {
+   "n": 15,
+   "hit@1": 0.8,
+   "hit@3": 0.8666666666666667,
+   "mrr": 0.8222222222222223
+  },
+  "typo": {
+   "n": 20,
+   "hit@1": 0.75,
+   "hit@3": 0.85,
+   "mrr": 0.7833333333333333
+  }
+ },
+ "errors": [
+  {
+   "query": "ID karta qildiraman deb DXMga bormoqchiman, o'zim bilan nimalarni olib boray?",
+   "style": "colloquial",
+   "gold": "2: ID-karta olish uchun qanday hujjatlar kerak?",
+   "pred": "287: ID-kartani boshqa shaxs (ishonchnoma bilan) olib bera oladimi?",
+   "rank": 2
+  },
+  {
+   "query": "Qizimni uzatyapmiz, ZAGSda nikohdan o'tishlari uchun nimalarni olib borishlari kerak?",
+   "style": "colloquial",
+   "gold": "7: Nikohni qayd qilish uchun nima kerak?",
+   "pred": "13: Ajrashish uchun FHDYOga qanday hujjatlar kerak?",
+   "rank": null
+  },
+  {
+   "query": "Tug'ruqxonadan chiqdik, chaqaloqning guvohnomasini qayerdan olamiz?",
+   "style": "colloquial",
+   "gold": "10: Tug'ilganlik guvohnomasi qanday olinadi?",
+   "pred": "166: Chaqaloq tug'ilgach qanday hujjatlar ketma-ket rasmiylashtiriladi?",
+   "rank": 2
+  },
+  {
+   "query": "id karta almashtirish narxi",
+   "style": "keywords",
+   "gold": "1: Pasportni (ID-karta) almashtirish tartibi qanday?",
+   "pred": "84: Ism yoki familiya o'zgargach ID-kartani almashtirish kerakmi?",
+   "rank": 3
+  },
+  {
+   "query": "Как восстановить утерянное свидетельство о браке?",
+   "style": "russian",
+   "gold": "36: Nikoh guvohnomasi yo'qolsa dublikat qanday olinadi?",
+   "pred": "165: Yo'qolgan hujjat yoki buyum bo'yicha qayerga murojaat qilinadi?",
+   "rank": 3
+  },
+  {
+   "query": "Men 5 yildan beri Koreyada ishlayman, ID kartamning muddati tugab qolyapti. Hozir O'zbekistonga borishga imkonim yo'q. Shu yerdan turib almashtirsam bo'ladimi?",
+   "style": "long",
+   "gold": "87: Chet elda yashovchi fuqaro pasport/ID-kartani qanday almashtiradi?",
+   "pred": "282: ID-karta amal muddati tugaganini qanday bilaman?",
+   "rank": 3
+  },
+  {
+   "query": "Biz faqat nikoh o'qitganmiz, ZAGSda ro'yxatdan o'tmaganmiz. Yaqinda o'g'limiz tug'ildi, turmush o'rtog'im otalikni rasman tan olmoqchi. Buni qanday rasmiylashtirsak bo'ladi?",
+   "style": "long",
+   "gold": "37: Otalikni belgilash (aniqlash) tartibi qanday?",
+   "pred": "17: Farzandlikka olishni rasmiylashtirish uchun nima kerak?",
+   "rank": null
+  },
+  {
+   "query": "Toshkentdagi ishlarimni ukam yuritishi uchun unga ishonch qog'ozi yozib bermoqchiman, buni qayerda tasdiqlataman?",
+   "style": "colloquial",
+   "gold": "45: Ishonchnoma (ishonch xati) qanday rasmiylashtiriladi?",
+   "pred": "304: Pul qarzi (tilxat) notarial tasdiqlanadimi?",
+   "rank": null
+  },
+  {
+   "query": "Uyimni o'g'limning nomiga sovg'a qilib o'tkazmoqchiman, notariusda nima qilinadi?",
+   "style": "colloquial",
+   "gold": "100: Ko'chmas mulkni hadya (sovg'a) shartnomasi qanday tuziladi?",
+   "pred": "306: Notarius kasal yoki keksa shaxsga uyga chiqib xizmat ko'rsatadimi?",
+   "rank": null
+  },
+  {
+   "query": "notarusda bitta hujjat tasdiqlatish necha pul turadi",
+   "style": "typo",
+   "gold": "205: Notarial harakat uchun qancha to'lov olinadi?",
+   "pred": "304: Pul qarzi (tilxat) notarial tasdiqlanadimi?",
+   "rank": 3
+  },
+  {
+   "query": "Отамдан қолган ҳовли ҳали ҳам унинг номида турибди, энди уни менга қандай расмийлаштирса бўлади?",
+   "style": "cyrillic",
+   "gold": "212: Merosga o'tgan uyni o'z nomiga qanday o'tkaziladi?",
+   "pred": "391: Ota-ona vafot etgach bolaning hujjatlarini kim rasmiylashtiradi?",
+   "rank": null
+  },
+  {
+   "query": "Как зарегистрировать право собственности на квартиру?",
+   "style": "russian",
+   "gold": "48: Uy-joyga (ko'chmas mulkka) bo'lgan huquqni davlat ro'yxatidan qanday o'tkaziladi?",
+   "pred": "50: Uy oldi-sotdisi (shartnoma) qanday rasmiylashtiriladi?",
+   "rank": null
+  },
+  {
+   "query": "2019-yilda uy sotib olganman, oldi-sotdi shartnomasi notariusda tuzilgan edi. Ko'chib yurganimizda o'sha shartnoma yo'qolib qoldi. Uni qayta tiklab olsam bo'ladimi?",
+   "style": "long",
+   "gold": "46: Notarial hujjat yo'qolsa nusxasi (dublikat) qanday olinadi?",
+   "pred": "499: Uy sotilgach kommunal shartnomalar yangi egaga o'tadimi?",
+   "rank": null
+  },
+  {
+   "query": "prava testida nechta xato qilsa yiqilad",
+   "style": "typo",
+   "gold": "113: Nazariy imtihonda nechta savolga to'g'ri javob berish kerak?",
+   "pred": "314: Yo'l qoidasi buzilganda haydovchilik guvohnomasi olib qo'yiladimi?",
+   "rank": null
+  },
+  {
+   "query": "mashinani ukamga sovga qilmoqchiman, notariusda nima qilinadi",
+   "style": "no_apostrophe",
+   "gold": "500: Transport vositasini sovg'a (hadya) qilish qanday rasmiylashtiriladi?",
+   "pred": "410: Notarius harakatni rad etsa nima qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "instagramda kiyim sotaman, soliq to'lashim shartmi",
+   "style": "colloquial",
+   "gold": "221: Onlayn (marketpleys orqali) savdo qiluvchi soliqni qanday to'laydi?",
+   "pred": "56: Yakka tartibdagi tadbirkor (YaTT) soliqlarni qanday to'laydi?",
+   "rank": null
+  },
+  {
+   "query": "firma ochish boji qancha",
+   "style": "keywords",
+   "gold": "60: Biznesni ro'yxatdan o'tkazish qancha vaqt va boj oladi?",
+   "pred": "326: Chet el investori O'zbekistonda firma ocha oladimi?",
+   "rank": null
+  },
+  {
+   "query": "my.soliq ga kirolmayapmn, eri kaliti yoq faqat id karta bor shunga krsa boladimi",
+   "style": "typo",
+   "gold": "223: Soliq to'lovchining shaxsiy kabinetiga qanday kiriladi?",
+   "pred": "184: ID-karta sinsa yoki buzilib qolsa nima qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "ishsizlik nafaqasi olish uchun qayrga borish kerak",
+   "style": "typo",
+   "gold": "68: Ishsizlik holatida qanday yordam olish mumkin?",
+   "pred": "25: Nafaqa (pensiya) tayinlash uchun qayerga murojaat qilinadi?",
+   "rank": 3
+  },
+  {
+   "query": "da'vo muddati o'tib ketsa",
+   "style": "keywords",
+   "gold": "466: Da'vo muddati (iskovaya davnost) nima?",
+   "pred": "54: Haydovchilik guvohnomasi muddati tugasa yoki yo'qolsa nima qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "menga notogri jarima yozishgan, bekor qildirsa boladimi",
+   "style": "no_apostrophe",
+   "gold": "156: Ma'muriy jarimaga qanday e'tiroz bildiriladi?",
+   "pred": "206: Berilgan ishonchnomani bekor qilish mumkinmi?",
+   "rank": null
+  },
+  {
+   "query": "Что будет, если уклоняться от призыва в армию?",
+   "style": "russian",
+   "gold": "353: Harbiy majburiyatni bajarmaslik uchun javobgarlik qanday?",
+   "pred": "167: Davlat xizmati rad etilsa nima qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "Qo'shnim 2 yil oldin 15 million so'm qarz olgan, tilxati bor. Qaytarmayapti, telefonni ham ko'tarmaydi. Sudga bersam, qancha boj to'lashim kerak bo'ladi?",
+   "style": "long",
+   "gold": "261: Sud xarajatlari (davlat boji) qanday belgilanadi?",
+   "pred": "161: Xizmat uchun to'langan boj qaytariladimi?",
+   "rank": null
+  },
+  {
+   "query": "svet bilan gaz pulini telefondan tolasa boladimi qaysi ilovda",
+   "style": "typo",
+   "gold": "149: Kommunal to'lovlarni qanday onlayn to'lash mumkin?",
+   "pred": "151: Elektr, gaz yoki suv uzilishida qayerga qo'ng'iroq qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "Биз Германияда турмуш қурганмиз, ўша ердаги никоҳ ҳужжатимиз бу ерда ўтадими?",
+   "style": "cyrillic",
+   "gold": "267: Chet elda ro'yxatga olingan nikohni O'zbekistonda tan oldirish kerakmi?",
+   "pred": "38: Chet el fuqarosi bilan nikoh qanday qayd etiladi?",
+   "rank": null
+  },
+  {
+   "query": "telegramda birov aldab pulimni oldi, qayerga yozsam bo'ladi",
+   "style": "colloquial",
+   "gold": "173: Onlayn firibgarlik (kiber jinoyat)ni qayerga xabar qilinadi?",
+   "pred": "163: Korrupsiya yoki pora holatini qayerga xabar berish mumkin?",
+   "rank": null
+  },
+  {
+   "query": "elektron imzo olish",
+   "style": "keywords",
+   "gold": "73: Elektron raqamli imzo (ERI) qanday olinadi?",
+   "pred": "375: Elektron imzo bilan hujjatni qanday imzolayman?",
+   "rank": 2
+  }
+ ],
+ "config": {
+  "rerank": true,
+  "gray_t": 0.8,
+  "gray_m": 0.1,
+  "rerank_top": 3,
+  "rerank_chars": 300
+ },
+ "rerank_share": 0.826,
+ "threshold_table": [
+  {
+   "t": 0.002,
+   "precision": 0.8653846153846154,
+   "answered_ok": 0.8282208588957055,
+   "neg_above": 0.19101123595505617
+  },
+  {
+   "t": 0.005,
+   "precision": 0.881578947368421,
+   "answered_ok": 0.8220858895705522,
+   "neg_above": 0.14606741573033707
+  },
+  {
+   "t": 0.01,
+   "precision": 0.903448275862069,
+   "answered_ok": 0.803680981595092,
+   "neg_above": 0.1348314606741573
+  },
+  {
+   "t": 0.02,
+   "precision": 0.9202898550724637,
+   "answered_ok": 0.7791411042944786,
+   "neg_above": 0.12359550561797752
+  },
+  {
+   "t": 0.05,
+   "precision": 0.9307692307692308,
+   "answered_ok": 0.7423312883435583,
+   "neg_above": 0.056179775280898875
+  },
+  {
+   "t": 0.1,
+   "precision": 0.926829268292683,
+   "answered_ok": 0.6993865030674846,
+   "neg_above": 0.011235955056179775
+  },
+  {
+   "t": 0.2,
+   "precision": 0.9272727272727272,
+   "answered_ok": 0.6257668711656442,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.25,
+   "precision": 0.9509803921568627,
+   "answered_ok": 0.5950920245398773,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.3,
+   "precision": 0.9591836734693877,
+   "answered_ok": 0.5766871165644172,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.4,
+   "precision": 0.9662921348314607,
+   "answered_ok": 0.5276073619631901,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.5,
+   "precision": 0.963855421686747,
+   "answered_ok": 0.49079754601226994,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.6,
+   "precision": 0.961038961038961,
+   "answered_ok": 0.4539877300613497,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.7,
+   "precision": 0.9705882352941176,
+   "answered_ok": 0.4049079754601227,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.8,
+   "precision": 0.967741935483871,
+   "answered_ok": 0.36809815950920244,
+   "neg_above": 0.0
+  },
+  {
+   "t": 0.9,
+   "precision": 0.9574468085106383,
+   "answered_ok": 0.27607361963190186,
+   "neg_above": 0.0
+  }
+ ],
+ "thresholds": {
+  "answer": 0.25,
+  "suggest": 0.002
+ },
+ "final": {
+  "real": {
+   "answered_ok": 138,
+   "unsure_ok": 43,
+   "unsure_wrong": 12,
+   "not_found": 7,
+   "answered_wrong": 5
+  },
+  "negatives": {
+   "not_found": 76,
+   "unsure_wrong": 17,
+   "smalltalk": 7
+  }
+ },
+ "neg_errors": [],
+ "latency_ms": {
+  "median": 2242,
+  "p90": 3033,
+  "mean": 2204
+ },
+ "holdout": {
+  "n": 505,
+  "hit@1": 0.996039603960396,
+  "hit@3": 1.0,
+  "mrr": 0.998019801980198
+ }
+}

@@ -1,0 +1,61 @@
+id,query,kind
+1,Qaysi bankda depozit foizi eng yuqori?,offtopic
+2,Avtomobil moyini necha kilometrda almashtirish kerak?,offtopic
+3,"Ov miltig'i olmoqchiman, uni saqlash uchun ruxsatnomani qayerdan olaman?",near_domain
+4,"Uyimga quyosh panellari o'rnatsam, ortiqcha elektrni davlatga sotsa bo'ladimi?",near_domain
+5,Sen botmisan yoki tirik odammisan?,chitchat
+6,"Dron sotib oldim, shahar ustida uchirish uchun ruxsat kerakmi?",near_domain
+7,Messi hozir qaysi klubda o'ynayapti?,offtopic
+8,Samsung yaxshimi yoki Xiaomi? Qaysi birini olay?,offtopic
+9,Python'da ro'yxatni teskari aylantirish qanday qilinadi?,offtopic
+10,Сайловда қайси участкада овоз беришимни қандай билсам бўлади?,near_domain
+11,Qizimning tug'ilgan kuniga qanday sovg'a olsam bo'ladi?,offtopic
+12,Tashabbusli byudjetda mahallamiz loyihasiga qanday ovoz beriladi?,near_domain
+13,Davlat idorasiga ishga kirish uchun tanlovda qanday qatnashaman?,near_domain
+14,Законно ли покупать криптовалюту в Узбекистане?,near_domain
+15,"Rahmat, katta yordam berdingiz!",chitchat
+16,Shahar ichida qancha tezlikda yurishga ruxsat bor?,near_domain
+17,Chet elga chiqayotganda o'zim bilan qancha naqd dollar olib o'tsam bo'ladi?,near_domain
+18,Toshkentdan Samarqandga Afrosiyob poyezdi soat nechada jo'naydi?,offtopic
+19,Qabristondan joy olish va dafn qilish uchun qanday ruxsat kerak?,near_domain
+20,Advokat bo'lish uchun qanday malaka imtihonini topshirish kerak?,near_domain
+21,Bolasiga qaramaydigan otani ota-onalik huquqidan mahrum qilish uchun nima qilish kerak?,near_domain
+22,"Uyda it boqyapmiz, uni biror joyda ro'yxatdan o'tkazish shartmi?",near_domain
+23,"Привет, как дела?",chitchat
+24,Qaysi davlatlar fuqarolari O'zbekistonga vizasiz kira oladi?,near_domain
+25,Машину увез эвакуатор. Как забрать ее со штрафстоянки?,near_domain
+26,"Ertaga Toshkentda havo qanday bo'ladi, yomg'ir yog'adimi?",offtopic
+27,Jamoat joyida sigaret chekkanlik uchun jarima qancha?,near_domain
+28,Bitcoin narxi bugun qancha?,offtopic
+29,Qamoqdagi akam bilan uchrashuvga borish tartibi qanday?,near_domain
+30,"Davlat xaridlarida, ya'ni tenderlarda firmamiz qanday qatnashishi mumkin?",near_domain
+31,Prezidentga afv etish haqida ariza qanday yoziladi?,near_domain
+32,"Erim meni uradi, oilaviy zo'ravonlikdan himoya orderini qanday olsam bo'ladi?",near_domain
+33,Сени ким яратган?,chitchat
+34,Futbol bo'yicha jahon chempionati qachon boshlanadi?,offtopic
+35,Ok tushunarli,chitchat
+36,"Машина двигатели тез қизиб кетяпти, сабаби нима бўлиши мумкин?",offtopic
+37,Xayrli tong,chitchat
+38,Mashinani texosmotrdan qayerda o'tkazsam bo'ladi?,near_domain
+39,"Xayr, ko'rishguncha",chitchat
+40,"Hovlimizdagi qari terakni kesmoqchimiz, buning uchun ruxsat olish kerakmi?",near_domain
+41,"Assalomu alaykum, yaxshimisiz?",chitchat
+42,Haj yoki umra safariga borish uchun navbatga qanday yozilsa bo'ladi?,near_domain
+43,Bayram kuni ishlasam ish haqi ikki baravar to'lanadimi?,near_domain
+44,Ko'chada mashina qo'yganim uchun parkovka to'lovini qanday to'layman?,near_domain
+45,"Tishim qattiq og'riyapti, qaysi dorini ichsam bo'ladi?",offtopic
+46,Palovni qanday qilib mazali pishirsa bo'ladi?,offtopic
+47,"Kompyuterim juda sekin ishlayapti, nima qilsam bo'ladi?",offtopic
+48,Salom,chitchat
+49,Samarqandda arzon va yaxshi mehmonxona tavsiya qila olasizmi?,offtopic
+50,Yangi chiqqan qonunlarning to'liq matnini qayerdan o'qisam bo'ladi?,near_domain
+51,Ingliz tilini tez o'rganish uchun qaysi ilova yaxshi?,offtopic
+52,Посоветуй хороший фильм на вечер,offtopic
+53,iPhone 16 Pro narxi hozir qancha?,offtopic
+54,"Ish vaqtidan tashqari olib qolishsa, qo'shimcha haq to'lanishi shartmi?",near_domain
+55,Машинага тонировка қилдириш учун рухсатнома қандай олинади?,near_domain
+56,Как похудеть на 5 кг за месяц?,offtopic
+57,"Zo'r ishlayapsan, barakalla",chitchat
+58,Bugun dollar kursi qancha?,offtopic
+59,"Mahallada ko'chaga sahna qurib konsert o'tkazmoqchimiz, hokimlikdan ruxsat olish kerakmi?",near_domain
+60,Eng kam oylik ish haqi hozir qancha bo'ldi?,near_domain

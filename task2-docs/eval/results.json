@@ -1,0 +1,275 @@
+{
+ "rows": [
+  {
+   "file": "NAMUNA_1_abzats.pdf",
+   "kind": "text",
+   "seconds": 0.7,
+   "requisites": "4/4",
+   "tasks": "5/5",
+   "extra": 0,
+   "executors": "5/5",
+   "deadlines": "5/5",
+   "ocr_conf": []
+  },
+  {
+   "file": "NAMUNA_1_abzats_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 5.5,
+   "requisites": "4/4",
+   "tasks": "5/5",
+   "extra": 0,
+   "executors": "5/5",
+   "deadlines": "5/5",
+   "ocr_conf": [
+    93.9
+   ]
+  },
+  {
+   "file": "NAMUNA_2_jadval.pdf",
+   "kind": "text",
+   "seconds": 0.5,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": []
+  },
+  {
+   "file": "NAMUNA_2_jadval_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 4.8,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": [
+    95.0
+   ]
+  },
+  {
+   "file": "NAMUNA_3_ilova.pdf",
+   "kind": "text",
+   "seconds": 0.6,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": []
+  },
+  {
+   "file": "NAMUNA_3_ilova_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 7.2,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": [
+    94.7,
+    94.7
+   ]
+  },
+  {
+   "file": "xat_1_abzatsdagi_topshiriqlar.pdf",
+   "kind": "text",
+   "seconds": 0.5,
+   "requisites": "4/4",
+   "tasks": "7/7",
+   "extra": 0,
+   "executors": "7/7",
+   "deadlines": "7/7",
+   "ocr_conf": []
+  },
+  {
+   "file": "xat_1_abzatsdagi_topshiriqlar_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 6.1,
+   "requisites": "4/4",
+   "tasks": "7/7",
+   "extra": 0,
+   "executors": "7/7",
+   "deadlines": "7/7",
+   "ocr_conf": [
+    93.5
+   ]
+  },
+  {
+   "file": "xat_2_jadvaldagi_topshiriqlar.pdf",
+   "kind": "text",
+   "seconds": 0.4,
+   "requisites": "4/4",
+   "tasks": "7/7",
+   "extra": 0,
+   "executors": "7/7",
+   "deadlines": "7/7",
+   "ocr_conf": []
+  },
+  {
+   "file": "xat_2_jadvaldagi_topshiriqlar_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 6.8,
+   "requisites": "4/4",
+   "tasks": "7/7",
+   "extra": 0,
+   "executors": "7/7",
+   "deadlines": "7/7",
+   "ocr_conf": [
+    92.7
+   ]
+  },
+  {
+   "file": "xat_3_ilovadagi_topshiriqlar.pdf",
+   "kind": "text",
+   "seconds": 0.7,
+   "requisites": "4/4",
+   "tasks": "8/8",
+   "extra": 0,
+   "executors": "8/8",
+   "deadlines": "8/8",
+   "ocr_conf": []
+  },
+  {
+   "file": "xat_3_ilovadagi_topshiriqlar_skaner.pdf",
+   "kind": "ocr",
+   "seconds": 13.4,
+   "requisites": "4/4",
+   "tasks": "8/8",
+   "extra": 0,
+   "executors": "8/8",
+   "deadlines": "8/8",
+   "ocr_conf": [
+    81.7,
+    93.5
+   ]
+  },
+  {
+   "file": "buyruq_245.pdf",
+   "kind": "synth_text",
+   "seconds": 2.3,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": []
+  },
+  {
+   "file": "buyruq_245_skaner.pdf",
+   "kind": "synth_ocr",
+   "seconds": 8.5,
+   "requisites": "4/4",
+   "tasks": "6/6",
+   "extra": 0,
+   "executors": "6/6",
+   "deadlines": "6/6",
+   "ocr_conf": [
+    95.6
+   ]
+  }
+ ],
+ "by_kind": {
+  "text": {
+   "req": [
+    24,
+    24
+   ],
+   "tp": 39,
+   "fp": 0,
+   "fn": 0,
+   "ex": [
+    39,
+    39
+   ],
+   "dl": [
+    39,
+    39
+   ]
+  },
+  "ocr": {
+   "req": [
+    24,
+    24
+   ],
+   "tp": 39,
+   "fp": 0,
+   "fn": 0,
+   "ex": [
+    39,
+    39
+   ],
+   "dl": [
+    39,
+    39
+   ]
+  },
+  "synth_text": {
+   "req": [
+    4,
+    4
+   ],
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "ex": [
+    6,
+    6
+   ],
+   "dl": [
+    6,
+    6
+   ]
+  },
+  "synth_ocr": {
+   "req": [
+    4,
+    4
+   ],
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "ex": [
+    6,
+    6
+   ],
+   "dl": [
+    6,
+    6
+   ]
+  }
+ },
+ "fails": [],
+ "ocr": [
+  {
+   "doc": "NAMUNA_1_abzats",
+   "cer": 0.0047
+  },
+  {
+   "doc": "NAMUNA_2_jadval",
+   "cer": 0.0066
+  },
+  {
+   "doc": "NAMUNA_3_ilova",
+   "cer": 0.0059
+  },
+  {
+   "doc": "xat_1_abzatsdagi_topshiriqlar",
+   "cer": 0.0169
+  },
+  {
+   "doc": "xat_2_jadvaldagi_topshiriqlar",
+   "cer": 0.0204
+  },
+  {
+   "doc": "xat_3_ilovadagi_topshiriqlar",
+   "cer": 0.0599
+  },
+  {
+   "doc": "buyruq_245",
+   "cer": 0.0071
+  }
+ ]
+}

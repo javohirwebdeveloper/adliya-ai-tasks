@@ -1,0 +1,491 @@
+{
+ "set": "dev",
+ "n_real": 205,
+ "n_neg": 100,
+ "steps": [
+  {
+   "name": "Dense qidiruv (bge-m3)",
+   "n": 205,
+   "hit@1": 0.7463414634146341,
+   "hit@3": 0.8682926829268293,
+   "mrr": 0.8128398972301412
+  },
+  {
+   "name": "+ sparse (leksik) og'irliklar",
+   "n": 205,
+   "hit@1": 0.7463414634146341,
+   "hit@3": 0.8731707317073171,
+   "mrr": 0.8156312251434202
+  },
+  {
+   "name": "+ so'zlashuv so'zlari lug'ati (prava, propiska, ZAGS ...)",
+   "n": 205,
+   "hit@1": 0.8097560975609757,
+   "hit@3": 0.9073170731707317,
+   "mrr": 0.8610085172280294
+  },
+  {
+   "name": "Yakuniy tizim (reranker'siz)",
+   "n": 205,
+   "hit@1": 0.8097560975609757,
+   "hit@3": 0.9073170731707317,
+   "mrr": 0.8546341463414634
+  }
+ ],
+ "styles": {
+  "colloquial": {
+   "n": 83,
+   "hit@1": 0.8674698795180723,
+   "hit@3": 0.9397590361445783,
+   "mrr": 0.8965863453815262
+  },
+  "cyrillic": {
+   "n": 25,
+   "hit@1": 0.84,
+   "hit@3": 0.92,
+   "mrr": 0.88
+  },
+  "keywords": {
+   "n": 26,
+   "hit@1": 0.7692307692307693,
+   "hit@3": 0.9230769230769231,
+   "mrr": 0.8474358974358975
+  },
+  "long": {
+   "n": 15,
+   "hit@1": 0.7333333333333333,
+   "hit@3": 0.8,
+   "mrr": 0.7666666666666667
+  },
+  "no_apostrophe": {
+   "n": 21,
+   "hit@1": 0.7619047619047619,
+   "hit@3": 0.9047619047619048,
+   "mrr": 0.8333333333333334
+  },
+  "russian": {
+   "n": 15,
+   "hit@1": 0.6666666666666666,
+   "hit@3": 0.8666666666666667,
+   "mrr": 0.7611111111111111
+  },
+  "typo": {
+   "n": 20,
+   "hit@1": 0.8,
+   "hit@3": 0.85,
+   "mrr": 0.8166666666666667
+  }
+ },
+ "errors": [
+  {
+   "query": "ID kartada millatim yozilmagan ekan, bu xato emasmi?",
+   "style": "colloquial",
+   "gold": "82: ID-kartaga qanday ma'lumotlar yoziladi?",
+   "pred": "4: ID-kartada xatolik chiqsa nima qilinadi?",
+   "rank": 3
+  },
+  {
+   "query": "Qizimni uzatyapmiz, ZAGSda nikohdan o'tishlari uchun nimalarni olib borishlari kerak?",
+   "style": "colloquial",
+   "gold": "7: Nikohni qayd qilish uchun nima kerak?",
+   "pred": "13: Ajrashish uchun FHDYOga qanday hujjatlar kerak?",
+   "rank": null
+  },
+  {
+   "query": "Opam eri bilan kelishib ajrashmoqchi, bolalari yo'q. Sudga bormasdan ZAGSning o'zida ajrashsa bo'ladimi?",
+   "style": "colloquial",
+   "gold": "12: Ajrashish (nikohni bekor qilish) qanday amalga oshiriladi?",
+   "pred": "291: Nikohdan ajralganlik (ajrim) guvohnomasi qanday olinadi?",
+   "rank": 3
+  },
+  {
+   "query": "Uyimga Turkiyadan do'stim mehmon bo'lib keladi, uni ro'yxatdan o'tkazishim kerakmi?",
+   "style": "colloquial",
+   "gold": "200: O'zbekistonga tashrif buyurgan chet ellik qancha muddatda ro'yxatga olinishi kerak?",
+   "pred": "299: Chet elga uzoq muddatga chiqishda ro'yxatdan chiqish kerakmi?",
+   "rank": 3
+  },
+  {
+   "query": "yo'qolgan tug'ilganlik guvohnomasi dublikat",
+   "style": "keywords",
+   "gold": "16: Guvohnoma yo'qolsa dublikat qanday olinadi?",
+   "pred": "493: Yo'qolgan guvohnoma o'rniga dublikat qancha muddatda beriladi?",
+   "rank": 3
+  },
+  {
+   "query": "bolaga ism qo`yishda taqiqlangan ismlar bormi",
+   "style": "no_apostrophe",
+   "gold": "39: Chaqaloqqa ism qo'yishda cheklovlar bormi?",
+   "pred": "174: Ismni voyaga yetgach mustaqil o'zgartirish mumkinmi?",
+   "rank": 2
+  },
+  {
+   "query": "tugilganlik guvohnomasidagi sana notogri yozilgan, togrilatsa boladimi",
+   "style": "no_apostrophe",
+   "gold": "392: Guvohnomadagi sana yoki ma'lumotni tuzatish mumkinmi?",
+   "pred": "290: Farzandlikka olingan bolaning tug'ilganlik yozuvi o'zgaradimi?",
+   "rank": 2
+  },
+  {
+   "query": "Как восстановить утерянное свидетельство о браке?",
+   "style": "russian",
+   "gold": "36: Nikoh guvohnomasi yo'qolsa dublikat qanday olinadi?",
+   "pred": "165: Yo'qolgan hujjat yoki buyum bo'yicha qayerga murojaat qilinadi?",
+   "rank": 3
+  },
+  {
+   "query": "Men 5 yildan beri Koreyada ishlayman, ID kartamning muddati tugab qolyapti. Hozir O'zbekistonga borishga imkonim yo'q. Shu yerdan turib almashtirsam bo'ladimi?",
+   "style": "long",
+   "gold": "87: Chet elda yashovchi fuqaro pasport/ID-kartani qanday almashtiradi?",
+   "pred": "282: ID-karta amal muddati tugaganini qanday bilaman?",
+   "rank": 2
+  },
+  {
+   "query": "Biz faqat nikoh o'qitganmiz, ZAGSda ro'yxatdan o'tmaganmiz. Yaqinda o'g'limiz tug'ildi, turmush o'rtog'im otalikni rasman tan olmoqchi. Buni qanday rasmiylashtirsak bo'ladi?",
+   "style": "long",
+   "gold": "37: Otalikni belgilash (aniqlash) tartibi qanday?",
+   "pred": "17: Farzandlikka olishni rasmiylashtirish uchun nima kerak?",
+   "rank": null
+  },
+  {
+   "query": "Toshkentdagi ishlarimni ukam yuritishi uchun unga ishonch qog'ozi yozib bermoqchiman, buni qayerda tasdiqlataman?",
+   "style": "colloquial",
+   "gold": "45: Ishonchnoma (ishonch xati) qanday rasmiylashtiriladi?",
+   "pred": "409: Ishonchnoma muddati qancha bo'lishi mumkin?",
+   "rank": null
+  },
+  {
+   "query": "Uyimni o'g'limning nomiga sovg'a qilib o'tkazmoqchiman, notariusda nima qilinadi?",
+   "style": "colloquial",
+   "gold": "100: Ko'chmas mulkni hadya (sovg'a) shartnomasi qanday tuziladi?",
+   "pred": "306: Notarius kasal yoki keksa shaxsga uyga chiqib xizmat ko'rsatadimi?",
+   "rank": null
+  },
+  {
+   "query": "uy hujjatlarim qolmagan, kadastr nomerini internetdan topsa boladimi",
+   "style": "no_apostrophe",
+   "gold": "210: Ko'chmas mulkning kadastr raqamini qayerdan bilib olish mumkin?",
+   "pred": "49: Ko'chmas mulk bo'yicha kadastr ko'chirmasi (ma'lumotnoma) qanday olinadi?",
+   "rank": 2
+  },
+  {
+   "query": "Отамдан қолган ҳовли ҳали ҳам унинг номида турибди, энди уни менга қандай расмийлаштирса бўлади?",
+   "style": "cyrillic",
+   "gold": "212: Merosga o'tgan uyni o'z nomiga qanday o'tkaziladi?",
+   "pred": "170: Vasiylik yoki homiylik qanday rasmiylashtiriladi?",
+   "rank": null
+  },
+  {
+   "query": "Как зарегистрировать право собственности на квартиру?",
+   "style": "russian",
+   "gold": "48: Uy-joyga (ko'chmas mulkka) bo'lgan huquqni davlat ro'yxatidan qanday o'tkaziladi?",
+   "pred": "107: Bino yoki xonadonni ijaraga berish shartnomasini ro'yxatdan o'tkazish kerakmi?",
+   "rank": null
+  },
+  {
+   "query": "2019-yilda uy sotib olganman, oldi-sotdi shartnomasi notariusda tuzilgan edi. Ko'chib yurganimizda o'sha shartnoma yo'qolib qoldi. Uni qayta tiklab olsam bo'ladimi?",
+   "style": "long",
+   "gold": "46: Notarial hujjat yo'qolsa nusxasi (dublikat) qanday olinadi?",
+   "pred": "499: Uy sotilgach kommunal shartnomalar yangi egaga o'tadimi?",
+   "rank": null
+  },
+  {
+   "query": "prava testida nechta xato qilsa yiqilad",
+   "style": "typo",
+   "gold": "113: Nazariy imtihonda nechta savolga to'g'ri javob berish kerak?",
+   "pred": "314: Yo'l qoidasi buzilganda haydovchilik guvohnomasi olib qo'yiladimi?",
+   "rank": null
+  },
+  {
+   "query": "mashinani ukamga sovga qilmoqchiman, notariusda nima qilinadi",
+   "style": "no_apostrophe",
+   "gold": "500: Transport vositasini sovg'a (hadya) qilish qanday rasmiylashtiriladi?",
+   "pred": "306: Notarius kasal yoki keksa shaxsga uyga chiqib xizmat ko'rsatadimi?",
+   "rank": null
+  },
+  {
+   "query": "Как оформить ОСАГО на машину?",
+   "style": "russian",
+   "gold": "315: Majburiy avtosug'urta (fuqarolik javobgarligi) qanday rasmiylashtiriladi?",
+   "pred": "53: Avtomobil oldi-sotdi shartnomasini rasmiylashtirish tartibi qanday?",
+   "rank": 3
+  },
+  {
+   "query": "Uy solig'i bo'yicha xabarnoma keldi, summasi qanday hisoblanganini tushunmadim",
+   "style": "colloquial",
+   "gold": "117: Mol-mulk (uy, yer) solig'i qanday hisoblanadi va to'lanadi?",
+   "pred": "411: Uy-joyni sovg'a (hadya) qilishda soliq yoki boj bormi?",
+   "rank": 3
+  },
+  {
+   "query": "instagramda kiyim sotaman, soliq to'lashim shartmi",
+   "style": "colloquial",
+   "gold": "221: Onlayn (marketpleys orqali) savdo qiluvchi soliqni qanday to'laydi?",
+   "pred": "56: Yakka tartibdagi tadbirkor (YaTT) soliqlarni qanday to'laydi?",
+   "rank": 4
+  },
+  {
+   "query": "firma ochish boji qancha",
+   "style": "keywords",
+   "gold": "60: Biznesni ro'yxatdan o'tkazish qancha vaqt va boj oladi?",
+   "pred": "326: Chet el investori O'zbekistonda firma ocha oladimi?",
+   "rank": null
+  },
+  {
+   "query": "my.soliq ga kirolmayapmn, eri kaliti yoq faqat id karta bor shunga krsa boladimi",
+   "style": "typo",
+   "gold": "223: Soliq to'lovchining shaxsiy kabinetiga qanday kiriladi?",
+   "pred": "184: ID-karta sinsa yoki buzilib qolsa nima qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "tug'ruq ta'tili puli",
+   "style": "keywords",
+   "gold": "232: Homiladorlik va tug'ruq ta'tili qanday rasmiylashtiriladi?",
+   "pred": "243: Tug'ruqxonani tanlash mumkinmi?",
+   "rank": 2
+  },
+  {
+   "query": "nogironlik guruhi olish uchun komissiya",
+   "style": "keywords",
+   "gold": "237: Nogironlik guruhini qanday rasmiylashtiriladi?",
+   "pred": "405: Nogironlik guruhini tasdiqlovchi ma'lumotnoma qayerdan olinadi?",
+   "rank": 2
+  },
+  {
+   "query": "ishsizlik nafaqasi olish uchun qayrga borish kerak",
+   "style": "typo",
+   "gold": "68: Ishsizlik holatida qanday yordam olish mumkin?",
+   "pred": "25: Nafaqa (pensiya) tayinlash uchun qayerga murojaat qilinadi?",
+   "rank": 3
+  },
+  {
+   "query": "da'vo muddati o'tib ketsa",
+   "style": "keywords",
+   "gold": "466: Da'vo muddati (iskovaya davnost) nima?",
+   "pred": "195: Vaqtincha ro'yxatga olish muddati tugasa nima qilinadi?",
+   "rank": 5
+  },
+  {
+   "query": "menga notogri jarima yozishgan, bekor qildirsa boladimi",
+   "style": "no_apostrophe",
+   "gold": "156: Ma'muriy jarimaga qanday e'tiroz bildiriladi?",
+   "pred": "94: Xorijga chiqishga qo'yilgan taqiqni qanday tekshirish va bekor qilish mumkin?",
+   "rank": null
+  },
+  {
+   "query": "Что будет, если уклоняться от призыва в армию?",
+   "style": "russian",
+   "gold": "353: Harbiy majburiyatni bajarmaslik uchun javobgarlik qanday?",
+   "pred": "167: Davlat xizmati rad etilsa nima qilinadi?",
+   "rank": 4
+  },
+  {
+   "query": "Qo'shnim 2 yil oldin 15 million so'm qarz olgan, tilxati bor. Qaytarmayapti, telefonni ham ko'tarmaydi. Sudga bersam, qancha boj to'lashim kerak bo'ladi?",
+   "style": "long",
+   "gold": "261: Sud xarajatlari (davlat boji) qanday belgilanadi?",
+   "pred": "161: Xizmat uchun to'langan boj qaytariladimi?",
+   "rank": null
+  },
+  {
+   "query": "Chiqindi mashinasi 2 haftadan beri kelmayapti, kimga shikoyat qilsam bo'ladi?",
+   "style": "colloquial",
+   "gold": "260: Chiqindini olib chiqish (maishiy chiqindi) xizmatidan norozi bo'lsam qayerga?",
+   "pred": "369: Yo'qolgan yoki shikastlangan pochta jo'natmasi bo'yicha shikoyat qayerga?",
+   "rank": 2
+  },
+  {
+   "query": "svet bilan gaz pulini telefondan tolasa boladimi qaysi ilovda",
+   "style": "typo",
+   "gold": "149: Kommunal to'lovlarni qanday onlayn to'lash mumkin?",
+   "pred": "151: Elektr, gaz yoki suv uzilishida qayerga qo'ng'iroq qilinadi?",
+   "rank": null
+  },
+  {
+   "query": "Уйни сотдим, газ ва свет ҳисобини янги эгасига қандай ўтказамиз?",
+   "style": "cyrillic",
+   "gold": "499: Uy sotilgach kommunal shartnomalar yangi egaga o'tadimi?",
+   "pred": "258: Uyni gazlashtirish (yangi ulanish) qanday rasmiylashtiriladi?",
+   "rank": 2
+  },
+  {
+   "query": "Биз Германияда турмуш қурганмиз, ўша ердаги никоҳ ҳужжатимиз бу ерда ўтадими?",
+   "style": "cyrillic",
+   "gold": "267: Chet elda ro'yxatga olingan nikohni O'zbekistonda tan oldirish kerakmi?",
+   "pred": "38: Chet el fuqarosi bilan nikoh qanday qayd etiladi?",
+   "rank": null
+  },
+  {
+   "query": "my.gov.uz ga qanday kiraman, menda ERI yo'q",
+   "style": "colloquial",
+   "gold": "72: my.gov.uz portaliga qanday ro'yxatdan o'tiladi yoki kiriladi?",
+   "pred": "503: Elektron raqamli imzo (ERI) kalitini yo'qotsam nima qilaman?",
+   "rank": 3
+  },
+  {
+   "query": "telegramda birov aldab pulimni oldi, qayerga yozsam bo'ladi",
+   "style": "colloquial",
+   "gold": "173: Onlayn firibgarlik (kiber jinoyat)ni qayerga xabar qilinadi?",
+   "pred": "378: Yo'qolgan yoki o'g'irlangan telefon (IMEI) bo'yicha qayerga murojaat?",
+   "rank": null
+  },
+  {
+   "query": "elektron imzo olish",
+   "style": "keywords",
+   "gold": "73: Elektron raqamli imzo (ERI) qanday olinadi?",
+   "pred": "375: Elektron imzo bilan hujjatni qanday imzolayman?",
+   "rank": 2
+  },
+  {
+   "query": "Электрон справкадаги QR кодни қандай текширса бўлади, ҳақиқийлигини билмоқчиман",
+   "style": "cyrillic",
+   "gold": "274: Elektron hujjatning (PDF) haqiqiyligini qanday tekshiriladi?",
+   "pred": "426: Kassa cheki (QR-kod) haqiqiyligini qanday tekshiriladi?",
+   "rank": 2
+  },
+  {
+   "query": "Как узнать статус моей заявки на my.gov.uz?",
+   "style": "russian",
+   "gold": "75: Ariza (davlat xizmati) holatini qanday kuzatish mumkin?",
+   "pred": "72: my.gov.uz portaliga qanday ro'yxatdan o'tiladi yoki kiriladi?",
+   "rank": 2
+  }
+ ],
+ "config": {
+  "rerank": false,
+  "gray_t": 0.8,
+  "gray_m": 0.1,
+  "rerank_top": 3,
+  "rerank_chars": 300
+ },
+ "rerank_share": 0.0,
+ "threshold_table": [
+  {
+   "t": 0.005,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.01,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.02,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.05,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.1,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.2,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.3,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.4,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 1.0
+  },
+  {
+   "t": 0.5,
+   "precision": 0.8097560975609757,
+   "answered_ok": 0.8097560975609757,
+   "neg_above": 0.8089887640449438
+  },
+  {
+   "t": 0.6,
+   "precision": 0.812807881773399,
+   "answered_ok": 0.8048780487804879,
+   "neg_above": 0.42696629213483145
+  },
+  {
+   "t": 0.65,
+   "precision": 0.8153846153846154,
+   "answered_ok": 0.775609756097561,
+   "neg_above": 0.19101123595505617
+  },
+  {
+   "t": 0.7,
+   "precision": 0.8470588235294118,
+   "answered_ok": 0.7024390243902439,
+   "neg_above": 0.11235955056179775
+  },
+  {
+   "t": 0.8,
+   "precision": 0.9452054794520548,
+   "answered_ok": 0.33658536585365856,
+   "neg_above": 0.011235955056179775
+  },
+  {
+   "t": 0.81,
+   "precision": 0.953125,
+   "answered_ok": 0.2975609756097561,
+   "neg_above": 0.011235955056179775
+  },
+  {
+   "t": 0.9,
+   "precision": 1.0,
+   "answered_ok": 0.07317073170731707,
+   "neg_above": 0.0
+  }
+ ],
+ "thresholds": {
+  "answer": 0.81,
+  "suggest": 0.65,
+  "scale": "stage1"
+ },
+ "final": {
+  "real": {
+   "answered_ok": 61,
+   "unsure_ok": 113,
+   "answered_wrong": 3,
+   "unsure_wrong": 18,
+   "not_found": 10
+  },
+  "negatives": {
+   "not_found": 76,
+   "answered_wrong": 1,
+   "unsure_wrong": 16,
+   "smalltalk": 7
+  }
+ },
+ "neg_errors": [
+  {
+   "query": "Ovchilik guvohnomasini qayerdan olsam bo'ladi?",
+   "pred": "Tug'ilganlik guvohnomasi qanday olinadi?"
+  }
+ ],
+ "latency_ms": {
+  "median": 586,
+  "p90": 851,
+  "mean": 633
+ },
+ "holdout": {
+  "n": 505,
+  "hit@1": 0.996039603960396,
+  "hit@3": 1.0,
+  "mrr": 0.998019801980198
+ }
+}

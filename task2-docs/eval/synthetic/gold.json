@@ -1,0 +1,79 @@
+{
+ "buyruq_245": {
+  "requisites": {
+   "sender": "O'zbekiston Respublikasi Adliya vazirligi huzuridagi huquqiy axborot markazi",
+   "number": "245",
+   "date": "2026-10-03",
+   "signatory": "F. Rahimova"
+  },
+  "tasks": [
+   {
+    "text": "Moliya bo'limi boshlig'i portal yangilanishi uchun zarur xarajatlar smetasini 2026 yil 15 noyabrgacha tayyorlasin.",
+    "executors": [
+     "Moliya bo'limi boshlig'i"
+    ],
+    "deadline": {
+     "text": "2026 yil 15 noyabrgacha",
+     "type": "sana",
+     "date": "2026-11-15"
+    }
+   },
+   {
+    "text": "Yangi qidiruv tizimi Axborot texnologiyalari boshqarmasi tomonidan 2026-yil 1-dekabrga qadar sinovdan o'tkazilsin.",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 1-dekabrga qadar",
+     "type": "sana",
+     "date": "2026-12-01"
+    }
+   },
+   {
+    "text": "Ishchi guruh a'zolari portal foydalanuvchilari murojaatlarini har haftada tahlil qilib borsin.",
+    "executors": [
+     "Ishchi guruh a'zolari"
+    ],
+    "deadline": {
+     "text": "har haftada",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Portal ma'lumotlar bazasining zaxira nusxasini olish",
+    "executors": [
+     "Ma'lumotlar bazasi bo'limi"
+    ],
+    "deadline": {
+     "text": "har kuni",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Foydalanuvchilar uchun video qo'llanma tayyorlash",
+    "executors": [
+     "Matbuot xizmati",
+     "Dizayn sektori"
+    ],
+    "deadline": {
+     "text": "20.12.2026",
+     "type": "sana",
+     "date": "2026-12-20"
+    }
+   },
+   {
+    "text": "Yangilangan portalni rasmiy ishga tushirish",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "deadline": {
+     "text": "sinov yakunlangandan so'ng 10 kun ichida",
+     "type": "shartli",
+     "date": null
+    }
+   }
+  ]
+ }
+}

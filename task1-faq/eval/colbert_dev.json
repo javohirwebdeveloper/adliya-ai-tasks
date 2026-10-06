@@ -1,0 +1,33 @@
+{
+ "results": {
+  "dense": {
+   "hit@1": 0.8,
+   "hit@3": 0.8976
+  },
+  "dense+sparse": {
+   "hit@1": 0.8146,
+   "hit@3": 0.9073
+  },
+  "colbert": {
+   "hit@1": 0.761,
+   "hit@3": 0.878
+  },
+  "dense+colbert": {
+   "hit@1": 0.7854,
+   "hit@3": 0.9073
+  },
+  "dense+sparse+colbert (0.4/0.2/0.4)": {
+   "hit@1": 0.8,
+   "hit@3": 0.9122
+  },
+  "dense+sparse+colbert (1/0.3/1)": {
+   "hit@1": 0.8098,
+   "hit@3": 0.9122
+  },
+  "dense+sparse+colbert (1/0.3/0.5)": {
+   "hit@1": 0.8195,
+   "hit@3": 0.9122
+  }
+ },
+ "query_encode_s": 0.67
+}

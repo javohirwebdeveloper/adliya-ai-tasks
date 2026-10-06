@@ -1,0 +1,206 @@
+id,query,answer_id,alt_answer_ids,style
+1,"Pasportimni yangi ID kartaga almashtirmoqchiman, qayerga borib nima qilaman?",1,,colloquial
+2,"ID karta qildiraman deb DXMga bormoqchiman, o'zim bilan nimalarni olib boray?",2,,colloquial
+3,"yangi ID kartamda tug'ilgan sanam xato chiqibdi, xatoni punktdagilar qilgan. Endi yana pul to'laymanmi",4,382,colloquial
+4,"Bozorda sumkamni o'g'irlatib qo'ydim, ichida ID kartam bor edi. Endi nima qilay?",387,33;165,colloquial
+5,"O'g'lim 16 yoshga to'ldi, birinchi marta pasport olamiz, nimalar kerak bo'ladi?",35,2,colloquial
+6,"ID kartada millatim yozilmagan ekan, bu xato emasmi?",82,183,colloquial
+7,"onam yotib qolgan, yurolmaydi. Unga ID kartani qanday qilib qildiramiz",385,276,colloquial
+8,"Qizimni uzatyapmiz, ZAGSda nikohdan o'tishlari uchun nimalarni olib borishlari kerak?",7,,colloquial
+9,"Opam eri bilan kelishib ajrashmoqchi, bolalari yo'q. Sudga bormasdan ZAGSning o'zida ajrashsa bo'ladimi?",12,13,colloquial
+10,"Nikohga ariza berdik, lekin to'yimiz 2 haftadan keyin. Bir oy kutmasdan tezroq qayd qildirsa bo'ladimi?",90,7,colloquial
+11,"yangi uy oldik, propiskani yangi uyga qanday o'tkazamiz",196,18;398,colloquial
+12,"Kvartira egasi propiska qilib berishga ko'nmayapti, nima qilsam bo'ladi?",295,357,colloquial
+13,"Uyimga Turkiyadan do'stim mehmon bo'lib keladi, uni ro'yxatdan o'tkazishim kerakmi?",200,41,colloquial
+14,"Aliment qarzim uchun chegaradan chiqarishmadi. Qarzni to'ladim, taqiqni qanday olib tashlatsam bo'ladi?",94,169,colloquial
+15,"ikki yoshli bolaga ID karta qildirsak, necha yilga beriladi",5,83,colloquial
+16,"Pasportimda familiyamning bitta harfi xato ketgan, to'g'rilatish uchun qayerga boraman?",284,382;4,colloquial
+17,"ZAGS nikohimizni ro'yxatga olishni rad etdi, endi qayerga shikoyat qilsam bo'ladi?",394,167;490,colloquial
+18,"Tug'ruqxonadan chiqdik, chaqaloqning guvohnomasini qayerdan olamiz?",10,,colloquial
+19,"ismimni o'zgartirmoqchiman, 20 yoshdaman, ota-onamning roziligi kerakmi",174,15,colloquial
+20,id karta almashtirish narxi,1,,keywords
+21,jshshir nima uchun kerak,34,,keywords
+22,nikoh yoshi qizlar uchun,8,,keywords
+23,sudlanmaganlik spravkasi olish,20,,keywords
+24,chet elga chiqishga taqiq bormi tekshirish,381,94,keywords
+25,yo'qolgan tug'ilganlik guvohnomasi dublikat,16,21,keywords
+26,pasportm yoqolib qoldi nma qilishim kere,33,165,typo
+27,"id kartaga hujjat topshirdim, qacon tayyor boladi? nechchi kun kutish kere",3,1,typo
+28,chaqaloqga jshshir qachon berilad,495,,typo
+29,egizaklar tugilsa ikkalasigaham alohida guvohnma beriladimi,190,,typo
+30,vaqtinchalik propiskani muddati tugab qopti nima qilamn,195,,typo
+31,"boshqa tumanga kochib otdim, ID kartani almashtirishim shartmi",86,497,no_apostrophe
+32,bolaga ism qo`yishda taqiqlangan ismlar bormi,39,,no_apostrophe
+33,"erim bilan ajrashdik, endi oz familiyamga qaytmoqchiman, buni qayerda rasmiylashtiraman",288,15,no_apostrophe
+34,"tugilganlik guvohnomasidagi sana notogri yozilgan, togrilatsa boladimi",392,89,no_apostrophe
+35,bolani onasining propiskasiga qoyish uchun otasining roziligi kerakmi,395,197,no_apostrophe
+36,"ish haqi togrisida malumotnoma kerak, kimdan olinadi",201,203,no_apostrophe
+37,Загран паспортни қаерда қилдирса бўлади?,6,,cyrillic
+38,Отам касалхонада вафот этди. Ўлимни ЗАГСда қайд қилдириш учун нималарни олиб боришимиз керак?,88,14,cyrillic
+39,Боламга фамилияни бобосининг исмидан қўйсак бўладими?,92,390,cyrillic
+40,"Менда ID карта бор, загран паспорт ҳам қилдирсам, иккаласи бирга амал қиладими?",383,85,cyrillic
+41,"Уй сотиб олдим, лекин унда ҳали ҳам эски эгаларнинг оиласи пропискада турибди. Нима қилиш керак?",396,,cyrillic
+42,"Пенсиям учун тириклик ҳақида справка сўрашяпти, уни қаерда қилдираман?",302,,cyrillic
+43,Нужно ли менять ID-карту после смены фамилии при замужестве?,84,,russian
+44,Как восстановить утерянное свидетельство о браке?,36,16;21,russian
+45,Как выйти из гражданства Узбекистана?,96,,russian
+46,Где взять справку о составе семьи?,159,404;374,russian
+47,"Men 5 yildan beri Koreyada ishlayman, ID kartamning muddati tugab qolyapti. Hozir O'zbekistonga borishga imkonim yo'q. Shu yerdan turib almashtirsam bo'ladimi?",87,386,long
+48,"Biz faqat nikoh o'qitganmiz, ZAGSda ro'yxatdan o'tmaganmiz. Yaqinda o'g'limiz tug'ildi, turmush o'rtog'im otalikni rasman tan olmoqchi. Buni qanday rasmiylashtirsak bo'ladi?",37,,long
+49,"Men Qozog'iston fuqarosiman, o'zbek yigitiga turmushga chiqqanman va 3 yildan beri Toshkentda yashayman. Doimiy yashash guvohnomasini olmoqchiman. Qayerga murojaat qilishim kerak?",42,,long
+50,"Bolam bilan Turkiyaga dam olishga ketmoqchiman. Uning otasi bilan ajrashganmiz, aloqamiz ham yo'q. Bolani olib chiqish uchun otasining ruxsati kerakmi?",97,,long
+51,"Otam vafot etganiga 2 oy bo'ldi, notarius meros guvohnomasini hozir beradimi yoki kutish kerakmi?",43,,colloquial
+52,"Toshkentdagi ishlarimni ukam yuritishi uchun unga ishonch qog'ozi yozib bermoqchiman, buni qayerda tasdiqlataman?",45,,colloquial
+53,"Uyimni o'g'limning nomiga sovg'a qilib o'tkazmoqchiman, notariusda nima qilinadi?",100,411,colloquial
+54,"bir uyga 4 ta merosxo'rmiz, kimga qancha ulush tegishini kim hal qiladi",308,,colloquial
+55,"Uy olmoqchiman, sotuvchi hujjatlari joyida deydi. Aldanib qolmaslik uchun nimalarni tekshiray?",176,49,colloquial
+56,"Kreditni yopdim, lekin uy hali ham bankda garovda turibdi. Garovni qanday olib tashlatsam bo'ladi?",313,51,colloquial
+57,"Notarius hujjatimni tasdiqlashdan bosh tortdi, sababini ham aytmadi. Endi nima qilay?",410,47,colloquial
+58,ijaraga beradigan kvartiramning shartnomasini qayergadir ro'yxatdan o'tkazish shartmi,107,,colloquial
+59,kadastr ko'chirmasi onlayn,49,,keywords
+60,vasiyatnoma yozish notarius,99,,keywords
+61,meros uchun kerakli hujjatlar,44,,keywords
+62,"otamdan qolgan uydagi ulushimni akamga qoldirib, merostan voz kechmoqchiman, nma qilish kere",102,,typo
+63,notarusda bitta hujjat tasdiqlatish necha pul turadi,205,,typo
+64,"uy hujjatlarim qolmagan, kadastr nomerini internetdan topsa boladimi",210,,no_apostrophe
+65,"qoshni devorini bizning hovli tomonga 1 metr surib qurdi, chegarani kim aniqlab beradi",413,,no_apostrophe
+66,"Отамдан қолган ҳовли ҳали ҳам унинг номида турибди, энди уни менга қандай расмийлаштирса бўлади?",212,,cyrillic
+67,"Нотариус уйга келиб хизмат кўрсатадими? Бувим касал, ётиб қолган",306,,cyrillic
+68,Уй уч ака-укага тегишли. Сотиш учун ҳаммамизнинг розилигимиз шартми?,406,,cyrillic
+69,Как зарегистрировать право собственности на квартиру?,48,,russian
+70,Можно ли заверить расписку о долге у нотариуса?,304,,russian
+71,"2019-yilda uy sotib olganman, oldi-sotdi shartnomasi notariusda tuzilgan edi. Ko'chib yurganimizda o'sha shartnoma yo'qolib qoldi. Uni qayta tiklab olsam bo'ladimi?",46,209,long
+72,Uyimga qo'shimcha xona qurib kengaytirmoqchiman. Qo'shnilar ruxsat olmasang keyin muammo bo'ladi deyishyapti. Rekonstruksiya uchun ruxsatni qayerdan olaman?,105,,long
+73,"Prava olmoqchiman, avtomaktabni bitirdim, endi nima qilishim kerak?",23,112,colloquial
+74,"Pravamning muddati tugab qoldi, qayerda almashtiraman?",54,,colloquial
+75,"Mashina oldim, tex pasportni o'z nomimga qanday o'tkazaman?",24,53,colloquial
+76,nechchi yoshdan prava olsa bo'ladi? O'g'lim 17 da,110,,colloquial
+77,Skuter haydash uchun ham prava kerakmi endi?,111,110,colloquial
+78,Mashinani sotib olishdan oldin u kreditda yoki arestda emasligini qanday bilsam bo'ladi?,217,,colloquial
+79,"B toifam bor, endi yuk mashinasi uchun C toifani ochmoqchiman, nima qilish kerak?",219,,colloquial
+80,gai shtraf tekshirish,115,,keywords
+81,avtoraqam yo'qoldi,318,55,keywords
+82,prava testida nechta xato qilsa yiqilad,113,,typo
+83,"eski mashinamni utilizatsiyaga topshrmoqchiman, uchyotdan chiqarish kerakmi",177,,typo
+84,chet el pravasini o`zbekiston pravasiga almashtirsa bo`ladimi,114,366,no_apostrophe
+85,"mashinani ukamga sovga qilmoqchiman, notariusda nima qilinadi",500,,no_apostrophe
+86,"Янги права олсам, неча йилдан кейин алмаштиришим керак бўлади?",109,,cyrillic
+87,"Машинам билан Қозоғистонга бормоқчиман, чегарадан ўтказиш учун қандай ҳужжатлар керак?",422,,cyrillic
+88,Как оформить ОСАГО на машину?,315,,russian
+89,"Germaniyadan mashina olib keldim, bojxonadan o'tkazdim. Endi uni O'zbekistonda ro'yxatdan o'tkazib, nomer olishim kerak. Qayerga borishim kerak?",218,24;55,long
+90,"yaTT ochmoqchiman, buning uchun soliqqa borishim kerakmi yoki onlayn qilsa bo'ladimi",120,,colloquial
+91,Soliqdan qarzim bor-yo'qligini qayerdan ko'rsam bo'ladi?,57,303,colloquial
+92,"Uy solig'i bo'yicha xabarnoma keldi, summasi qanday hisoblanganini tushunmadim",117,,colloquial
+93,"Kvartiramni ijaraga berganman, ijaradan keladigan pulga soliq to'lashim kerakmi?",222,358,colloquial
+94,"instagramda kiyim sotaman, soliq to'lashim shartmi",221,,colloquial
+95,"Do'stim bilan MChJ ochmoqchimiz, qayerda ro'yxatdan o'tamiz?",59,,colloquial
+96,"Yangi firmamizga nom tanladik, ro'yxatdan o'tishdan oldin uni boshqalar olib qo'ymasligi uchun nima qilsak bo'ladi?",61,,colloquial
+97,"Choraklik hisobotni topshirishni unutib qo'yibman, soliqdan penya yoki jarima keladimi?",323,,colloquial
+98,oylikdan soliq foizi,505,,keywords
+99,inn raqami nima,58,,keywords
+100,firma ochish boji qancha,60,,keywords
+101,chekdagi qr kodni tekshirish,426,,keywords
+102,"my.soliq ga kirolmayapmn, eri kaliti yoq faqat id karta bor shunga krsa boladimi",223,,typo
+103,yatt faliyatini vaqtincha toxtatsa boladimi,319,,typo
+104,"chet eldan oglim pul jonatib turadi, unga soliq tolanadimi",320,,no_apostrophe
+105,"firmamizni butunlay yopmoqchimiz, buning uchun nima qilish togri boladi",122,,no_apostrophe
+106,"Онлайн касса олдим, уни солиқда рўйхатдан ўтказиш керакми?",230,,cyrillic
+107,"Офисимиз бошқа жойга кўчди, фирманинг юридик манзилини қандай алмаштирамиз?",226,,cyrillic
+108,Как зарегистрировать товарный знак?,431,,russian
+109,"Men 2023-yilda Dubayda ishlab, u yerda yaxshigina pul topdim. Hozir O'zbekistonga butunlay qaytdim. Chet elda topgan daromadimni deklaratsiya qilishim kerakmi?",424,,long
+110,"ish beruvchi 3 oydan beri oylik bermayapti, qayerga arz qilsam bo'ladi",126,,colloquial
+111,"Yangi ishga kiryapman, trudovoy knijka so'rashmayapti. Endi qog'oz daftarcha umuman yo'qmi?",125,,colloquial
+112,"Erkaklar nechchi yoshda pensiyaga chiqadi, staj qancha bo'lishi kerak?",128,,colloquial
+113,"Onam 55 yoshga to'ldi, pensiya uchun ariza yozish kerakmi yoki o'zi tayinlanadimi?",129,,colloquial
+114,"dadam vafot etdi, ukam 12 yoshda. Unga pensiya beriladimi",132,,colloquial
+115,"Ishdan ketyapman, ishlatmagan otpuskam uchun pul berishadimi?",329,124,colloquial
+116,"Ishdan o'z xohishim bilan ketmoqchiman, necha kun oldin aytishim kerak?",435,,colloquial
+117,"Homiladorman, ishxonada og'ir ishga qo'yishyapti. Menga imtiyoz yo'qmi?",438,,colloquial
+118,tug'ruq ta'tili puli,232,,keywords
+119,bandlik markazi ro'yxatdan o'tish hujjatlari,501,68,keywords
+120,nogironlik guruhi olish uchun komissiya,237,66;131,keywords
+121,bolnichnida yotsam oyligimni qanchasni to'lashadi,234,336,typo
+122,ishsizlik nafaqasi olish uchun qayrga borish kerak,68,179;501,typo
+123,"5 ta farzandim bor, davlatdan biror nafaqa olsa boladimi",440,135;67;26,no_apostrophe
+124,"pensiyam notogri hisoblangan, kamroq kelyapti, qayerga shikoyat qilay",338,,no_apostrophe
+125,Ишга кираётганда қандай ҳужжатлар сўрашади?,333,,cyrillic
+126,Ногиронлик аравачасини давлат бепул берадими?,238,,cyrillic
+127,"Бувим картадан пул ечишни билмайди, пенсиясини қўлга нақд олса бўладими?",133,368,cyrillic
+128,Сколько длится испытательный срок при приёме на работу?,331,,russian
+129,"Подскажите, куда жаловаться, если незаконно уволили с работы?",235,127,russian
+130,"Men 58 yoshdaman, ishlagan korxonamda qisqartirish bo'lib ishsiz qoldim. Stajim 27 yil. Pensiyaga muddatidan oldin chiqsam bo'ladimi?",134,,long
+131,"Onam yolg'iz yashaydi, 78 yoshda, endi o'zini o'zi eplay olmay qoldi. Biz boshqa shaharda turamiz. Davlat tomonidan uyga kelib qaraydigan yordam bormi?",239,,long
+132,"boshqa poliklinikaga o'tmoqchiman, uyimga yaqinrog'iga. Qanday qilib o'tsam bo'ladi",27,,colloquial
+133,Bolamni 1-sinfga yozdirish qachon boshlanadi va qayerda yoziladi?,140,70,colloquial
+134,"Bog'cha navbatimiz qayerda turibdi, qanday bilsam bo'ladi?",247,70,colloquial
+135,"Attestatimni yo'qotib qo'ydim, yangisini olsam bo'ladimi?",142,345,colloquial
+136,"kontrakt pulini bir yo'la to'lay olmayman, bo'lib to'lasa bo'ladimi",348,,colloquial
+137,Rossiyada olgan diplomimni bu yerda tan oldirish uchun nima qilishim kerak?,71,,colloquial
+138,"Shifokor noto'g'ri davolab, onamning ahvoli yomonlashdi. Qayerga shikoyat qilsam bo'ladi?",344,69,colloquial
+139,"Kasalligim sabab bir yil o'qishdan dam olib, keyin davom ettirmoqchiman. Institutda bunga ruxsat berishadimi?",453,,colloquial
+140,bepul dorilar ro'yxati,244,139,keywords
+141,sanatoriy putyovka olish,245,,keywords
+142,boshqa univerga perevod qlish mumkinmi,251,,typo
+143,bolalrni emlash jadvalini qayerdan bilsa boladi,138,448,typo
+144,"tugishimga 1 oy qoldi, tugruqxonani ozim tanlasam boladimi yoki biriktirilganiga borish shartmi",243,,no_apostrophe
+145,"talabalar yotoqxonasiga joy olish uchun nima qilish kerak, oqishga kirdim",143,,no_apostrophe
+146,"Қон топширмоқчиман, донор бўлиш учун нима керак?",343,,cyrillic
+147,"Тез ёрдамга қўнғироқ қилсам, улар мендан нималарни сўрашади?",445,,cyrillic
+148,Как перевести ребёнка в другую школу?,141,,russian
+149,"Oilamiz bilan 4 yil Turkiyada yashab, endi qaytib keldik. O'g'lim u yerda 3-sinfni tugatgan. Uni bu yerdagi maktabga qanday joylashtirsak bo'ladi?",452,,long
+150,armiyaga necha yoshdan chaqirishadi,145,,colloquial
+151,"Universitetda o'qiyman, armiyadan otsrochka olsam bo'ladimi?",146,252;350,colloquial
+152,"Sudga borib yurmasdan, da'vo arizasini onlayn yuborsa bo'ladimi?",153,,colloquial
+153,"Sud qaroriga rozi emasman, qancha vaqt ichida shikoyat qilsam bo'ladi?",262,,colloquial
+154,"bolamning otasi aliment to'lamayapti, qanday undirsam bo'ladi",168,,colloquial
+155,"Yangi telefon sotib oldim, 3 kunda buzildi, do'kon almashtirib bermayapti. Qayerga murojaat qilay?",157,,colloquial
+156,"Advokat yollashga pulim yo'q, davlat bepul advokat beradimi?",154,,colloquial
+157,"Sud qarori chiqdi, lekin qarzdor baribir pul bermayapti. Endi kim majburlab undiradi?",155,265,colloquial
+158,ispolnitelniy list olish,265,,keywords
+159,da'vo muddati o'tib ketsa,466,,keywords
+160,sud majlisi qachonligini qayerdan bilamn,360,,typo
+161,"menga notogri jarima yozishgan, bekor qildirsa boladimi",156,264,no_apostrophe
+162,"sog`ligim yomon, harbiy xizmatga yaroqsiz deb topishlari uchun nima qilish kerak",253,455,no_apostrophe
+163,"Ишим бўйича чиққан ҳал қилув қарорининг копияси керак, кимдан сўрайман?",362,,cyrillic
+164,"Медиация нима ўзи, судга бормасдан келишса бўладими?",468,,cyrillic
+165,"Что будет, если уклоняться от призыва в армию?",353,,russian
+166,"Qo'shnim 2 yil oldin 15 million so'm qarz olgan, tilxati bor. Qaytarmayapti, telefonni ham ko'tarmaydi. Sudga bersam, qancha boj to'lashim kerak bo'ladi?",261,,long
+167,gaz pulidan qancha qarzim borligini qanday bilsam bo'ladi,256,,colloquial
+168,"Svet o'chib qoldi, butun ko'cha qorong'i. Qayerga qo'ng'iroq qilsam bo'ladi?",151,,colloquial
+169,"Hovlimga gaz kiritmoqchiman, yangi ulanish uchun qayerga ariza beraman?",258,,colloquial
+170,"Chiqindi mashinasi 2 haftadan beri kelmayapti, kimga shikoyat qilsam bo'ladi?",260,,colloquial
+171,"diplomimga apostil qo'ydirib chet elga o'qishga ketmoqchiman, qayerda qilinadi",266,249;63,colloquial
+172,"Chet elda rasmiy ishlamoqchiman, firibgarlarga tushib qolmaslik uchun qayerga murojaat qilsam bo'ladi?",65,,colloquial
+173,"Yuqori qavatdan suv toshib uyimni buzdi, zararni kim to'laydi?",356,,colloquial
+174,"Elektr hisobimiz noto'g'ri, ishlatganimizdan ko'p hisoblashgan, qayerga borsak bo'ladi?",462,79,colloquial
+175,pochta trek kod kuzatish,80,,keywords
+176,sudlanmaganlik spravkasiga apostil,364,63,keywords
+177,chetdan kelgn posilkaga boj tolash kerakmi,270,,typo
+178,svet bilan gaz pulini telefondan tolasa boladimi qaysi ilovda,149,,typo
+179,ko‘p qavatli uyning kapital ta’miri kimning pulidan qilinadi,460,,no_apostrophe
+180,"Уйни сотдим, газ ва свет ҳисобини янги эгасига қандай ўтказамиз?",499,,cyrillic
+181,"Биз Германияда турмуш қурганмиз, ўша ердаги никоҳ ҳужжатимиз бу ерда ўтадими?",267,268,cyrillic
+182,"Подскажите, где можно поставить апостиль на документы?",63,,russian
+183,"Akam Rossiyada ishlab yurgan paytida vafot etdi. Jasadini olib keldik, u yerda o'lim haqida hujjat berishgan. Endi bu hujjatni O'zbekistonda qanday tan oldiramiz?",471,268,long
+184,"my.gov.uz ga qanday kiraman, menda ERI yo'q",72,29,colloquial
+185,"my.gov paroli esimdan chiqdi, qanday tiklayman?",272,,colloquial
+186,"Hozir bitta BHM necha pul? Kimdir 375 ming deydi, kimdir 412",32,,colloquial
+187,"Bank kartamdan bilmagan holda pul yechib olishibdi, nima qilishim kerak?",172,173,colloquial
+188,"telegramda birov aldab pulimni oldi, qayerga yozsam bo'ladi",173,172,colloquial
+189,"Hokimiyatga ariza yozganimga bir oy bo'ldi, javob yo'q. Endi qayerga boray?",278,81;31,colloquial
+190,"Davlat xizmatini rad etishdi, sababini ham aytishmadi. Bu qonuniymi?",490,167,colloquial
+191,"14 yoshli qizimga bank karta ochib bermoqchiman, qanday qilinadi?",380,494,colloquial
+192,"my.gov dagi shaxsiy kabinetimda eski telefon raqamim turibdi, yangisiga qanday almashtiraman?",485,478,colloquial
+193,favqulodda raqamlar,164,,keywords
+194,elektron imzo olish,73,,keywords
+195,eng yaqin dxmni xaritadan qanqa topsa boladi,479,30,typo
+196,mygov ilovasini qayerdan yuklab olamn,488,,typo
+197,"bojni click orqali to`ladim, endi qog`oz kvitansiyani ham olib borishim kerakmi",74,,no_apostrophe
+198,"arizani xato toldirib yuboribman, togrilasa boladimi",482,,no_apostrophe
+199,Коррупция ҳолатини қаерга хабар қилсам бўлади? Пора сўрашди,163,,cyrillic
+200,"Электрон справкадаги QR кодни қандай текширса бўлади, ҳақиқийлигини билмоқчиман",274,,cyrillic
+201,"Телефонимга мобил ID ўрнатмоқчиман, бу нима учун керак ва қаердан уланади?",273,,cyrillic
+202,Как узнать статус моей заявки на my.gov.uz?,75,491,russian
+203,"Можно ли вернуть госпошлину, если услугу не оказали?",161,,russian
+204,"Bobom 85 yoshda, nogironlar aravachasida yuradi. Unga bir ma'lumotnoma olish kerak edi, lekin DXMga olib borolmaymiz. Xodimlar uyga kelib xizmat ko'rsatishadimi?",276,492,long
+205,"Yaqinda farzandimiz tug'ildi. Hamma hujjatlarini birma-bir qilishim kerak, qaysi biridan boshlasam bo'ladi? Ketma-ketligini bilmayman",166,477,long

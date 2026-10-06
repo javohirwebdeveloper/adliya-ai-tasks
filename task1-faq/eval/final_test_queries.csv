@@ -1,0 +1,121 @@
+id,query,answer_id,alt_answer_ids,style
+1,"Хочу купить квартиру на имя сына, ему 10 лет. Как правильно оформить такую сделку?",305,,russian
+2,ID kartamning amal qilish muddati qachon tugashini qayerdan korsam boladi,282,,no_apostrophe
+3,"Germaniyaga hujjat topshiryapman, tug'ilganlik guvohnomamga apostil qo'ydirish kerak ekan. Buni qayerda qilishadi?",192,63,colloquial
+4,"Бизнинг туманда давлат хизматлари маркази борми, манзилини қаердан билсам бўлади?",30,479,cyrillic
+5,"kop qavatli uyimizni kim boshqaradi, podyezd va hovli boyicha muammolarni kimga aytamiz",152,354,no_apostrophe
+6,"Ишга кираётганда ҳарбий билет сўрашяпти, бу шартми?",458,,cyrillic
+7,"2021-yilda sud qarzdordan pul undirish haqida qaror chiqargan, ijro varaqasini olganman, lekin hali ijroga topshirmagandim. Hozir topshirsam kech emasmi, ijro varaqasining muddati qancha?",465,,long
+8,"Kecha ID kartam qo'limdan tushib, chetidan yorilib qoldi. Endi bankda chipini o'qimayapti. Yangisini qayerda almashtiraman, buning uchun yana pul to'laymanmi?",184,,long
+9,"Chet elga posilka jo'natmoqchiman, nimalarni yuborish mumkin emas?",475,,colloquial
+10,"Телефонимга Mobile ID қилдирмоқчиман, бу нима ўзи ва қаерда қилинади?",273,,cyrillic
+11,"Ишга кираётгандим, судланмаганлик хакида справка сурашяпти. Уни каердан олсам булади?",20,,cyrillic
+12,sud qarori kopiyasi olish,362,,keywords
+13,"Akamning mashinasini u yo'qligida minib yursam, yonimda qanday hujjat bo'lishi kerak?",317,,colloquial
+14,Ko'chamizning nomi o'zgartirildi. Endi uy hujjatlarini ham yangilatish kerakmi?,312,,colloquial
+15,Kontraktni to'lashga pulimiz yetmayapti. Talabalarga ta'lim krediti berishadimi?,250,,colloquial
+16,Bank kredit uchun daromad haqida spravka so'rayapti. Uni onlayn yuklab olsa bo'ladimi?,203,201,colloquial
+17,"MChJga yangi tasischi qoshmoqchimiz, ustavni ozgartirish uchn nima kerak",227,,typo
+18,Pochta orqali jo‘natgan posilkam yo‘qolib qoldi. Qayerga shikoyat qilsam bo‘ladi?,369,,colloquial
+19,STIR nima degani,58,178,keywords
+20,"Har bir hujjat uchun alohida ariza bermasdan, bog'liq xizmatlarni bir yo'la rasmiylashtirsa bo'ladimi?",477,275;160,colloquial
+21,"Янги квартирага кучиб утдик, пропискани янги манзилга кандай утказамиз?",196,18;398,cyrillic
+22,"Можно ли временно снять машину с учета? Уезжаю на год, машина будет стоять в гараже.",417,,russian
+23,"Sobiq erim bilan ajrashganmiz. Bolani o'zimning uyimga propiska qilmoqchiman, lekin u rozilik bermayapti. Usiz qilsa bo'ladimi?",395,197,colloquial
+24,sud kuni qachonligini tekshirish,360,,keywords
+25,"Vaqtinchalik propiskamning muddati tugab qolyapti. Nima qilishim kerak, uzaytirsa bo'ladimi?",195,,colloquial
+26,"O`g`lim 16 ga to`ldi, endi birinchi pasportini qilishimiz kerak. Qanday hujjatlar bilan borish kerak?",35,2,colloquial
+27,mygovdagi xizmatlr pullikmi yoki tekinmi,277,181;279,typo
+28,"ERI kalitm yoqolib qoldi, endi nma qilaman",503,,typo
+29,ijaradagi kvartira vaqtincha propiska,357,19,keywords
+30,"propiskam ozgardi, ID kartni almashtirsh kerakmi yoki chipiga ozi yozilib qoladimi",86,497,typo
+31,"Ota-onamdan qolgan uy uch aka-ukaning nomida. Bittamiz o’z ulushini sotmoqchi, qolganlarning roziligisiz sotsa bo’ladimi?",406,,colloquial
+32,Tez yordamga qo'ng'iroq qilganda nimalarni aytish kerak?,445,,colloquial
+33,har safar bir xil spravkalarni yigib yurishim kerakmi yoki idoralar ozlari bir birlaridan olishadimi,373,,no_apostrophe
+34,nogironlik aravachasi bepul olish,238,,keywords
+35,"Bolam tugilganiga 2 oy boldi, hali ZAGSda royxatdan otkazmadik. Muddati otib ketmadimi?",11,,no_apostrophe
+36,"mashinamni nomeri tushib qolib yoqolibdi, yangisini qayrdan olsa boladi",318,55,typo
+37,"Erim vafot etdi, ikki kichkina farzandim bor. Bolalarga otasi uchun pensiya tayinlanadimi?",132,,colloquial
+38,Бир ёшга тўлмаган чақалоққа ҳам ID карта қилдириш мажбурийми?,83,5,cyrillic
+39,Akam Rossiyada vafot etdi. U yerda berilgan o'lim haqidagi hujjatni bu yerda qanday tan oldiramiz?,471,268,colloquial
+40,"Alimentdan qarzim bor ekan, aeroportda chiqarmay qo'yishdi. Bu taqiqni qanday olib tashlasam bo'ladi?",169,94,colloquial
+41,"Rossiyada qizim tugʻildi, u yerning hujjati bor. Oʻzbekistonda ham qayd qildirishim kerakmi, qanday qilinadi?",64,,colloquial
+42,pensiya kam hisoblangan qayta hisoblatish,338,,keywords
+43,hamma hujjatlarni bitta murojaat bilan olish,275,477;160,keywords
+44,Энг якин ДХМ каердалигини картадан курсатадиган жой борми?,479,30,cyrillic
+45,Мой друг иностранец заболел в Ташкенте. Ему окажут медицинскую помощь?,341,,russian
+46,Sudga da'vo arizasini internet orqali bersa bo'ladimi?,153,,colloquial
+47,id karta boj imtiyozi kimlarga,283,,keywords
+48,"Rossiyadagi ukamga ishonchnoma bermoqchiman, u yerda amal qilishi uchn nma qilish kerak, apostil kerakmi",207,,typo
+49,Trudovoy knijka hali ham kerakmi yoki hammasi elektron bo'lib ketganmi?,125,,colloquial
+50,"otamga ikkinchi guruh nogironlik berildi, endi unga nogironlik boyicha pensiya ozi chiqadimi yoki ariza yozish kerakmi",131,66,no_apostrophe
+51,"Уй акам иккимизга тегишли, лекин келиша олмаяпмиз. Уз улушимни ажратиб олишим учун нима килишим керак?",309,,cyrillic
+52,"Otpuskadaligimda kasal bo'lib qoldim, bolnichniy ham oldim. Otpuskam shu kunlarga uzayadimi?",334,,colloquial
+53,"Yaqinda YaTT bo'lib ro'yxatdan o'tdim, endi to'lovlarni qabul qilish uchun bankda hisob raqam ochishim kerak. Buning uchun qanday hujjatlar kerak? Bankka bormasdan onlayn ochsa bo'ladimi?",229,,long
+54,"sel kelib uyimizni suv bosdi, davlatdan bir martalik yordam olsa boladimi",337,,no_apostrophe
+55,"Еду с ребенком в Турцию без мужа. Нужно ли его согласие, заверенное у нотариуса?",97,,russian
+56,"Qozog'istondan o'qishga kelgan talabaman, yotoqxonada yashayman. Menga ham ro'yxatga turish kerakmi?",297,200,colloquial
+57,"Qishloqda dehqon xo'jaligi ochib, rasmiy ishlamoqchiman. Ro'yxatdan o'tish qanday bo'ladi?",325,,colloquial
+58,notariusga borganda ozim bilan guvoh olib borishim shartmi,498,,no_apostrophe
+59,Otamdan qolgan hovli hali ham uning nomida turibdi. Uni o'zimga qanday qilib rasmiylashtirsam bo'ladi?,212,43,colloquial
+60,Davlat kasalxonasida yotib davolanish pullikmi yoki tekinmi?,446,,colloquial
+61,svet tarifi 1 kilovatt narxi,461,,keywords
+62,Boshqa davlat fuqaroligini olmoqchiman. O‘zbekiston fuqaroligidan chiqish uchun nima qilish kerak?,96,,colloquial
+63,"Oyligim haqida spravka kerak edi, buni faqat ishxonadan olamanmi yoki mygovdan ham chiqarsa boladimi",201,203,no_apostrophe
+64,"YaTT faoliyatimni butunlay yopmoqchiman, nimadan boshlashim kerak?",122,,colloquial
+65,kam taminlangan oyla deb tan olish uchun daromadni qanaqa hisoblashadi,339,,typo
+66,"Eski mashinamni utilizatsiyaga topshirib, uchyotdan butunlay chiqarmoqchiman. Qayerga murojaat qilaman?",177,,colloquial
+67,"Soliqdan qarzim yig`ilib qoldi, birdaniga to`lay olmayman. Bo`lib-bo`lib to`lashga ruxsat berishadimi?",427,,colloquial
+68,"Тошкентга ишлагани келдим, ижарада турибман. Вақтинча пропискага туриш шартми, неча кун ичида қилиш керак?",19,357,cyrillic
+69,"notarius hujjatimni tasdiqlashdan bosh tortdi, sababini ham aytmadi. Endi qayerga shikoyat qilsam boladi",410,47,no_apostrophe
+70,ikkinchi nikoh ZAGS hujjatlar ajrim guvohnomasi,388,7,keywords
+71,Chet eldan usta olib kelib ishlatmoqchiman. Unga ishlashga ruxsatnoma qanday olinadi?,180,400,colloquial
+72,"Birinchi qavatdagi kvartiramni do'konga aylantirmoqchiman, buning uchun ruxsat kerakmi?",463,,colloquial
+73,"Uyni sotib oldim, hujjatlar qo'limda, lekin davreestrda hali ham eski egasining nomi chiqyapti. Reyestrdagi yozuvni qanday yangilatsam bo'ladi?",416,48;106,colloquial
+74,Bog'cha to'lovi juda qimmat. Ko'p bolali oilalarga chegirma bormi?,504,,colloquial
+75,"uy sharoitimiz haqida mahaladan spravka kerak edi, qanday olinad",374,,typo
+76,"Universitetdan oqish joyimdan spravka kerak, uni mygov orqali olsa boladimi",22,144,no_apostrophe
+77,Со скольки лет можно получить права категории B?,110,,russian
+78,Ўзбекистон фуқароси эканимни қайси ҳужжат билан исботлайман?,384,,cyrillic
+79,"bankdan olgan kreditlarmni tolay olmayapman, bankrot bolsam boladimi",171,,typo
+80,"MChJ ochmoqchimz, qayrda royxatdan otkaziladi",59,,typo
+81,"pravam yoqolib qoldi, qanday qilib tiklasam boladi",54,,no_apostrophe
+82,mashina uchun yillik solik qanaqa tolanadi,421,,typo
+83,Где можно узнать кадастровый номер своей квартиры?,210,,russian
+84,Turkiyalik sherigim bilan birga firma ochmoqchimiz. Chet ellik ta'sischi bo'la oladimi?,326,,colloquial
+85,"Я иностранец, живу в Ташкенте и потерял вид на жительство. Куда обращаться, чтобы его восстановить?",397,,russian
+86,"Как развестись через ЗАГС, если детей нет и мы оба согласны?",12,13,russian
+87,qaysi xizmatga qanaqa hujatlar va qancha boj kerakligini bir joydan korsa boladigan sayt bormi,279,181;371;277,typo
+88,"harbiy royxatga turish uchun qayerga borish kerak, voenkomatgami",78,145;148,no_apostrophe
+89,Chet ellik ishchini ishga olmoqchiman. U avval ro'yxatga (propiskaga) turishi kerakmi yoki ishlashga ruxsatnomaning o'zi yetadimi?,400,180,colloquial
+90,Uch oydan beri oylik berishmayapti. Qayerga arz qilsam bo'ladi?,126,127,colloquial
+91,"Erim bilan ajrashyapmiz. Turmush qurganimizdan keyin uy va mashina olganmiz, hammasi erimning nomiga rasmiylashtirilgan. Endi shu mol-mulk qanday bo'linadi, menga ham ulush tegadimi?",93,,long
+92,har qanaqa shartnomani notarusdan otkazish majburiymi,208,,typo
+93,"nikohdan oldn qaysi vrachlarga korikdan otish kerak, zagsga qanaqa sprvkalar kerak",9,7,typo
+94,To'ydan oldin kelin-kuyov mol-mulk bo'yicha shartnoma tuzib qo'ysa bo'ladimi? Qayerda tuziladi?,188,,colloquial
+95,"Onam qandli diabet bilan og'riydi, har oy insulin olamiz. Eshitishimcha, ba'zi dorilar imtiyozli beriladi ekan. Retseptni kim yozib beradi va imtiyozni qanday rasmiylashtiramiz?",139,244,long
+96,Bolaga albatta otasining familiyasini berish shartmi? Onasinikini yozdirsa ham bo'ladimi?,390,92,colloquial
+97,"Uyimni 10 yil oldin qurganman, lekin hali ham kadastr hujjatlari yo'q. Endi sotmoqchiman. Kadastr pasportini qayerda va qanday qildiraman?",52,415,long
+98,rossiyadan perevod soliq olinadimi,320,,keywords
+99,"O'g'limni boshqa maktabga o'tkazmoqchiman, bunga nima kerak?",141,,colloquial
+100,Ҳокимиятдан келган жавоб мени қониқтирмади. Яна қаерга ёзсам бўлади?,484,,cyrillic
+101,Pochta orqali tovar yubormoqchiman. Xaridor posilkani olayotganda pulini to'lasa bo'ladimi?,476,,colloquial
+102,"Otam 40 yil ishlagan. Unga mehnat faxriysi degan maqomni berishadimi, buni qanday olsa bo'ladi?",444,,colloquial
+103,"bolam tugruqxonada tugildi, metrikani onlayn rasmiylashtirsa boladimi",486,10,no_apostrophe
+104,Ҳокимликка интернет орқали ариза ёзиб юборса бўладими?,483,31,cyrillic
+105,Koreyaga ishlashga qonuniy yo'l bilan ketmoqchiman. Qayerga murojaat qilsam bo'ladi?,65,,colloquial
+106,yozgi lager bolalar yozilish,451,,keywords
+107,kasalxonaga yotqzish uchun napravleniyani kim beradi,242,,typo
+108,"Майгов паролимни унутиб куйдим, кандай тиклайман?",272,,cyrillic
+109,"Kichkina oziq-ovqat do'konim bor, YaTT sifatida ishlayman. Eshitishimcha, aylanmadan soliq to'lasa bo'larkan. Bu qanday soliq va kimlar to'laydi?",224,56,long
+110,"Мактаб аттестатимни йўқотиб қўйдим, дубликатини қаердан оламан?",142,345,cyrillic
+111,bepul advokat davlat hisobidan,154,,keywords
+112,Bolamni maktabga bermasdan uyda o'qitsam bo'ladimi? Eksternat degan narsa bormi?,248,,colloquial
+113,"Уй акам иккимизнинг номимизда. Мен ўз улушимни сотмоқчиман, акамнинг розилиги керакми?",406,,cyrillic
+114,"Xotinim bilan kelishib ajrashmoqchimiz, bolalarimiz yo'q. Sudga bormasdan ZAGSning o'zida ajrashsa bo'ladimi?",12,13,colloquial
+115,"mygovda hayotiy vaziyatlar bolimi bor ekan, u nima ozi va qanday ishlaydi",477,275,no_apostrophe
+116,"Kreditlarim ko'payib ketdi, hech biriga to'lay olmayapman. Qarzga botgan odamga qanday yordam bor?",171,,colloquial
+117,yong'in bo'ldi davlatdan yordam puli,337,,keywords
+118,"ta'til paytida bolnichniy, ta'til uzayadimi",334,,keywords
+119,otamning mashinasini haydash uchun doverennost kerakmi yoki prava bilan texpasportning ozi yetadimi,317,,no_apostrophe
+120,Boshqa tumanga ko'chib o'tdim. Endi ID kartani yangisiga almashtirishim shartmi?,86,497,colloquial

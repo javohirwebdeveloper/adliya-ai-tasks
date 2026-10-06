@@ -1,0 +1,101 @@
+id,query,kind
+1,Ertaga Toshkentda havo qanday bo'ladi?,offtopic
+2,"Bugun yomg'ir yog'adimi, soyabon olsam bo'ladimi?",offtopic
+3,Real Madrid kecha kim bilan o'ynadi?,offtopic
+4,Paxtakorning keyingi o'yini qachon?,offtopic
+5,"Osh qanday damlanadi, retseptini ayting",offtopic
+6,Somsa xamirini qanday qilsam yumshoq chiqadi?,offtopic
+7,Python'da ro'yxatni qanday saralash mumkin?,offtopic
+8,JavaScriptda async/await qanday ishlaydi?,offtopic
+9,Eng yaxshi o'zbek kinolarini tavsiya qiling,offtopic
+10,Yangi Avengers filmini qayerdan ko'rsam bo'ladi?,offtopic
+11,25 ni 4 ga ko'paytirsa nechchi bo'ladi?,offtopic
+12,Kvadrat tenglamani qanday yechaman?,offtopic
+13,Shahzodaning yangi qo'shig'i chiqdimi?,offtopic
+14,Samarqandga borsam qaysi joylarni ko'rishim kerak?,offtopic
+15,Cobalt bilan Gentradan qaysi biri yaxshiroq?,offtopic
+16,iPhone 15 narxi qancha?,offtopic
+17,Ingliz tilini tez o'rganish uchun nima maslahat berasiz?,offtopic
+18,Amir Temur qachon tug'ilgan?,offtopic
+19,Dunyodagi eng baland tog' qaysi?,offtopic
+20,Oyda odam yashay oladimi?,offtopic
+21,Menga bitta latifa aytib bering,offtopic
+22,Samsung yaxshimi yoki Xiaomi?,offtopic
+23,Tarvuzning pishganini qanday bilsa bo'ladi?,offtopic
+24,Shaxmatda eng yaxshi birinchi yurish qaysi?,offtopic
+25,Instagramda qanday qilib ko'proq obunachi yig'aman?,offtopic
+26,"Mushugim ovqat yemayapti, nima qilay?",offtopic
+27,Excelda VLOOKUP formulasini qanday yozaman?,offtopic
+28,2026 jahon chempionati qaysi davlatlarda o'tyapti?,offtopic
+29,Uyda tandir non qanday yopiladi?,offtopic
+30,Ozish uchun qanday parhez tutsam bo'ladi?,offtopic
+31,Gitara chalishni qanday o'rganaman?,offtopic
+32,Sevgi haqida she'r yozib bering,offtopic
+33,"Kompyuterim juda sekin ishlayapti, nima qilsam bo'ladi?",offtopic
+34,Какая погода будет завтра в Самарканде?,offtopic
+35,Как приготовить плов по-узбекски?,offtopic
+36,Кто выиграл Лигу чемпионов в прошлом году?,offtopic
+37,Посоветуй хороший сериал на вечер,offtopic
+38,Как написать цикл for на Python?,offtopic
+39,"Эртага ҳаво қандай бўлади, иссиқ бўладими?",offtopic
+40,Палов учун қанча гуруч солинади?,offtopic
+41,Ovchilik guvohnomasini qayerdan olsam bo'ladi?,near_domain
+42,Ov miltig'imni ro'yxatdan o'tkazish uchun ruxsatnoma qanday olinadi?,near_domain
+43,Saylovchilar ro'yxatida borligimni qanday tekshirsam bo'ladi?,near_domain
+44,"Saylov kuni boshqa shaharda bo'lsam, qayerda ovoz beraman?",near_domain
+45,Haj ziyoratiga borish uchun navbatga qanday yoziladi?,near_domain
+46,Mashina oynalarini qoraytirish (tonirovka) uchun ruxsatnoma qanday olinadi?,near_domain
+47,Qamoqxonadagi akam bilan uchrashuvga ruxsat qanday olinadi?,near_domain
+48,"Amnistiya qachon e'lon qilinadi, kimlarga tegishli bo'ladi?",near_domain
+49,Davlat xaridlari tenderida qanday qatnashsa bo'ladi?,near_domain
+50,Ochiq byudjet portalida mahalla tashabbusiga qanday ovoz beraman?,near_domain
+51,O'zbekistonda kriptovalyuta sotib olish qonuniymi?,near_domain
+52,Чегарадан қанча нақд доллар олиб ўтиш мумкин?,near_domain
+53,Uy itini ro'yxatdan o'tkazish shartmi?,near_domain
+54,"Dron sotib oldim, uni biror joyda ro'yxatdan o'tkazishim kerakmi?",near_domain
+55,Baliq ovlashga qaysi oylarda taqiq bo'ladi?,near_domain
+56,Hovlimdagi katta daraxtni kesish uchun ruxsat kerakmi?,near_domain
+57,Miting yoki ommaviy tadbir o'tkazish uchun ruxsat qanday olinadi?,near_domain
+58,Telegram kanalimni ommaviy axborot vositasi sifatida ro'yxatdan o'tkazishim kerakmi?,near_domain
+59,Firma uchun muhr (pechat) qayerda yasatiladi?,near_domain
+60,Markaziy bank dollar kursini qayerda e'lon qiladi?,near_domain
+61,"Davlat mukofotiga (orden, medal) qanday tavsiya qilinadi?",near_domain
+62,Қабристондан жой ажратиш учун кимга мурожаат қилинади?,near_domain
+63,Sigirimni ro'yxatga olish (birkalash) majburiymi?,near_domain
+64,Mahalliy kengashga deputatlikka nomzod bo'lish uchun nima kerak?,near_domain
+65,Telefon raqamimni saqlab qolgan holda boshqa operatorga o'tsam bo'ladimi?,near_domain
+66,Как другу-иностранцу получить электронную визу в Узбекистан?,near_domain
+67,Metro kartasini (ATTO) qayerdan olsam bo'ladi?,near_domain
+68,Toshkentda avtobusda yo'l haqi qancha?,near_domain
+69,Как купить билет на поезд онлайн?,near_domain
+70,Sport ustasi unvonini olish uchun nima qilish kerak?,near_domain
+71,Eksport uchun kelib chiqish sertifikatini qayerdan olaman?,near_domain
+72,Mashinani texnik ko'rikdan (texosmotr) qayerda o'tkazsa bo'ladi?,near_domain
+73,"To'yga necha kishi chaqirish mumkin, cheklov bormi?",near_domain
+74,Aholini ro'yxatga olish (perepis) qachon o'tkaziladi?,near_domain
+75,Birjada aksiya sotib olish uchun nima qilish kerak?,near_domain
+76,"Uyimga quyosh panellari o'rnatsam, ortiqcha elektrni davlatga sotsam bo'ladimi?",near_domain
+77,Mahalladagi profilaktika inspektorining telefon raqamini qayerdan topaman?,near_domain
+78,Shahar ichida tezlik chegarasi necha km/soat?,near_domain
+79,Mashinada bolalar uchun avtokreslo majburiymi?,near_domain
+80,Как получить права на управление катером или лодкой?,near_domain
+81,salom,chitchat
+82,Assalomu alaykum,chitchat
+83,rahmat,chitchat
+84,katta rahmat!,chitchat
+85,qalesan,chitchat
+86,"qalaysiz, ishlar yaxshimi?",chitchat
+87,?,chitchat
+88,ok,chitchat
+89,👍,chitchat
+90,😂😂😂,chitchat
+91,asdfgh,chitchat
+92,bot ishlayaptimi,chitchat
+93,sen kimsan?,chitchat
+94,Привет,chitchat
+95,спасибо большое,chitchat
+96,hello,chitchat
+97,xayr,chitchat
+98,tushunmadim,chitchat
+99,hmm,chitchat
+100,ассалому алайкум,chitchat

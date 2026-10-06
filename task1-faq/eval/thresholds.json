@@ -1,0 +1,10 @@
+{
+ "rerank": {
+  "answer": 0.25,
+  "suggest": 0.002
+ },
+ "stage1": {
+  "answer": 0.81,
+  "suggest": 0.65
+ }
+}

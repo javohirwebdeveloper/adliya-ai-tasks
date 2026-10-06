@@ -1,0 +1,38 @@
+pattern,canonical
+prava\w*,haydovchilik guvohnomasi
+voditelsk\w*,haydovchilik guvohnomasi
+propisk\w*,doimiy ro'yxatga olish (yashash joyi bo'yicha)
+vremenn\w* propisk\w*,vaqtincha ro'yxatga olish
+zags\w*,FHDYo (fuqarolik holati dalolatnomalarini yozish) organi
+svet\w*,elektr energiyasi
+bolnichn\w*,kasallik varaqasi
+spravk\w*,ma'lumotnoma
+otsrochk\w*,muddatli harbiy xizmatdan kechiktirish
+ispolnitel\w* list\w*,ijro varaqasi
+inn\b,STIR (soliq to'lovchining identifikatsiya raqami)
+pinfl\w*,JSHSHIR (shaxsiy identifikatsiya raqami)
+tex ?pasport\w*,transport vositasini qayd etish guvohnomasi
+zagran\w*,xorijga chiqish biometrik pasporti
+doverennost\w*,ishonchnoma
+shtraf\w*,jarima
+nalog\w*,soliq
+dekret\w*,homiladorlik va tug'ruq ta'tili
+aliment\w*,aliment undirish
+gai\b|dai\b|gibdd\w*,YHXB (yo'l harakati xavfsizligi xizmati)
+posilk\w*,xalqaro pochta jo'natmasi
+uchastkov\w*,profilaktika inspektori
+obsh\w*,talabalar turar joyi (yotoqxona)
+kontrakt\w*,to'lov-kontrakt asosida o'qish
+ipotek\w*,ipoteka krediti
+kvartir\w*,kvartira (uy-joy)
+pensiy\w*,pensiya
+posobi\w*,nafaqa
+subsidi\w*,subsidiya
+mchj|ooo\b,MChJ (mas'uliyati cheklangan jamiyat)
+yatt\b|ip\b,yakka tartibdagi tadbirkor
+firma\w*,tadbirkorlik subyekti (yuridik shaxs)
+viza\w*,viza
+militsiy\w*,ichki ishlar organi
+svidetelstv\w*,guvohnoma
+attestat\w*,attestat
+muddat\w* (?:tugab|tugadi|tugagan|tugay|tugashi|o'tib|o'tgan|o'tdi)\w*,muddati tugasa nima qilinadi (almashtirish)

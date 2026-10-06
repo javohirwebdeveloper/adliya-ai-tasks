@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.cache/
+*.log
+.env.*
+!.env.example
+tools/node_modules/
+tools/shot.cjs
+SUHBAT.md
+tools/chatshot.cjs
+task1-faq/eval/kb_colbert.npz
+task1-faq/eval/dev_scores.json

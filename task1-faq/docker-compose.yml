@@ -1,0 +1,64 @@
+name: adliya-faq
+
+# Portlar faqat 127.0.0.1 ga ochiladi. Docker e'lon qilgan portlar UFW qoidalarini chetlab o'tadi,
+# shuning uchun baza va Qdrant tashqi tarmoqqa umuman chiqarilmaydi.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: faq
+      POSTGRES_USER: faq
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-faq}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${PG_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U faq -d faq"]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.2
+    volumes:
+      - qdrant:/qdrant/storage
+    ports:
+      - "127.0.0.1:${QDRANT_PORT:-6333}:6333"
+    restart: unless-stopped
+
+  api:
+    build: .
+    image: adliya-faq-api
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://faq:${POSTGRES_PASSWORD:-faq}@postgres:5432/faq
+      QDRANT_URL: http://qdrant:6333
+      VOSK_MODEL: /vosk
+    volumes:
+      - ${HF_CACHE:-hf-cache}:/models   # modellar bir marta yuklanadi (internetsiz muhitda oldindan joylanadi)
+      - ./data:/srv/data:ro
+      - ${VOSK_DIR:-./models/vosk-model-small-uz-0.22}:/vosk:ro   # o'zbekcha nutqni tanish modeli (ixtiyoriy)
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+    restart: unless-stopped
+
+  bot:
+    image: adliya-faq-api
+    command: ["python", "-m", "app.bot"]
+    env_file: .env
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+    restart: on-failure
+
+volumes:
+  pgdata:
+  qdrant:
+  hf-cache:

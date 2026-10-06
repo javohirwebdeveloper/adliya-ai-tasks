@@ -1,0 +1,497 @@
+{
+ "NAMUNA_1_abzats": {
+  "requisites": {
+   "sender": "Huquqiy xizmatlarni raqamlashtirish milliy agentligi Kengashi",
+   "number": "121",
+   "date": "2026-02-10",
+   "signatory": "M. Tursunov"
+  },
+  "tasks": [
+   {
+    "text": "Ro'yxatga olish departamenti yuridik shaxslarni ro'yxatdan o'tkazish tartibini soddalashtirishni nazarda tutuvchi hujjat loyihasini bir oy muddatda ishlab chiqsin va Kengash muhokamasiga kiritsin.",
+    "executors": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "deadline": {
+     "text": "bir oy muddatda",
+     "type": "nisbiy",
+     "date": "2026-03-10"
+    }
+   },
+   {
+    "text": "Axborot texnologiyalari boshqarmasi Ro'yxatga olish departamenti bilan birgalikda ro'yxatdan o'tkazish axborot tizimining yagona interaktiv davlat xizmatlari portali bilan integratsiyasini 2026-yil 1-iyulga qadar ta'minlasin.",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi",
+     "Ro'yxatga olish departamenti"
+    ],
+    "deadline": {
+     "text": "2026-yil 1-iyulga qadar",
+     "type": "sana",
+     "date": "2026-07-01"
+    }
+   },
+   {
+    "text": "Huquqiy ekspertiza boshqarmasi ro'yxatdan o'tkazishda taqdim etiladigan hujjatlarni avtomatik tekshirish modulini joriy etish yuzasidan takliflar tayyorlasin.",
+    "executors": [
+     "Huquqiy ekspertiza boshqarmasi"
+    ],
+    "deadline": {
+     "text": "bir oy muddatda",
+     "type": "nisbiy",
+     "date": "2026-03-10"
+    }
+   },
+   {
+    "text": "Hududiy bo'linmalar yangi tartib bo'yicha amaliy qo'llanmani tarqatish va aholiga tushuntirish ishlarini 2026-yil 15-martdan boshlab tashkil etsin.",
+    "executors": [
+     "Hududiy bo'linmalar"
+    ],
+    "deadline": {
+     "text": "2026-yil 15-martdan boshlab",
+     "type": "boshlanish",
+     "date": "2026-03-15"
+    }
+   },
+   {
+    "text": "Ro'yxatga olish departamenti mazkur qaror ijrosi to'g'risida har oyda Kengashga ma'lumot berib borsin.",
+    "executors": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "deadline": {
+     "text": "har oyda",
+     "type": "davriy",
+     "date": null
+    }
+   }
+  ]
+ },
+ "NAMUNA_2_jadval": {
+  "requisites": {
+   "sender": "Yuridik xizmatlar sifatini oshirish respublika komissiyasi",
+   "number": "145",
+   "date": "2026-02-24",
+   "signatory": "O. Saidov"
+  },
+  "tasks": [
+   {
+    "text": "Murojaatlarni avtomatik tasniflash modulini joriy etish",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 1-may",
+     "type": "sana",
+     "date": "2026-05-01"
+    }
+   },
+   {
+    "text": "Elektron yuridik maslahat chatbotini ishga tushirish",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi",
+     "Yuridik xizmat ko'rsatish boshqarmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 15-iyun",
+     "type": "sana",
+     "date": "2026-06-15"
+    }
+   },
+   {
+    "text": "Topshiriqlarni avtomatik taqsimlash tizimini sinovdan o'tkazish",
+    "executors": [
+     "Ish yuritish (devonxona) bo'limi"
+    ],
+    "deadline": {
+     "text": "tizim tayyor bo'lgandan so'ng 2 oy ichida",
+     "type": "shartli",
+     "date": null
+    }
+   },
+   {
+    "text": "Xodimlar uchun o'quv seminarlarini tashkil etish",
+    "executors": [
+     "Kadrlar boshqarmasi"
+    ],
+    "deadline": {
+     "text": "har chorakda",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Ma'lumotlar xavfsizligi talablariga muvofiqlikni ta'minlash",
+    "executors": [
+     "Axborot xavfsizligi bo'linmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 20-aprel",
+     "type": "sana",
+     "date": "2026-04-20"
+    }
+   },
+   {
+    "text": "Axborot texnologiyalari boshqarmasi yuqoridagi topshiriqlar ijrosi to'g'risida har chorak yakunidan keyingi oyning 10-sanasiga qadar Komissiyaga axborot kiritsin.",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "deadline": {
+     "text": "har chorak yakunidan keyingi oyning 10-sanasiga qadar",
+     "type": "davriy",
+     "date": null
+    }
+   }
+  ]
+ },
+ "NAMUNA_3_ilova": {
+  "requisites": {
+   "sender": "Notariat va FHDYo faoliyatini muvofiqlashtirish kengashi",
+   "number": "160",
+   "date": "2026-03-05",
+   "signatory": "G. Nazarova"
+  },
+  "tasks": [
+   {
+    "text": "Kengash kotibiyati ilova ijrosi to'g'risida har chorakda Kengash yig'ilishiga axborot kiritib borsin.",
+    "executors": [
+     "Kengash kotibiyati"
+    ],
+    "deadline": {
+     "text": "har chorakda",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Notariat harakatlarini elektron qayd etish modulini joriy etish",
+    "executors": [
+     "Notariat boshqarmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 1-iyun",
+     "type": "sana",
+     "date": "2026-06-01"
+    }
+   },
+   {
+    "text": "FHDYo yozuvlarini raqamli arxivga o'tkazish",
+    "executors": [
+     "FHDYo boshqarmasi"
+    ],
+    "deadline": {
+     "text": "2026-yil 1-avgust",
+     "type": "sana",
+     "date": "2026-08-01"
+    }
+   },
+   {
+    "text": "Elektron hujjatlarni tizimlararo almashish integratsiyasini ta'minlash",
+    "executors": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "deadline": {
+     "text": "texnik topshiriq tasdiqlangandan so'ng 3 oy ichida",
+     "type": "shartli",
+     "date": null
+    }
+   },
+   {
+    "text": "Hududiy bo'linmalar xodimlarini yangi tizimda ishlashga o'qitish",
+    "executors": [
+     "Kadrlar boshqarmasi",
+     "hududiy bo'linmalar"
+    ],
+    "deadline": {
+     "text": "2026-yil 15-may",
+     "type": "sana",
+     "date": "2026-05-15"
+    }
+   },
+   {
+    "text": "Fuqarolar uchun qo'llanma va axborot materiallarini tayyorlash",
+    "executors": [
+     "Axborot xizmati"
+    ],
+    "deadline": {
+     "text": "bir oy muddatda",
+     "type": "nisbiy",
+     "date": "2026-04-05"
+    }
+   }
+  ]
+ },
+ "xat_1_abzatsdagi_topshiriqlar": {
+  "requisites": {
+   "sender": "Raqamli huquqiy xizmatlar agentligi",
+   "number": "03-12/1456",
+   "date": "2026-09-08",
+   "signatory": "Sh. Qodirov"
+  },
+  "tasks": [
+   {
+    "text": "Markazning Tizim tahlili bo'limi amaldagi murojaatlar portalining funksional imkoniyatlarini tahlil qilib, foydalanuvchilar eng ko'p murojaat qiladigan xizmatlar va mavjud muammolar bo'yicha tahliliy ma'lumotni 2026-yil 20-sentabrga qadar Agentlikka taqdim etsin.",
+    "executors": [
+     "Markazning Tizim tahlili bo'limi"
+    ],
+    "deadline": {
+     "text": "2026-yil 20-sentabrga qadar",
+     "type": "sana",
+     "date": "2026-09-20"
+    }
+   },
+   {
+    "text": "Sun'iy intellekt laboratoriyasi portalga kelib tushayotgan murojaatlarni mavzu va yo'nalishlar bo'yicha avtomatik tasniflash imkoniyatini joriy etish yuzasidan texnik takliflarni 01.10.2026 yilgacha ishlab chiqsin.",
+    "executors": [
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "deadline": {
+     "text": "01.10.2026 yilgacha",
+     "type": "sana",
+     "date": "2026-10-01"
+    }
+   },
+   {
+    "text": "Axborot xavfsizligi bo'limi Sun'iy intellekt laboratoriyasi bilan birgalikda sun'iy intellekt xizmatlariga uzatiladigan ma'lumotlar tarkibini o'rganib, shaxsga doir va foydalanilishi cheklangan ma'lumotlarni himoya qilish bo'yicha takliflarni o'n kun muddatda kiritsin.",
+    "executors": [
+     "Axborot xavfsizligi bo'limi",
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "deadline": {
+     "text": "o'n kun muddatda",
+     "type": "nisbiy",
+     "date": "2026-09-18"
+    }
+   },
+   {
+    "text": "Dasturiy ta'minotni ishlab chiqish bo'limi fuqarolarga davlat va huquqiy xizmatlar bo'yicha ma'lumot beruvchi virtual yordamchining tajriba-sinov variantini tayyorlab, uni 2026-yil 25-oktabrga qadar sinovdan o'tkazsin.",
+    "executors": [
+     "Dasturiy ta'minotni ishlab chiqish bo'limi"
+    ],
+    "deadline": {
+     "text": "2026-yil 25-oktabrga qadar",
+     "type": "sana",
+     "date": "2026-10-25"
+    }
+   },
+   {
+    "text": "Markaz yuqoridagi topshiriqlar ijrosi holati to'g'risida har oyning 5-sanasiga qadar Agentlikning Loyihalarni boshqarish departamentiga ma'lumot berib borsin.",
+    "executors": [
+     "Markaz"
+    ],
+    "deadline": {
+     "text": "har oyning 5-sanasiga qadar",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Shuningdek, ishlar natijalari bo'yicha umumlashtirilgan hisobot va keyingi bosqich uchun takliflarni 2026-yil 5-noyabrga qadar Agentlik rahbariyatiga taqdim etishingizni so'raymiz.",
+    "executors": [
+     "Adliya organlari va muassasalarida axborot texnologiyalarini rivojlantirish markazi"
+    ],
+    "deadline": {
+     "text": "2026-yil 5-noyabrga qadar",
+     "type": "sana",
+     "date": "2026-11-05"
+    }
+   },
+   {
+    "text": "Topshiriqlar ijrosi uchun mas'ul xodimlar to'g'risidagi ma'lumotni uch ish kuni ichida taqdim etishingiz so'raladi.",
+    "executors": [
+     "Adliya organlari va muassasalarida axborot texnologiyalarini rivojlantirish markazi"
+    ],
+    "deadline": {
+     "text": "uch ish kuni ichida",
+     "type": "nisbiy",
+     "date": "2026-09-11"
+    }
+   }
+  ]
+ },
+ "xat_2_jadvaldagi_topshiriqlar": {
+  "requisites": {
+   "sender": "\"Yangi avlod raqamli yechimlar\" davlat unitar korxonasi",
+   "number": "15/2-784",
+   "date": "2026-09-11",
+   "signatory": "A. Yusupov"
+  },
+  "tasks": [
+   {
+    "text": "Murojaatlar portalidagi mavjud klassifikatorlarni inventarizatsiya qilish va ularni takomillashtirish bo'yicha taklif tayyorlash",
+    "executors": [
+     "Tizim tahlili bo'limi"
+    ],
+    "deadline": {
+     "text": "18.09.2026",
+     "type": "sana",
+     "date": "2026-09-18"
+    }
+   },
+   {
+    "text": "Hujjatlardan topshiriq, muddat va ijrochi haqidagi ma'lumotlarni avtomatik ajratish bo'yicha prototip ishlab chiqish",
+    "executors": [
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "deadline": {
+     "text": "30.09.2026",
+     "type": "sana",
+     "date": "2026-09-30"
+    }
+   },
+   {
+    "text": "Topshiriqlarni tarkibiy bo'linmalarga yo'naltirish uchun vakolatlar va tashkiliy tuzilma ma'lumotlarini shakllantirish",
+    "executors": [
+     "Biznes-tahlil bo'limi",
+     "Kadrlar bo'limi"
+    ],
+    "deadline": {
+     "text": "2026-yil 5-oktabr",
+     "type": "sana",
+     "date": "2026-10-05"
+    }
+   },
+   {
+    "text": "AI modullarining mavjud axborot tizimlari bilan integratsiyasi bo'yicha texnik talablarni tayyorlash",
+    "executors": [
+     "Integratsiya bo'limi"
+    ],
+    "deadline": {
+     "text": "prototip tayyor bo'lgandan so'ng 15 kun ichida",
+     "type": "shartli",
+     "date": null
+    }
+   },
+   {
+    "text": "Tajriba-sinov natijalarini baholash va aniqlangan kamchiliklar bo'yicha takliflar kiritish",
+    "executors": [
+     "Loyiha guruhi"
+    ],
+    "deadline": {
+     "text": "01.11.2026",
+     "type": "sana",
+     "date": "2026-11-01"
+    }
+   },
+   {
+    "text": "Bajarilgan ishlar holati to'g'risida qisqacha ma'lumot taqdim etish",
+    "executors": [
+     "Loyiha koordinatori"
+    ],
+    "deadline": {
+     "text": "har haftaning juma kuni",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Bajarilgan ishlar bo'yicha umumlashtirilgan ma'lumot loyiha koordinatori orqali Korxonaning Raqamli loyihalar boshqarmasiga taqdim etilsin.",
+    "executors": [
+     "Loyiha koordinatori"
+    ],
+    "deadline": {
+     "text": "ko'rsatilmagan",
+     "type": "yo'q",
+     "date": null
+    }
+   }
+  ]
+ },
+ "xat_3_ilovadagi_topshiriqlar": {
+  "requisites": {
+   "sender": "Ma'lumotlar xavfsizligi va integratsiya agentligi",
+   "number": "07-04/2219",
+   "date": "2026-09-15",
+   "signatory": "D. Ergasheva"
+  },
+  "tasks": [
+   {
+    "text": "Ilovada ko'rsatilgan topshiriqlarning o'z vaqtida va sifatli bajarilishini ta'minlash hamda ijro holati to'g'risida har oyning 25-sanasiga qadar Agentlikka axborot kiritib borishingizni so'raymiz.",
+    "executors": [
+     "Adliya organlari va muassasalarida axborot texnologiyalarini rivojlantirish markazi"
+    ],
+    "deadline": {
+     "text": "har oyning 25-sanasiga qadar",
+     "type": "davriy",
+     "date": null
+    }
+   },
+   {
+    "text": "Ichki axborot tizimlarida sun'iy intellekt qo'llash mumkin bo'lgan jarayonlarni aniqlash",
+    "executors": [
+     "Tizim tahlili bo'limi"
+    ],
+    "deadline": {
+     "text": "20.09.2026",
+     "type": "sana",
+     "date": "2026-09-20"
+    }
+   },
+   {
+    "text": "Tanlangan jarayonlar uchun zarur ma'lumotlar manbalarini inventarizatsiya qilish",
+    "executors": [
+     "Ma'lumotlar bazalarini boshqarish bo'limi"
+    ],
+    "deadline": {
+     "text": "30.09.2026",
+     "type": "sana",
+     "date": "2026-09-30"
+    }
+   },
+   {
+    "text": "Topshiriqlarni avtomatik aniqlash va atributlarini ajratish modulining tajriba-sinov variantini ishlab chiqish",
+    "executors": [
+     "Sun'iy intellekt laboratoriyasi",
+     "Dasturiy ta'minotni ishlab chiqish bo'limi"
+    ],
+    "deadline": {
+     "text": "2026-yil 15-oktabr",
+     "type": "sana",
+     "date": "2026-10-15"
+    }
+   },
+   {
+    "text": "Taqsimlash modulida foydalaniladigan tarkibiy bo'linmalar vakolatlari bazasini shakllantirish",
+    "executors": [
+     "Biznes-tahlil bo'limi"
+    ],
+    "deadline": {
+     "text": "25.10.2026",
+     "type": "sana",
+     "date": "2026-10-25"
+    }
+   },
+   {
+    "text": "Modullarning axborot xavfsizligi talablariga muvofiqligini tekshirish",
+    "executors": [
+     "Axborot xavfsizligi bo'limi"
+    ],
+    "deadline": {
+     "text": "prototip tayyor bo'lgandan so'ng 10 kun ichida",
+     "type": "shartli",
+     "date": null
+    }
+   },
+   {
+    "text": "Tajriba-sinov natijalarini tahlil qilib, keyingi joriy etish bosqichi bo'yicha takliflar tayyorlash",
+    "executors": [
+     "Loyiha guruhi"
+    ],
+    "deadline": {
+     "text": "10.11.2026",
+     "type": "sana",
+     "date": "2026-11-10"
+    }
+   },
+   {
+    "text": "Xodimlarni yangi modullar bilan ishlashga o'qitish",
+    "executors": [
+     "Kadrlar bo'limi"
+    ],
+    "deadline": {
+     "text": "doimiy",
+     "type": "doimiy",
+     "date": null
+    }
+   }
+  ]
+ }
+}
