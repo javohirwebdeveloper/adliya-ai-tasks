@@ -142,7 +142,11 @@ Chegara protsessorda: ikkita katta model (har biri 568 mln parametr) hisoblanadi
 
 Ko'proq yuklama uchun GPU kerak: unda ikkala model 20-50 ms da ishlaydi va sig'im o'nlab barobar oshadi.
 
-Sinov paytidagi topilma: model API ning turli ishchi oqimlarida (thread) ishlaganda 2 barobar sekinlashdi. PyTorch ning protsessor oqimlari guruhi (OpenMP) har bir oqimda alohida yaratilib, bir-biriga xalaqit berar ekan. Barcha hisob bitta doimiy oqimga o'tkazildi, navbatda tez 1-bosqich reranker'dan oldin turadi (`app/embedder.py`).
+Sinov paytidagi topilmalar:
+
+- Uzoq so'rov bo'lmasa, operatsion tizim model fayllarini xotiradan chiqarib yuboradi va keyingi birinchi savol 5 soniyagacha cho'ziladi. API ishga tushganda va keyin har 5 daqiqada modellarni kichik hisob bilan «isitib» turadi.
+- Telegram botni haqiqiy akkauntdan avtomatik sinash (`tools/bot_e2e.py`) ovozli salomdagi xatoni topdi: nutq modeli «assalomu aleykum» deb yozadi, bot buni salom deb tanimagan edi. Tuzatildi.
+- Model API ning turli ishchi oqimlarida (thread) ishlaganda 2 barobar sekinlashdi. PyTorch ning protsessor oqimlari guruhi (OpenMP) har bir oqimda alohida yaratilib, bir-biriga xalaqit berar ekan. Barcha hisob bitta doimiy oqimga o'tkazildi, navbatda tez 1-bosqich reranker'dan oldin turadi (`app/embedder.py`).
 
 Xavfsizlik:
 

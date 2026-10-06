@@ -34,3 +34,4 @@ def test_short_and_smalltalk():
     assert content_words("pravamning muddati tugadi, qayerda almashtiraman") >= 3
     assert smalltalk_kind("Salom!") == "greeting" and smalltalk_kind("katta rahmat") == "thanks"
     assert smalltalk_kind("salom, pasport qancha turadi") is None
+    assert smalltalk_kind("assalomu aleykum") == "greeting"          # ovozli xabardan chiqqan shakl

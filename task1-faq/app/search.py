@@ -23,8 +23,9 @@ from .embedder import Embedder, sparse_dot
 from .normalize import clean_kb_question, load_synonyms, normalize, query_variants
 
 SMALLTALK = [
-    (re.compile(r"^\W*(assalomu?\s*alaykum|assalom|salom|salem|xayrli kun|hayrli kun|привет|здравствуйте|"
-                r"салом|ассалому алайкум|hello|hi)\W*$", re.I), "greeting"),
+    # ovozli xabar matnga aylanganda "aleykum", "alaykim" kabi og'zaki shakllar ham chiqadi
+    (re.compile(r"^\W*((va\s+)?(assalomu?|salom)?\s*(alaykum|aleykum|alaykim|aleykim|alaikum)(\s+assalom)?|assalom|salom|salem|"
+                r"xayrli kun|hayrli kun|привет|здравствуйте|салом|ассалому алайкум|hello|hi)\W*$", re.I), "greeting"),
     (re.compile(r"^\W*(katta\s+)?(rahmat|raxmat|tashakkur|спасибо|рахмат|раҳмат|thanks|thank you)\W*$", re.I), "thanks"),
 ]
 UZ_CYRILLIC = re.compile(r"[ўқғҳЎҚҒҲ]")

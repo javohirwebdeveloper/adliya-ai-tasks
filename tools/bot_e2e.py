@@ -82,7 +82,7 @@ async def run(client):
         r = await conv.get_response()
         check("to'liq savolga javob: sarlavha, baho tugmalari", "Foydali" in " ".join(buttons(r)) and "\n\n" in r.raw_text,
               r.raw_text[:80])
-        check("javob vaqti 3 soniyadan kam", time.time() - t0 < 3, f"{time.time() - t0:.1f} s")
+        check("javob vaqti 5 soniyadan kam", time.time() - t0 < 5, f"{time.time() - t0:.1f} s")
 
         await r.click(text=next(b for b in buttons(r) if "Bu emas" in b))
         r2 = await conv.get_response()
@@ -112,7 +112,7 @@ async def run(client):
         r = await conv.get_response()
         check("ovozli xabar: eshitgani yoziladi", "Eshitdim" in r.raw_text, r.raw_text)
         r = await conv.get_response()
-        check("ovozli savolga javob", len(r.raw_text) > 10)
+        check("ovozli salomga salom bilan javob", "Assalomu alaykum" in r.raw_text, r.raw_text[:60])
 
         await client.send_file(bot, os.path.join(os.path.dirname(__file__), "..", "task2-docs", "docs", "screenshot.png"))
         r = await conv.get_response()

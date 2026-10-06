@@ -92,8 +92,24 @@ async def lifespan(app: FastAPI):
     vosk = os.getenv("VOSK_MODEL", "")
     app.state.speech = Speech(vosk) if vosk and os.path.isdir(vosk) else None
     app.state.job = {"state": "idle"}
+    app.state.searcher._search("pasport almashtirish uchun qanday hujjatlar kerak", 3)   # birinchi foydalanuvchi kutmasin
+    app.state.searcher._cache = {}
+    threading.Thread(target=_keep_warm, daemon=True, name="keep-warm").start()
     yield
     app.state.pool.close()
+
+
+def _keep_warm(every: int = 300):
+    """Uzoq so'rov bo'lmasa, operatsion tizim model fayllarini xotiradan chiqarib yuboradi va keyingi birinchi
+    savol 2 barobar sekin javob oladi (o'lchangan: 5,3 s). Har 5 daqiqada kichik hisob modellarni "issiq" tutadi."""
+    while True:
+        time.sleep(every)
+        try:
+            app.state.embedder.encode(["salom"], max_length=16)
+            if app.state.reranker is not None:
+                app.state.reranker.score("salom", ["salom"], max_length=16)
+        except Exception:                        # noqa: BLE001
+            pass
 
 
 app = FastAPI(title="Savol-javob: semantik qidiruv", version="2.0", lifespan=lifespan)
