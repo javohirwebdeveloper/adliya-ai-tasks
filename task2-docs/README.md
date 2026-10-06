@@ -15,7 +15,7 @@ Foydalanuvchi veb-sahifada PDF ni yuklaydi va «Tahlil qilish» tugmasini bosadi
 
 - **Natija hujjat ustida ko'rsatiladi.** Sahifaning o'ng tomonida hujjatning o'zi turadi. Topshiriq yoki rekvizit bosilsa, u hujjatning qayeridan olingani ramka bilan belgilanadi. Xodim natijani asl hujjat bilan bir qarashda solishtiradi va tizimga «ko'r-ko'rona» ishonmaydi.
 - **Excel'ga yuklab olish.** Ikki varaq: topshiriqlar (ijrochi, muddat, muddat turi, sana, manba) va rekvizitlar. Devonxona yoki ijro nazorati bo'limi o'z jadvaliga ko'chiradi.
-- **Muddatlarni kalendarga qo'shish (.ics).** Aniq sanasi bor har bir topshiriq kalendar hodisasi bo'ladi: Outlook, Google Calendar yoki telefonga import qilinadi.
+- **Muddatlarni kalendarga qo'shish (.ics).** Aniq sanasi bor har bir topshiriq kalendar hodisasi bo'ladi: Outlook, Google Calendar yoki telefonga import qilinadi. Har biriga ikkita eslatma qo'yilgan: muddatdan 3 kun va 1 kun oldin, soat 9:00 da (kalendar dasturining sozlamasiga bog'liq emas). Fayl brauzerning o'zida yasaladi, hech qayerga yuborilmaydi.
 - **Nazorat va hujjat ijrochisi alohida.** «Ijro nazorati ... zimmasiga yuklansin» bandi va hujjatni tayyorlagan xodim («Ijrochi: N. Sobirova») topshiriq ijrochisi bilan aralashtirilmaydi, alohida maydonda chiqadi.
 - **Ogohlantirishlar.** Rekvizit topilmasa, ijrochi aniqlanmasa yoki skaner sifati past bo'lsa (OCR ishonchi 80% dan past), natija ostida «tekshiring» degan yozuv chiqadi.
 - **Telefonda ham qulay.** Kichik ekranda jadval kartochkalarga aylanadi.

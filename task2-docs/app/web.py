@@ -159,6 +159,9 @@ function ics(){const q=last.requisites,ev=last.tasks.filter(t=>t.deadline&&t.dea
  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//hujjat-tahlili//uz','CALSCALE:GREGORIAN'];
  ev.forEach((t,i)=>{const d=t.deadline.date.replace(/-/g,'');L.push('BEGIN:VEVENT','UID:'+Date.now()+'-'+i+'@hujjat','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z',
   'DTSTART;VALUE=DATE:'+d,'SUMMARY:'+x('Muddat: '+t.text.slice(0,80)),
-  'DESCRIPTION:'+x('Ijrochi: '+t.executors.join(', ')+'\nMuddat: '+t.deadline.text+'\nHujjat: '+(q.sender||'')+', № '+(q.number||'')+', '+fmt(q.date)+'\nManba: '+t.source),'END:VEVENT')});
+  'DESCRIPTION:'+x('Ijrochi: '+t.executors.join(', ')+'\nMuddat: '+t.deadline.text+'\nHujjat: '+(q.sender||'')+', № '+(q.number||'')+', '+fmt(q.date)+'\nManba: '+t.source),
+  // eslatmalar kalendar sozlamasiga bog'liq bo'lmasin: muddatdan 3 kun va 1 kun oldin, soat 9:00 da
+  'BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-P2DT15H','DESCRIPTION:'+x('3 kun qoldi: '+t.text.slice(0,60)),'END:VALARM',
+  'BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-PT15H','DESCRIPTION:'+x('Ertaga muddat: '+t.text.slice(0,60)),'END:VALARM','END:VEVENT')});
  L.push('END:VCALENDAR');save(new Blob([L.join('\r\n')],{type:'text/calendar'}),base()+'-muddatlar.ics')}
 </script></body></html>"""

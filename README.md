@@ -15,7 +15,7 @@ Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv
 
 **Savol-javob:** ovozli savol (o'zbekcha, internetsiz; nutq modeli 5 ta ochiq model ichidan haqiqiy Telegram ovozlarida o'lchab tanlangan, xato 59% dan 25% ga tushdi), bot qaysi savolni tushunganini ko'rsatadi va o'xshash savollarni tugma qilib beradi, qisqa savolda taxmin qilmay aniqlashtiradi, mavzular menyusi, «Foydali / Bu emas» baholari, admin sahifasi va **bot javob topa olmagan savollar ro'yxati** (bazaga qaysi javoblarni qo'shish kerakligini ko'rsatadi), Excel orqali bazani yangilash.
 
-**Hujjat tahlili:** natija hujjatning o'zida ko'rsatiladi (topshiriq bosilsa, qayerdan olingani belgilanadi), Excel'ga yuklab olish, muddatlarni kalendarga qo'shish (.ics), skaner sifati past bo'lsa ogohlantirish.
+**Hujjat tahlili:** natija hujjatning o'zida ko'rsatiladi (topshiriq bosilsa, qayerdan olingani belgilanadi), Excel'ga yuklab olish, muddatlarni eslatmalar bilan kalendarga qo'shish (.ics), skaner sifati past bo'lsa ogohlantirish.
 
 ## Umumiy yondashuv
 
