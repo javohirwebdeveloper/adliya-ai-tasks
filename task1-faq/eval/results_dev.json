@@ -29,7 +29,8 @@
    "n": 205,
    "hit@1": 0.7853658536585366,
    "hit@3": 0.8780487804878049,
-   "mrr": 0.8404099558977608
+   "mrr": 0.8404099558977608,
+   "note": "birinchi o'lchovdan; tajriba indeksi o'chirilgan"
   },
   {
    "name": "Yakuniy tizim (reranker so'rovlarning 83% ida ishladi)",
@@ -376,7 +377,8 @@
  ],
  "thresholds": {
   "answer": 0.25,
-  "suggest": 0.002
+  "suggest": 0.002,
+  "scale": "rerank"
  },
  "final": {
   "real": {
@@ -387,16 +389,16 @@
    "answered_wrong": 5
   },
   "negatives": {
-   "not_found": 76,
-   "unsure_wrong": 17,
+   "not_found": 78,
+   "unsure_wrong": 15,
    "smalltalk": 7
   }
  },
  "neg_errors": [],
  "latency_ms": {
-  "median": 2242,
-  "p90": 3033,
-  "mean": 2204
+  "median": 2739,
+  "p90": 3774,
+  "mean": 2668
  },
  "holdout": {
   "n": 505,

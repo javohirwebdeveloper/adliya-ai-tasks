@@ -83,6 +83,9 @@ def content_words(query: str) -> int:
     return sum(w not in STOPWORDS for w in words)
 
 
+TOPIC_S1 = 0.6       # 1-bosqich bali shundan past bo'lsa, savol mavzusi bazada yo'q deb hisoblanadi
+
+
 def final_status(query: str, cands: list[Candidate], confident: bool, t_answer: float, t_suggest: float):
     """Yakuniy qaror: javob / variantlar / topilmadi. Qidiruv ham, baholash skripti ham shu funksiyadan foydalanadi."""
     status = "answered" if confident else decide(cands[0].score if cands else None, t_answer, t_suggest)
@@ -94,8 +97,13 @@ def final_status(query: str, cands: list[Candidate], confident: bool, t_answer: 
         second = cands[1].score if len(cands) > 1 else 0.0
         if not (cands[0].score >= 0.8 and cands[0].score - second >= 0.3):
             status, reason = "unsure", "short"
-    elif status == "not_found" and short and cands and cands[0].stage1 >= 0.6:
+    elif status == "not_found" and short and cands and cands[0].stage1 >= TOPIC_S1:
         status, reason = "unsure", "short"           # "muddat": mavzu bazada bor, lekin savol juda umumiy
+    elif status == "unsure" and cands and max(c.stage1 for c in cands) < TOPIC_S1:
+        # "Bu foydalimi yoki foydali emasmi" kabi bazaga aloqasi yo'q gapga reranker past ball bilan ham variant
+        # chiqarardi (sinovda topildi). Mavzu bazada bo'lmasa, variant o'rniga "topilmadi" va mavzular ro'yxati.
+        # Dev to'plamida to'g'ri variant olgan savollarning hammasida bu bal 0.6 dan yuqori.
+        status, reason = "not_found", "off_topic"
     return status, reason
 
 

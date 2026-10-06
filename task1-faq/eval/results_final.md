@@ -12,6 +12,8 @@ Real so'rovlar: 120 ta, bazada javobi yo'q so'rovlar: 60 ta.
 | (sinov, rad etildi) lug'at + qolip so'zlari tozalangan indeks | 72.5% | 92.5% | 0.831 |
 | Yakuniy tizim (reranker so'rovlarning 87% ida ishladi) | 87.5% | 91.7% | 0.894 |
 
+Rad etilgan tajriba qatori birinchi o'lchovdan olingan: tajriba indeksi (faq_clean) rad etilgach o'chirilgan, bu qator qaror qoidalariga bog'liq emas.
+
 ## Yozilish uslubi bo'yicha (yakuniy tizim)
 
 | Uslub | Soni | Hit@1 | Hit@3 |
@@ -26,18 +28,18 @@ Real so'rovlar: 120 ta, bazada javobi yo'q so'rovlar: 60 ta.
 
 ## Tizim foydalanuvchiga nima qaytaradi
 
-Reranker chegaralari: javob >= 0.25, variantlar >= 0.002 (dev to'plamida tanlangan).
+Chegaralar (reranker bali): javob >= 0.25, variantlar >= 0.002 (dev to'plamida tanlangan).
 
 | Natija | Real so'rovlar | Bazada yo'q so'rovlar |
 |---|---|---|
 | to'g'ri javob berildi | 76 (63.3%) | 0 (0.0%) |
 | variantlar ko'rsatildi, to'g'risi ichida | 28 (23.3%) | 0 (0.0%) |
-| variantlar ko'rsatildi, to'g'risi yo'q | 8 (6.7%) | 14 (23.3%) |
+| variantlar ko'rsatildi, to'g'risi yo'q | 8 (6.7%) | 12 (20.0%) |
 | noto'g'ri javob berildi | 2 (1.7%) | 0 (0.0%) |
-| "topilmadi" deyildi | 6 (5.0%) | 45 (75.0%) |
+| "topilmadi" deyildi | 6 (5.0%) | 47 (78.3%) |
 | salom/rahmat deb javob berildi | 0 (0.0%) | 1 (1.7%) |
 
-Tezlik (CPU, kesh siz, bitta so'rov): mediana 2439 ms, o'rtacha 2502 ms, p90 3440 ms.
+Tezlik (CPU, kesh siz, bitta so'rov): mediana 2706 ms, o'rtacha 2752 ms, p90 3775 ms.
 
 ## Birinchi o'rinda noto'g'ri javob chiqqan so'rovlar
 

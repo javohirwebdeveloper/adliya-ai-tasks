@@ -22,7 +22,7 @@ Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv
 - **Avval ma'lumotni o'rgandim.** 1-topshiriqda bazadagi savollar qolip bilan yasalganini va 10 juft javob deyarli bir xilligini topdim. 2-topshiriqda hujjatlarning ikki turi (qaror va xat) va topshiriq keladigan to'rt xil joy bor.
 - **Har bir g'oyani o'lchab qabul qildim.** Mantiqan to'g'ri ko'ringan ikki g'oya (bazadagi qolip so'zlarini tozalash, ColBERT) o'lchovda foyda bermadi va olib tashlandi. Bu README larda ochiq yozilgan.
 - **Natijani halol o'lchadim.** 1-topshiriqda tizim sozlab bo'lingach, alohida yozilgan «ko'r» test to'plamida faqat bir marta o'lchandi. 2-topshiriqda berilgan hujjatlardan tashqari boshqacha formatdagi hujjat ham sinaldi va unda topilgan xatolar ham yozildi.
-- **Avtomatik testlar:** 1-topshiriqda 18 ta (ovozli savol bilan), 2-topshiriqda 33 ta (`pytest`).
+- **Avtomatik testlar:** 1-topshiriqda 21 ta (ovozli savol bilan), 2-topshiriqda 33 ta (`pytest`).
 - **Xavfsizlik:** portlar faqat `127.0.0.1` ga ochiladi, tashqariga nginx orqali HTTPS, so'rovlar soni cheklangan, konteynerlar root emas, yuklangan hujjat diskka yozilmaydi, foydalanuvchi ID si jurnalda ochiq saqlanmaydi.
 
 ## Tez ishga tushirish

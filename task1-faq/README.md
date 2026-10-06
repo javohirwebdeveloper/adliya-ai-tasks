@@ -18,7 +18,7 @@ Tizim sozlab bo'lingach alohida yozilgan «ko'r» test to'plamida (120 ta real s
 
 Ko'r to'plamdagi natija dev bilan deyarli bir xil: tizim dev savollariga moslashib qolmagan.
 
-Foydalanuvchi nimani ko'radi (ko'r to'plam, 120 ta real savol): 63% darhol to'g'ri javob oladi, 23% variantlarni ko'radi va to'g'risi ularning ichida bo'ladi, 1,7% noto'g'ri javob oladi, 5% «topilmadi» degan javob oladi. Bazada yo'q savollarning 75% iga «topilmadi» deyiladi, qolganiga variantlar ko'rsatiladi.
+Foydalanuvchi nimani ko'radi (ko'r to'plam, 120 ta real savol): 63% darhol to'g'ri javob oladi, 23% variantlarni ko'radi va to'g'risi ularning ichida bo'ladi, 1,7% noto'g'ri javob oladi, 5% «topilmadi» degan javob oladi. Bazada yo'q savollarning 78% iga «topilmadi» deyiladi, 20% iga yaqin mavzudagi variantlar ko'rsatiladi, bittasi salom deb tanildi (bu qism «aloqasiz gapga variant yo'q» qoidasidan keyin qayta o'lchangan, 3-bo'limga qarang).
 
 Tezlik (shu server, GPU siz): bitta yangi savol o'rtacha 2,5 soniya, 1-bosqich ishonchli bo'lsa 0,6 soniya, takroriy savol keshdan 10 ms.
 
@@ -27,7 +27,7 @@ Tezlik (shu server, GPU siz): bitta yangi savol o'rtacha 2,5 soniya, 1-bosqich i
 Topshiriqda so'ralgan asosiy narsa savolga javob topish. Lekin bot real odamlar uchun, shuning uchun yana quyidagilar qilindi:
 
 - **Bot qaysi savolni tushunganini ko'rsatadi.** Javob ustida sarlavha turadi, masalan «Haydovchilik guvohnomasi muddati tugasa yoki yo'qolsa nima qilinadi?». Odam bot uni to'g'ri tushunganini darhol ko'radi.
-- **O'xshash savollar tugma bo'lib chiqadi.** Bot noto'g'ri tushunsa, odam bitta bosish bilan to'g'ri javobni oladi. Faqat haqiqatan yaqin savollar ko'rsatiladi, aloqasiz taklif chiqmaydi.
+- **O'xshash savollar tugma bo'lib chiqadi.** Bot noto'g'ri tushunsa, odam bitta bosish bilan to'g'ri javobni oladi. Faqat yaqin savollar ko'rsatiladi. Savol mavzusi bazada umuman bo'lmasa, variant o'rniga «topilmadi» va mavzular ro'yxati chiqadi.
 - **Qisqa savolda taxmin qilinmaydi.** «prava», «muddat», «pasport» kabi bir-ikki so'zli savolga bot bitta javobni tanlab bermaydi, «Qaysi biri haqida so'rayapsiz?» deb variantlarni ko'rsatadi.
 - **Ovozli savol.** Telegram'da ovozli xabar yuborish yoki veb-sahifada mikrofon tugmasini bosish mumkin. Nutq serverning o'zida, internetsiz tanib olinadi (GigaAM-Multilingual, beshta ochiq model ichidan o'lchab tanlangan, 4-bo'limga qarang). Bot nima eshitganini ham yozadi: «Eshitdim: ...». Bu yozishga qiynaladigan keksa odamlar uchun qulay.
 - **Mavzular menyusi.** Nima so'rashni bilmagan odam 9 ta mavzudan birini tanlab, savollar ro'yxatini varaqlaydi: «Pasport, propiska va FHDYo», «Notarius va meros», «Avtomobil va haydovchilik guvohnomasi» va hokazo.
@@ -102,6 +102,7 @@ Reranker'ni qanday ishlatish bo'yicha solishtirish (dev, birinchi bosqich nomzod
 - **Kirill.** Kirillda yozilgan savol lotinga o'giriladi va ikkala variant ham qidiriladi: o'zbekcha kirilni lotin varianti yaxshi topadi, ruscha savolni bge-m3 o'zi tushunadi.
 - **Reranker (bge-reranker-v2-m3) qoldi, lekin tejamkor ishlatiladi.** U Hit@1 ni 81,5% dan 86,8% ga ko'tardi, lekin CPU da sekin: bitta nomzodga 0,65 soniya. O'lchovlarda uch narsa chiqdi. Birinchisi: 5 ta emas, 3 ta nomzod berish aniqroq va 40% tezroq. Ikkinchisi: reranker'ga faqat savol matnini berish yaramaydi (Hit@1 79%), javob matni ham kerak. Uchinchisi, kulrang zona: 1-bosqich ishonchli bo'lsa, reranker chaqirilmaydi. Bunda aniqlik o'zgarmadi va bazada yo'q savollardan birortasi ham «ishonchli» deb o'tib ketmadi. GPU bo'lsa, reranker 20-50 ms da ishlaydi va kulrang zonani o'chirish mumkin.
 - **«Muddati tugadi» qoidasi.** Sinov paytida «pravamning muddati tugadi» savoliga bot guvohnoma qancha muddatga berilishini aytdi, odam esa uni yangilashni so'rayapti. Lug'atga «muddati tugadi -> muddati tugasa nima qilinadi» qoidasi qo'shildi.
+- **Aloqasiz gapga variant ko'rsatilmaydi.** Ovozli sinovda «Bu foydalimi yoki foydali emasmi» degan gapga bot bazaga aloqasi yo'q 3 ta variant chiqardi: reranker hamma nomzodga juda past ball bergan (0,004), lekin variant chegarasi (0,002) undan ham past edi. Endi savol mavzusi bazada bo'lmasa (1-bosqich bali 0,6 dan past, bu chegara qisqa savol qoidasida ham ishlatiladi), variant o'rniga «topilmadi» va mavzular ro'yxati chiqadi. Dev to'plamida to'g'ri variant olgan savollarning hammasida bu bal 0,6 dan yuqori edi. Qayta o'lchov: real savollar natijasi ikkala to'plamda ham o'zgarmadi, bazada yo'q savollarga aloqasiz variant ko'rsatish dev da 17 tadan 15 taga, ko'r to'plamda 14 tadan 12 taga kamaydi.
 
 ## 4. Sifatni qanday tekshirdim
 
@@ -226,7 +227,7 @@ curl -s http://127.0.0.1:8000/ask -H 'content-type: application/json' \
 
 Boshqa so'rovlar: `POST /stt` (ovozli fayl -> matn), `POST /feedback`, `GET /answers/{id}`, `GET /categories`, `GET /categories/{id}?page=N`, `GET /health`. Admin: `/admin`, `/admin/data`, `/admin/upload`, `/admin/reindex`.
 
-Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (18 ta). Nutq modellarini solishtirish: `python eval/stt_bench.py fleurs|dir ...` (usuli faylning boshida).
+Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (21 ta). Nutq modellarini solishtirish: `python eval/stt_bench.py fleurs|dir ...` (usuli faylning boshida).
 
 ## Kod tuzilmasi
 
