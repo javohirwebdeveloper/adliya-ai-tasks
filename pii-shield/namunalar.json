@@ -1,0 +1,32 @@
+[
+ {
+  "yozuv": "o'zbek lotin",
+  "asl": "Assalomu alaykum! Men tadbirkorlik bilan shug'ullanaman, lekin soliq hisoblash bo'yicha biroz tushunmovchilik bo'ldi. Iltimos, mening hisobimni tekshirib bering. Mana ma'lumotlarim: Ismim Alisher Karimovbek Karimov. STIR: 569843210, manzilim: Toshkent viloyati, Chilonzor tumani, 15-uy. Kartam: Uzcard 8600 1234567890123456. Elektron pochtam: alisher.karimov@mail.uz. Javobingizni kutaman.",
+  "yashirin": "Assalomu alaykum! Men tadbirkorlik bilan shug'ullanaman, lekin soliq hisoblash bo'yicha biroz tushunmovchilik bo'ldi. Iltimos, mening hisobimni tekshirib bering. Mana ma'lumotlarim: Ismim [ISM_1] [ISM_2]. STIR: [STIR_1], manzilim: Toshkent viloyati, Chilonzor tumani, [MANZIL_1]. Kartam: Uzcard [KARTA_1]. Elektron pochtam: [EMAIL_1]. Javobingizni kutaman.",
+  "mavzu": "Tadbirkorlik va soliq",
+  "shoshilinch": false,
+  "xulosa": "Tadbirkor [ISM_1] [ISM_2] soliq hisoblash bo'yicha tushunmovchilik yuzaga kelganini ma'lum qilib, hisobini tekshirib ko'rishni so'ramoqda.",
+  "javob": "Assalomu alaykum, [ISM_1] [ISM_2]! Murojaatingiz qabul qilindi. Soliq hisoblash bo'yicha ma'lumotlaringizni mutaxassislarimiz tomonidan ko'rib chiqib, qisqa muddatda sizga javob beramiz.",
+  "fuqaroga": "Assalomu alaykum, Alisher Karimovbek Karimov! Murojaatingiz qabul qilindi. Soliq hisoblash bo'yicha ma'lumotlaringizni mutaxassislarimiz tomonidan ko'rib chiqib, qisqa muddatda sizga javob beramiz."
+ },
+ {
+  "yozuv": "o'zbek kirill",
+  "asl": "Assalomu alaykum. Men Toshkent viloyati, Чирчилзор тумани, Шарқ кўчаси, 45-уйдан яшайман. Ҳарбий хизматдан келган шахсларнинг суд жараёнидаги ҳуқуқлари бўйича аниқлаштириш керак. Паспорт рақами: AB789123, STIR: 123456789. Алоқа учун рақам: +998901234567. Картам: Uzcard 8600 1122334455667788.",
+  "yashirin": "Assalomu alaykum. Men Toshkent viloyati, Чирчилзор тумани, [MANZIL_1] яшайман. Ҳарбий хизматдан келган шахсларнинг суд жараёнидаги ҳуқуқлари бўйича аниқлаштириш керак. Паспорт рақами: [PASPORT_1], STIR: [STIR_1]. Алоқа учун рақам: [TELEFON_1]. Картам: Uzcard [KARTA_1].",
+  "mavzu": "Sud, harbiy xizmat va huquq",
+  "shoshilinch": false,
+  "xulosa": "Murojaatnoma harbiy xizmatdan qaytgan shaxslarning sud jarayonidagi huquqlari haqida ma'lumot olish va aniqlashtirishni o'z ichiga oladi.",
+  "javob": "Assalomu alaykum! Harbiy xizmatdan qaytgan shaxslarning sud jarayonidagi huquqlari bo'yicha aniq ma'lumot olishingiz mumkin. Sizga batafsil yordam berishimiz uchun tegishli bo'lim xodimi [TELEFON_1] raqamiga bog'lanib, masalani yoritib beradi.",
+  "fuqaroga": "Assalomu alaykum! Harbiy xizmatdan qaytgan shaxslarning sud jarayonidagi huquqlari bo'yicha aniq ma'lumot olishingiz mumkin. Sizga batafsil yordam berishimiz uchun tegishli bo'lim xodimi +998901234567 raqamiga bog'lanib, masalani yoritib beradi."
+ },
+ {
+  "yozuv": "rus tili",
+  "asl": "Здравствуйте, хочу уточнить ситуацию по поводу моей отсрочки от армии из-за судебного процесса. Я, Karimov Rustambekbekbekovich, сейчас прохожу через разбирательство и мне нужны документы. Мой ПИНФЛ 54892013674205, карта Humo 9860 1234 5678 9012 для оплаты пошлин. Машина у меня 01 A 777 BB, живу в Ташкенте, Чиланзар тумани, 15-уличка, дом 42. Подскажите, как лучше поступить?",
+  "yashirin": "Здравствуйте, хочу уточнить ситуацию по поводу моей отсрочки от армии из-за судебного процесса. Я, [ISM_1], сейчас прохожу через разбирательство и мне нужны документы. Мой ПИНФЛ [JSHSHIR_1], карта Humo [KARTA_1] для оплаты пошлин. Машина у меня [AVTO_1], живу в Ташкенте, Чиланзар тумани, 15-уличка, [MANZIL_1]. Подскажите, как лучше поступить?",
+  "mavzu": "Sud, harbiy xizmat va huquq",
+  "shoshilinch": true,
+  "xulosa": "Fuqaro [ISM_1] sud jarayoni davom etayotgani sababli harbiy xizmatdan ozod qilish (kechiktirish) bo'yicha hujjatlarni qanday olishi haqida ma'lumot so'ramoqda.",
+  "javob": "Assalomu alaykum, [ISM_1]! Sud jarayoni davom etayotganligi haqidagi tasdiqlovchi hujjatlar bilan harbiy xizmatdan ozod qilish bo'yicha tegishli idoraga murojaat qilishingiz mumkin. Sizga aniqroq yo'riqnoma berishimiz uchun sud qarori yoki jarayon haqidagi ma'lumotni taqdim etishingizni so'raymiz.",
+  "fuqaroga": "Assalomu alaykum, Karimov Rustambekbekbekovich! Sud jarayoni davom etayotganligi haqidagi tasdiqlovchi hujjatlar bilan harbiy xizmatdan ozod qilish bo'yicha tegishli idoraga murojaat qilishingiz mumkin. Sizga aniqroq yo'riqnoma berishimiz uchun sud qarori yoki jarayon haqidagi ma'lumotni taqdim etishingizni so'raymiz."
+ }
+]

@@ -1,0 +1,34 @@
+# Qo'lda yozilgan sinov matnlari: murojaat, xat, chat uslubida. Belgilash: {TUR|qiymat}.
+# Manzilda faqat aniq joy (ko'cha, mahalla, uy, xonadon) belgilanadi: viloyat, tuman, shahar ochiq qoladi.
+# Qasddan qiyin holatlar: kichik harfli ismlar, rus tili, kirill, raqamga o'xshash, lekin shaxsiy bo'lmagan qiymatlar.
+
+Assalomu alaykum. Men {ISM|Toshpo'latov Bahodir Erkin o'g'li}, pasportim {PASPORT|AB4567123}, JSHSHIR {JSHSHIR|30812854120034}. Notarial ishonchnoma bekor qilinishini so'rayman.
+Hurmatli Adliya vazirligi! {ISM|Rahimova Nigora Shavkat qizi} nomidan yozyapman. Toshkent shahri, Yunusobod tumani, {MANZIL|Amir Temur shoh ko'chasi, 45-uy, 12-xonadon} manzilida yashayman. Telefon: {TELEFON|+998 97 712 34 56}.
+salom aka, mana pasport {PASPORT|aa 1234567} emas ekan, to'g'risi {PASPORT|AD7788990}. tel {TELEFON|901112233}
+Мен {ISM|Абдуллаев Шерзод Бахтиёр ўғли}, туғилган санам {TUG_SANA|12.04.1991}, телефон {TELEFON|+998 93 456 78 90}. Самарқанд шаҳри, {MANZIL|Регистон кўчаси, 17-уй}.
+Добрый день. Меня зовут {ISM|Петрова Анна Сергеевна}, паспорт {PASPORT|AC 2345678}, ИНН {STIR|412345678}. Прошу вернуть госпошлину.
+Kartamga ({KARTA|9860 1601 0123 4567}) pul qaytarilmadi, to'lov 05.09.2026 da 375 000 so'm bo'lgan, kvitansiya № 4471.
+{ISM|Yusupova Malika} va {ISM|Yusupov Anvar} merosni teng bo'lishni so'rashmoqda. Notarius: {ISM|O. Karimov}.
+Arizachi: {ISM|Ergashev Ulug'bek}, tug'ilgan sana: {TUG_SANA|1985-yil 3-mart}, email: {EMAIL|ulugbek.ergashev@gmail.com}.
+Farg'ona viloyati, Quva tumani, {MANZIL|Navbahor MFY, Bog'ishamol ko'chasi, 8-uy} da yashovchi {ISM|Qodirova Dilfuza Akbar qizi} ning arizasi ko'rib chiqilsin.
+PQ-3666-son qarorning 2-bandiga ko'ra, 2026-yil 1-iyulga qadar 14 ta hudud bo'yicha hisobot taqdim etilsin.
+Hisob raqamim {HISOB|20206000700123456001}, bank kodi 00450, STIR {STIR|305123987}.
+Assalomu alaykum, men {ISM|Dilshod}, haydovchilik guvohnomam muddati o'tibdi, mashinam {AVTO|01 A 777 AA}.
+Mening ismim {ISM|Gulnora Hasanova}, 1990 yilda tug'ilganman, nafaqa masalasida yozyapman.
+otam {ISM|Karimov Rustam} vafot etgan, meros ochish uchun nima kerak? mening raqamim {TELEFON|+998991234567}
+Ishonchnoma {ISM|Sobirov Jasur Olim o'g'li} (JSHSHIR {JSHSHIR|31203956010012}) nomiga, muddati 2027-yil 1-yanvargacha.
+Toshkent viloyati, Chirchiq shahri, {MANZIL|Mustaqillik ko'chasi 12, kv. 34}. Murojaatchi: {ISM|Nazarova Feruza}.
+Uyimiz {MANZIL|Chilonzor 9-mavze, 15-uy, 41-xonadon}. Kadastr hujjati yo'qolgan.
+Buyruq № 245, 10.02.2026. Ijrochi: Moliya bo'limi. Muddat: 15 kun.
+{ISM|Jalolov Sardor} ({TELEFON|90-345-67-89}) ishga qabul qilish bo'yicha shartnoma tuzilsin.
+Мой номер {TELEFON|+998 (90) 765-43-21}, звоните после 18:00. Я {ISM|Ким Виктор Николаевич}.
+Talabnoma: {ISM|Mirzayev Otabek Rustamovich}, pasport {PASPORT|FA 1234567}, tug'ilgan {TUG_SANA|23.11.1979}.
+Sud qarori 2-1234/2026, ish bo'yicha javobgar {ISM|Hamidov Akmal}.
+Аризачи {ISM|Тўхтасинова Мадина Илҳом қизи}, ЖШШИР {JSHSHIR|41505923400017}, Наманган вилояти, Чуст тумани, {MANZIL|Ғалаба маҳалласи, 3-уй}.
+Ota-onamning nikoh guvohnomasi {HUJJAT|I-TN 0012345} seriyali, nusxasini olsa bo'ladimi?
+{ISM|Abdullayeva Shahnoza} xonim, hujjatlaringiz {EMAIL|info.shahnoza@mail.ru} manziliga yuborildi.
+Ish yuzasidan {ISM|Xolmatov Bekzod} bilan {TELEFON|+998 88 123 00 77} raqami orqali bog'lanish mumkin.
+Avtomobil {AVTO|10 345 ABC} raqamli, kompaniyamizga tegishli, STIR {STIR|207654321}.
+Fuqaro {ISM|Raxmonov Ilhom Ergash o'g'li} {MANZIL|Beshyog'och mahallasi, 21-uy} da istiqomat qiladi, {TUG_SANA|1972-yil 9-sentabrda} tug'ilgan.
+Kartaning faqat oxirgi 4 raqami: **** 4521. To'lov ID: 7781234.
+Hurmatli {ISM|Ziyodulla Mamatqulov}! Sizning 2026-yil 14-sentabrdagi murojaatingiz ko'rib chiqildi.

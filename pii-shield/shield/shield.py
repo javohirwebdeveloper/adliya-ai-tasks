@@ -13,7 +13,7 @@ import re
 from .rules import Hit, find, latinize
 
 PRIORITY = {"JSHSHIR": 9, "KARTA": 9, "HISOB": 9, "HUJJAT": 8, "PASPORT": 8, "STIR": 8, "EMAIL": 8, "TELEFON": 7,
-            "TUG_SANA": 7, "AVTO": 6, "ISM": 5, "MANZIL": 4}
+            "TUG_SANA": 7, "AVTO": 6, "ISM": 5, "MANZIL": 4, "RAQAM": 3}
 
 
 def resolve(hits: list[Hit]) -> list[Hit]:
@@ -30,7 +30,7 @@ def resolve(hits: list[Hit]) -> list[Hit]:
 
 class Shield:
     def __init__(self, model=None):
-        self.model = model              # ixtiyoriy: ism va manzilni topuvchi o'qitilgan model (ner.py)
+        self.model = model              # ixtiyoriy: o'qitilgan NER modeli, model.predict(lotin_matn) -> [(tur, bosh, oxir)]
 
     def detect(self, text: str) -> list[tuple[str, int, int]]:
         lat, idx = latinize(text)
