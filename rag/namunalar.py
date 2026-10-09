@@ -37,7 +37,8 @@ def card(it):
             "manbalar": [{"n": i, "savol": x["question"], "ishlatildi": i in used}
                          for i, x in enumerate(it["qidiruv"]["items"], 1)],
             "javob": d.get("javob", "") if ok else "", "fuqaroga": Shield.unmask(d["javob"], it["key"]) if ok else NOT_FOUND,
-            "yopiq": y.get("javob") if y.get("javob_bor") else "Javob yo'q dedi.", "yopiq_izoh": y_note.strip()}
+            "yopiq": y.get("javob") if y.get("javob_bor") else "Javob yo'q dedi.", "yopiq_izoh": y_note.strip(),
+            "yopiq_baho": (it.get("yopiq_baho") or {}).get("baho", ""), "key": it["key"]}
 
 
 if __name__ == "__main__":

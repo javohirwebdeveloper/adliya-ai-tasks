@@ -17,6 +17,8 @@ fuqaro savoli: "Men Karimov Akmal, pasportim AB1234567. ID karta olish uchun nim
 
 Gemma hech qachon haqiqiy ism, pasport yoki telefonni ko'rmaydi. Qidirish ham yashirilgan matnda ishlaydi.
 
+Demo: [javi.uz/adliya/qalqon/#rag](https://javi.uz/adliya/qalqon/#rag)
+
 ## Natija
 
 Savollar: 1-topshiriqning ko'r to'plami (bazada javobi bor 120 ta, yo'q 60 ta), har biriga to'qima ism, pasport,

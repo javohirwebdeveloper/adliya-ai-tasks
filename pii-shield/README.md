@@ -120,7 +120,7 @@ baholangan: buni ko'proq ma'lumotda tekshirish kerak.
 Javob loyihasi xodim ko'rib chiqqandan keyin yuborilishi kerak: ba'zi javoblarda model o'zidan talab yoki idora nomini
 qo'shgan ("ГСБДД"), bir marta fuqaroning telefonini qo'llab-quvvatlash xizmati raqami deb yozgan.
 
-Jonli demo'ning 4-qismida Gemma 4 ning 3-testdagi haqiqiy javoblari bor (lotin, kirill, rus): fuqaro yozgan matn, Gemma
+Jonli demo'ning «Gemma 4» bo'limida 3-testdagi haqiqiy javoblar bor (lotin, kirill, rus): fuqaro yozgan matn, Gemma
 ko'rgan matn, javob va fuqaroga boradigan javob. Namunalar qo'lda tanlangan (til xatosisiz), o'lchovlar esa hamma
 murojaat bo'yicha.
 

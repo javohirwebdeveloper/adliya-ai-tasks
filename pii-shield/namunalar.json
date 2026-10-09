@@ -7,7 +7,14 @@
   "shoshilinch": false,
   "xulosa": "Fuqaro o'zining pensiya hissoblari va hisobvarag'izi bo'yicha ma'lumot olishni so'rayapti. JSHSHIR va STIR raqamlari taqdim etilgan.",
   "javob": "Assalomu alaykum! Sizning murojaatingiz qabul qilindi. Pensiya hissoblaringiz bo'yicha ma'lumotlarni taqdim etish uchun tegishli bo'limimiz tomonidan tekshiruv o'tkaziladi va javob [TELEFON_1] raqamingizga yuboriladi.",
-  "fuqaroga": "Assalomu alaykum! Sizning murojaatingiz qabul qilindi. Pensiya hissoblaringiz bo'yicha ma'lumotlarni taqdim etish uchun tegishli bo'limimiz tomonidan tekshiruv o'tkaziladi va javob +998901234567 raqamingizga yuboriladi."
+  "fuqaroga": "Assalomu alaykum! Sizning murojaatingiz qabul qilindi. Pensiya hissoblaringiz bo'yicha ma'lumotlarni taqdim etish uchun tegishli bo'limimiz tomonidan tekshiruv o'tkaziladi va javob +998901234567 raqamingizga yuboriladi.",
+  "key": {
+   "[JSHSHIR_1]": "45091234567890",
+   "[TUG_SANA_1]": "1975-yil 12-mayda",
+   "[STIR_1]": "842091537",
+   "[TELEFON_1]": "+998901234567",
+   "[PASPORT_1]": "AB1234567"
+  }
  },
  {
   "yozuv": "o'zbek kirill",
@@ -17,7 +24,11 @@
   "shoshilinch": true,
   "xulosa": "Fuqaro [ISM_1] mahallada suv таъминотидаги муаммолар ва почта орқали келган ҳужжатларни олишдаги қийинчиликлар бўйича murojaat қилди.",
   "javob": "Ассалому алайкум, [ISM_1]! Мурожаатингиз қабул қилинди. Сув таъминоти масаласи бўйича тегишли хизматларга кўрсатма берилди ва почта ҳужжатларини олиш бўйича муаммо тугатиш учун чоралар кўрилади.",
-  "fuqaroga": "Ассалому алайкум, Каримов Жасурбек Олимбоевич! Мурожаатингиз қабул қилинди. Сув таъминоти масаласи бўйича тегишли хизматларга кўрсатма берилди ва почта ҳужжатларини олиш бўйича муаммо тугатиш учун чоралар кўрилади."
+  "fuqaroga": "Ассалому алайкум, Каримов Жасурбек Олимбоевич! Мурожаатингиз қабул қилинди. Сув таъминоти масаласи бўйича тегишли хизматларга кўрсатма берилди ва почта ҳужжатларини олиш бўйича муаммо тугатиш учун чоралар кўрилади.",
+  "key": {
+   "[ISM_1]": "Каримов Жасурбек Олимбоевич",
+   "[PASPORT_1]": "AB456789"
+  }
  },
  {
   "yozuv": "rus tili",
@@ -27,6 +38,10 @@
   "shoshilinch": false,
   "xulosa": "Fuqaro mobil ilova orqali soliq to'lash tartibi va ma'lumotlarni to'g'ri kiritish bo'yicha ma'lumot so'ramoqda.",
   "javob": "Здравствуйте! Для оплаты налогов через мобильные приложения убедитесь, что вы вводите ИНН [STIR_1] и данные карты [KARTA_1] в соответствующие поля. Если у вас возникнут сложности, вы можете обратиться в ближайшее отделение налоговой службы для получения детальной консультации.",
-  "fuqaroga": "Здравствуйте! Для оплаты налогов через мобильные приложения убедитесь, что вы вводите ИНН 123456789 и данные карты 9860 1234 5678 9012 в соответствующие поля. Если у вас возникнут сложности, вы можете обратиться в ближайшее отделение налоговой службы для получения детальной консультации."
+  "fuqaroga": "Здравствуйте! Для оплаты налогов через мобильные приложения убедитесь, что вы вводите ИНН 123456789 и данные карты 9860 1234 5678 9012 в соответствующие поля. Если у вас возникнут сложности, вы можете обратиться в ближайшее отделение налоговой службы для получения детальной консультации.",
+  "key": {
+   "[STIR_1]": "123456789",
+   "[KARTA_1]": "9860 1234 5678 9012"
+  }
  }
 ]

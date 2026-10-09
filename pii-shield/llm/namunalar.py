@@ -26,7 +26,7 @@ def card(it):
     reply = str(j.get("javob_loyihasi") or "")
     return {"yozuv": it["yozuv"], "asl": it["matn"], "yashirin": it["masked"], "mavzu": j.get("mavzu", ""),
             "shoshilinch": bool(j.get("shoshilinch")), "xulosa": j.get("xulosa", ""),
-            "javob": reply, "fuqaroga": Shield.unmask(reply, it["key"])}
+            "javob": reply, "fuqaroga": Shield.unmask(reply, it["key"]), "key": it["key"]}
 
 
 def pick(items):
