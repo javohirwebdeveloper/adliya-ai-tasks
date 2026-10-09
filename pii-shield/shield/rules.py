@@ -66,7 +66,8 @@ NUM_END = r"(?![\w]|[ -]\d)"                                      # raqam shu ye
 NOT_MONEY = r"(?!\s*(?:so'm|sum|uzs|\$|dollar|yevro|evro|rub|mln|mlrd|million|milliard|ming|tiyin))"
 DATE = (r"\d{1,2}[./]\d{1,2}[./]\d{4}|\d{4}[./-]\d{1,2}[./-]\d{1,2}|\d{4}-yil \d{1,2}-(?:" + MONTHS + r")\w*|\d{1,2}[ -](?:"
         + MONTHS + r")\w*,? \d{4}")
-BIRTH = r"t(?:u|o')g'il\w*|rodil\w*|rojdeni\w*|[dg]\. ?r\."          # "tug'ilgan", "тўғилган", "родился", "дата рождения"
+BIRTH = r"t(?:u|o')g'il\w*|rodil\w*|rojdeni\w*|urojen\w*|[dg]\. ?r\."  # "tug'ilgan", "тўғилган", "родился", "дата рождения"
+BIRTH_FILL = r"(?:\W{1,3}(?:sana\w*|kun\w*|yil\w*|data|esa|mening|bu|ham|god\w*)){0,3}\W{1,4}"   # "tug'ilgan sanam esa: "
 
 
 def luhn(digits: str) -> bool:
@@ -95,14 +96,14 @@ PATTERNS = [
     # (tur, regex, ishonch, tekshiruv)
     ("EMAIL", re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+"), 3, None),
     ("JSHSHIR", re.compile(r"(?<!\d[ -])" + W + r"(\d{14})" + NUM_END), 3, lambda m: valid_pinfl(m.group(1))),
-    ("JSHSHIR", re.compile(KW(r"jshshir|jshir|pinfl|shaxsiy raqam\w*") + FILL + r"(\d(?:[ -]?\d){12,15})(?![\w])"), 3, None),
+    ("JSHSHIR", re.compile(KW(r"jshshir|jshir|pinfl|shaxsiy raqam\w*") + FILL + r"(\d(?:[ -]?\d){5,15})(?![\w])"), 3, None),
     ("KARTA", re.compile(r"(?<!\d[ -])" + W + r"((?:\d{4}[ -]?){3}\d{4})" + NUM_END), 3,
      lambda m: (lambda d: luhn(d) or d[:4] in ("8600", "9860"))(re.sub(r"\D", "", m.group(1)))),
     ("KARTA", re.compile(KW(r"uzcard|humo|visa|mastercard|kart\w*|plastik\w*") + FILL + r"(\d(?:[ -]?\d){12,19})"
                          + NUM_END + NOT_MONEY), 3, None),
     ("HISOB", re.compile(r"(?<!\d[ -])" + W + r"(\d{20})" + NUM_END), 3, None),
-    ("STIR", re.compile(KW(r"stir|inn|soliq to'lovchining identifikatsiya raqami") + FILL + r"(\d{3}[ -]?\d{3}[ -]?\d{3})"
-                        + NUM_END), 3, None),
+    ("STIR", re.compile(KW(r"stir|inn|soliq raqam\w*|soliq to'lovchining identifikatsiya raqami") + FILL
+                        + r"(\d(?:[ -]?\d){5,12})" + NUM_END), 3, None),
     ("PASPORT", re.compile(W + r"([A-Z]{2} ?№? ?\d{7})" + E), 3, None),
     # "pasport" so'zidan keyin: kichik harf va 6-8 raqam ham (yozishda xato bo'lsa ham yashirilsin)
     ("PASPORT", re.compile(KW(r"pasport\w*|passport\w*|id[- ]?karta\w*") + FILL
@@ -132,7 +133,7 @@ PATTERNS = [
     # tug'ilgan sana: faqat "tug'ilgan" / "родился" yonida. Oddiy sanalar (hujjat sanasi, muddat) va yolg'iz tug'ilgan
     # yil yashirilmaydi: AI ga muddat va yosh kerak, ular odamni aniqlab bermaydi.
     ("TUG_SANA", re.compile(r"(?i)(" + DATE + r")(?=\D{0,25}(?:yil\w* |goda? )?(?:" + BIRTH + "))"), 3, None),
-    ("TUG_SANA", re.compile(r"(?i)(?:" + BIRTH + r")(?: (?:sana|kun|data)\w*)?\W{0,4}(" + DATE + ")"), 3, None),
+    ("TUG_SANA", re.compile(r"(?i)(?:" + BIRTH + r")" + BIRTH_FILL + "(" + DATE + ")"), 3, None),
 ]
 
 # Uzun raqam (12+ xona) hech bir qoidaga tushmasa ham yashiriladi: murojaatda bunday raqam deyarli doim
@@ -172,10 +173,10 @@ def trim_name(lat: str, h: Hit):
 # yo'naltirish uchun hudud kerak, uy raqami esa kerak emas.
 STREET = re.compile(
     r"((?:" + QNAME + r" ){1,3}(?:ko'chasi|ko'cha|shoh ko'chasi|tor ko'chasi|berk ko'chasi|mahallasi|MFY|massivi|"
-    r"dahasi|kvartali|qishlog'i|ovuli|SFY)(?:,? \d+[a-z]?(?![\w-]))?|"
+    r"dahasi|kvartali|qishlog'i|qishloq|ovuli|SFY)(?:,? \d+[a-z]?(?![\w-]))?(?=(?:da|dan|ga|ning|dagi|ni)?(?![\w']))|"
     # oldindan keladigan shakl, ruscha ham: "mahalla Navbahor", "ulitsa Amira Temura", "ul. Amir Temur 45"
-    r"(?i:ko'cha|mahalla|maxalla|maxallya|mahallya|massiv|kvartal|ulitsa|ul\.|prospekt|pr-t|pereulok|per\.|proyezd|"
-    r"tupik|bulvar|mikrorayon|mkr\.?)\s*(?:" + QNAME + " ){0,2}" + QNAME + r"(?:,? \d+[a-z]?(?![\w-]))?)" + E)
+    r"(?i:ko'cha|mahalla|maxalla|maxallya|mahallya|massiv|kvartal|ulits[aeiu]|ul\.|prospekt\w*|pr-t|pereul\w*|per\.|proyezd|"
+    r"tupik|bulvar|mikrorayon|mkr\.?)\s*(?:" + QNAME + " ){0,2}" + QNAME + r"(?:,? \d+[a-z]?(?![\w-]))?" + E + ")")
 HOUSE = re.compile(r"(?i)(\d+[a-z]?[-–]?(?:uy|xonadon|kvartira|xona)\w*|(?:uy|xonadon|kvartira|kv\.?|dom|d\.|korpus)\s*№?\s*\d+[a-z]?|"
                    r"(?:" + NAMEW + r" )?\d+[-–]?(?:mavze|daha|kvartal|mikrorayon)|"
                    r"\d+[-–]?(?:tor |berk )?(?:ko'cha\w*|ulitsa|ulichka|proyezd|tupik|liniya))" + E)

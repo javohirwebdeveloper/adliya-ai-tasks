@@ -82,3 +82,15 @@ def test_blind_set_2_patterns():
     assert m("Men, Abdullayev Jasurbek O‘tmonovich, harbiy") == "Men, [ISM_1], harbiy"
     assert m("Menbekov Rustambek Omadbekman, STIR") == "[ISM_1]man, STIR"
     assert m("Yunusobodda yashaydigan Nazarovman.") == "Yunusobodda yashaydigan [ISM_1]man."
+
+
+def test_blind_set_3_patterns():
+    """3-ko'r to'plamda topilgan naqshlar."""
+    m = lambda t: S.mask(t)[0]
+    assert m("Mening soliq raqamim 584921037 bo'lib") == "Mening soliq raqamim [STIR_1] bo'lib"
+    assert m("Мой ПИНФЛ 584923017. STIR 88492031 raqamli") == "Мой ПИНФЛ [JSHSHIR_1]. STIR [STIR_1] raqamli"
+    assert m("Men Toshkent tumani, Amirxon mahallasida yashayman.") == "Men Toshkent tumani, [MANZIL_1]da yashayman."
+    assert m("Jizzax viloyati, Arxa qishloq, 15-uyda") == "Jizzax viloyati, [MANZIL_1]"
+    assert m("Живу в Чиланзарском районе, по улице Амира Темура, дом 45.") == "Живу в Чиланзарском районе, по [MANZIL_1]."
+    assert m("Я, уроженец 15.05.1988 года.") == "Я, уроженец [TUG_SANA_1] года."
+    assert m("tug'ilgan sanam esa 1992-yil 15-may.") == "tug'ilgan sanam esa [TUG_SANA_1]."
