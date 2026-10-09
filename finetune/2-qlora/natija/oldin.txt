@@ -1,0 +1,3 @@
+O'QITISHDAN OLDIN:
+  haqiqiy hujjatlar (13 ta): json 100%, ijrochi 54%, muddat 85%, turi 62%, hammasi 31%
+  sun'iy, yangi nomlar (150 ta): json 100%, ijrochi 36%, muddat 74%, turi 61%, hammasi 21%

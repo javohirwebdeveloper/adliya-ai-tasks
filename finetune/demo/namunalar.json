@@ -1,0 +1,87 @@
+[
+ {
+  "nom": "Ikki ijrochi",
+  "text": "Moliya-iqtisodiyot boshqarmasi Kadrlar bo'limi bilan birgalikda xodimlarni rag'batlantirish tartibini har chorakda ko'rib chiqsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Moliya-iqtisodiyot boshqarmasi",
+    "Kadrlar bo'limi"
+   ],
+   "muddat": "har chorakda",
+   "muddat_turi": "davriy"
+  },
+  "manba": "yangi"
+ },
+ {
+  "nom": "Kim bajaradi, kimga emas",
+  "text": "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Hududiy adliya boshqarmalari"
+   ],
+   "muddat": "2026-yil 25-dekabrgacha",
+   "muddat_turi": "sana"
+  },
+  "manba": "yangi"
+ },
+ {
+  "nom": "Doimiy",
+  "text": "Axborot xizmati vazirlik rasmiy saytidagi ma'lumotlarning dolzarbligini doimiy ravishda ta'minlasin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Axborot xizmati"
+   ],
+   "muddat": "doimiy ravishda",
+   "muddat_turi": "doimiy"
+  },
+  "manba": "yangi"
+ },
+ {
+  "nom": "Haqiqiy hujjat",
+  "text": "Kengash kotibiyati ilova ijrosi to'g'risida har chorakda Kengash yig'ilishiga axborot kiritib borsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Kengash kotibiyati"
+   ],
+   "muddat": "har chorakda",
+   "muddat_turi": "davriy"
+  },
+  "manba": "real"
+ },
+ {
+  "nom": "Boshlanish sanasi",
+  "text": "Yuridik xizmat 2027-yil 1-yanvardan boshlab shartnomalarni faqat elektron shaklda ro'yxatga olsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Yuridik xizmat"
+   ],
+   "muddat": "2027-yil 1-yanvardan boshlab",
+   "muddat_turi": "boshlanish"
+  },
+  "manba": "yangi"
+ },
+ {
+  "nom": "Muddatsiz",
+  "text": "Kadrlar bo'limi xodimlarning malaka oshirish rejasini ishlab chiqsin va tasdiqlash uchun kiritsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Kadrlar bo'limi"
+   ],
+   "muddat": null,
+   "muddat_turi": "yo'q"
+  },
+  "manba": "yangi"
+ },
+ {
+  "nom": "Har oy",
+  "text": "Ekspert xulosasi loyiha rahbari orqali Vazirlikning Ijro nazorati boshqarmasiga har oyda taqdim etilsin.",
+  "kutilgan": {
+   "ijrochi": [
+    "Loyiha rahbari"
+   ],
+   "muddat": "har oyda",
+   "muddat_turi": "davriy"
+  },
+  "manba": "synth"
+ }
+]

@@ -1,0 +1,59 @@
+16:24:03 Qurilma: cuda NVIDIA L4
+16:24:03 Model: FacebookAI/xlm-roberta-base | o'qitish: 2744 | tekshirish: 304 | ko'r test: 325 | mavzular: 9
+16:24:03 Eng oddiy taxmin (hammasiga eng ko'p mavzu): 24.3%
+16:24:17 Fine-tuningsiz (muzlatilgan model + klassifikator): ko'r test 41.8% (11 s)
+16:24:17 LoRA: o'qitiladigan parametrlar 1,039,881 / 279,090,450 (0.37%)
+16:24:19   qadam 20/860, loss 2.182, 1 s
+16:24:20   qadam 40/860, loss 2.133, 2 s
+16:24:21   qadam 60/860, loss 2.135, 3 s
+16:24:22   qadam 80/860, loss 1.936, 4 s
+16:24:23 Epoch 1: o'rtacha loss 2.054 | tekshirish 59.2% | ko'r test 52.3%
+16:24:24   qadam 100/860, loss 1.533, 6 s
+16:24:25   qadam 120/860, loss 1.321, 7 s
+16:24:26   qadam 140/860, loss 1.152, 8 s
+16:24:27   qadam 160/860, loss 1.033, 9 s
+16:24:28 Epoch 2: o'rtacha loss 1.197 | tekshirish 82.6% | ko'r test 64.0%
+16:24:28   qadam 180/860, loss 0.864, 11 s
+16:24:30   qadam 200/860, loss 0.841, 12 s
+16:24:31   qadam 220/860, loss 0.779, 13 s
+16:24:32   qadam 240/860, loss 0.674, 14 s
+16:24:33 Epoch 3: o'rtacha loss 0.749 | tekshirish 89.5% | ko'r test 65.5%
+16:24:33   qadam 260/860, loss 0.557, 16 s
+16:24:34   qadam 280/860, loss 0.614, 17 s
+16:24:36   qadam 300/860, loss 0.520, 18 s
+16:24:37   qadam 320/860, loss 0.528, 19 s
+16:24:38   qadam 340/860, loss 0.532, 20 s
+16:24:39 Epoch 4: o'rtacha loss 0.548 | tekshirish 94.7% | ko'r test 69.8%
+16:24:40   qadam 360/860, loss 0.410, 22 s
+16:24:41   qadam 380/860, loss 0.420, 23 s
+16:24:42   qadam 400/860, loss 0.419, 24 s
+16:24:43   qadam 420/860, loss 0.424, 25 s
+16:24:44 Epoch 5: o'rtacha loss 0.416 | tekshirish 94.7% | ko'r test 70.2%
+16:24:45   qadam 440/860, loss 0.316, 27 s
+16:24:46   qadam 460/860, loss 0.307, 28 s
+16:24:47   qadam 480/860, loss 0.300, 29 s
+16:24:48   qadam 500/860, loss 0.354, 30 s
+16:24:49 Epoch 6: o'rtacha loss 0.322 | tekshirish 97.4% | ko'r test 70.5%
+16:24:49   qadam 520/860, loss 0.216, 32 s
+16:24:51   qadam 540/860, loss 0.280, 33 s
+16:24:52   qadam 560/860, loss 0.270, 34 s
+16:24:53   qadam 580/860, loss 0.268, 35 s
+16:24:54   qadam 600/860, loss 0.225, 36 s
+16:24:55 Epoch 7: o'rtacha loss 0.260 | tekshirish 96.7% | ko'r test 68.9%
+16:24:55   qadam 620/860, loss 0.224, 38 s
+16:24:57   qadam 640/860, loss 0.205, 39 s
+16:24:58   qadam 660/860, loss 0.221, 40 s
+16:24:59   qadam 680/860, loss 0.212, 41 s
+16:25:00 Epoch 8: o'rtacha loss 0.218 | tekshirish 98.4% | ko'r test 71.1%
+16:25:00   qadam 700/860, loss 0.186, 43 s
+16:25:02   qadam 720/860, loss 0.208, 44 s
+16:25:03   qadam 740/860, loss 0.163, 45 s
+16:25:04   qadam 760/860, loss 0.209, 46 s
+16:25:05 Epoch 9: o'rtacha loss 0.188 | tekshirish 98.0% | ko'r test 69.8%
+16:25:05   qadam 780/860, loss 0.234, 48 s
+16:25:06   qadam 800/860, loss 0.205, 49 s
+16:25:08   qadam 820/860, loss 0.161, 50 s
+16:25:09   qadam 840/860, loss 0.175, 51 s
+16:25:10   qadam 860/860, loss 0.169, 52 s
+16:25:10 Epoch 10: o'rtacha loss 0.181 | tekshirish 97.7% | ko'r test 70.2%
+16:25:10 TAYYOR: {"model": "FacebookAI/xlm-roberta-base", "train": 2744, "val": 304, "test": 325, "majority_test": 0.2431, "frozen_probe_test": 0.4185, "lora_test": 0.7015, "trainable_params": 1039881, "total_params": 279090450, "adapter_mb": 4.0, "train_minutes": 0.9, "history": [{"epoch": 1, "loss": 2.0536, "val": 0.5921, "test": 0.5231}, {"epoch": 2, "loss": 1.1973, "val": 0.8257, "test": 0.64}, {"epoch": 3, "loss": 0.7492, "val": 0.8947, "test": 0.6554}, {"epoch": 4, "loss": 0.5476, "val": 0.9474, "test": 0.6985}, {"epoch": 5, "loss": 0.4157, "val": 0.9474, "test": 0.7015}, {"epoch": 6, "loss": 0.322, "val": 0.9737, "test": 0.7046}, {"epoch": 7, "loss": 0.2602, "val": 0.9671, "test": 0.6892}, {"epoch": 8, "loss": 0.2179, "val": 0.9836, "test": 0.7108}, {"epoch": 9, "loss": 0.1882, "val": 0.9803, "test": 0.6985}, {"epoch": 10, "loss": 0.1815, "val": 0.977, "test": 0.7015}]}

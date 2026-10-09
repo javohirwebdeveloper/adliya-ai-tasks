@@ -1,0 +1,715 @@
+[
+ {
+  "text": "Ro'yxatga olish departamenti yuridik shaxslarni ro'yxatdan o'tkazish tartibini soddalashtirishni nazarda tutuvchi hujjat loyihasini bir oy muddatda ishlab chiqsin va Kengash muhokamasiga kiritsin.",
+  "ijrochi": [
+   "Ro'yxatga olish departamenti"
+  ],
+  "muddat": "bir oy muddatda",
+  "muddat_turi": "nisbiy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Ro'yxatga olish departamenti\"\n  ],\n  \"muddat\": \"bir oy muddatda\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "bir oy muddatda",
+    "muddat_turi": "sana"
+   },
+   "ms": 5226
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"bir oy muddatda\", \"muddat_turi\": \"nisbiy\"}",
+   "json": {
+    "ijrochi": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "bir oy muddatda",
+    "muddat_turi": "nisbiy"
+   },
+   "ms": 5080
+  }
+ },
+ {
+  "text": "Axborot texnologiyalari boshqarmasi Ro'yxatga olish departamenti bilan birgalikda ro'yxatdan o'tkazish axborot tizimining yagona interaktiv davlat xizmatlari portali bilan integratsiyasini 2026-yil 1-iyulga qadar ta'minlasin.",
+  "ijrochi": [
+   "Axborot texnologiyalari boshqarmasi",
+   "Ro'yxatga olish departamenti"
+  ],
+  "muddat": "2026-yil 1-iyulga qadar",
+  "muddat_turi": "sana",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Axborot texnologiyalari boshqarmasi\",\n    \"Ro'yxatga olish departamenti\"\n  ],\n  \"muddat\": \"2026-yil 1-iyulga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Axborot texnologiyalari boshqarmasi",
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "2026-yil 1-iyulga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 4656
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\", \"Ro'yxatga olish departamenti\"], \"muddat\": \"2026-yil 1-iyulga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Axborot texnologiyalari boshqarmasi",
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "2026-yil 1-iyulga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 7147
+  }
+ },
+ {
+  "text": "Huquqiy ekspertiza boshqarmasi ro'yxatdan o'tkazishda taqdim etiladigan hujjatlarni avtomatik tekshirish modulini joriy etish yuzasidan takliflar tayyorlasin.",
+  "ijrochi": [
+   "Huquqiy ekspertiza boshqarmasi"
+  ],
+  "muddat": null,
+  "muddat_turi": "yo'q",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1981
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Huquqiy ekspertiza boshqarmasi\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+   "json": {
+    "ijrochi": [
+     "Huquqiy ekspertiza boshqarmasi"
+    ],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 4261
+  }
+ },
+ {
+  "text": "Hududiy bo'linmalar yangi tartib bo'yicha amaliy qo'llanmani tarqatish va aholiga tushuntirish ishlarini 2026-yil 15-martdan boshlab tashkil etsin.",
+  "ijrochi": [
+   "Hududiy bo'linmalar"
+  ],
+  "muddat": "2026-yil 15-martdan boshlab",
+  "muddat_turi": "boshlanish",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": \"2026-yil 15-martdan boshlab\",\n  \"muddat_turi\": \"boshlanish\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": "2026-yil 15-martdan boshlab",
+    "muddat_turi": "boshlanish"
+   },
+   "ms": 2958
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Hududiy bo'linmalar\"], \"muddat\": \"2026-yil 15-martdan boshlab\", \"muddat_turi\": \"boshlanish\"}",
+   "json": {
+    "ijrochi": [
+     "Hududiy bo'linmalar"
+    ],
+    "muddat": "2026-yil 15-martdan boshlab",
+    "muddat_turi": "boshlanish"
+   },
+   "ms": 5525
+  }
+ },
+ {
+  "text": "Ro'yxatga olish departamenti mazkur qaror ijrosi to'g'risida har oyda Kengashga ma'lumot berib borsin.",
+  "ijrochi": [
+   "Ro'yxatga olish departamenti"
+  ],
+  "muddat": "har oyda",
+  "muddat_turi": "davriy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Ro'yxatga olish departamenti\"\n  ],\n  \"muddat\": \"har oyda\",\n  \"muddat_turi\": \"davriy\"\n}",
+   "json": {
+    "ijrochi": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "har oyda",
+    "muddat_turi": "davriy"
+   },
+   "ms": 3056
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"har oyda\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Ro'yxatga olish departamenti"
+    ],
+    "muddat": "har oyda",
+    "muddat_turi": "davriy"
+   },
+   "ms": 4262
+  }
+ },
+ {
+  "text": "Axborot texnologiyalari boshqarmasi yuqoridagi topshiriqlar ijrosi to'g'risida har chorak yakunidan keyingi oyning 10-sanasiga qadar Komissiyaga axborot kiritsin.",
+  "ijrochi": [
+   "Axborot texnologiyalari boshqarmasi"
+  ],
+  "muddat": "har chorak yakunidan keyingi oyning 10-sanasiga qadar",
+  "muddat_turi": "davriy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Axborot texnologiyalari boshqarmasi\"\n  ],\n  \"muddat\": \"keyingi oyning 10-sanasiga qadar\",\n  \"muddat_turi\": \"nisbiy\"\n}",
+   "json": {
+    "ijrochi": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "muddat": "keyingi oyning 10-sanasiga qadar",
+    "muddat_turi": "nisbiy"
+   },
+   "ms": 3851
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\"], \"muddat\": \"har chorak yakunidan keyingi oyning 10-sanasiga qadar\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Axborot texnologiyalari boshqarmasi"
+    ],
+    "muddat": "har chorak yakunidan keyingi oyning 10-sanasiga qadar",
+    "muddat_turi": "davriy"
+   },
+   "ms": 6549
+  }
+ },
+ {
+  "text": "Kengash kotibiyati ilova ijrosi to'g'risida har chorakda Kengash yig'ilishiga axborot kiritib borsin.",
+  "ijrochi": [
+   "Kengash kotibiyati"
+  ],
+  "muddat": "har chorakda",
+  "muddat_turi": "davriy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1942
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Kengash kotibiyati\"], \"muddat\": \"har chorakda\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Kengash kotibiyati"
+    ],
+    "muddat": "har chorakda",
+    "muddat_turi": "davriy"
+   },
+   "ms": 4076
+  }
+ },
+ {
+  "text": "Markazning Tizim tahlili bo'limi amaldagi murojaatlar portalining funksional imkoniyatlarini tahlil qilib, foydalanuvchilar eng ko'p murojaat qiladigan xizmatlar va mavjud muammolar bo'yicha tahliliy ma'lumotni 2026-yil 20-sentabrga qadar Agentlikka taqdim etsin.",
+  "ijrochi": [
+   "Markazning Tizim tahlili bo'limi"
+  ],
+  "muddat": "2026-yil 20-sentabrga qadar",
+  "muddat_turi": "sana",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\"Markazning Tizim tahlili bo'limi\"],\n  \"muddat\": \"2026-yil 20-sentabrga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Markazning Tizim tahlili bo'limi"
+    ],
+    "muddat": "2026-yil 20-sentabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 3760
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Markazning Tizim tahlili bo'limi\"], \"muddat\": \"2026-yil 20-sentabrga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Markazning Tizim tahlili bo'limi"
+    ],
+    "muddat": "2026-yil 20-sentabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 5812
+  }
+ },
+ {
+  "text": "Sun'iy intellekt laboratoriyasi portalga kelib tushayotgan murojaatlarni mavzu va yo'nalishlar bo'yicha avtomatik tasniflash imkoniyatini joriy etish yuzasidan texnik takliflarni 01.10.2026 yilgacha ishlab chiqsin.",
+  "ijrochi": [
+   "Sun'iy intellekt laboratoriyasi"
+  ],
+  "muddat": "01.10.2026 yilgacha",
+  "muddat_turi": "sana",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Sun'iy intellekt laboratoriyasi\"\n  ],\n  \"muddat\": \"01.10.2026 yilgacha\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "muddat": "01.10.2026 yilgacha",
+    "muddat_turi": "sana"
+   },
+   "ms": 3651
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"01.10.2026 yilgacha\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "muddat": "01.10.2026 yilgacha",
+    "muddat_turi": "sana"
+   },
+   "ms": 5327
+  }
+ },
+ {
+  "text": "Axborot xavfsizligi bo'limi Sun'iy intellekt laboratoriyasi bilan birgalikda sun'iy intellekt xizmatlariga uzatiladigan ma'lumotlar tarkibini o'rganib, shaxsga doir va foydalanilishi cheklangan ma'lumotlarni himoya qilish bo'yicha takliflarni o'n kun muddatda kiritsin.",
+  "ijrochi": [
+   "Axborot xavfsizligi bo'limi",
+   "Sun'iy intellekt laboratoriyasi"
+  ],
+  "muddat": "o'n kun muddatda",
+  "muddat_turi": "nisbiy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Axborot xavfsizligi bo'limi\",\n    \"Sun'iy intellekt laboratoriyasi\"\n  ],\n  \"muddat\": \"o'n kun muddatda\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Axborot xavfsizligi bo'limi",
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "muddat": "o'n kun muddatda",
+    "muddat_turi": "sana"
+   },
+   "ms": 4145
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Axborot xavfsizligi bo'limi\", \"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"o'n kun muddatda\", \"muddat_turi\": \"nisbiy\"}",
+   "json": {
+    "ijrochi": [
+     "Axborot xavfsizligi bo'limi",
+     "Sun'iy intellekt laboratoriyasi"
+    ],
+    "muddat": "o'n kun muddatda",
+    "muddat_turi": "nisbiy"
+   },
+   "ms": 6351
+  }
+ },
+ {
+  "text": "Dasturiy ta'minotni ishlab chiqish bo'limi fuqarolarga davlat va huquqiy xizmatlar bo'yicha ma'lumot beruvchi virtual yordamchining tajriba-sinov variantini tayyorlab, uni 2026-yil 25-oktabrga qadar sinovdan o'tkazsin.",
+  "ijrochi": [
+   "Dasturiy ta'minotni ishlab chiqish bo'limi"
+  ],
+  "muddat": "2026-yil 25-oktabrga qadar",
+  "muddat_turi": "sana",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\"Dasturiy ta'minotni ishlab chiqish bo'limi\", \"fuqarolarga davlat va huquqiy xizmatlar bo'yicha ma'lumot beruvchi virtual yordamchining tajriba-sinov variantini tayyorlab\"],\n  \"muddat\": \"2026-yil 25-oktabrga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Dasturiy ta'minotni ishlab chiqish bo'limi",
+     "fuqarolarga davlat va huquqiy xizmatlar bo'yicha ma'lumot beruvchi virtual yordamchining tajriba-sinov variantini tayyorlab"
+    ],
+    "muddat": "2026-yil 25-oktabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 6728
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Dasturiy ta'minotni ishlab chiqish bo'limi\"], \"muddat\": \"2026-yil 25-oktabrga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Dasturiy ta'minotni ishlab chiqish bo'limi"
+    ],
+    "muddat": "2026-yil 25-oktabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 6270
+  }
+ },
+ {
+  "text": "Markaz yuqoridagi topshiriqlar ijrosi holati to'g'risida har oyning 5-sanasiga qadar Agentlikning Loyihalarni boshqarish departamentiga ma'lumot berib borsin.",
+  "ijrochi": [
+   "Markaz"
+  ],
+  "muddat": "har oyning 5-sanasiga qadar",
+  "muddat_turi": "davriy",
+  "src": "real",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\"Agentlikning Loyihalarni boshqarish departamentiga\"],\n  \"muddat\": \"har oyning 5-sanasiga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Agentlikning Loyihalarni boshqarish departamentiga"
+    ],
+    "muddat": "har oyning 5-sanasiga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 3467
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Markaz\"], \"muddat\": \"har oyning 5-sanasiga qadar\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Markaz"
+    ],
+    "muddat": "har oyning 5-sanasiga qadar",
+    "muddat_turi": "davriy"
+   },
+   "ms": 4141
+  }
+ },
+ {
+  "text": "Bajarilgan ishlar bo'yicha umumlashtirilgan ma'lumot loyiha koordinatori orqali Korxonaning Raqamli loyihalar boshqarmasiga taqdim etilsin.",
+  "ijrochi": [
+   "Loyiha koordinatori"
+  ],
+  "muddat": null,
+  "muddat_turi": "yo'q",
+  "src": "real",
+  "oldin": {
+   "raw": "{\"ijrochi\": [], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1620
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Loyiha koordinatori\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+   "json": {
+    "ijrochi": [
+     "Loyiha koordinatori"
+    ],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 3575
+  }
+ },
+ {
+  "text": "Ekspert xulosasi loyiha rahbari orqali Vazirlikning Ijro nazorati boshqarmasiga har oyda taqdim etilsin.",
+  "ijrochi": [
+   "Loyiha rahbari"
+  ],
+  "muddat": "har oyda",
+  "muddat_turi": "davriy",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1970
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Loyiha rahbari\"], \"muddat\": \"har oyda\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Loyiha rahbari"
+    ],
+    "muddat": "har oyda",
+    "muddat_turi": "davriy"
+   },
+   "ms": 3935
+  }
+ },
+ {
+  "text": "3. Strategik rejalashtirish boshqarmasi strategik rivojlanish konsepsiyasini 18.06.2026-yilga qadar takomillashtirsin.",
+  "ijrochi": [
+   "Strategik rejalashtirish boshqarmasi"
+  ],
+  "muddat": "18.06.2026-yilga qadar",
+  "muddat_turi": "sana",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"strategik rejalashtirish boshqarmasi\"\n  ],\n  \"muddat\": \"18.06.2026-yilga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "strategik rejalashtirish boshqarmasi"
+    ],
+    "muddat": "18.06.2026-yilga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 3801
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Strategik rejalashtirish boshqarmasi\"], \"muddat\": \"18.06.2026-yilga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Strategik rejalashtirish boshqarmasi"
+    ],
+    "muddat": "18.06.2026-yilga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 5633
+  }
+ },
+ {
+  "text": "Vazirlikning Yuridik ta'lim departamenti raqamli xizmatlar katalogini doimiy ravishda ishlab chiqsin.",
+  "ijrochi": [
+   "Vazirlikning Yuridik ta'lim departamenti"
+  ],
+  "muddat": "doimiy ravishda",
+  "muddat_turi": "doimiy",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Yuridik ta'lim departamenti\"\n  ],\n  \"muddat\": null,\n  \"muddat_turi\": \"doimiy\"\n}",
+   "json": {
+    "ijrochi": [
+     "Yuridik ta'lim departamenti"
+    ],
+    "muddat": null,
+    "muddat_turi": "doimiy"
+   },
+   "ms": 2722
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Vazirlikning Yuridik ta'lim departamenti\"], \"muddat\": \"doimiy ravishda\", \"muddat_turi\": \"doimiy\"}",
+   "json": {
+    "ijrochi": [
+     "Vazirlikning Yuridik ta'lim departamenti"
+    ],
+    "muddat": "doimiy ravishda",
+    "muddat_turi": "doimiy"
+   },
+   "ms": 5034
+  }
+ },
+ {
+  "text": "Ma'lumotlar sifatini tekshirish tartibini yigirma ish kuni muddatda Huquqiy targ'ibot guruhi tomonidan ta'minlansin.",
+  "ijrochi": [
+   "Huquqiy targ'ibot guruhi"
+  ],
+  "muddat": "yigirma ish kuni muddatda",
+  "muddat_turi": "nisbiy",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Huquqiy targ'ibot guruhi\"\n  ],\n  \"muddat\": \"yigirma ish kuni\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Huquqiy targ'ibot guruhi"
+    ],
+    "muddat": "yigirma ish kuni",
+    "muddat_turi": "sana"
+   },
+   "ms": 3230
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Huquqiy targ'ibot guruhi\"], \"muddat\": \"yigirma ish kuni muddatda\", \"muddat_turi\": \"nisbiy\"}",
+   "json": {
+    "ijrochi": [
+     "Huquqiy targ'ibot guruhi"
+    ],
+    "muddat": "yigirma ish kuni muddatda",
+    "muddat_turi": "nisbiy"
+   },
+   "ms": 4960
+  }
+ },
+ {
+  "text": "Murojaatlar bilan ishlash sektori Intellektual mulk laboratoriyasi bilan birgalikda fuqarolar murojaatlari tasnifini 2027-yil 4-oktabrga qadar ta'minlasin.",
+  "ijrochi": [
+   "Murojaatlar bilan ishlash sektori",
+   "Intellektual mulk laboratoriyasi"
+  ],
+  "muddat": "2027-yil 4-oktabrga qadar",
+  "muddat_turi": "sana",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Murojaatlar bilan ishlash sektori\",\n    \"Intellektual mulk laboratoriyasi\",\n    \"fuqarolar murojaatlari tasnifini\"\n  ],\n  \"muddat\": \"2027-yil 4-oktabrga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Murojaatlar bilan ishlash sektori",
+     "Intellektual mulk laboratoriyasi",
+     "fuqarolar murojaatlari tasnifini"
+    ],
+    "muddat": "2027-yil 4-oktabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 5501
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Murojaatlar bilan ishlash sektori\", \"Intellektual mulk laboratoriyasi\"], \"muddat\": \"2027-yil 4-oktabrga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Murojaatlar bilan ishlash sektori",
+     "Intellektual mulk laboratoriyasi"
+    ],
+    "muddat": "2027-yil 4-oktabrga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 6704
+  }
+ },
+ {
+  "text": "8. Innovatsion rivojlantirish xizmati ma'lumotlar sifatini tekshirish tartibini 08.01.2026-yilga qadar ta'minlasin.",
+  "ijrochi": [
+   "Innovatsion rivojlantirish xizmati"
+  ],
+  "muddat": "08.01.2026-yilga qadar",
+  "muddat_turi": "sana",
+  "src": "synth",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\n    \"Innovatsion rivojlantirish xizmati ma'lumotlar sifatini tekshirish tartibini\"\n  ],\n  \"muddat\": \"08.01.2026-yilga qadar\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Innovatsion rivojlantirish xizmati ma'lumotlar sifatini tekshirish tartibini"
+    ],
+    "muddat": "08.01.2026-yilga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 4823
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Innovatsion rivojlantirish xizmati\"], \"muddat\": \"08.01.2026-yilga qadar\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Innovatsion rivojlantirish xizmati"
+    ],
+    "muddat": "08.01.2026-yilga qadar",
+    "muddat_turi": "sana"
+   },
+   "ms": 5781
+  }
+ },
+ {
+  "text": "Moliya-iqtisodiyot boshqarmasi Kadrlar bo'limi bilan birgalikda xodimlarni rag'batlantirish tartibini har chorakda ko'rib chiqsin.",
+  "src": "yangi",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1881
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Moliya-iqtisodiyot boshqarmasi\", \"Kadrlar bo'limi\"], \"muddat\": \"har chorakda\", \"muddat_turi\": \"davriy\"}",
+   "json": {
+    "ijrochi": [
+     "Moliya-iqtisodiyot boshqarmasi",
+     "Kadrlar bo'limi"
+    ],
+    "muddat": "har chorakda",
+    "muddat_turi": "davriy"
+   },
+   "ms": 6224
+  }
+ },
+ {
+  "text": "Axborot xizmati vazirlik rasmiy saytidagi ma'lumotlarning dolzarbligini doimiy ravishda ta'minlasin.",
+  "src": "yangi",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 2533
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Axborot xizmati\"], \"muddat\": \"doimiy ravishda\", \"muddat_turi\": \"doimiy\"}",
+   "json": {
+    "ijrochi": [
+     "Axborot xizmati"
+    ],
+    "muddat": "doimiy ravishda",
+    "muddat_turi": "doimiy"
+   },
+   "ms": 4730
+  }
+ },
+ {
+  "text": "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
+  "src": "yangi",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [\"Ijro nazorati bo'limi\"],\n  \"muddat\": \"2026-yil 25-dekabrgacha\",\n  \"muddat_turi\": \"sana\"\n}",
+   "json": {
+    "ijrochi": [
+     "Ijro nazorati bo'limi"
+    ],
+    "muddat": "2026-yil 25-dekabrgacha",
+    "muddat_turi": "sana"
+   },
+   "ms": 3471
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Hududiy adliya boshqarmalari\"], \"muddat\": \"2026-yil 25-dekabrgacha\", \"muddat_turi\": \"sana\"}",
+   "json": {
+    "ijrochi": [
+     "Hududiy adliya boshqarmalari"
+    ],
+    "muddat": "2026-yil 25-dekabrgacha",
+    "muddat_turi": "sana"
+   },
+   "ms": 5519
+  }
+ },
+ {
+  "text": "Yuridik xizmat 2027-yil 1-yanvardan boshlab shartnomalarni faqat elektron shaklda ro'yxatga olsin.",
+  "src": "yangi",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": \"2027-yil 1-yanvardan boshlab\",\n  \"muddat_turi\": \"boshlanish\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": "2027-yil 1-yanvardan boshlab",
+    "muddat_turi": "boshlanish"
+   },
+   "ms": 2927
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Yuridik xizmat\"], \"muddat\": \"2027-yil 1-yanvardan boshlab\", \"muddat_turi\": \"boshlanish\"}",
+   "json": {
+    "ijrochi": [
+     "Yuridik xizmat"
+    ],
+    "muddat": "2027-yil 1-yanvardan boshlab",
+    "muddat_turi": "boshlanish"
+   },
+   "ms": 5311
+  }
+ },
+ {
+  "text": "Kadrlar bo'limi xodimlarning malaka oshirish rejasini ishlab chiqsin va tasdiqlash uchun kiritsin.",
+  "src": "yangi",
+  "oldin": {
+   "raw": "{\n  \"ijrochi\": [],\n  \"muddat\": null,\n  \"muddat_turi\": \"yo'q\"\n}",
+   "json": {
+    "ijrochi": [],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 1969
+  },
+  "keyin": {
+   "raw": "{\"ijrochi\": [\"Kadrlar bo'limi\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+   "json": {
+    "ijrochi": [
+     "Kadrlar bo'limi"
+    ],
+    "muddat": null,
+    "muddat_turi": "yo'q"
+   },
+   "ms": 3699
+  }
+ }
+]

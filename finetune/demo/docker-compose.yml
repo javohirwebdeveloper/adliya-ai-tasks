@@ -1,0 +1,10 @@
+name: adliya-trening
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    env_file: .env                                  # MODAL_URL, TRENING_TOKEN (git'da emas)
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8097}:8000"          # faqat shu kompyuterdan; tashqariga nginx orqali
+    read_only: true
+    tmpfs: [/tmp]

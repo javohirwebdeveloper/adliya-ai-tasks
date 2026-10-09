@@ -1,0 +1,75 @@
+{
+ "model": "FacebookAI/xlm-roberta-base",
+ "train": 2744,
+ "val": 304,
+ "test": 325,
+ "majority_test": 0.2431,
+ "frozen_probe_test": 0.4185,
+ "lora_test": 0.7015,
+ "trainable_params": 1039881,
+ "total_params": 279090450,
+ "adapter_mb": 4.0,
+ "train_minutes": 0.9,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 2.0536,
+   "val": 0.5921,
+   "test": 0.5231
+  },
+  {
+   "epoch": 2,
+   "loss": 1.1973,
+   "val": 0.8257,
+   "test": 0.64
+  },
+  {
+   "epoch": 3,
+   "loss": 0.7492,
+   "val": 0.8947,
+   "test": 0.6554
+  },
+  {
+   "epoch": 4,
+   "loss": 0.5476,
+   "val": 0.9474,
+   "test": 0.6985
+  },
+  {
+   "epoch": 5,
+   "loss": 0.4157,
+   "val": 0.9474,
+   "test": 0.7015
+  },
+  {
+   "epoch": 6,
+   "loss": 0.322,
+   "val": 0.9737,
+   "test": 0.7046
+  },
+  {
+   "epoch": 7,
+   "loss": 0.2602,
+   "val": 0.9671,
+   "test": 0.6892
+  },
+  {
+   "epoch": 8,
+   "loss": 0.2179,
+   "val": 0.9836,
+   "test": 0.7108
+  },
+  {
+   "epoch": 9,
+   "loss": 0.1882,
+   "val": 0.9803,
+   "test": 0.6985
+  },
+  {
+   "epoch": 10,
+   "loss": 0.1815,
+   "val": 0.977,
+   "test": 0.7015
+  }
+ ]
+}

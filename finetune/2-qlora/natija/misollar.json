@@ -1,0 +1,80 @@
+[
+ {
+  "gap": "Ro'yxatga olish departamenti yuridik shaxslarni ro'yxatdan o'tkazish tartibini soddalashtirishni nazarda tutuvchi hujjat loyihasini bir oy muddatda ishlab chiqsin va Kengash muhokamasiga kiritsin.",
+  "kutilgan": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"bir oy muddatda\", \"muddat_turi\": \"nisbiy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"bir oy muddatda\", \"muddat_turi\": \"nisbiy\"}"
+ },
+ {
+  "gap": "Axborot texnologiyalari boshqarmasi Ro'yxatga olish departamenti bilan birgalikda ro'yxatdan o'tkazish axborot tizimining yagona interaktiv davlat xizmatlari portali bilan integratsiyasini 2026-yil 1-iyulga qadar ta'minlasin.",
+  "kutilgan": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\", \"Ro'yxatga olish departamenti\"], \"muddat\": \"2026-yil 1-iyulga qadar\", \"muddat_turi\": \"sana\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\", \"Ro'yxatga olish departamenti\"], \"muddat\": \"2026-yil 1-iyulga qadar\", \"muddat_turi\": \"sana\"}"
+ },
+ {
+  "gap": "Huquqiy ekspertiza boshqarmasi ro'yxatdan o'tkazishda taqdim etiladigan hujjatlarni avtomatik tekshirish modulini joriy etish yuzasidan takliflar tayyorlasin.",
+  "kutilgan": "{\"ijrochi\": [\"Huquqiy ekspertiza boshqarmasi\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Huquqiy ekspertiza boshqarmasi\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}"
+ },
+ {
+  "gap": "Hududiy bo'linmalar yangi tartib bo'yicha amaliy qo'llanmani tarqatish va aholiga tushuntirish ishlarini 2026-yil 15-martdan boshlab tashkil etsin.",
+  "kutilgan": "{\"ijrochi\": [\"Hududiy bo'linmalar\"], \"muddat\": \"2026-yil 15-martdan boshlab\", \"muddat_turi\": \"boshlanish\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Hududiy bo'linmalar\"], \"muddat\": \"2026-yil 15-martdan boshlab\", \"muddat_turi\": \"boshlanish\"}"
+ },
+ {
+  "gap": "Ro'yxatga olish departamenti mazkur qaror ijrosi to'g'risida har oyda Kengashga ma'lumot berib borsin.",
+  "kutilgan": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"har oyda\", \"muddat_turi\": \"davriy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Ro'yxatga olish departamenti\"], \"muddat\": \"har oyda\", \"muddat_turi\": \"davriy\"}"
+ },
+ {
+  "gap": "Axborot texnologiyalari boshqarmasi yuqoridagi topshiriqlar ijrosi to'g'risida har chorak yakunidan keyingi oyning 10-sanasiga qadar Komissiyaga axborot kiritsin.",
+  "kutilgan": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\"], \"muddat\": \"har chorak yakunidan keyingi oyning 10-sanasiga qadar\", \"muddat_turi\": \"davriy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Axborot texnologiyalari boshqarmasi\"], \"muddat\": \"har chorak yakunidan keyingi oyning 10-sanasiga qadar\", \"muddat_turi\": \"davriy\"}"
+ },
+ {
+  "gap": "Kengash kotibiyati ilova ijrosi to'g'risida har chorakda Kengash yig'ilishiga axborot kiritib borsin.",
+  "kutilgan": "{\"ijrochi\": [\"Kengash kotibiyati\"], \"muddat\": \"har chorakda\", \"muddat_turi\": \"davriy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Kengash kotibiyati\"], \"muddat\": \"har chorakda\", \"muddat_turi\": \"davriy\"}"
+ },
+ {
+  "gap": "Markazning Tizim tahlili bo'limi amaldagi murojaatlar portalining funksional imkoniyatlarini tahlil qilib, foydalanuvchilar eng ko'p murojaat qiladigan xizmatlar va mavjud muammolar bo'yicha tahliliy ma'lumotni 2026-yil 20-sentabrga qadar Agentlikka taqdim etsin.",
+  "kutilgan": "{\"ijrochi\": [\"Markazning Tizim tahlili bo'limi\"], \"muddat\": \"2026-yil 20-sentabrga qadar\", \"muddat_turi\": \"sana\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Markazning Tizim tahlili bo'limi\"], \"muddat\": \"2026-yil 20-sentabrga qadar\", \"muddat_turi\": \"sana\"}"
+ },
+ {
+  "gap": "Sun'iy intellekt laboratoriyasi portalga kelib tushayotgan murojaatlarni mavzu va yo'nalishlar bo'yicha avtomatik tasniflash imkoniyatini joriy etish yuzasidan texnik takliflarni 01.10.2026 yilgacha ishlab chiqsin.",
+  "kutilgan": "{\"ijrochi\": [\"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"01.10.2026 yilgacha\", \"muddat_turi\": \"sana\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"01.10.2026 yilgacha\", \"muddat_turi\": \"sana\"}"
+ },
+ {
+  "gap": "Axborot xavfsizligi bo'limi Sun'iy intellekt laboratoriyasi bilan birgalikda sun'iy intellekt xizmatlariga uzatiladigan ma'lumotlar tarkibini o'rganib, shaxsga doir va foydalanilishi cheklangan ma'lumotlarni himoya qilish bo'yicha takliflarni o'n kun muddatda kiritsin.",
+  "kutilgan": "{\"ijrochi\": [\"Axborot xavfsizligi bo'limi\", \"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"o'n kun muddatda\", \"muddat_turi\": \"nisbiy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Axborot xavfsizligi bo'limi\", \"Sun'iy intellekt laboratoriyasi\"], \"muddat\": \"o'n kun muddatda\", \"muddat_turi\": \"nisbiy\"}"
+ },
+ {
+  "gap": "Dasturiy ta'minotni ishlab chiqish bo'limi fuqarolarga davlat va huquqiy xizmatlar bo'yicha ma'lumot beruvchi virtual yordamchining tajriba-sinov variantini tayyorlab, uni 2026-yil 25-oktabrga qadar sinovdan o'tkazsin.",
+  "kutilgan": "{\"ijrochi\": [\"Dasturiy ta'minotni ishlab chiqish bo'limi\"], \"muddat\": \"2026-yil 25-oktabrga qadar\", \"muddat_turi\": \"sana\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Dasturiy ta'minotni ishlab chiqish bo'limi\"], \"muddat\": \"2026-yil 25-oktabrga qadar\", \"muddat_turi\": \"sana\"}"
+ },
+ {
+  "gap": "Markaz yuqoridagi topshiriqlar ijrosi holati to'g'risida har oyning 5-sanasiga qadar Agentlikning Loyihalarni boshqarish departamentiga ma'lumot berib borsin.",
+  "kutilgan": "{\"ijrochi\": [\"Markaz\"], \"muddat\": \"har oyning 5-sanasiga qadar\", \"muddat_turi\": \"davriy\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Markaz\"], \"muddat\": \"har oyning 5-sanasiga qadar\", \"muddat_turi\": \"davriy\"}"
+ },
+ {
+  "gap": "Bajarilgan ishlar bo'yicha umumlashtirilgan ma'lumot loyiha koordinatori orqali Korxonaning Raqamli loyihalar boshqarmasiga taqdim etilsin.",
+  "kutilgan": "{\"ijrochi\": [\"Loyiha koordinatori\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}",
+  "model": "",
+  "keyin": "{\"ijrochi\": [\"Loyiha koordinatori\"], \"muddat\": null, \"muddat_turi\": \"yo'q\"}"
+ }
+]

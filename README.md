@@ -22,6 +22,11 @@ yashiradi. 1-topshiriqning ko'r to'plamida RAG bilan va RAG'siz Gemma solishtiri
 7.5% → 0%, bazada yo'q savolga "javob yo'q" deyish 41.7% → 100%. Topilma: savoldagi salom va shaxsiy ma'lumot
 qidiruvni 87.5% dan 75.8% ga tushiradi; yechimi va qolgan cheklovlar [rag/README.md](rag/README.md) da.
 
+**Qo'shimcha: [finetune](finetune), model o'qitish.** Qwen3-4B QLoRA bilan rasmiy xatdagi topshiriq gapidan ijrochi va
+muddatni ajratishga o'rgatildi: haqiqiy 13 ta gapda 31% → 100%, yangi nomli 150 ta gapda 21% → 94% (bitta L4 GPU,
+10 daqiqa, ~$0.24). XLM-RoBERTa LoRA bilan savolni mavzuga ajratishga o'rgatildi: ko'r testda 41.8% → 70.2%.
+Demo: [javi.uz/adliya/trening](https://javi.uz/adliya/trening/)
+
 Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv va uning sababi, natijani qanday o'lchaganim, cheklovlar va keyingi qadamlar, ishga tushirish yo'riqnomasi.
 
 ## Topshiriqdan tashqari qilinganlar

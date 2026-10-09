@@ -1,0 +1,28 @@
+{
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "train": 1600,
+ "epochs": 1,
+ "trainable": 33030144,
+ "adapter_mb": 126.1,
+ "train_minutes": 10.4,
+ "before": {
+  "real": null,
+  "synth": null
+ },
+ "after": {
+  "real": {
+   "json": 1.0,
+   "ijrochi": 1.0,
+   "muddat": 1.0,
+   "turi": 1.0,
+   "hammasi": 1.0
+  },
+  "synth": {
+   "json": 1.0,
+   "ijrochi": 0.94,
+   "muddat": 1.0,
+   "turi": 1.0,
+   "hammasi": 0.94
+  }
+ }
+}

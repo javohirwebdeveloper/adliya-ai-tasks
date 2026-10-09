@@ -1,0 +1,13 @@
+Model: Qwen/Qwen3-4B-Instruct-2507, 4 bitda yuklandi: 45 s, GPU xotira 2.5 GB
+LoRA: o'qitiladigan parametrlar 33,030,144 (1.48% — 4 bitli asosiy model hisobida)
+O'qitish misollari: 1600, o'rtacha uzunlik 250 token
+  epoch 1, qadam 20/100, loss 0.010, 124 s
+  epoch 1, qadam 40/100, loss 0.001, 248 s
+  epoch 1, qadam 60/100, loss 0.000, 373 s
+  epoch 1, qadam 80/100, loss 0.000, 498 s
+  epoch 1, qadam 100/100, loss 0.000, 624 s
+O'qitish tugadi: 10.4 daqiqa
+O'QITISHDAN KEYIN:
+  haqiqiy hujjatlar (13 ta): json 100%, ijrochi 100%, muddat 100%, turi 100%, hammasi 100%
+  sun'iy, yangi nomlar (150 ta): json 100%, ijrochi 94%, muddat 100%, turi 100%, hammasi 94%
+TAYYOR: {"model": "Qwen/Qwen3-4B-Instruct-2507", "train": 1600, "epochs": 1, "trainable": 33030144, "adapter_mb": 126.1, "train_minutes": 10.4, "before": {"real": null, "synth": null}, "after": {"real": {"json": 1.0, "ijrochi": 1.0, "muddat": 1.0, "turi": 1.0, "hammasi": 1.0}, "synth": {"json": 1.0, "ijrochi": 0.94, "muddat": 1.0, "turi": 1.0, "hammasi": 0.94}}}
