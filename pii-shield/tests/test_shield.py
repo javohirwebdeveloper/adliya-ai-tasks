@@ -103,3 +103,7 @@ def test_lowercase_document_number():
     assert S.mask("Ayolimning ham prava muddati tugabdi, ad 4803829")[0] == "Ayolimning ham prava muddati tugabdi, [PASPORT_1]"
     assert S.mask("aa4803829 raqamli guvohnoma")[0] == "[PASPORT_1] raqamli guvohnoma"
     assert kinds("Ijara 3 oy va 1250000 so'm, bu 1234567 emas") == []
+    # ajratgich bilan (foydalanuvchi demo'da topgan "ad-2808399") va guruhlangan raqam
+    for doc in ("ad-2808399", "AD-2808399", "AB.1234567", "AA/1234567", "AA № 1234567", "aa 123 45 67", "AC 480-38-29"):
+        assert S.mask(f"prava muddati tugabdi, {doc}.")[0] == "prava muddati tugabdi, [PASPORT_1].", doc
+    assert kinds("tel aa 90 111 22 33") != ["PASPORT"]          # telefonning bo'lagi pasport bo'lib qolmasin

@@ -25,15 +25,15 @@ qonunga muvofiq yashirish kerak: qalqon dataset tayyorlashning birinchi qadami b
 | Tur | Misol | Qanday |
 |---|---|---|
 | ISM | Karimov Akmal Rustam o'g'li, Петрова Анна Сергеевна, A. Yusupov, men Dilshod | otasining ismi, familiya qo'shimchalari, bosh harflar, ismlar ro'yxati va ishora so'zlar |
-| PASPORT | AB4567123, AC 2345678, aa 1234567 | 2 harf va 7 raqam; kichik harf faqat "pasport" so'zidan keyin |
+| PASPORT | AB4567123, ad-2808399, AA № 123 45 67, AAF 1234567 (texpasport) | 2 harf va 7 raqam, istalgan ajratgich va registrda ("va 1250000 so'm" kabi so'z va summa bundan mustasno) |
 | JSHSHIR | 31505901234567 | 14 raqam, ichidagi tug'ilgan sana haqiqiy bo'lishi shart |
-| TELEFON | +998 90 123 45 67, 93-555-44-33 | O'zbekiston operator kodlari |
+| TELEFON | +998 90 123 45 67, 901 234 567, 66 233 45 67, +7 916 123 45 67 | operator va viloyat kodlari, istalgan guruhlash; chet el raqamlari |
 | KARTA | 8600 1234 5678 9012 | 16 raqam, Luhn tekshiruvi yoki Uzcard/Humo boshlanishi |
 | HISOB, STIR | 20 xonali hisob raqami, 9 xonali STIR | STIR faqat "STIR/INN" so'zi bilan (aks holda telefon bilan adashadi) |
 | RAQAM | 12 xonadan uzun boshqa raqam | qoidaga tushmagan uzun raqam ham yashiriladi; pul summasi va yillar bundan mustasno |
 | MANZIL | Bunyodkor ko'chasi, 12-uy, 45-xonadon | ko'cha, mahalla, uy, xonadon |
 | TUG_SANA | 1990-yil 15-mayda tug'ilgan, дата рождения 15.05.1988 | faqat "tug'ilgan", "родился" so'zlari yonidagi sana |
-| EMAIL, AVTO, HUJJAT | a@mail.uz, 01 A 123 BC, I-TN 0012345 | format bo'yicha |
+| EMAIL, TELEGRAM, AVTO, HUJJAT | a@mail.uz, akmal(at)mail.uz, @akmal_k, 01 A 123 BC, 01a123bc, I-TN 0012345 | format bo'yicha |
 
 **Ataylab yashirilmaydiganlar:** viloyat, tuman, shahar (murojaatni yo'naltirish uchun hudud kerak), hujjat sanasi va
 raqami, muddatlar, summalar, qaror raqamlari, yolg'iz tug'ilgan yil (pensiya kabi savolda yosh kerak). Bular AI ga
@@ -51,6 +51,11 @@ odam ekanini tushunadi.
 | 1-ko'r test | 63 | 191 | 74.9% |
 | 2-ko'r test (1-test xatolari tuzatilgandan keyin yaratilgan) | 89 | 269 | 95.5% |
 | **3-ko'r test (2-test xatolari tuzatilgandan keyin yaratilgan)** | 89 | 295 | **95.3%** |
+
+**Yozilish shakllari sinovi** ([eval/stress.py](eval/stress.py), doimiy test): bir xil ma'lumotning odamlar yozadigan
+333 ta shakli (katta-kichik harf, defis, nuqta, "№", guruhlangan raqam, kirill, rus, KATTA HARFLI ism, "ugli", qo'shimchalar,
+"(at)" bilan email) hammasi yashiriladi; 19 ta murakkab oddiy matnda (summa, qaror raqami, qisqartmalar) ortiqcha 0. Bu
+sinov demo'ni sinab ko'rgan odam topgan xatolardan keyin qo'shildi ("ad 4803829", "ad-2808399" ochiq qolgan edi).
 
 **Ortiqcha yashirish** (AI uchun foydali ma'lumot yo'qolmasligi): 1-topshiriqdagi FAQ bazasi va uning barcha sinov
 savollarida (4038 ta matn, shaxsiy ma'lumot yo'q) qalqon hech narsa yashirmadi. Bu tekshiruv ikki xatoni topdi va ular
@@ -128,7 +133,7 @@ murojaat bo'yicha.
 
 ```bash
 docker compose up -d --build                  # http://127.0.0.1:8095
-python -m pytest tests                        # 12 ta test
+python -m pytest tests                        # 14 ta test
 python -m eval.evaluate --show                # qo'lda yozilgan to'plam
 python -m eval.gemma_eval llm/natija/gemma_items_v3.json   # 3-ko'r test
 ```

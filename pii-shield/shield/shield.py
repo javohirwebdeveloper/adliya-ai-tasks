@@ -13,7 +13,7 @@ import re
 from .rules import Hit, find, latinize
 
 PRIORITY = {"JSHSHIR": 9, "KARTA": 9, "HISOB": 9, "HUJJAT": 8, "PASPORT": 8, "STIR": 8, "EMAIL": 8, "TELEFON": 7,
-            "TUG_SANA": 7, "AVTO": 6, "ISM": 5, "MANZIL": 4, "RAQAM": 3}
+            "TUG_SANA": 7, "TELEGRAM": 7, "AVTO": 6, "ISM": 5, "MANZIL": 4, "RAQAM": 3}
 
 
 def resolve(hits: list[Hit]) -> list[Hit]:
