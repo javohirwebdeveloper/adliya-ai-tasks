@@ -94,3 +94,5 @@ def test_blind_set_3_patterns():
     assert m("Живу в Чиланзарском районе, по улице Амира Темура, дом 45.") == "Живу в Чиланзарском районе, по [MANZIL_1]."
     assert m("Я, уроженец 15.05.1988 года.") == "Я, уроженец [TUG_SANA_1] года."
     assert m("tug'ilgan sanam esa 1992-yil 15-may.") == "tug'ilgan sanam esa [TUG_SANA_1]."
+    assert kinds("Mahallada ko'chaga sahna qurib konsert o'tkazmoqchimiz") == []      # RAG sinovida topilgan
+    assert kinds("Yaqinda o'g'li tug'ildi, metrika qanday olinadi?") == []

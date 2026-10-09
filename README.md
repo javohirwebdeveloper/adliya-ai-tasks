@@ -16,6 +16,12 @@ ga yuborilishidan oldin ism, pasport, JSHSHIR, telefon, karta, manzil yashirilad
 (lokal) yashirilgan murojaatni asl matndagidek tushundi: mavzu 100% bir xil, o'zidan ism yoki raqam to'qimadi.
 Demo: [javi.uz/adliya/qalqon](https://javi.uz/adliya/qalqon/)
 
+**Qo'shimcha: [rag](rag), savol-javob bazasi + qalqon + Gemma 4.** 1-topshiriqdagi qidiruv (R) va Gemma 4 (G)
+ulandi: model faqat bazadan topilgan 3 ta manbaga tayanib javob yozadi va manbani ko'rsatadi, fuqaro ma'lumotini qalqon
+yashiradi. 1-topshiriqning ko'r to'plamida RAG bilan va RAG'siz Gemma solishtirildi: rasmiy javobga mos javob 27.5% → 75%, rasmiy javobga zid javob
+7.5% → 0%, bazada yo'q savolga "javob yo'q" deyish 41.7% → 100%. Topilma: savoldagi salom va shaxsiy ma'lumot
+qidiruvni 87.5% dan 75.8% ga tushiradi; yechimi va qolgan cheklovlar [rag/README.md](rag/README.md) da.
+
 Har bir papkadagi README da: topshiriqni qanday tushunganim, tanlangan yondashuv va uning sababi, natijani qanday o'lchaganim, cheklovlar va keyingi qadamlar, ishga tushirish yo'riqnomasi.
 
 ## Topshiriqdan tashqari qilinganlar

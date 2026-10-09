@@ -52,8 +52,9 @@ odam ekanini tushunadi.
 | 2-ko'r test (1-test xatolari tuzatilgandan keyin yaratilgan) | 89 | 269 | 95.5% |
 | **3-ko'r test (2-test xatolari tuzatilgandan keyin yaratilgan)** | 89 | 295 | **95.3%** |
 
-**Ortiqcha yashirish** (AI uchun foydali ma'lumot yo'qolmasligi): 1-topshiriqdagi FAQ bazasining 3553 ta savol va
-javobida (258 ming belgi, shaxsiy ma'lumot yo'q) qalqon hech narsa yashirmadi. Rasmiy xatlarda (2-topshiriq namunalari)
+**Ortiqcha yashirish** (AI uchun foydali ma'lumot yo'qolmasligi): 1-topshiriqdagi FAQ bazasi va uning barcha sinov
+savollarida (4038 ta matn, shaxsiy ma'lumot yo'q) qalqon hech narsa yashirmadi. Bu tekshiruv ikki xatoni topdi va ular
+tuzatildi: "Mahallada ko'chaga sahna qurib..." manzil deb, "Yaqinda o'g'li tug'ildi" ism deb olingan edi. Rasmiy xatlarda (2-topshiriq namunalari)
 faqat imzo qo'ygan va ijrochining ismi, telefon, email yashirildi: sana, hujjat raqami, muddat va topshiriq matni ochiq.
 
 **Ko'r test qanday qilingan.** Sinov murojaatlarini alohida model (Gemma 4 12B) yozgan: 9 mavzu, 4 uslub (rasmiy ariza,

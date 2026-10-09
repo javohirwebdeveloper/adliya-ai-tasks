@@ -225,9 +225,12 @@ curl -s http://127.0.0.1:8000/ask -H 'content-type: application/json' \
 
 `status`: `answered` (javob), `unsure` (variantlar `alternatives` da), `not_found` (bazada yo'q), `smalltalk` (salom, rahmat).
 
+RAG uchun: `POST /retrieve {"question": "...", "k": 3}` savolga eng yaqin k ta javobning to'liq matnini va botning
+qarorini (answered / unsure / not_found) qaytaradi, bot statistikasiga yozilmaydi ([../rag](../rag) shundan foydalanadi).
+
 Boshqa so'rovlar: `POST /stt` (ovozli fayl -> matn), `POST /feedback`, `GET /answers/{id}`, `GET /categories`, `GET /categories/{id}?page=N`, `GET /health`. Admin: `/admin`, `/admin/data`, `/admin/upload`, `/admin/reindex`.
 
-Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (21 ta). Nutq modellarini solishtirish: `python eval/stt_bench.py fleurs|dir ...` (usuli faylning boshida).
+Baholash: `python -m eval.evaluate --set dev` yoki `--set final` (`RERANK=0` bilan 1-bosqich chegaralari tanlanadi). Reranker variantlarini solishtirish: `python -m eval.dump_scores`, so'ng `python -m eval.analyze`. Testlar: `pytest tests` (22 ta). Nutq modellarini solishtirish: `python eval/stt_bench.py fleurs|dir ...` (usuli faylning boshida).
 
 ## Kod tuzilmasi
 

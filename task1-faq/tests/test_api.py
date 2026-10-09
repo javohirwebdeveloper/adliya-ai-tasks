@@ -36,6 +36,13 @@ def test_not_found_and_smalltalk():
     assert ask("salom")["status"] == "smalltalk"
 
 
+def test_retrieve_for_rag():
+    r = c.post("/retrieve", json={"question": "ID karta olish uchun qanday hujjatlar kerak?", "k": 3}).json()
+    assert r["status"] == "answered" and r["items"][0]["answer_id"] == 2 and len(r["items"]) == 3
+    assert all(it["answer"] and it["question"] for it in r["items"])
+    assert c.post("/retrieve", json={"question": "salom"}).json() == {"status": "smalltalk", "reason": None, "items": []}
+
+
 def test_cache():
     ask("Nikoh guvohnomasi yo'qolsa nima qilish kerak")
     assert ask("Nikoh guvohnomasi yo'qolsa nima qilish kerak")["cached"] is True

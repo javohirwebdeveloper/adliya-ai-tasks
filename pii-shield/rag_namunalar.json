@@ -1,0 +1,120 @@
+[
+ {
+  "nom": "Lotin",
+  "fuqaro": "Hurmatli mutaxassis! Xotinim bilan kelishib ajrashmoqchimiz, bolalarimiz yo'q. Sudga bormasdan ZAGSning o'zida ajrashsa bo'ladimi? Ma'lumot uchun: Ergashev Ulug'bek, JSHSHIR 40403751926083, tel +998 99 623 51 56.",
+  "yashirin": "Hurmatli mutaxassis! Xotinim bilan kelishib ajrashmoqchimiz, bolalarimiz yo'q. Sudga bormasdan ZAGSning o'zida ajrashsa bo'ladimi? Ma'lumot uchun: [ISM_1], JSHSHIR [JSHSHIR_1], tel [TELEFON_1].",
+  "javob_bor": true,
+  "ishlatilgan": [
+   2
+  ],
+  "manbalar": [
+   {
+    "n": 1,
+    "savol": "Turmush o'rtoqlardan biri chet elda bo'lsa ajrashish qanday amalga oshiriladi?",
+    "ishlatildi": false
+   },
+   {
+    "n": 2,
+    "savol": "Ajrashish uchun FHDYOga qanday hujjatlar kerak?",
+    "ishlatildi": true
+   },
+   {
+    "n": 3,
+    "savol": "Nikohdan ajralganlik (ajrim) guvohnomasi qanday olinadi?",
+    "ishlatildi": false
+   }
+  ],
+  "javob": "Er-xotin yashash joyidagi istalgan FHDYO bo'limiga pasport/ID-karta, nikoh guvohnomasi va davlat boji to'langanligi haqidagi kvitansiya bilan murojaat qilishlari mumkin. Ajrashish FHDYO bo'limi orqali rasmiylashtiriladi.",
+  "fuqaroga": "Er-xotin yashash joyidagi istalgan FHDYO bo'limiga pasport/ID-karta, nikoh guvohnomasi va davlat boji to'langanligi haqidagi kvitansiya bilan murojaat qilishlari mumkin. Ajrashish FHDYO bo'limi orqali rasmiylashtiriladi.",
+  "yopiq": "O'zbekiston Respublikasi qonunchiligiga ko'ra, oilaviy munosabatlarni tugatish (ajrashish) faqat sud tartibida amalga oshiriladi. Bolalarsiz bo'lsangiz ham, ajrashish uchun sudga murojaat qilish va sud qarori bilan oilaviy munosabatlarni tugatish shart. ZAGS (Davlat ro'yxati organi) faqat nikoh ro'yxatiga olish yoki nikohni qayta ro'yxatga olish bilan shug'ullanadi.",
+  "yopiq_izoh": "Hakam: noto'g'ri. Ma'lumotnomada bolalarsiz va o'zaro rozi bo'lgan er-xotinlar FHDYO (ZAGS) orqali ajrashishi mumkinligi ko'rsatilgan, lekin javobda faqat sud tartibida bo'lishi shart deb xato ma'lumot berilgan."
+ },
+ {
+  "nom": "Кирилл",
+  "fuqaro": "Ассалому алайкум, мен Раҳимова Нигора Шавкат қизи. Ўзбекистон фуқароси эканимни қайси ҳужжат билан исботлайман? Телефоним +998 94 387 20 87.",
+  "yashirin": "Ассалому алайкум, мен [ISM_1]. Ўзбекистон фуқароси эканимни қайси ҳужжат билан исботлайман? Телефоним [TELEFON_1].",
+  "javob_bor": true,
+  "ishlatilgan": [
+   1
+  ],
+  "manbalar": [
+   {
+    "n": 1,
+    "savol": "Fuqarolikni tasdiqlovchi hujjat sifatida nima ishlaydi?",
+    "ishlatildi": true
+   },
+   {
+    "n": 2,
+    "savol": "O'zbekiston fuqaroligini olish tartibi qanday?",
+    "ishlatildi": false
+   },
+   {
+    "n": 3,
+    "savol": "Chet elda pasport muddati tugasa nima qilinadi?",
+    "ishlatildi": false
+   }
+  ],
+  "javob": "Ўзбекистон фуқаролигини ID-карта ва хорижга чиқиш биометрик паспорти тасдиқлайди.",
+  "fuqaroga": "Ўзбекистон фуқаролигини ID-карта ва хорижга чиқиш биометрик паспорти тасдиқлайди.",
+  "yopiq": "Ассалому алайкум, [ISM_1] кимлигингиз ва Ўзбекистон фуқаролигингизни исботлаш учун паспорт ёки паспортни алмаштириш тўғрисидаги гувоҳномани тақдим этишингиз керак. Шунингдек, фуқаролик ҳақида берилган расмий гувоҳнома ҳам ҳужжат бўла олади. Агар қўшимча маълумот керак бўлса, яқиндаги АДЯР бўлимига мурожаат қилишингиз мумкин.",
+  "yopiq_izoh": "Hakam: noto'g'ri. Tekshiriladigan javobda ma'lumotnomada ko'rsatilgan ID-karta va biometrik pasport o'rniga noto'g'ri hujjatlar (pasportni almashish guvohnomasi) ko'rsatilgan."
+ },
+ {
+  "nom": "Русский",
+  "fuqaro": "Здравствуйте, меня зовут Каримов Алишер Олимович. Можно ли временно снять машину с учета? Уезжаю на год, машина будет стоять в гараже. Мой телефон +998 91 594 34 80.",
+  "yashirin": "Здравствуйте, меня зовут [ISM_1]. Можно ли временно снять машину с учета? Уезжаю на год, машина будет стоять в гараже. Мой телефон [TELEFON_1].",
+  "javob_bor": true,
+  "ishlatilgan": [
+   1
+  ],
+  "manbalar": [
+   {
+    "n": 1,
+    "savol": "Transport vositasini vaqtincha hisobdan chiqarish mumkinmi?",
+    "ishlatildi": true
+   },
+   {
+    "n": 2,
+    "savol": "Transport vositasini hisobdan chiqarish (utilizatsiya) tartibi qanday?",
+    "ishlatildi": false
+   },
+   {
+    "n": 3,
+    "savol": "Mobil ID nima va qanday ulanadi?",
+    "ishlatildi": false
+   }
+  ],
+  "javob": "В некоторых случаях существует возможность временного снятия транспортного средства с учета. Порядок действий можно уточнить через Центр государственных услуг (DXM) или на портале my.gov.uz.",
+  "fuqaroga": "В некоторых случаях существует возможность временного снятия транспортного средства с учета. Порядок действий можно уточнить через Центр государственных услуг (DXM) или на портале my.gov.uz.",
+  "yopiq": "Здравствуйте, [ISM_1]. В Узбекистане процедура временного снятия автомобиля с учета в связи с длительным простоем не предусмотрена законодательством. Если автомобиль будет находиться в гараже и не будет эксплуатироваться, он остается зарегистрированным. Рекомендуем ознакомиться с правилами регистрации транспортных средств на официальном сайте Министерства юстиции.",
+  "yopiq_izoh": "Hakam: noto'g'ri. Ma'lumotnomada vaqtincha hisobdan chiqarish imkoniyati mavjudligini aytilgan, lekin javobda bu imkoniyat qonunchilikda ko'rilmagan deb ta'kidlangan."
+ },
+ {
+  "nom": "Bazada yo'q savol",
+  "fuqaro": "Машину увез эвакуатор. Как забрать ее со штрафстоянки? Я Юсупова Малика Анваровна, паспорт AA9894050, ПИНФЛ 30302784901822.",
+  "yashirin": "Машину увез эвакуатор. Как забрать ее со штрафстоянки? Я [ISM_1], паспорт [PASPORT_1], ПИНФЛ [JSHSHIR_1].",
+  "javob_bor": false,
+  "ishlatilgan": [],
+  "manbalar": [
+   {
+    "n": 1,
+    "savol": "JSHSHIR (shaxsiy identifikatsiya raqami) nima?",
+    "ishlatildi": false
+   },
+   {
+    "n": 2,
+    "savol": "Pasport yoki ID-karta yo'qolsa nima qilinadi?",
+    "ishlatildi": false
+   },
+   {
+    "n": 3,
+    "savol": "Chaqaloqqa JSHSHIR (shaxsiy identifikatsiya raqami) qachon beriladi?",
+    "ishlatildi": false
+   }
+  ],
+  "javob": "",
+  "fuqaroga": "Bu savol bo'yicha bazada ma'lumot topmadim. Savolni boshqacharoq yozib ko'ring yoki mavzular ro'yxatidan qidiring.",
+  "yopiq": "Для получения автомобиля со штрафстоянки вам необходимо обратиться в соответствующее подразделение ГСБДД с паспортом и документами на транспортное средство. Вам потребуется оплатить сумму штрафа и услуги по хранению автомобиля на стоянке. После оплаты и проверки документов автомобиль будет возвращен владельцу.",
+  "yopiq_izoh": "Bazada bunday javob yo'q, model o'zi bilganidan yozdi."
+ }
+]

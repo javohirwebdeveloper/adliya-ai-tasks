@@ -147,14 +147,16 @@ arizachi murojaatchi talabnoma ijrochi notarius otam onam akam opam iltimos rahm
 ya menya moy moya mne uvajayemiy uvajayemaya zdravstvuyte gospodin grajdanin grajdanka dobriy privet
 milliy ijtimoiy tibbiy huquqiy moliyaviy iqtisodiy madaniy ilmiy harbiy siyosiy oliy asosiy umumiy rasmiy shaxsiy
 xususiy mahalliy ma'muriy jinoiy ma'naviy doimiy qonuniy hududiy idoraviy tarixiy
-to'lov so'rov sinov tanlov saylov ishlov""".split())
+to'lov so'rov sinov tanlov saylov ishlov
+yaqinda hozir hozirda kecha bugun ertaga keyin avval oldin endi agar lekin ammo biroq yana mana aslida albatta balki
+shuning chunki""".split())
 FIRST_SET = {n.lower() for n in FIRST_NAMES}
 
 
 def name_like(tok: str) -> bool:
     low = tok.lower()
     return low not in STOP and (low in FIRST_SET or re.fullmatch(SURNAME, tok) is not None
-                                or re.search(r"(?:ovich|evich|ovna|evna|o'g'li|qizi)$", low) is not None)
+                                or re.search(r"..(?:ovich|evich|ovna|evna)$", low) is not None)   # "o'g'li" o'zi ism emas
 
 
 def trim_name(lat: str, h: Hit):
@@ -216,9 +218,12 @@ def find(lat: str) -> list[Hit]:
 
 
 def street_name(lat: str, s: int, e: int):
-    """Ko'cha nomi o'rnida "Menga", "Bizning" kabi so'z bo'lsa ("Menga ko'cha nomi kerakmi?"), bu manzil emas."""
+    """Ko'cha nomi o'rnida "Menga", "Bizning" kabi so'z ("Menga ko'cha nomi kerakmi?") yoki qo'shimchali so'z
+    ("Mahallada ko'chaga sahna qurib...") bo'lsa, bu manzil emas: ko'cha nomi bosh kelishikda keladi."""
     while (w := re.match(r"[\w'.-]+\s*", lat[s:e])) and w.group(0).strip().lower() in STOP:
         s += w.end()
+    if any(re.search(r"[a-z'](?:da|dan|ga|ning|dagi|ni)$", w) for w in re.findall(r"[A-Z][\w'-]+", lat[s:e])):
+        return None
     return (s, e) if re.search(r"[A-Z][a-z']", lat[s:e]) else None
 
 

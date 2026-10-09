@@ -3,7 +3,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 WORKDIR /srv
 RUN pip install "fastapi>=0.115" "uvicorn>=0.30"
 COPY shield ./shield
-COPY app.py namunalar.json ./
+COPY app.py namunalar.json rag_namunalar.json ./
 RUN useradd -m -u 10001 app
 USER app
 EXPOSE 8000

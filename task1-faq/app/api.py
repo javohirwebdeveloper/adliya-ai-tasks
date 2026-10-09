@@ -162,6 +162,26 @@ def ask(body: AskIn):
     return out
 
 
+class RetrieveIn(BaseModel):
+    question: str = Field(min_length=1, max_length=1000)
+    k: int = Field(3, ge=1, le=5)
+
+
+@app.post("/retrieve")
+def retrieve(body: RetrieveIn):
+    """RAG uchun qidirish: savolga eng yaqin k ta javobning to'liq matni. Bot statistikasiga yozilmaydi.
+    status - botning o'z qarori (answered / unsure / not_found): javob beruvchi model buni ham hisobga oladi."""
+    s: Searcher = app.state.searcher
+    res = s.search(body.question, top_k=body.k)
+    cands = res["candidates"][:body.k]
+    with app.state.pool.connection() as conn:
+        rows = db.get_answers(conn, [c.answer_id for c in cands])
+    return {"status": res["status"], "reason": res.get("reason"),
+            "items": [{"answer_id": c.answer_id, "question": s.question_of(c.answer_id),
+                       "answer": rows[c.answer_id]["answer"], "score": round(c.score, 4)}
+                      for c in cands if c.answer_id in rows]}
+
+
 class FeedbackIn(BaseModel):
     log_id: int
     useful: bool

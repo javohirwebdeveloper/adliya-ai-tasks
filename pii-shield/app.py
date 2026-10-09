@@ -3,6 +3,7 @@
   POST /api/mask    {"text": "..."}              -> {"masked": "...", "key": {"[ISM_1]": "..."}, "found": [...]}
   POST /api/unmask  {"text": "...", "key": {...}} -> {"text": "..."}
   GET  /api/namunalar                             -> Gemma 4 ning oldindan yozib olingan haqiqiy javoblari
+  GET  /api/rag_namunalar                         -> RAG (1-topshiriq bazasi + qalqon + Gemma 4) namunalari
 """
 import json
 import time
@@ -18,6 +19,8 @@ app = FastAPI(title="Shaxsiy ma'lumot qalqoni", version="1.0")
 S = Shield()
 EXAMPLES = Path(__file__).with_name("namunalar.json")
 NAMUNA = json.loads(EXAMPLES.read_text(encoding="utf-8")) if EXAMPLES.exists() else []
+RAG_FILE = Path(__file__).with_name("rag_namunalar.json")
+RAG_NAMUNA = json.loads(RAG_FILE.read_text(encoding="utf-8")) if RAG_FILE.exists() else []
 
 
 class MaskIn(BaseModel):
@@ -49,6 +52,11 @@ def namunalar():
     return NAMUNA
 
 
+@app.get("/api/rag_namunalar")
+def rag_namunalar():
+    return RAG_NAMUNA
+
+
 @app.get("/health")
 def health():
     return {"ok": True}
@@ -68,7 +76,7 @@ button{background:var(--a);color:#fff;border:0;border-radius:10px;padding:11px 1
 button.g{background:#eef2f7;color:var(--b)}h2{font-size:17px;margin:0 0 10px}
 .out{white-space:pre-wrap;min-height:120px}.tag{border-radius:6px;padding:1px 6px;font-weight:600;font-size:14px}
 table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}td{border-top:1px solid var(--l);padding:6px 4px;vertical-align:top}
-.note{color:var(--m);font-size:13px;margin-top:10px}.lbl{color:var(--m);font-size:13px;font-weight:600;margin-bottom:4px}#g4 .out{min-height:0}
+.note{color:var(--m);font-size:13px;margin-top:10px}.lbl{color:var(--m);font-size:13px;font-weight:600;margin-bottom:4px}#g4 .out,#r5 .out{min-height:0}
 </style></head><body><main>
 <h1>Shaxsiy ma'lumot qalqoni</h1>
 <p class="sub">Matn sun'iy intellektga yuborilishidan oldin ism, pasport, JSHSHIR, telefon, karta, manzil kabi ma'lumotlar yashiriladi.
@@ -91,6 +99,15 @@ Haqiqiy model javoblari pastda.</div></div>
 <div class="lbl" style="margin-top:14px">Fuqaroga boradi</div><div class="out" id="gf"></div>
 <div class="note">Oldindan yozib olingan: Gemma 4 12B, lokal model (Modal GPU). Model faqat "Gemma ko'rgan matn" ni ko'rgan.
 Murojaat va undagi shaxsiy ma'lumotlarni ham Gemma to'qib chiqargan, ular haqiqiy odamga tegishli emas.</div></div>
+<div class="card" id="r5" style="margin-top:18px;display:none"><h2>5. RAG: savol-javob bazasi + qalqon + Gemma 4</h2>
+<div id="rb"></div><div class="grid" style="margin-top:12px"><div><div class="lbl">Fuqaro savoli</div><div class="out" id="rf"></div></div>
+<div><div class="lbl">Gemma ko'rgan savol</div><div class="out" id="ry"></div></div></div>
+<div class="lbl" style="margin-top:14px">Bazadan topilgan manbalar (1-topshiriq qidiruvi)</div><div class="out" id="rm"></div>
+<div class="lbl" style="margin-top:14px">RAG javobi</div><div class="out" id="rj"></div>
+<div class="lbl" style="margin-top:14px">Fuqaroga boradi</div><div class="out" id="rq"></div>
+<div class="lbl" style="margin-top:14px">Taqqoslash: xuddi shu savolga RAG'siz Gemma</div><div class="out" id="ro"></div>
+<div class="note">Oldindan yozib olingan: Gemma 4 12B, Modal GPU. Savollar 1-topshiriqning ko'r to'plamidan, ism va raqamlar to'qima.
+Natijalar: <a href="https://github.com/javohirwebdeveloper/adliya-ai-tasks/tree/main/rag">github.com/.../rag</a></div></div>
 </main><script>
 const C={ISM:'#dbeafe',PASPORT:'#fde68a',JSHSHIR:'#fecaca',TELEFON:'#bbf7d0',KARTA:'#fbcfe8',HISOB:'#fbcfe8',STIR:'#e9d5ff',
 EMAIL:'#bae6fd',MANZIL:'#fed7aa',AVTO:'#e5e7eb',TUG_SANA:'#ddd6fe',HUJJAT:'#fde68a',RAQAM:'#fecaca'};
@@ -113,6 +130,14 @@ gf.textContent=x.fuqaroga;gb.querySelectorAll('button').forEach((b,j)=>b.classNa
 fetch('api/namunalar').then(r=>r.json()).then(g=>{if(!g.length)return;g4.style.display='';
 gb.innerHTML=g.map((x,i)=>'<button data-i="'+i+'">'+(LBL[x.yozuv]||x.yozuv)+'</button>').join('');
 gb.querySelectorAll('button').forEach(b=>b.onclick=()=>show(g,+b.dataset.i));show(g,0)});
+function rshow(g,i){const x=g[i];rf.textContent=x.fuqaro;ry.innerHTML=paint(x.yashirin);
+rm.innerHTML=x.manbalar.map(m=>'<div style="margin:2px 0'+(m.ishlatildi?';font-weight:600':';color:#64748b')+'">['+m.n+'] '+esc(m.savol)+(m.ishlatildi?' ✓':'')+'</div>').join('');
+rj.innerHTML=x.javob_bor?paint(x.javob)+' <span class="tag" style="background:#e2e8f0">manba: '+x.ishlatilgan.map(n=>'['+n+']').join(' ')+'</span>':'<b>Bazada javob yo\\'q</b>: model javob to\\'qimadi.';
+rq.textContent=x.fuqaroga;ro.innerHTML=paint(x.yopiq)+(x.yopiq_izoh?'<div class="note" style="color:#b91c1c">'+esc(x.yopiq_izoh)+'</div>':'');
+rb.querySelectorAll('button').forEach((b,j)=>b.className=j==i?'':'g')}
+fetch('api/rag_namunalar').then(r=>r.json()).then(g=>{if(!g.length)return;r5.style.display='';
+rb.innerHTML=g.map((x,i)=>'<button data-i="'+i+'">'+esc(x.nom)+'</button>').join('');
+rb.querySelectorAll('button').forEach(b=>b.onclick=()=>rshow(g,+b.dataset.i));rshow(g,0);if(location.hash=='#r5')r5.scrollIntoView()});
 document.getElementById('go').onclick=go;document.getElementById('ex').onclick=()=>{t.value=EX[ei++%EX.length];go()};go();
 </script></body></html>"""
 

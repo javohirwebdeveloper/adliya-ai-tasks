@@ -12,3 +12,5 @@ SUHBAT.md
 tools/chatshot.cjs
 task1-faq/eval/kb_colbert.npz
 task1-faq/eval/dev_scores.json
+rag/natija/qidiruv_kesh.jsonl
+rag/natija/inputs_xom.json
