@@ -105,6 +105,9 @@ PATTERNS = [
     ("STIR", re.compile(KW(r"stir|inn|soliq raqam\w*|soliq to'lovchining identifikatsiya raqami") + FILL
                         + r"(\d(?:[ -]?\d){5,12})" + NUM_END), 3, None),
     ("PASPORT", re.compile(W + r"([A-Z]{2} ?№? ?\d{7})" + E), 3, None),
+    # kichik harf bilan ham (chatda shunday yozishadi: "prava ... ad 4803829"); "va 1250000 so'm" kabi so'z va summa emas
+    ("PASPORT", re.compile(r"(?i)" + W + r"(?!(?:va|bu|da|ga|ni|na|po|za|ot|do|iz|ne|to|on|my|vy|ya|yo|ha|uy|ta|xo|so|ki|ko|mi)\W)"
+                           r"([a-z]{2} ?№? ?\d{7})" + E + NOT_MONEY), 2, None),
     # "pasport" so'zidan keyin: kichik harf va 6-8 raqam ham (yozishda xato bo'lsa ham yashirilsin)
     ("PASPORT", re.compile(KW(r"pasport\w*|passport\w*|id[- ]?karta\w*") + FILL
                            + r"(?!(?:va|bu|da|ga|ni|na|po|za|ot|do|iz|ne|to|on|my|vy|ya)\W)([a-z]{2} ?№? ?\d{6,8}|\d{2} ?\d{2} ?№? ?\d{6,7})(?![\w])"), 3, None),

@@ -96,3 +96,10 @@ def test_blind_set_3_patterns():
     assert m("tug'ilgan sanam esa 1992-yil 15-may.") == "tug'ilgan sanam esa [TUG_SANA_1]."
     assert kinds("Mahallada ko'chaga sahna qurib konsert o'tkazmoqchimiz") == []      # RAG sinovida topilgan
     assert kinds("Yaqinda o'g'li tug'ildi, metrika qanday olinadi?") == []
+
+
+def test_lowercase_document_number():
+    """Foydalanuvchi demo'da topgan: kichik harfli hujjat raqami "pasport" so'zisiz ham yashirilishi kerak."""
+    assert S.mask("Ayolimning ham prava muddati tugabdi, ad 4803829")[0] == "Ayolimning ham prava muddati tugabdi, [PASPORT_1]"
+    assert S.mask("aa4803829 raqamli guvohnoma")[0] == "[PASPORT_1] raqamli guvohnoma"
+    assert kinds("Ijara 3 oy va 1250000 so'm, bu 1234567 emas") == []
