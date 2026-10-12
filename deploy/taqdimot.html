@@ -133,10 +133,10 @@ html.kursor,html.kursor *{cursor:none!important}
 #kursor svg{position:absolute;display:none;filter:drop-shadow(0 1.5px 2px rgba(0,0,0,.4));transition:transform .1s ease}
 #kursor[data-k=arrow] .ka,#kursor[data-k=hand] .kh,#kursor[data-k=text] .kt{display:block}
 #kursor.k-down svg{transform:scale(.86)}
-#kursor .ka{left:-4.6px;top:-4.6px;transform-origin:4.6px 4.6px}
-#kursor .kh{left:-18.6px;top:-4.6px;transform-origin:18.6px 4.6px}
-#kursor .kt{left:-11.5px;top:-25.3px;transform-origin:11.5px 25.3px}
-.ripple{position:fixed;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(30,30,30,.14);pointer-events:none;z-index:2147483646;animation:ripple .45s ease-out forwards}
+#kursor .ka{left:-4px;top:-4px;transform-origin:4px 4px}
+#kursor .kh{left:-16.2px;top:-4px;transform-origin:16.2px 4px}
+#kursor .kt{left:-10px;top:-22px;transform-origin:10px 22px}
+.ripple{position:fixed;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:rgba(30,30,30,.14);pointer-events:none;z-index:2147483646;animation:ripple .45s ease-out forwards}
 @keyframes ripple{from{transform:scale(.3);opacity:1}to{transform:scale(1.3);opacity:0}}
 @media (max-width:1000px){.chain{flex-direction:column;align-items:stretch}.arrow,.duo .arrow{transform:rotate(90deg);align-self:center;justify-self:center;flex:0 0 36px;width:40px;height:36px;margin:6px 0}.grid2,.grid3,.res,.duo{grid-template-columns:1fr}#dots{display:none}}
 </style>
@@ -298,9 +298,9 @@ html.kursor,html.kursor *{cursor:none!important}
 </div>
 
 <div id="kursor" aria-hidden="true">
-  <svg class="ka" viewBox="-2 -2 16 23.5" width="36.8" height="54"><path d="M0 0V16.5L3.9 12.8L6.6 19.2L9.2 18.1L6.5 11.9H11.8Z" fill="#fff" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M0 0V16.5L3.9 12.8L6.6 19.2L9.2 18.1L6.5 11.9H11.8Z"/></svg>
-  <svg class="kh" viewBox="-1.5 -1 19.5 22.5" width="44.8" height="51.7"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 2.2V12" stroke-width="5.4"/><path d="M9.65 7.9V12" stroke-width="5.1"/><path d="M12.5 8.6V12.2" stroke-width="5"/><path d="M15.15 9.7V12.6" stroke-width="4.7"/><path d="M2.5 11.6L5.7 15.4" stroke-width="5.2"/><g stroke-width="2.2"><path d="M5 11H16.4V15.6C16.4 18 15.2 19.6 13 19.6H8.8C6.6 19.6 5 18.2 5 16Z"/></g></g><g fill="#fff" stroke="#fff" stroke-linecap="round"><path d="M6.6 2.2V12" stroke-width="3.2"/><path d="M9.65 7.9V12" stroke-width="2.9"/><path d="M12.5 8.6V12.2" stroke-width="2.8"/><path d="M15.15 9.7V12.6" stroke-width="2.5"/><path d="M2.5 11.6L5.7 15.4" stroke-width="3"/><g stroke="none"><path d="M5 11H16.4V15.6C16.4 18 15.2 19.6 13 19.6H8.8C6.6 19.6 5 18.2 5 16Z"/></g></g><path d="M8.15 9.2V10.5M11.07 9.9V11M13.85 10.9V11.8" stroke="#000" stroke-width=".8" stroke-linecap="round"/></svg>
-  <svg class="kt" viewBox="-5 -11 10 22" width="23" height="50.6"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-2.8-9.2C-1-9.2 0-8.6 0-7.4C0-8.6 1-9.2 2.8-9.2M0-7.4V7.4M-2.8 9.2C-1 9.2 0 8.6 0 7.4C0 8.6 1 9.2 2.8 9.2" stroke="#fff" stroke-width="3.4"/><path d="M-2.8-9.2C-1-9.2 0-8.6 0-7.4C0-8.6 1-9.2 2.8-9.2M0-7.4V7.4M-2.8 9.2C-1 9.2 0 8.6 0 7.4C0 8.6 1 9.2 2.8 9.2" stroke="#000" stroke-width="1.3"/></g></svg>
+  <svg class="ka" viewBox="-2 -2 16 23.5" width="32" height="47"><path d="M0 0V16.5L3.9 12.8L6.6 19.2L9.2 18.1L6.5 11.9H11.8Z" fill="#fff" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M0 0V16.5L3.9 12.8L6.6 19.2L9.2 18.1L6.5 11.9H11.8Z"/></svg>
+  <svg class="kh" viewBox="-1.5 -1 19.5 22.5" width="39" height="45"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 2.2V12" stroke-width="5.4"/><path d="M9.65 7.9V12" stroke-width="5.1"/><path d="M12.5 8.6V12.2" stroke-width="5"/><path d="M15.15 9.7V12.6" stroke-width="4.7"/><path d="M2.5 11.6L5.7 15.4" stroke-width="5.2"/><g stroke-width="2.2"><path d="M5 11H16.4V15.6C16.4 18 15.2 19.6 13 19.6H8.8C6.6 19.6 5 18.2 5 16Z"/></g></g><g fill="#fff" stroke="#fff" stroke-linecap="round"><path d="M6.6 2.2V12" stroke-width="3.2"/><path d="M9.65 7.9V12" stroke-width="2.9"/><path d="M12.5 8.6V12.2" stroke-width="2.8"/><path d="M15.15 9.7V12.6" stroke-width="2.5"/><path d="M2.5 11.6L5.7 15.4" stroke-width="3"/><g stroke="none"><path d="M5 11H16.4V15.6C16.4 18 15.2 19.6 13 19.6H8.8C6.6 19.6 5 18.2 5 16Z"/></g></g><path d="M8.15 9.2V10.5M11.07 9.9V11M13.85 10.9V11.8" stroke="#000" stroke-width=".8" stroke-linecap="round"/></svg>
+  <svg class="kt" viewBox="-5 -11 10 22" width="20" height="44"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-2.8-9.2C-1-9.2 0-8.6 0-7.4C0-8.6 1-9.2 2.8-9.2M0-7.4V7.4M-2.8 9.2C-1 9.2 0 8.6 0 7.4C0 8.6 1 9.2 2.8 9.2" stroke="#fff" stroke-width="3.4"/><path d="M-2.8-9.2C-1-9.2 0-8.6 0-7.4C0-8.6 1-9.2 2.8-9.2M0-7.4V7.4M-2.8 9.2C-1 9.2 0 8.6 0 7.4C0 8.6 1 9.2 2.8 9.2" stroke="#000" stroke-width="1.3"/></g></svg>
 </div>
 
 <script>
