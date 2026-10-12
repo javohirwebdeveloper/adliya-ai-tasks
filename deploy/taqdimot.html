@@ -380,26 +380,40 @@ if (P) {
 /* ---------- jonli: fine-tuning ---------- */
 const S = {text: "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
   k: {ijrochi: ["Hududiy adliya boshqarmalari"], muddat: "2026-yil 25-dekabrgacha", muddat_turi: "sana"}};
+// javobi oldindan ma'lum gaplar: shularda ✓/✗ chiqadi (model javoblari: finetune/2-qlora/natija/demo_sinov.json)
+const KNOWN = [S,
+  {text: "Markaz yuqoridagi topshiriqlar ijrosi holati to'g'risida har oyning 5-sanasiga qadar Agentlikning Loyihalarni boshqarish departamentiga ma'lumot berib borsin.",
+   k: {ijrochi: ["Markaz"], muddat: "har oyning 5-sanasiga qadar", muddat_turi: "davriy"}},
+  {text: "Moliya-iqtisodiyot boshqarmasi Kadrlar bo'limi bilan birgalikda xodimlarni rag'batlantirish tartibini har chorakda ko'rib chiqsin.",
+   k: {ijrochi: ["Moliya-iqtisodiyot boshqarmasi", "Kadrlar bo'limi"], muddat: "har chorakda", muddat_turi: "davriy"}},
+  {text: "Ekspert xulosasi loyiha rahbari orqali Vazirlikning Ijro nazorati boshqarmasiga har oyda taqdim etilsin.",
+   k: {ijrochi: ["Loyiha rahbari"], muddat: "har oyda", muddat_turi: "davriy"}},
+  {text: "Kengash kotibiyati ilova ijrosi to'g'risida har chorakda Kengash yig'ilishiga axborot kiritib borsin.",
+   k: {ijrochi: ["Kengash kotibiyati"], muddat: "har chorakda", muddat_turi: "davriy"}},
+  {text: "Yuridik xizmat 2027-yil 1-yanvardan boshlab shartnomalarni faqat elektron shaklda ro'yxatga olsin.",
+   k: {ijrochi: ["Yuridik xizmat"], muddat: "2027-yil 1-yanvardan boshlab", muddat_turi: "boshlanish"}},
+];
+const known = t => (KNOWN.find(x => norm(x.text) === norm(t)) || {}).k || null;
 const q2 = $("q2"); q2.value = S.text;
-let cache = {}, pending = {}, expected = S.k;
+let cache = {}, pending = {};
 const fld = (k, v, ok) => `<div class="f"><span class="k">${k}</span><span>${v}</span>${ok === undefined ? "<span></span>" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>'}</div>`;
-function col(r) {
+function col(r, e) {
   const j = r.json && typeof r.json === "object" ? r.json : null;
-  if (!j) return fld("Natija", '<span class="nil">JSON emas</span>', expected ? false : undefined);
+  if (!j) return fld("Natija", '<span class="nil">JSON emas</span>', e ? false : undefined);
   const ij = Array.isArray(j.ijrochi) ? j.ijrochi : j.ijrochi ? [j.ijrochi] : [];
-  const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat, e = expected;
+  const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat;
   return fld("Ijrochi", ij.length ? esc(ij.join(", ")) : '<span class="nil">topilmadi</span>', e ? JSON.stringify(ij.map(norm).sort()) === JSON.stringify(e.ijrochi.map(norm).sort()) : undefined) +
          fld("Muddat", md ? esc(md) : '<span class="nil">yo\'q</span>', e ? norm(md) === norm(e.muddat || "") : undefined) +
          fld("Muddat turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
 }
-function paint(d) { $("r0").innerHTML = col(d.oldin); $("r1").innerHTML = col(d.keyin);
+function paint(d) { const e = known(d.text); $("r0").innerHTML = col(d.oldin, e); $("r1").innerHTML = col(d.keyin, e);
   $("m0").textContent = (d.oldin.ms / 1000).toFixed(1) + " s"; $("m1").textContent = (d.keyin.ms / 1000).toFixed(1) + " s";
   $("c0").style.opacity = $("c1").style.opacity = 1; }
 async function analyse(text, quiet) {
   if (cache[text]) return cache[text];
   const job = pending[text] || (pending[text] = fetch("/adliya/trening/api/tahlil", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({text})})
     .then(r => { if (!r.ok) throw new Error("model javob bermadi"); return r.json(); })
-    .then(d => (cache[text] = d))
+    .then(d => (cache[text] = Object.assign(d, {text})))
     .finally(() => { delete pending[text]; }));
   if (quiet) return job;
   const t = Date.now();
@@ -409,7 +423,7 @@ async function analyse(text, quiet) {
 }
 async function showModel() { const text = q2.value.trim(); if (cache[text]) return paint(cache[text]); try { paint(await analyse(text)); } catch (e) { $("w2").textContent = "GPU uyg'onmoqda"; } }
 $("go2").onclick = async () => { const text = q2.value.trim(); delete cache[text]; try { paint(await analyse(text)); } catch (e) { $("w2").textContent = e.message; } };
-q2.addEventListener("input", () => { expected = norm(q2.value) === norm(S.text) ? S.k : null; $("c0").style.opacity = $("c1").style.opacity = .35; });
+q2.addEventListener("input", () => { $("c0").style.opacity = $("c1").style.opacity = .35; });
 
 /* ---------- jonli: anonimlashtirish ---------- */
 const q3 = $("q3");
