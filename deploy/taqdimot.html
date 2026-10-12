@@ -309,11 +309,11 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "
 const norm = s => String(s ?? "").replace(/[‘’ʻʼ`´]/g, "'").toLowerCase().replace(/\s+/g, " ").replace(/^[ .,;:]+|[ .,;:]+$/g, "");
 const SEC = [...document.querySelectorAll("section")];
 const NOTES = [
-  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bo'limingiz ishiga yaqin uchta ish qildim, qisqacha ko'rsataman."],
-  ["30 s", "Birinchisi, fine-tuning. Muammo: tayyor model hujjat kimga yuborilishini ijrochi deb oladi. Qwen3-4B ni QLoRA bilan 1600 ta misolda o'qitdim: bitta GPU, 10 daqiqa. Real gaplarda 31 foizdan 100 foizga. Jonli sinov: chapda o'qitilmagan model xato, o'ngda o'qitilgani to'g'ri."],
-  ["22 s", "Ikkinchisi, anonimlashtirish. Murojaat LLM ga ketishidan oldin ism, pasport, telefon belgiga almashtiriladi, javob qaytgach asl holiga qaytariladi. (yozing) Uch marta test qildim: 95-97 foiz, oddiy matnda ortiqcha yashirish yo'q."],
-  ["18 s", "Uchinchisi, RAG: bot bazasini Gemma 4 ga uladim, model faqat topilgan manbadan yozadi. Rasmiy javobga mos javob 27 foizdan 75 foizga oshdi, zid javob nolga tushdi."],
-  ["12 s", "Keyingi qadam: haqiqiy murojaatlarda ism va manzilni qoidalar belgilaydi, xodim tekshiradi. Shu ma'lumotda NER modelini o'qitib, oldin va keyin o'lchayman. Stajirovkaga tayyorman. Rahmat."],
+  ["8 s", "Assalomu alaykum. Men Javohir Jumaboyev. Suhbatdan keyin bo'limingiz ishiga yaqin uchta ish qildim. Hozir ularni qisqacha ko'rsataman."],
+  ["26 s", "Birinchisi, fine-tuning. («Tahlil qilish»ni bosing) Model rasmiy xatdan ijrochi va muddatni ajratishi kerak. Tayyor model esa ko'pincha qabul qiluvchi bo'limni ijrochi deb oladi. Shuning uchun Qwen3-4B ni QLoRA bilan 1600 ta misolda o'qitdim. Natijada haqiqiy gaplarda aniqlik 31 foizdan 100 foizga chiqdi. Pastda buni jonli ko'ryapsiz: chapdagi o'qitilmagan model adashdi, o'ngdagi o'qitilgani esa to'g'ri topdi."],
+  ["24 s", "Ikkinchisi, anonimlashtirish. Murojaat LLM ga yuborilishidan oldin undagi ism, pasport va telefon belgiga almashtiriladi. Javob qaytgach, ular asl holiga qaytariladi. (Matn oxiriga yozing: Telefonim 93 555 12 34) Ko'ryapsiz, raqam yozilishi bilan yashirildi. Uch marta sinab, xatolarini tuzatib bordim: natija 75 foizdan 95 foizga chiqdi. Oddiy matnlarda esa ortiqcha hech narsa yashirilmadi."],
+  ["20 s", "Uchinchisi, RAG. Birinchi topshiriqdagi bot bazasini Gemma 4 modeliga uladim. Savol avval anonimlashtiriladi, keyin bazadan eng mos javoblar topiladi va model faqat shularga tayanib yozadi. Natijada rasmiy javobga mos javoblar 27 foizdan 75 foizga chiqdi, zid javob esa birorta ham qolmadi."],
+  ["12 s", "Anonimlashtirishda qoidalar bilan 95 foizga chiqdim, qolganini model topishi kerak. Shuning uchun keyingi qadam: haqiqiy murojaatlarda ism va manzilni topadigan NER modelini o'qitish. Stajirovkaga tayyorman. E'tiboringiz uchun rahmat."],
 ];
 const P = new URLSearchParams(location.search).has("p");
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("taqdimot") : null;
