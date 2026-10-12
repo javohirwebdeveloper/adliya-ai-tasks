@@ -311,7 +311,7 @@ const SEC = [...document.querySelectorAll("section")];
 const NOTES = [
   ["6 s", "Assalomu alaykum. Men Javohir Jumaboyev. Suhbatdan keyin ba'zi ishlar qildim, hozir tushuntiraman."],
   ["26 s", "Birinchisi, fine-tuning. («Tahlil qilish»ni bosing) Xatdan ijrochi va muddatni ajratib olish kerak. Oddiy model ko'pincha adashadi: ma'lumot kimga topshirilsa, o'shani ijrochi deb oladi. Men Qwen3-4B modelini QLoRA bilan 1600 ta misolda o'qitdim. Haqiqiy gaplarda o'qitishdan oldin 31 foiz to'g'ri edi, keyin 100 foiz bo'ldi. Mana, pastda ko'ryapsiz: chapdagi o'qitilmagan model xato qildi, o'ngdagisi to'g'ri topdi."],
-  ["24 s", "Ikkinchisi, anonimlashtirish. Bu murojaatni LLM ga yuborishdan oldin undagi ism, pasport, telefon raqamni yashirib qo'yadi. Javob kelgandan keyin ularni joyiga qaytaradi. (Matn oxiriga yozing: Telefonim 93 555 12 34) Ko'ryapsizmi, raqamni yozishim bilan yashirdi. Uch marta sinadim, xatolarni tuzatib bordim: 75 foizdan 95 foizga chiqdi. Oddiy matnda esa ortiqcha hech narsani yashirmaydi."],
+  ["36 s", "Ikkinchisi, anonimlashtirish. Fuqaro murojaatida ismi, pasporti, telefoni bo'ladi. AI ga bular kerak emas, unga savolning o'zi yetadi. Shuning uchun AI ga berishdan oldin ismni «ISM_1», pasportni «PASPORT_1» qilib qo'yamiz. AI «Hurmatli ISM_1» deb javob yozadi, biz uni yana «Hurmatli Karimov Akmal» qilib qaytaramiz. Ya'ni AI shaxsiy ma'lumotni ko'rmaydi, fuqaro esa javobni o'z ismi bilan oladi. (Matn oxiriga yozing: Telefonim 93 555 12 34) Ko'ryapsizmi, raqamni yozishim bilan yashirdi. Uch marta sinadim, xatolarni tuzatib bordim: 75 foizdan 95 foizga chiqdi. Oddiy matnda esa ortiqcha hech narsani yashirmaydi."],
   ["22 s", "Uchinchisi, RAG. Birinchi topshiriqdagi botning bazasini Gemma 4 ga uladim. Savol kelsa, avval undagi shaxsiy ma'lumotni yashiradi, keyin bazadan eng mos javoblarni topadi. Model faqat shularga qarab yozadi. Bazasiz model 27 foiz to'g'ri javob berardi, baza bilan 75 foiz. Rasmiy javobga zid javob esa umuman qolmadi."],
   ["12 s", "Hozir anonimlashtirish qoidalar bilan ishlaydi, 95 foizgacha chiqdi. Qolganini topish uchun model kerak. Keyingi qadamda haqiqiy murojaatlar bilan ism va manzilni topadigan NER modelini o'qitmoqchiman. Stajirovkaga tayyorman. E'tiboringiz uchun rahmat."],
 ];
@@ -367,6 +367,7 @@ const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecti
 
 /* ---------- suflyor ---------- */
 let t0 = null;
+const LIMIT = NOTES.reduce((a, n) => a + parseInt(n[0]), 0);   // slaydlar vaqti yig'indisi, soniya
 function pres() { $("ps").textContent = `${cur + 1} / ${SEC.length} · ${NOTES[cur][0]}`; $("pn").textContent = NOTES[cur][1];
   $("px").textContent = cur + 1 < SEC.length ? "Keyingi: " + SEC[cur + 1].querySelector("h1,h2").textContent : "Oxirgi slayd"; }
 function gpu(g) { $("gd").className = "dot " + (g.ok ? "ok" : g.err ? "no" : ""); $("gt").textContent = g.text; }
@@ -374,7 +375,7 @@ if (P) {
   document.body.classList.add("p"); pres();
   $("pp").onclick = () => send(cur - 1); $("pnx").onclick = () => send(cur + 1); $("pr").onclick = () => { t0 = Date.now(); };
   setInterval(() => { if (!t0) return; const s = Math.floor((Date.now() - t0) / 1000);
-    $("tm").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; $("tm").style.color = s > 90 ? "var(--r)" : ""; }, 250);
+    $("tm").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; $("tm").style.color = s > LIMIT ? "var(--r)" : ""; }, 250);
 }
 
 /* ---------- jonli: fine-tuning ---------- */
