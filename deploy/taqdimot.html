@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bir hafta, uch natija · Javohir Jumaboyev</title>
+<title>Uch ish, o'lchangan natija · Javohir Jumaboyev</title>
 <meta name="robots" content="noindex">
 <style>
 @font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -136,7 +136,7 @@ body.p #pres{display:block}
 
 <section class="slide s1">
   <div class="kick">Adliya AKT · sun'iy intellekt modellarini o'qitish bo'limi</div>
-  <h1>Bir hafta,<br>uch natija</h1>
+  <h1>Uch ish,<br>o'lchangan natija</h1>
   <div class="sub">Javohir Jumaboyev · AI muhandis</div>
   <div class="trio">
     <div class="card"><div class="big">31%<span class="ar">→</span><span class="to">100%</span></div>
@@ -200,12 +200,12 @@ body.p #pres{display:block}
 </section>
 
 <section class="slide s5">
-  <div class="kick">04 · Taklif</div>
-  <h1>1 oylik sinov</h1>
+  <div class="kick">04 · Keyingi qadam</div>
+  <h1>Real murojaatlarda</h1>
   <div class="steps">
-    <div class="card"><div class="n">1-2 hafta</div><div class="t">Real murojaatlar, qalqondan o'tkazilgan</div></div>
-    <div class="card"><div class="n">3 hafta</div><div class="t">Ism va manzilni topadigan modelni o'qitish</div></div>
-    <div class="card"><div class="n">4 hafta</div><div class="t">Ko'r test, o'lchangan natija</div></div>
+    <div class="card"><div class="n">1</div><div class="t">Murojaatlar qalqondan o'tadi</div></div>
+    <div class="card"><div class="n">2</div><div class="t">Ism va manzilni topadigan model o'qitiladi</div></div>
+    <div class="card"><div class="n">3</div><div class="t">Ko'r testda o'lchanadi</div></div>
   </div>
   <div class="end">
     <div class="links"><b>javi.uz/adliya</b><br>github.com/javohirwebdeveloper/adliya-ai-tasks<br>+998 97 548 07 10</div>
@@ -230,11 +230,11 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "
 const norm = s => String(s ?? "").replace(/[‘’ʻʼ`´]/g, "'").toLowerCase().replace(/\s+/g, " ").replace(/^[ .,;:]+|[ .,;:]+$/g, "");
 const SL = [...document.querySelectorAll(".slide")];
 const NOTES = [
-  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bir hafta ichida bo'limingiz ishiga yaqin uchta narsa qildim."],
+  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bo'limingiz ishiga yaqin uchta ish qildim, natijalarini ko'rsataman."],
   ["32 s", "Birinchisi, model o'qitish. Qwen3-4B modelini QLoRA usulida rasmiy xatdan ijrochi va muddatni ajratishga o'rgatdim. Chapda o'qitilmagan model: hujjat kimga yuborilishini ijrochi deb oldi. O'ngda o'qitilgani: to'g'ri topdi. Haqiqiy gaplarda 31 foizdan 100 foizga, bitta GPU'da 10 daqiqada."],
   ["20 s", "Ikkinchisi, shaxsiy ma'lumot qalqoni. (yozing) Ism, pasport, telefon darhol yashiriladi: AI ularni ko'rmaydi, javob qaytgach joyiga qo'yiladi. Boshqa model yozgan ko'r testda 95-97 foiz."],
   ["18 s", "Uchinchisi, RAG: bot bazasini Gemma 4 ga uladim, model faqat topilgan manbadan yozadi. Rasmiy javobga mos javob 27 foizdan 75 foizga oshdi, zid javob nolga tushdi."],
-  ["12 s", "Hammasi o'z serverda, internetsiz ishlaydi. Bir oylik sinov muddatida real murojaatlarda shunday modelni o'qitib, o'lchab beraman. Rahmat."],
+  ["12 s", "Hammasi o'z serverda, internetsiz ishlaydi. Keyingi qadam: real murojaatlarda ism va manzilni topadigan model o'qitish. Stajirovkaga tayyorman. Rahmat."],
 ];
 const P = new URLSearchParams(location.search).has("p");
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("taqdimot") : null;
