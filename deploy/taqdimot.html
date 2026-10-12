@@ -3,340 +3,431 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Uch ish, o'lchangan natija · Javohir Jumaboyev</title>
+<title>Javohir Jumaboyev · AI muhandis</title>
 <meta name="robots" content="noindex">
 <style>
-@font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Hand;font-display:block;src:url(/adliya/qalqon/f/excalifont-latin.woff2) format("woff2");unicode-range:U+20-7E,U+A0-A3,U+A5-A6,U+A8-AB,U+AD-B1,U+B4,U+B6-B8,U+BA-FF,U+131,U+152-153,U+2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+2013-2014,U+2018-201A,U+201C-201E,U+2020,U+2022,U+2024-2026,U+2030,U+2039-203A,U+20AC,U+2122,U+2212}
+@font-face{font-family:Hand;font-display:block;src:url(/adliya/qalqon/f/excalifont-cyrillic.woff2) format("woff2");unicode-range:U+400-45F,U+490-491,U+2116}
+@font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-ext-400-normal.woff2) format("woff2");unicode-range:U+0460-052F}
-@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-ext-600-normal.woff2) format("woff2");unicode-range:U+0460-052F}
-@font-face{font-family:PlexMono;font-weight:500;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Mono;font-weight:500;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
 
-:root{--bg:#f4f3ee;--paper:#fff;--ink:#16181d;--muted:#5e6470;--faint:#8a8f99;--line:#e2e0d8;--track:#e9e7e0;
-  --accent:#0d5b4a;--accent-soft:#e1eee8;--bad:#a3341f;--bad-soft:#f7e8e3;--bar:#1c1e24;
-  --sans:Plex,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:PlexMono,ui-monospace,Menlo,monospace}
+:root{--ink:#1e1e1e;--mu:#5c636b;--fa:#8a9097;--g:#2f9e44;--gf:#b2f2bb;--b:#1971c2;--bf:#a5d8ff;--r:#e03131;--rf:#ffc9c9;
+  --y:#f08c00;--yf:#ffec99;--gr:#868e96;--grf:#e9ecef;--hand:Hand,Plex,"Segoe UI",sans-serif;--sans:Plex,system-ui,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:400 24px/1.45 var(--sans);overflow:hidden}
-#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;transform-origin:center center}
-.slide{position:absolute;inset:0;padding:72px 96px 96px;display:flex;flex-direction:column;opacity:0;pointer-events:none;
-  transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}
-.slide.on{opacity:1;pointer-events:auto;transform:none}
-.kick{font:600 18px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
-h1{font-weight:600;font-size:96px;line-height:1.02;letter-spacing:-.025em;margin:0}
-h2{font-weight:600;font-size:60px;line-height:1.06;letter-spacing:-.02em;margin:0}
-.sub{font-size:28px;color:var(--muted);margin-top:22px}
-.foot{position:absolute;left:96px;right:96px;bottom:40px;display:flex;justify-content:space-between;font-size:18px;color:var(--faint)}
-.big{font-weight:600;font-size:112px;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums;white-space:nowrap}
-.big .ar{color:var(--faint);font-weight:400;margin:0 .06em}
-.big .to{color:var(--accent)}
-.lbl{font-size:22px;color:var(--muted);margin-top:12px}
-.pill{display:inline-block;font:600 18px/1 var(--sans);padding:11px 16px;border-radius:999px;background:var(--track);margin:0 8px 8px 0}
-.pill.dark{background:var(--ink);color:#fff}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:22px}
-.rd{background:var(--bar);color:#f1efe8;font:500 .8em/1 var(--mono);padding:.24em .5em .22em;border-radius:6px;white-space:nowrap;vertical-align:.06em}
-.ok{color:var(--accent);font-weight:600}.no{color:var(--bad);font-weight:600}
-#prog{position:fixed;left:0;bottom:0;height:4px;background:var(--accent);transition:width .45s ease;z-index:5}
-#nav{position:fixed;right:18px;bottom:14px;display:flex;gap:6px;z-index:6;opacity:.35;transition:opacity .2s}
-#nav:hover{opacity:1}
-:fullscreen #nav{display:none}
-#nav button{border:0;background:var(--paper);color:var(--ink);font:600 15px/1 var(--sans);padding:9px 12px;border-radius:8px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.12)}
-textarea{font:inherit;color:inherit;background:none;border:0;outline:0;resize:none;width:100%}
-.go{border:0;background:var(--ink);color:#fff;font:600 20px/1 var(--sans);padding:16px 24px;border-radius:12px;cursor:pointer}
-.go:disabled{opacity:.5;cursor:wait}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{margin:0;background:#fff;color:var(--ink);font:400 clamp(15px,1.05vw,19px)/1.5 var(--sans)}
+section{min-height:100vh;scroll-snap-align:start;max-width:1640px;margin:0 auto;padding:clamp(28px,5vh,60px) clamp(28px,5vw,96px) clamp(40px,6vh,72px);
+  display:flex;flex-direction:column;position:relative}
+.hand{font-family:var(--hand)}
+h1,h2,h3{font-family:var(--hand);font-weight:400;margin:0;line-height:1.1}
+h1{font-size:clamp(56px,6vw,110px)}
+h2{font-size:clamp(34px,3.2vw,58px)}
+h3{font-size:clamp(22px,1.7vw,30px)}
+.sub{font-family:var(--hand);font-size:clamp(22px,1.9vw,34px);color:var(--mu);margin-top:10px}
+.lbl{font-family:var(--hand);font-size:clamp(18px,1.35vw,24px);color:var(--mu)}
+[data-rough]{position:relative}
+.rsvg{position:absolute;pointer-events:none;overflow:visible;z-index:0}
+.rsvg path{transition:stroke-dashoffset 1s ease}
+.box{padding:clamp(12px,1.2vw,22px) clamp(16px,1.6vw,26px);z-index:1}
+.box>*:not(.rsvg){position:relative;z-index:1}
+svg.rsvg{position:absolute!important}
 
-/* 1: sarlavha */
-.s1 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:auto}
-.s1 .trio .card{padding:36px 36px 34px}
-.s1 .trio .big{font-size:76px}
-.s1 .trio .lbl{font-size:24px;color:var(--ink);margin-top:18px;font-weight:600}
-.s1 .trio .lbl small{display:block;font-weight:400;color:var(--muted);font-size:20px;margin-top:4px}
-.motif{margin-top:30px;font-size:30px;color:var(--muted)}
+/* skrinshotdagidek: tepasida raqam, ostida quti */
+.chain{display:flex;align-items:flex-end;gap:0;margin-top:clamp(18px,3.2vh,44px)}
+.step{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center}
+.step .top{font-family:var(--hand);font-size:clamp(20px,1.8vw,34px);margin-bottom:10px;white-space:nowrap}
+.step .box{width:100%;min-height:clamp(72px,9vh,108px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--hand);font-size:clamp(18px,1.45vw,27px);line-height:1.15;hyphens:manual}
+.step .box small{display:block;font-size:.6em;color:var(--mu);margin-top:5px;line-height:1.2}
+.arrow{flex:0 0 clamp(36px,4vw,70px);height:40px;align-self:flex-end;margin-bottom:clamp(16px,3vh,36px)}
 
-/* 2: model o'qitish */
-.s2 .grid{display:grid;grid-template-columns:520px 1fr;gap:56px;margin-top:34px;flex:1;min-height:0}
-.s2 .stat+.stat{margin-top:38px}
-.s2 .stat .big{font-size:92px}
-.s2 .live{display:flex;flex-direction:column;padding:28px 30px;min-height:0}
-.s2 .q{font-size:24px;line-height:1.45;border-bottom:1px solid var(--line);padding-bottom:18px}
-.s2 .act{display:flex;align-items:center;gap:16px;margin-top:16px}
-.s2 .wait{font-size:18px;color:var(--muted)}
-.s2 .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
-.s2 .col{border:1px solid var(--line);border-radius:16px;padding:16px 20px;transition:opacity .3s}
-.s2 .col.after{border-color:#b9d3c9;background:#fbfdfc}
-.s2 .ch{font:600 15px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);display:flex;justify-content:space-between}
-.s2 .col.after .ch{color:var(--accent)}
-.s2 .row{display:grid;grid-template-columns:96px 1fr 26px;gap:10px;padding:9px 0;border-top:1px solid #efede7;font-size:20px;align-items:start}
-.s2 .row:first-of-type{border-top:0}
-.s2 .row .k{color:var(--muted);font-size:17px;padding-top:3px}
-.s2 .row .m{text-align:right}
-.s2 .nil{color:var(--faint)}
+/* muqova */
+.cover{justify-content:center}
+.cover .chain{margin-top:clamp(50px,9vh,110px)}
+.cover .step .top{font-size:clamp(30px,3vw,54px)}
+.cover .step .box{min-height:clamp(120px,16vh,180px);font-size:clamp(26px,2.2vw,40px)}
+.cover .gap{flex:0 0 clamp(24px,3vw,56px)}
 
-/* 3: qalqon */
-.s3 .duo{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;margin-top:34px;flex:1;min-height:0}
-.s3 .pane{padding:26px 30px;display:flex;flex-direction:column}
-.s3 .ph{font:600 15px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;display:flex;justify-content:space-between}
-.s3 .ph span{letter-spacing:0;text-transform:none;font-weight:400;font-size:17px;color:var(--muted)}
-.s3 textarea,.s3 .out{font-size:27px;line-height:1.55;flex:1}
-.s3 .out{white-space:pre-wrap}
-.s3 .arrow{display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--faint)}
-.s3 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border-top:1px solid var(--line)}
-.s3 .stats div{padding:18px 0 0}
-.s3 .stats b{display:block;font-size:44px;font-weight:600;letter-spacing:-.02em}
-.s3 .stats span{font-size:19px;color:var(--muted)}
+/* izohli gap */
+.sent{font-size:clamp(17px,1.25vw,22px);line-height:3.3;margin-top:2px}
+.mark{position:relative;white-space:nowrap;padding:0 .15em}
+.mark>span.note{position:absolute;left:50%;transform:translateX(-50%);top:-1.35em;font-family:var(--hand);font-size:.82em;white-space:nowrap;line-height:1}
+.mark.g>span.note{color:var(--g)}.mark.r>span.note{color:var(--r)}.mark.b>span.note{color:var(--b)}
 
-/* 4: RAG */
-.s4 .pipe{display:flex;align-items:center;gap:14px;margin-top:30px;flex-wrap:wrap}
-.s4 .pipe .st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 20px;font-size:22px;font-weight:600}
-.s4 .pipe .st.acc{background:var(--accent);border-color:var(--accent);color:#fff}
-.s4 .pipe .ar{color:var(--faint);font-size:26px}
-.s4 .bars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
-.s4 .bars .card{padding:24px 26px}
-.s4 .bars h3{margin:0 0 18px;font-size:22px;font-weight:600}
-.s4 .br{display:grid;grid-template-columns:84px 1fr 82px;align-items:center;gap:12px;margin-top:12px;font-size:18px;color:var(--muted)}
-.s4 .br .t{height:14px;background:var(--track);border-radius:7px;overflow:hidden}
-.s4 .br .t i{display:block;height:100%;width:0;border-radius:7px;background:#a3a8b0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
-.s4 .br.r{color:var(--ink);font-weight:600}.s4 .br.r .t i{background:var(--accent)}
-.s4 .br b{font-weight:600;font-size:24px;text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
-.s4 .ex{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:20px;margin-top:28px}
-.s4 .ex .card{padding:20px 24px;font-size:20px}
-.s4 .ex .h{font:600 14px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;color:var(--faint)}
-.s4 .ex .bad{border-color:#edd3cb;border-left:5px solid var(--bad)}.s4 .ex .bad .h{color:var(--bad)}
-.s4 .ex .good{border-color:#b9d3c9;border-left:5px solid var(--accent)}.s4 .ex .good .h{color:var(--accent)}
+/* grafik */
+.chart{display:flex;align-items:flex-end;gap:clamp(14px,1.8vw,30px);height:clamp(170px,23vh,240px);padding:30px 8px 0;margin-top:6px}
+.grp{flex:1;display:flex;flex-direction:column;align-items:center;height:100%}
+.bars{flex:1;width:100%;display:flex;align-items:flex-end;justify-content:center;gap:8px}
+.bar{width:clamp(22px,2.2vw,40px);position:relative}
+.bar .v{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-family:var(--hand);font-size:clamp(14px,1.1vw,19px);white-space:nowrap;margin-bottom:4px}
+.grp .n{font-family:var(--hand);font-size:clamp(16px,1.2vw,21px);margin-top:10px;color:var(--mu);text-align:center;line-height:1.1}
+.legend{display:flex;gap:20px;font-family:var(--hand);font-size:clamp(16px,1.2vw,20px);margin-top:6px}
+.legend i{display:inline-block;width:16px;height:12px;margin-right:6px;vertical-align:-1px;border:2px solid}
+.legend .o i{border-color:var(--gr);background:var(--grf)}.legend .k i{border-color:var(--g);background:var(--gf)}
+.axis{border-bottom:2px solid var(--ink);border-radius:2px}
 
-/* 5: taklif */
-.s5 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-.s5 .steps .card{padding:30px 32px}
-.s5 .steps .n{font:600 18px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.s5 .steps .t{font-size:30px;font-weight:600;margin-top:14px;line-height:1.25}
-.s5 .end{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end}
-.s5 .links{font-size:26px;line-height:1.7}
-.s5 .links b{font-weight:600}
-.s5 .badge{display:inline-flex;align-items:center;gap:12px;font-size:24px;font-weight:600;padding:16px 22px;border-radius:14px;background:var(--accent-soft);color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,34px);margin-top:clamp(18px,3vh,36px)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,34px);margin-top:clamp(22px,3vh,36px)}
+.big{font-family:var(--hand);font-size:clamp(34px,3vw,56px);line-height:1}
+.big .ar{font-family:var(--sans);color:var(--fa);font-size:.65em;margin:0 .2em}
+.big .k{color:var(--g)}
 
-/* suflyor oynasi */
-body.p{overflow:auto;font-size:20px}
-body.p #stage,body.p #nav,body.p #prog{display:none}
-#pres{display:none;max-width:980px;margin:0 auto;padding:28px}
-body.p #pres{display:block}
-#pres .top{display:flex;justify-content:space-between;align-items:center;font-size:18px;color:var(--muted)}
-#pres .tm{font:600 44px/1 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums}
-#pres .note{font-size:34px;line-height:1.45;margin:24px 0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 32px}
-#pres .next{font-size:19px;color:var(--muted)}
-#pres .ctl{display:flex;gap:10px;margin-top:18px}
-#pres .ctl button{border:0;background:var(--ink);color:#fff;font:600 18px/1 var(--sans);padding:14px 20px;border-radius:10px;cursor:pointer}
-#pres .gpu{display:inline-flex;align-items:center;gap:8px}
-#pres .dot{width:12px;height:12px;border-radius:50%;background:#c9a227}
-#pres .dot.ok{background:var(--accent)}#pres .dot.no{background:var(--bad)}
+/* jonli sinov */
+.live{margin-top:clamp(18px,3vh,36px)}
+.live textarea{width:100%;border:0;background:transparent;font:inherit;font-size:clamp(16px,1.15vw,20px);line-height:1.55;resize:none;outline:none;color:var(--ink)}
+.btn{font-family:var(--hand);font-size:clamp(18px,1.3vw,22px);background:none;border:0;cursor:pointer;padding:10px 22px;color:var(--ink)}
+.btn:disabled{opacity:.45;cursor:wait}
+.wait{font-family:var(--hand);color:var(--mu);font-size:clamp(15px,1.1vw,19px)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,28px);margin-top:8px}
+.res .ch{font-family:var(--hand);font-size:clamp(19px,1.4vw,24px);display:flex;justify-content:space-between;margin-bottom:4px}
+.res .after .ch{color:var(--g)}
+.f{display:grid;grid-template-columns:90px 1fr 26px;gap:10px;padding:7px 0;font-size:clamp(15px,1.05vw,18px);border-top:1px dashed #d5d8dc}
+.f:first-of-type{border-top:0}
+.f .k{color:var(--mu)}
+.ok{color:var(--g);font-weight:600;text-align:right}.no{color:var(--r);font-weight:600;text-align:right}.nil{color:var(--fa)}
+.duo{display:grid;grid-template-columns:1fr 60px 1fr;align-items:stretch}
+.duo .arrow{align-self:center;margin:0}
+.out{white-space:pre-wrap;font-size:clamp(16px,1.15vw,20px);line-height:1.75;min-height:110px}
+.tok{display:inline-block;background:var(--ink);color:#fff;font:500 .78em/1 Mono,monospace;padding:.32em .5em .28em;border-radius:4px;vertical-align:.08em;white-space:nowrap}
+.keys{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:clamp(14px,1vw,17px);color:var(--mu)}
+.ans{font-size:clamp(16px,1.15vw,20px);line-height:1.5}
+.src{margin:8px 0 0;padding:0;list-style:none;font-size:clamp(14px,1vw,17px);color:var(--fa)}
+.src li{padding:3px 0}.src li.u{color:var(--ink);font-weight:600}
+
+#dots{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:9}
+#dots a{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);display:block;background:#fff}
+#dots a.on{background:var(--ink)}
+body.p section,body.p #dots{display:none}
+#pres{display:none;max-width:980px;margin:0 auto;padding:28px;font-family:var(--sans)}
+body.p{scroll-snap-type:none}body.p #pres{display:block}
+#pres .top{display:flex;justify-content:space-between;align-items:center;color:var(--mu)}
+#pres .tm{font:600 42px/1 var(--sans);color:var(--ink)}
+#pres .nt{font-size:32px;line-height:1.45;margin:22px 0;border:2px solid var(--ink);border-radius:14px;padding:24px 28px}
+#pres .ctl{display:flex;gap:10px;margin-top:16px}
+#pres .ctl button{border:2px solid var(--ink);background:#fff;font:600 17px/1 var(--sans);padding:12px 18px;border-radius:10px;cursor:pointer}
+#pres .dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--y);margin-right:8px}
+#pres .dot.ok{background:var(--g)}#pres .dot.no{background:var(--r)}
+@media (max-width:1000px){.chain{flex-direction:column;align-items:stretch}.arrow{transform:rotate(90deg);align-self:center;margin:6px 0}.grid2,.grid3,.res,.duo{grid-template-columns:1fr}#dots{display:none}}
 </style>
 </head>
 <body>
-<div id="stage">
+<nav id="dots"></nav>
 
-<section class="slide s1">
-  <div class="kick">Adliya AKT · sun'iy intellekt modellarini o'qitish bo'limi</div>
-  <h1>Uch ish,<br>o'lchangan natija</h1>
-  <div class="sub">Javohir Jumaboyev · AI muhandis</div>
-  <div class="trio">
-    <div class="card"><div class="big">31%<span class="ar">→</span><span class="to">100%</span></div>
-      <div class="lbl">Model o'qitish<small>Qwen3-4B, QLoRA</small></div></div>
-    <div class="card"><div class="big"><span class="to">95-97%</span></div>
-      <div class="lbl">Shaxsiy ma'lumot qalqoni<small>ko'r testda yashirildi</small></div></div>
-    <div class="card"><div class="big">27%<span class="ar">→</span><span class="to">75%</span></div>
-      <div class="lbl">RAG<small>bot bazasi + Gemma 4</small></div></div>
+<!-- 0 · muqova -->
+<section class="cover" id="s0">
+  <h1>Javohir Jumaboyev</h1>
+  <div class="sub">AI muhandis</div>
+  <div class="chain">
+    <div class="step"><div class="top">31% → 100%</div><div class="box" data-rough="box" data-go="1">Fine-tuning<small>Qwen3-4B, QLoRA</small></div></div>
+    <div class="gap"></div>
+    <div class="step"><div class="top">95-97%</div><div class="box" data-rough="box" data-go="2">Anonimlashtirish<small>shaxsga doir ma'lumot</small></div></div>
+    <div class="gap"></div>
+    <div class="step"><div class="top">27% → 75%</div><div class="box" data-rough="box" data-go="3">RAG<small>bot bazasi + Gemma 4</small></div></div>
   </div>
 </section>
 
-<section class="slide s2">
-  <div class="kick">01 · Model o'qitish</div>
-  <h2>Topshiriqdan ijrochi va muddat</h2>
-  <div class="grid">
-    <div>
-      <div class="stat"><div class="big">31%<span class="ar">→</span><span class="to">100%</span></div><div class="lbl">13 ta haqiqiy hujjat gapi</div></div>
-      <div class="stat"><div class="big">21%<span class="ar">→</span><span class="to">94%</span></div><div class="lbl">150 ta yangi gap</div></div>
-      <div style="margin-top:40px"><span class="pill dark">Qwen3-4B</span><span class="pill">QLoRA</span><span class="pill">1.5% parametr</span><span class="pill">1 GPU · 10 daqiqa</span></div>
+<!-- 1 · fine-tuning -->
+<section id="s1">
+  <h2>Fine-tuning: rasmiy xatdan ijrochi va muddat</h2>
+  <div class="chain">
+    <div class="step"><div class="top">gap → JSON</div><div class="box" data-rough="box">1600 ta misol</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">1.5% parametr</div><div class="box" data-rough="box-b">Qwen3-4B + LoRA<small>4 bit, asosiy model muzlatilgan</small></div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">10 daqiqa</div><div class="box" data-rough="box">1 × L4 GPU<small>$0.24</small></div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">126 MB</div><div class="box" data-rough="box-g">Adapter</div></div>
+  </div>
+  <div class="grid2">
+    <div class="box" data-rough="box">
+      <div class="lbl">Muammo</div>
+      <div class="sent"><span class="mark g" data-rough="ell-g"><span class="note">ijrochi</span>Hududiy adliya boshqarmalari</span> ushbu buyruq ijrosi to'g'risidagi ma'lumotni
+        <span class="mark b" data-rough="und-b"><span class="note">muddat</span>2026-yil 25-dekabrgacha</span>
+        <span class="mark r" data-rough="ell-r"><span class="note">qabul qiluvchi, ijrochi emas</span>Ijro nazorati bo'limiga</span> taqdim etsin.</div>
+      <div class="lbl" style="margin-top:4px">O'qitilmagan model qabul qiluvchini ijrochi deb oladi</div>
     </div>
-    <div class="card live">
-      <textarea class="q" id="q2" rows="3" spellcheck="false"></textarea>
-      <div class="act"><button class="go" id="go2" type="button">Tahlil qilish</button><span class="wait" id="w2"></span></div>
-      <div class="cols">
-        <div class="col" id="c0"><div class="ch">O'qitishdan oldin <span id="m0"></span></div><div id="r0"></div></div>
-        <div class="col after" id="c1"><div class="ch">O'qitishdan keyin <span id="m1"></span></div><div id="r1"></div></div>
+    <div class="box" data-rough="box">
+      <div class="lbl">Natija · 13 ta real gap (o'qitishda yo'q)</div>
+      <div class="chart axis" id="ch1"></div>
+      <div class="legend"><span class="o"><i></i>oldin</span><span class="k"><i></i>keyin</span><span style="margin-left:auto">150 ta yangi gap: 21% → <b style="color:var(--g);font-weight:400">94%</b></span></div>
+    </div>
+  </div>
+  <div class="box live" data-rough="box">
+    <div class="lbl">Jonli sinov</div>
+    <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center">
+      <textarea id="q2" rows="2" spellcheck="false"></textarea>
+      <div style="text-align:center"><button class="btn" id="go2" type="button" data-rough="box-g">Tahlil qilish</button><div class="wait" id="w2"></div></div>
+    </div>
+    <div class="res">
+      <div id="c0"><div class="ch"><span>O'qitishdan oldin</span><span class="wait" id="m0"></span></div><div id="r0"></div></div>
+      <div class="after" id="c1"><div class="ch"><span>O'qitishdan keyin</span><span class="wait" id="m1"></span></div><div id="r1"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · anonimlashtirish -->
+<section id="s2">
+  <h2>Anonimlashtirish: AI shaxsiy ma'lumotni ko'rmaydi</h2>
+  <div class="chain">
+    <div class="step"><div class="top">ism, pasport, tel</div><div class="box" data-rough="box">Murojaat</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">1-3 ms</div><div class="box" data-rough="box-b">Anonim&shy;lashtirish<small>Karimov Akmal → [ISM_1]</small></div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">[ISM_1]</div><div class="box" data-rough="box">LLM</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">kalit</div><div class="box" data-rough="box-g">Asl holiga qaytarish<small>Hurmatli Karimov Akmal</small></div></div>
+  </div>
+  <div class="box live" data-rough="box">
+    <div class="lbl">Jonli sinov</div>
+    <div class="duo">
+      <textarea id="q3" rows="4" spellcheck="false"></textarea>
+      <div class="arrow" data-rough="arrow"></div>
+      <div class="out" id="o3"></div>
+    </div>
+    <div class="keys" id="k3"></div>
+  </div>
+  <div class="grid3">
+    <div class="box" data-rough="box">
+      <div class="lbl">Test · 3 marta, matnlarni boshqa model yozgan</div>
+      <div class="chart axis" id="ch2" style="height:clamp(140px,19vh,200px)"></div>
+    </div>
+    <div class="box" data-rough="box">
+      <div class="lbl">Ortiqcha yashirish</div>
+      <div class="big" style="margin-top:14px">0 <span style="font-size:.5em;color:var(--mu)">/ 4038 matn</span></div>
+      <div class="lbl" style="margin-top:22px">Yozilish shakllari</div>
+      <div class="big" style="margin-top:10px">333 <span style="font-size:.5em;color:var(--mu)">/ 333</span></div>
+    </div>
+    <div class="box" data-rough="box-y">
+      <div class="lbl" style="color:var(--ink)">Qanday ishlaydi</div>
+      <h3 style="margin-top:12px">Qoidalar, model emas</h3>
+      <div class="lbl" style="margin-top:6px">format, Luhn, sana, ismlar, kontekst</div>
+      <h3 style="margin-top:20px">Keyingi qadam: NER</h3>
+      <div class="lbl" style="margin-top:6px">qoidalar ~97% da to'xtaydi</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · RAG -->
+<section id="s3">
+  <h2>RAG: Gemma 4 faqat bazadan yozadi</h2>
+  <div class="chain">
+    <div class="step"><div class="top">fuqaro</div><div class="box" data-rough="box">Savol</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">[ISM_1]</div><div class="box" data-rough="box">Anonim&shy;lashtirish</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">505 → 3</div><div class="box" data-rough="box-b">Qidiruv<small>bge-m3, Qdrant, reranker</small></div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">faqat manbadan</div><div class="box" data-rough="box-g">Gemma 4</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">manba [2]</div><div class="box" data-rough="box">Javob<small>yoki «bazada yo'q»</small></div></div>
+  </div>
+  <div class="grid2">
+    <div class="box" data-rough="box">
+      <div class="lbl">Natija · 180 ta test savol</div>
+      <div class="chart axis" id="ch3"></div>
+      <div class="legend"><span class="o"><i></i>RAG'siz</span><span class="k"><i></i>RAG bilan</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(14px,1.6vw,24px)">
+      <div class="box" data-rough="box">
+        <div class="lbl">Savol</div>
+        <div class="ans">«Bolamiz yo'q, kelishib ajrashmoqchimiz. ZAGSda bo'ladimi?»</div>
+      </div>
+      <div class="box" data-rough="box-r">
+        <div class="lbl" style="color:var(--r)">RAG'siz Gemma ✗</div>
+        <div class="ans">«…ajrashish faqat sud tartibida amalga oshiriladi»</div>
+      </div>
+      <div class="box" data-rough="box-g">
+        <div class="lbl" style="color:var(--g)">RAG bilan ✓ · manba [2]</div>
+        <div class="ans">«FHDYo bo'limiga pasport, nikoh guvohnomasi va boj kvitansiyasi bilan murojaat qilinadi»</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="slide s3">
-  <div class="kick">02 · Shaxsiy ma'lumot qalqoni</div>
-  <h2>AI ism va pasportni ko'rmaydi</h2>
-  <div class="duo">
-    <div class="card pane"><div class="ph">Fuqaro yozadi</div><textarea id="q3" spellcheck="false"></textarea></div>
-    <div class="arrow">→</div>
-    <div class="card pane"><div class="ph">AI ko'radi <span id="st3"></span></div><div class="out" id="o3"></div></div>
-  </div>
-  <div class="stats">
-    <div><b>95-97%</b><span>ko'r testda yashirildi</span></div>
-    <div><b>0</b><span>ortiqcha, 4038 ta matnda</span></div>
-    <div><b>1-3 ms</b><span>bitta matnga, GPU'siz</span></div>
-    <div><b>3</b><span>lotin, kirill, rus</span></div>
+<!-- 4 · keyingi qadam -->
+<section id="s4" style="justify-content:center">
+  <h2>Keyingi qadam</h2>
+  <div class="chain">
+    <div class="step"><div class="top">real ma'lumot</div><div class="box" data-rough="box">Murojaatlar</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">[ISM_1]</div><div class="box" data-rough="box-b">Anonim&shy;lashtirish</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">ism, manzil</div><div class="box" data-rough="box-g">NER modelini o'qitish</div></div>
+    <div class="arrow" data-rough="arrow"></div>
+    <div class="step"><div class="top">qoidalar + model</div><div class="box" data-rough="box">Test</div></div>
   </div>
 </section>
-
-<section class="slide s4">
-  <div class="kick">03 · RAG</div>
-  <h2>Model faqat manbadan yozadi</h2>
-  <div class="pipe">
-    <span class="st">Savol</span><span class="ar">→</span><span class="st">Qalqon</span><span class="ar">→</span>
-    <span class="st">Bazadan 3 manba</span><span class="ar">→</span><span class="st acc">Gemma 4</span><span class="ar">→</span><span class="st">Javob + manba</span>
-  </div>
-  <div class="bars" id="bars"></div>
-  <div class="ex">
-    <div class="card"><div class="h">Savol</div>«Bolamiz yo'q, kelishib ajrashmoqchimiz. ZAGSda bo'ladimi?»</div>
-    <div class="card bad"><div class="h">RAG'siz Gemma ✗</div>«Faqat sud tartibida»</div>
-    <div class="card good"><div class="h">RAG bilan ✓</div>«FHDYo orqali: pasport, nikoh guvohnomasi, boj kvitansiyasi» · manba [2]</div>
-  </div>
-</section>
-
-<section class="slide s5">
-  <div class="kick">04 · Keyingi qadam</div>
-  <h1>Real murojaatlarda</h1>
-  <div class="steps">
-    <div class="card"><div class="n">1</div><div class="t">Murojaatlar qalqondan o'tadi</div></div>
-    <div class="card"><div class="n">2</div><div class="t">Ism va manzilni topadigan model o'qitiladi</div></div>
-    <div class="card"><div class="n">3</div><div class="t">Ko'r testda o'lchanadi</div></div>
-  </div>
-  <div class="end">
-    <div class="links"><b>javi.uz/adliya</b><br>github.com/javohirwebdeveloper/adliya-ai-tasks<br>+998 97 548 07 10</div>
-    <div class="badge">● O'z serverda, internetsiz</div>
-  </div>
-</section>
-
-</div>
-<div id="prog"></div>
-<div id="nav"><button id="pv" type="button">←</button><button id="nx" type="button">→</button><button id="fs" type="button">⛶</button></div>
 
 <div id="pres">
-  <div class="top"><span id="ps">1 / 5</span><span class="gpu"><span class="dot" id="gd"></span><span id="gt">GPU tekshirilmoqda</span></span><span class="tm" id="tm">0:00</span></div>
-  <div class="note" id="pn"></div>
-  <div class="next" id="px"></div>
+  <div class="top"><span id="ps"></span><span><span class="dot" id="gd"></span><span id="gt">GPU tekshirilmoqda</span></span><span class="tm" id="tm">0:00</span></div>
+  <div class="nt" id="pn"></div>
+  <div id="px" style="color:var(--mu)"></div>
   <div class="ctl"><button id="pp" type="button">← Oldingi</button><button id="pnx" type="button">Keyingi →</button><button id="pr" type="button">Vaqtni boshlash</button></div>
 </div>
 
+<script>/* rough.js 4.6.6, MIT License, (c) 2019 Preet Shihn, https://roughjs.com */
+var rough=function(){"use strict";function t(t,e,s){if(t&&t.length){const[n,o]=e,a=Math.PI/180*s,h=Math.cos(a),r=Math.sin(a);for(const e of t){const[t,s]=e;e[0]=(t-n)*h-(s-o)*r+n,e[1]=(t-n)*r+(s-o)*h+o}}}function e(t,e){return t[0]===e[0]&&t[1]===e[1]}function s(s,n,o,a=1){const h=o,r=Math.max(n,.1),i=s[0]&&s[0][0]&&"number"==typeof s[0][0]?[s]:s,c=[0,0];if(h)for(const e of i)t(e,c,h);const l=function(t,s,n){const o=[];for(const s of t){const t=[...s];e(t[0],t[t.length-1])||t.push([t[0][0],t[0][1]]),t.length>2&&o.push(t)}const a=[];s=Math.max(s,.1);const h=[];for(const t of o)for(let e=0;e<t.length-1;e++){const s=t[e],n=t[e+1];if(s[1]!==n[1]){const t=Math.min(s[1],n[1]);h.push({ymin:t,ymax:Math.max(s[1],n[1]),x:t===s[1]?s[0]:n[0],islope:(n[0]-s[0])/(n[1]-s[1])})}}if(h.sort(((t,e)=>t.ymin<e.ymin?-1:t.ymin>e.ymin?1:t.x<e.x?-1:t.x>e.x?1:t.ymax===e.ymax?0:(t.ymax-e.ymax)/Math.abs(t.ymax-e.ymax))),!h.length)return a;let r=[],i=h[0].ymin,c=0;for(;r.length||h.length;){if(h.length){let t=-1;for(let e=0;e<h.length&&!(h[e].ymin>i);e++)t=e;h.splice(0,t+1).forEach((t=>{r.push({s:i,edge:t})}))}if(r=r.filter((t=>!(t.edge.ymax<=i))),r.sort(((t,e)=>t.edge.x===e.edge.x?0:(t.edge.x-e.edge.x)/Math.abs(t.edge.x-e.edge.x))),(1!==n||c%s==0)&&r.length>1)for(let t=0;t<r.length;t+=2){const e=t+1;if(e>=r.length)break;const s=r[t].edge,n=r[e].edge;a.push([[Math.round(s.x),i],[Math.round(n.x),i]])}i+=n,r.forEach((t=>{t.edge.x=t.edge.x+n*t.edge.islope})),c++}return a}(i,r,a);if(h){for(const e of i)t(e,c,-h);!function(e,s,n){const o=[];e.forEach((t=>o.push(...t))),t(o,s,n)}(l,c,-h)}return l}function n(t,e){var n;const o=e.hachureAngle+90;let a=e.hachureGap;a<0&&(a=4*e.strokeWidth),a=Math.round(Math.max(a,.1));let h=1;return e.roughness>=1&&((null===(n=e.randomizer)||void 0===n?void 0:n.next())||Math.random())>.7&&(h=a),s(t,a,o,h||1)}class o{constructor(t){this.helper=t}fillPolygons(t,e){return this._fillPolygons(t,e)}_fillPolygons(t,e){const s=n(t,e);return{type:"fillSketch",ops:this.renderLines(s,e)}}renderLines(t,e){const s=[];for(const n of t)s.push(...this.helper.doubleLineOps(n[0][0],n[0][1],n[1][0],n[1][1],e));return s}}function a(t){const e=t[0],s=t[1];return Math.sqrt(Math.pow(e[0]-s[0],2)+Math.pow(e[1]-s[1],2))}class h extends o{fillPolygons(t,e){let s=e.hachureGap;s<0&&(s=4*e.strokeWidth),s=Math.max(s,.1);const o=n(t,Object.assign({},e,{hachureGap:s})),h=Math.PI/180*e.hachureAngle,r=[],i=.5*s*Math.cos(h),c=.5*s*Math.sin(h);for(const[t,e]of o)a([t,e])&&r.push([[t[0]-i,t[1]+c],[...e]],[[t[0]+i,t[1]-c],[...e]]);return{type:"fillSketch",ops:this.renderLines(r,e)}}}class r extends o{fillPolygons(t,e){const s=this._fillPolygons(t,e),n=Object.assign({},e,{hachureAngle:e.hachureAngle+90}),o=this._fillPolygons(t,n);return s.ops=s.ops.concat(o.ops),s}}class i{constructor(t){this.helper=t}fillPolygons(t,e){const s=n(t,e=Object.assign({},e,{hachureAngle:0}));return this.dotsOnLines(s,e)}dotsOnLines(t,e){const s=[];let n=e.hachureGap;n<0&&(n=4*e.strokeWidth),n=Math.max(n,.1);let o=e.fillWeight;o<0&&(o=e.strokeWidth/2);const h=n/4;for(const r of t){const t=a(r),i=t/n,c=Math.ceil(i)-1,l=t-c*n,u=(r[0][0]+r[1][0])/2-n/4,p=Math.min(r[0][1],r[1][1]);for(let t=0;t<c;t++){const a=p+l+t*n,r=u-h+2*Math.random()*h,i=a-h+2*Math.random()*h,c=this.helper.ellipse(r,i,o,o,e);s.push(...c.ops)}}return{type:"fillSketch",ops:s}}}class c{constructor(t){this.helper=t}fillPolygons(t,e){const s=n(t,e);return{type:"fillSketch",ops:this.dashedLine(s,e)}}dashedLine(t,e){const s=e.dashOffset<0?e.hachureGap<0?4*e.strokeWidth:e.hachureGap:e.dashOffset,n=e.dashGap<0?e.hachureGap<0?4*e.strokeWidth:e.hachureGap:e.dashGap,o=[];return t.forEach((t=>{const h=a(t),r=Math.floor(h/(s+n)),i=(h+n-r*(s+n))/2;let c=t[0],l=t[1];c[0]>l[0]&&(c=t[1],l=t[0]);const u=Math.atan((l[1]-c[1])/(l[0]-c[0]));for(let t=0;t<r;t++){const a=t*(s+n),h=a+s,r=[c[0]+a*Math.cos(u)+i*Math.cos(u),c[1]+a*Math.sin(u)+i*Math.sin(u)],l=[c[0]+h*Math.cos(u)+i*Math.cos(u),c[1]+h*Math.sin(u)+i*Math.sin(u)];o.push(...this.helper.doubleLineOps(r[0],r[1],l[0],l[1],e))}})),o}}class l{constructor(t){this.helper=t}fillPolygons(t,e){const s=e.hachureGap<0?4*e.strokeWidth:e.hachureGap,o=e.zigzagOffset<0?s:e.zigzagOffset,a=n(t,e=Object.assign({},e,{hachureGap:s+o}));return{type:"fillSketch",ops:this.zigzagLines(a,o,e)}}zigzagLines(t,e,s){const n=[];return t.forEach((t=>{const o=a(t),h=Math.round(o/(2*e));let r=t[0],i=t[1];r[0]>i[0]&&(r=t[1],i=t[0]);const c=Math.atan((i[1]-r[1])/(i[0]-r[0]));for(let t=0;t<h;t++){const o=2*t*e,a=2*(t+1)*e,h=Math.sqrt(2*Math.pow(e,2)),i=[r[0]+o*Math.cos(c),r[1]+o*Math.sin(c)],l=[r[0]+a*Math.cos(c),r[1]+a*Math.sin(c)],u=[i[0]+h*Math.cos(c+Math.PI/4),i[1]+h*Math.sin(c+Math.PI/4)];n.push(...this.helper.doubleLineOps(i[0],i[1],u[0],u[1],s),...this.helper.doubleLineOps(u[0],u[1],l[0],l[1],s))}})),n}}const u={};class p{constructor(t){this.seed=t}next(){return this.seed?(2**31-1&(this.seed=Math.imul(48271,this.seed)))/2**31:Math.random()}}const f=0,d=1,g=2,M={A:7,a:7,C:6,c:6,H:1,h:1,L:2,l:2,M:2,m:2,Q:4,q:4,S:4,s:4,T:2,t:2,V:1,v:1,Z:0,z:0};function k(t,e){return t.type===e}function b(t){const e=[],s=function(t){const e=new Array;for(;""!==t;)if(t.match(/^([ \t\r\n,]+)/))t=t.substr(RegExp.$1.length);else if(t.match(/^([aAcChHlLmMqQsStTvVzZ])/))e[e.length]={type:f,text:RegExp.$1},t=t.substr(RegExp.$1.length);else{if(!t.match(/^(([-+]?[0-9]+(\.[0-9]*)?|[-+]?\.[0-9]+)([eE][-+]?[0-9]+)?)/))return[];e[e.length]={type:d,text:`${parseFloat(RegExp.$1)}`},t=t.substr(RegExp.$1.length)}return e[e.length]={type:g,text:""},e}(t);let n="BOD",o=0,a=s[o];for(;!k(a,g);){let h=0;const r=[];if("BOD"===n){if("M"!==a.text&&"m"!==a.text)return b("M0,0"+t);o++,h=M[a.text],n=a.text}else k(a,d)?h=M[n]:(o++,h=M[a.text],n=a.text);if(!(o+h<s.length))throw new Error("Path data ended short");for(let t=o;t<o+h;t++){const e=s[t];if(!k(e,d))throw new Error("Param not a number: "+n+","+e.text);r[r.length]=+e.text}if("number"!=typeof M[n])throw new Error("Bad segment: "+n);{const t={key:n,data:r};e.push(t),o+=h,a=s[o],"M"===n&&(n="L"),"m"===n&&(n="l")}}return e}function y(t){let e=0,s=0,n=0,o=0;const a=[];for(const{key:h,data:r}of t)switch(h){case"M":a.push({key:"M",data:[...r]}),[e,s]=r,[n,o]=r;break;case"m":e+=r[0],s+=r[1],a.push({key:"M",data:[e,s]}),n=e,o=s;break;case"L":a.push({key:"L",data:[...r]}),[e,s]=r;break;case"l":e+=r[0],s+=r[1],a.push({key:"L",data:[e,s]});break;case"C":a.push({key:"C",data:[...r]}),e=r[4],s=r[5];break;case"c":{const t=r.map(((t,n)=>n%2?t+s:t+e));a.push({key:"C",data:t}),e=t[4],s=t[5];break}case"Q":a.push({key:"Q",data:[...r]}),e=r[2],s=r[3];break;case"q":{const t=r.map(((t,n)=>n%2?t+s:t+e));a.push({key:"Q",data:t}),e=t[2],s=t[3];break}case"A":a.push({key:"A",data:[...r]}),e=r[5],s=r[6];break;case"a":e+=r[5],s+=r[6],a.push({key:"A",data:[r[0],r[1],r[2],r[3],r[4],e,s]});break;case"H":a.push({key:"H",data:[...r]}),e=r[0];break;case"h":e+=r[0],a.push({key:"H",data:[e]});break;case"V":a.push({key:"V",data:[...r]}),s=r[0];break;case"v":s+=r[0],a.push({key:"V",data:[s]});break;case"S":a.push({key:"S",data:[...r]}),e=r[2],s=r[3];break;case"s":{const t=r.map(((t,n)=>n%2?t+s:t+e));a.push({key:"S",data:t}),e=t[2],s=t[3];break}case"T":a.push({key:"T",data:[...r]}),e=r[0],s=r[1];break;case"t":e+=r[0],s+=r[1],a.push({key:"T",data:[e,s]});break;case"Z":case"z":a.push({key:"Z",data:[]}),e=n,s=o}return a}function m(t){const e=[];let s="",n=0,o=0,a=0,h=0,r=0,i=0;for(const{key:c,data:l}of t){switch(c){case"M":e.push({key:"M",data:[...l]}),[n,o]=l,[a,h]=l;break;case"C":e.push({key:"C",data:[...l]}),n=l[4],o=l[5],r=l[2],i=l[3];break;case"L":e.push({key:"L",data:[...l]}),[n,o]=l;break;case"H":n=l[0],e.push({key:"L",data:[n,o]});break;case"V":o=l[0],e.push({key:"L",data:[n,o]});break;case"S":{let t=0,a=0;"C"===s||"S"===s?(t=n+(n-r),a=o+(o-i)):(t=n,a=o),e.push({key:"C",data:[t,a,...l]}),r=l[0],i=l[1],n=l[2],o=l[3];break}case"T":{const[t,a]=l;let h=0,c=0;"Q"===s||"T"===s?(h=n+(n-r),c=o+(o-i)):(h=n,c=o);const u=n+2*(h-n)/3,p=o+2*(c-o)/3,f=t+2*(h-t)/3,d=a+2*(c-a)/3;e.push({key:"C",data:[u,p,f,d,t,a]}),r=h,i=c,n=t,o=a;break}case"Q":{const[t,s,a,h]=l,c=n+2*(t-n)/3,u=o+2*(s-o)/3,p=a+2*(t-a)/3,f=h+2*(s-h)/3;e.push({key:"C",data:[c,u,p,f,a,h]}),r=t,i=s,n=a,o=h;break}case"A":{const t=Math.abs(l[0]),s=Math.abs(l[1]),a=l[2],h=l[3],r=l[4],i=l[5],c=l[6];if(0===t||0===s)e.push({key:"C",data:[n,o,i,c,i,c]}),n=i,o=c;else if(n!==i||o!==c){x(n,o,i,c,t,s,a,h,r).forEach((function(t){e.push({key:"C",data:t})})),n=i,o=c}break}case"Z":e.push({key:"Z",data:[]}),n=a,o=h}s=c}return e}function w(t,e,s){return[t*Math.cos(s)-e*Math.sin(s),t*Math.sin(s)+e*Math.cos(s)]}function x(t,e,s,n,o,a,h,r,i,c){const l=(u=h,Math.PI*u/180);var u;let p=[],f=0,d=0,g=0,M=0;if(c)[f,d,g,M]=c;else{[t,e]=w(t,e,-l),[s,n]=w(s,n,-l);const h=(t-s)/2,c=(e-n)/2;let u=h*h/(o*o)+c*c/(a*a);u>1&&(u=Math.sqrt(u),o*=u,a*=u);const p=o*o,k=a*a,b=p*k-p*c*c-k*h*h,y=p*c*c+k*h*h,m=(r===i?-1:1)*Math.sqrt(Math.abs(b/y));g=m*o*c/a+(t+s)/2,M=m*-a*h/o+(e+n)/2,f=Math.asin(parseFloat(((e-M)/a).toFixed(9))),d=Math.asin(parseFloat(((n-M)/a).toFixed(9))),t<g&&(f=Math.PI-f),s<g&&(d=Math.PI-d),f<0&&(f=2*Math.PI+f),d<0&&(d=2*Math.PI+d),i&&f>d&&(f-=2*Math.PI),!i&&d>f&&(d-=2*Math.PI)}let k=d-f;if(Math.abs(k)>120*Math.PI/180){const t=d,e=s,r=n;d=i&&d>f?f+120*Math.PI/180*1:f+120*Math.PI/180*-1,p=x(s=g+o*Math.cos(d),n=M+a*Math.sin(d),e,r,o,a,h,0,i,[d,t,g,M])}k=d-f;const b=Math.cos(f),y=Math.sin(f),m=Math.cos(d),P=Math.sin(d),v=Math.tan(k/4),S=4/3*o*v,O=4/3*a*v,L=[t,e],T=[t+S*y,e-O*b],D=[s+S*P,n-O*m],A=[s,n];if(T[0]=2*L[0]-T[0],T[1]=2*L[1]-T[1],c)return[T,D,A].concat(p);{p=[T,D,A].concat(p);const t=[];for(let e=0;e<p.length;e+=3){const s=w(p[e][0],p[e][1],l),n=w(p[e+1][0],p[e+1][1],l),o=w(p[e+2][0],p[e+2][1],l);t.push([s[0],s[1],n[0],n[1],o[0],o[1]])}return t}}const P={randOffset:function(t,e){return G(t,e)},randOffsetWithRange:function(t,e,s){return E(t,e,s)},ellipse:function(t,e,s,n,o){const a=T(s,n,o);return D(t,e,o,a).opset},doubleLineOps:function(t,e,s,n,o){return $(t,e,s,n,o,!0)}};function v(t,e,s,n,o){return{type:"path",ops:$(t,e,s,n,o)}}function S(t,e,s){const n=(t||[]).length;if(n>2){const o=[];for(let e=0;e<n-1;e++)o.push(...$(t[e][0],t[e][1],t[e+1][0],t[e+1][1],s));return e&&o.push(...$(t[n-1][0],t[n-1][1],t[0][0],t[0][1],s)),{type:"path",ops:o}}return 2===n?v(t[0][0],t[0][1],t[1][0],t[1][1],s):{type:"path",ops:[]}}function O(t,e,s,n,o){return function(t,e){return S(t,!0,e)}([[t,e],[t+s,e],[t+s,e+n],[t,e+n]],o)}function L(t,e){if(t.length){const s="number"==typeof t[0][0]?[t]:t,n=j(s[0],1*(1+.2*e.roughness),e),o=e.disableMultiStroke?[]:j(s[0],1.5*(1+.22*e.roughness),z(e));for(let t=1;t<s.length;t++){const a=s[t];if(a.length){const t=j(a,1*(1+.2*e.roughness),e),s=e.disableMultiStroke?[]:j(a,1.5*(1+.22*e.roughness),z(e));for(const e of t)"move"!==e.op&&n.push(e);for(const t of s)"move"!==t.op&&o.push(t)}}return{type:"path",ops:n.concat(o)}}return{type:"path",ops:[]}}function T(t,e,s){const n=Math.sqrt(2*Math.PI*Math.sqrt((Math.pow(t/2,2)+Math.pow(e/2,2))/2)),o=Math.ceil(Math.max(s.curveStepCount,s.curveStepCount/Math.sqrt(200)*n)),a=2*Math.PI/o;let h=Math.abs(t/2),r=Math.abs(e/2);const i=1-s.curveFitting;return h+=G(h*i,s),r+=G(r*i,s),{increment:a,rx:h,ry:r}}function D(t,e,s,n){const[o,a]=F(n.increment,t,e,n.rx,n.ry,1,n.increment*E(.1,E(.4,1,s),s),s);let h=q(o,null,s);if(!s.disableMultiStroke&&0!==s.roughness){const[o]=F(n.increment,t,e,n.rx,n.ry,1.5,0,s),a=q(o,null,s);h=h.concat(a)}return{estimatedPoints:a,opset:{type:"path",ops:h}}}function A(t,e,s,n,o,a,h,r,i){const c=t,l=e;let u=Math.abs(s/2),p=Math.abs(n/2);u+=G(.01*u,i),p+=G(.01*p,i);let f=o,d=a;for(;f<0;)f+=2*Math.PI,d+=2*Math.PI;d-f>2*Math.PI&&(f=0,d=2*Math.PI);const g=2*Math.PI/i.curveStepCount,M=Math.min(g/2,(d-f)/2),k=V(M,c,l,u,p,f,d,1,i);if(!i.disableMultiStroke){const t=V(M,c,l,u,p,f,d,1.5,i);k.push(...t)}return h&&(r?k.push(...$(c,l,c+u*Math.cos(f),l+p*Math.sin(f),i),...$(c,l,c+u*Math.cos(d),l+p*Math.sin(d),i)):k.push({op:"lineTo",data:[c,l]},{op:"lineTo",data:[c+u*Math.cos(f),l+p*Math.sin(f)]})),{type:"path",ops:k}}function _(t,e){const s=m(y(b(t))),n=[];let o=[0,0],a=[0,0];for(const{key:t,data:h}of s)switch(t){case"M":a=[h[0],h[1]],o=[h[0],h[1]];break;case"L":n.push(...$(a[0],a[1],h[0],h[1],e)),a=[h[0],h[1]];break;case"C":{const[t,s,o,r,i,c]=h;n.push(...Z(t,s,o,r,i,c,a,e)),a=[i,c];break}case"Z":n.push(...$(a[0],a[1],o[0],o[1],e)),a=[o[0],o[1]]}return{type:"path",ops:n}}function I(t,e){const s=[];for(const n of t)if(n.length){const t=e.maxRandomnessOffset||0,o=n.length;if(o>2){s.push({op:"move",data:[n[0][0]+G(t,e),n[0][1]+G(t,e)]});for(let a=1;a<o;a++)s.push({op:"lineTo",data:[n[a][0]+G(t,e),n[a][1]+G(t,e)]})}}return{type:"fillPath",ops:s}}function C(t,e){return function(t,e){let s=t.fillStyle||"hachure";if(!u[s])switch(s){case"zigzag":u[s]||(u[s]=new h(e));break;case"cross-hatch":u[s]||(u[s]=new r(e));break;case"dots":u[s]||(u[s]=new i(e));break;case"dashed":u[s]||(u[s]=new c(e));break;case"zigzag-line":u[s]||(u[s]=new l(e));break;default:s="hachure",u[s]||(u[s]=new o(e))}return u[s]}(e,P).fillPolygons(t,e)}function z(t){const e=Object.assign({},t);return e.randomizer=void 0,t.seed&&(e.seed=t.seed+1),e}function W(t){return t.randomizer||(t.randomizer=new p(t.seed||0)),t.randomizer.next()}function E(t,e,s,n=1){return s.roughness*n*(W(s)*(e-t)+t)}function G(t,e,s=1){return E(-t,t,e,s)}function $(t,e,s,n,o,a=!1){const h=a?o.disableMultiStrokeFill:o.disableMultiStroke,r=R(t,e,s,n,o,!0,!1);if(h)return r;const i=R(t,e,s,n,o,!0,!0);return r.concat(i)}function R(t,e,s,n,o,a,h){const r=Math.pow(t-s,2)+Math.pow(e-n,2),i=Math.sqrt(r);let c=1;c=i<200?1:i>500?.4:-.0016668*i+1.233334;let l=o.maxRandomnessOffset||0;l*l*100>r&&(l=i/10);const u=l/2,p=.2+.2*W(o);let f=o.bowing*o.maxRandomnessOffset*(n-e)/200,d=o.bowing*o.maxRandomnessOffset*(t-s)/200;f=G(f,o,c),d=G(d,o,c);const g=[],M=()=>G(u,o,c),k=()=>G(l,o,c),b=o.preserveVertices;return a&&(h?g.push({op:"move",data:[t+(b?0:M()),e+(b?0:M())]}):g.push({op:"move",data:[t+(b?0:G(l,o,c)),e+(b?0:G(l,o,c))]})),h?g.push({op:"bcurveTo",data:[f+t+(s-t)*p+M(),d+e+(n-e)*p+M(),f+t+2*(s-t)*p+M(),d+e+2*(n-e)*p+M(),s+(b?0:M()),n+(b?0:M())]}):g.push({op:"bcurveTo",data:[f+t+(s-t)*p+k(),d+e+(n-e)*p+k(),f+t+2*(s-t)*p+k(),d+e+2*(n-e)*p+k(),s+(b?0:k()),n+(b?0:k())]}),g}function j(t,e,s){if(!t.length)return[];const n=[];n.push([t[0][0]+G(e,s),t[0][1]+G(e,s)]),n.push([t[0][0]+G(e,s),t[0][1]+G(e,s)]);for(let o=1;o<t.length;o++)n.push([t[o][0]+G(e,s),t[o][1]+G(e,s)]),o===t.length-1&&n.push([t[o][0]+G(e,s),t[o][1]+G(e,s)]);return q(n,null,s)}function q(t,e,s){const n=t.length,o=[];if(n>3){const a=[],h=1-s.curveTightness;o.push({op:"move",data:[t[1][0],t[1][1]]});for(let e=1;e+2<n;e++){const s=t[e];a[0]=[s[0],s[1]],a[1]=[s[0]+(h*t[e+1][0]-h*t[e-1][0])/6,s[1]+(h*t[e+1][1]-h*t[e-1][1])/6],a[2]=[t[e+1][0]+(h*t[e][0]-h*t[e+2][0])/6,t[e+1][1]+(h*t[e][1]-h*t[e+2][1])/6],a[3]=[t[e+1][0],t[e+1][1]],o.push({op:"bcurveTo",data:[a[1][0],a[1][1],a[2][0],a[2][1],a[3][0],a[3][1]]})}if(e&&2===e.length){const t=s.maxRandomnessOffset;o.push({op:"lineTo",data:[e[0]+G(t,s),e[1]+G(t,s)]})}}else 3===n?(o.push({op:"move",data:[t[1][0],t[1][1]]}),o.push({op:"bcurveTo",data:[t[1][0],t[1][1],t[2][0],t[2][1],t[2][0],t[2][1]]})):2===n&&o.push(...R(t[0][0],t[0][1],t[1][0],t[1][1],s,!0,!0));return o}function F(t,e,s,n,o,a,h,r){const i=[],c=[];if(0===r.roughness){t/=4,c.push([e+n*Math.cos(-t),s+o*Math.sin(-t)]);for(let a=0;a<=2*Math.PI;a+=t){const t=[e+n*Math.cos(a),s+o*Math.sin(a)];i.push(t),c.push(t)}c.push([e+n*Math.cos(0),s+o*Math.sin(0)]),c.push([e+n*Math.cos(t),s+o*Math.sin(t)])}else{const l=G(.5,r)-Math.PI/2;c.push([G(a,r)+e+.9*n*Math.cos(l-t),G(a,r)+s+.9*o*Math.sin(l-t)]);const u=2*Math.PI+l-.01;for(let h=l;h<u;h+=t){const t=[G(a,r)+e+n*Math.cos(h),G(a,r)+s+o*Math.sin(h)];i.push(t),c.push(t)}c.push([G(a,r)+e+n*Math.cos(l+2*Math.PI+.5*h),G(a,r)+s+o*Math.sin(l+2*Math.PI+.5*h)]),c.push([G(a,r)+e+.98*n*Math.cos(l+h),G(a,r)+s+.98*o*Math.sin(l+h)]),c.push([G(a,r)+e+.9*n*Math.cos(l+.5*h),G(a,r)+s+.9*o*Math.sin(l+.5*h)])}return[c,i]}function V(t,e,s,n,o,a,h,r,i){const c=a+G(.1,i),l=[];l.push([G(r,i)+e+.9*n*Math.cos(c-t),G(r,i)+s+.9*o*Math.sin(c-t)]);for(let a=c;a<=h;a+=t)l.push([G(r,i)+e+n*Math.cos(a),G(r,i)+s+o*Math.sin(a)]);return l.push([e+n*Math.cos(h),s+o*Math.sin(h)]),l.push([e+n*Math.cos(h),s+o*Math.sin(h)]),q(l,null,i)}function Z(t,e,s,n,o,a,h,r){const i=[],c=[r.maxRandomnessOffset||1,(r.maxRandomnessOffset||1)+.3];let l=[0,0];const u=r.disableMultiStroke?1:2,p=r.preserveVertices;for(let f=0;f<u;f++)0===f?i.push({op:"move",data:[h[0],h[1]]}):i.push({op:"move",data:[h[0]+(p?0:G(c[0],r)),h[1]+(p?0:G(c[0],r))]}),l=p?[o,a]:[o+G(c[f],r),a+G(c[f],r)],i.push({op:"bcurveTo",data:[t+G(c[f],r),e+G(c[f],r),s+G(c[f],r),n+G(c[f],r),l[0],l[1]]});return i}function Q(t){return[...t]}function H(t,e=0){const s=t.length;if(s<3)throw new Error("A curve must have at least three points.");const n=[];if(3===s)n.push(Q(t[0]),Q(t[1]),Q(t[2]),Q(t[2]));else{const s=[];s.push(t[0],t[0]);for(let e=1;e<t.length;e++)s.push(t[e]),e===t.length-1&&s.push(t[e]);const o=[],a=1-e;n.push(Q(s[0]));for(let t=1;t+2<s.length;t++){const e=s[t];o[0]=[e[0],e[1]],o[1]=[e[0]+(a*s[t+1][0]-a*s[t-1][0])/6,e[1]+(a*s[t+1][1]-a*s[t-1][1])/6],o[2]=[s[t+1][0]+(a*s[t][0]-a*s[t+2][0])/6,s[t+1][1]+(a*s[t][1]-a*s[t+2][1])/6],o[3]=[s[t+1][0],s[t+1][1]],n.push(o[1],o[2],o[3])}}return n}function N(t,e){return Math.pow(t[0]-e[0],2)+Math.pow(t[1]-e[1],2)}function B(t,e,s){const n=N(e,s);if(0===n)return N(t,e);let o=((t[0]-e[0])*(s[0]-e[0])+(t[1]-e[1])*(s[1]-e[1]))/n;return o=Math.max(0,Math.min(1,o)),N(t,J(e,s,o))}function J(t,e,s){return[t[0]+(e[0]-t[0])*s,t[1]+(e[1]-t[1])*s]}function K(t,e,s,n){const o=n||[];if(function(t,e){const s=t[e+0],n=t[e+1],o=t[e+2],a=t[e+3];let h=3*n[0]-2*s[0]-a[0];h*=h;let r=3*n[1]-2*s[1]-a[1];r*=r;let i=3*o[0]-2*a[0]-s[0];i*=i;let c=3*o[1]-2*a[1]-s[1];return c*=c,h<i&&(h=i),r<c&&(r=c),h+r}(t,e)<s){const s=t[e+0];if(o.length){(a=o[o.length-1],h=s,Math.sqrt(N(a,h)))>1&&o.push(s)}else o.push(s);o.push(t[e+3])}else{const n=.5,a=t[e+0],h=t[e+1],r=t[e+2],i=t[e+3],c=J(a,h,n),l=J(h,r,n),u=J(r,i,n),p=J(c,l,n),f=J(l,u,n),d=J(p,f,n);K([a,c,p,d],0,s,o),K([d,f,u,i],0,s,o)}var a,h;return o}function U(t,e){return X(t,0,t.length,e)}function X(t,e,s,n,o){const a=o||[],h=t[e],r=t[s-1];let i=0,c=1;for(let n=e+1;n<s-1;++n){const e=B(t[n],h,r);e>i&&(i=e,c=n)}return Math.sqrt(i)>n?(X(t,e,c+1,n,a),X(t,c,s,n,a)):(a.length||a.push(h),a.push(r)),a}function Y(t,e=.15,s){const n=[],o=(t.length-1)/3;for(let s=0;s<o;s++){K(t,3*s,e,n)}return s&&s>0?X(n,0,n.length,s):n}const tt="none";class et{constructor(t){this.defaultOptions={maxRandomnessOffset:2,roughness:1,bowing:1,stroke:"#000",strokeWidth:1,curveTightness:0,curveFitting:.95,curveStepCount:9,fillStyle:"hachure",fillWeight:-1,hachureAngle:-41,hachureGap:-1,dashOffset:-1,dashGap:-1,zigzagOffset:-1,seed:0,disableMultiStroke:!1,disableMultiStrokeFill:!1,preserveVertices:!1,fillShapeRoughnessGain:.8},this.config=t||{},this.config.options&&(this.defaultOptions=this._o(this.config.options))}static newSeed(){return Math.floor(Math.random()*2**31)}_o(t){return t?Object.assign({},this.defaultOptions,t):this.defaultOptions}_d(t,e,s){return{shape:t,sets:e||[],options:s||this.defaultOptions}}line(t,e,s,n,o){const a=this._o(o);return this._d("line",[v(t,e,s,n,a)],a)}rectangle(t,e,s,n,o){const a=this._o(o),h=[],r=O(t,e,s,n,a);if(a.fill){const o=[[t,e],[t+s,e],[t+s,e+n],[t,e+n]];"solid"===a.fillStyle?h.push(I([o],a)):h.push(C([o],a))}return a.stroke!==tt&&h.push(r),this._d("rectangle",h,a)}ellipse(t,e,s,n,o){const a=this._o(o),h=[],r=T(s,n,a),i=D(t,e,a,r);if(a.fill)if("solid"===a.fillStyle){const s=D(t,e,a,r).opset;s.type="fillPath",h.push(s)}else h.push(C([i.estimatedPoints],a));return a.stroke!==tt&&h.push(i.opset),this._d("ellipse",h,a)}circle(t,e,s,n){const o=this.ellipse(t,e,s,s,n);return o.shape="circle",o}linearPath(t,e){const s=this._o(e);return this._d("linearPath",[S(t,!1,s)],s)}arc(t,e,s,n,o,a,h=!1,r){const i=this._o(r),c=[],l=A(t,e,s,n,o,a,h,!0,i);if(h&&i.fill)if("solid"===i.fillStyle){const h=Object.assign({},i);h.disableMultiStroke=!0;const r=A(t,e,s,n,o,a,!0,!1,h);r.type="fillPath",c.push(r)}else c.push(function(t,e,s,n,o,a,h){const r=t,i=e;let c=Math.abs(s/2),l=Math.abs(n/2);c+=G(.01*c,h),l+=G(.01*l,h);let u=o,p=a;for(;u<0;)u+=2*Math.PI,p+=2*Math.PI;p-u>2*Math.PI&&(u=0,p=2*Math.PI);const f=(p-u)/h.curveStepCount,d=[];for(let t=u;t<=p;t+=f)d.push([r+c*Math.cos(t),i+l*Math.sin(t)]);return d.push([r+c*Math.cos(p),i+l*Math.sin(p)]),d.push([r,i]),C([d],h)}(t,e,s,n,o,a,i));return i.stroke!==tt&&c.push(l),this._d("arc",c,i)}curve(t,e){const s=this._o(e),n=[],o=L(t,s);if(s.fill&&s.fill!==tt)if("solid"===s.fillStyle){const e=L(t,Object.assign(Object.assign({},s),{disableMultiStroke:!0,roughness:s.roughness?s.roughness+s.fillShapeRoughnessGain:0}));n.push({type:"fillPath",ops:this._mergedShape(e.ops)})}else{const e=[],o=t;if(o.length){const t="number"==typeof o[0][0]?[o]:o;for(const n of t)n.length<3?e.push(...n):3===n.length?e.push(...Y(H([n[0],n[0],n[1],n[2]]),10,(1+s.roughness)/2)):e.push(...Y(H(n),10,(1+s.roughness)/2))}e.length&&n.push(C([e],s))}return s.stroke!==tt&&n.push(o),this._d("curve",n,s)}polygon(t,e){const s=this._o(e),n=[],o=S(t,!0,s);return s.fill&&("solid"===s.fillStyle?n.push(I([t],s)):n.push(C([t],s))),s.stroke!==tt&&n.push(o),this._d("polygon",n,s)}path(t,e){const s=this._o(e),n=[];if(!t)return this._d("path",n,s);t=(t||"").replace(/\n/g," ").replace(/(-\s)/g,"-").replace("/(ss)/g"," ");const o=s.fill&&"transparent"!==s.fill&&s.fill!==tt,a=s.stroke!==tt,h=!!(s.simplification&&s.simplification<1),r=function(t,e,s){const n=m(y(b(t))),o=[];let a=[],h=[0,0],r=[];const i=()=>{r.length>=4&&a.push(...Y(r,e)),r=[]},c=()=>{i(),a.length&&(o.push(a),a=[])};for(const{key:t,data:e}of n)switch(t){case"M":c(),h=[e[0],e[1]],a.push(h);break;case"L":i(),a.push([e[0],e[1]]);break;case"C":if(!r.length){const t=a.length?a[a.length-1]:h;r.push([t[0],t[1]])}r.push([e[0],e[1]]),r.push([e[2],e[3]]),r.push([e[4],e[5]]);break;case"Z":i(),a.push([h[0],h[1]])}if(c(),!s)return o;const l=[];for(const t of o){const e=U(t,s);e.length&&l.push(e)}return l}(t,1,h?4-4*(s.simplification||1):(1+s.roughness)/2),i=_(t,s);if(o)if("solid"===s.fillStyle)if(1===r.length){const e=_(t,Object.assign(Object.assign({},s),{disableMultiStroke:!0,roughness:s.roughness?s.roughness+s.fillShapeRoughnessGain:0}));n.push({type:"fillPath",ops:this._mergedShape(e.ops)})}else n.push(I(r,s));else n.push(C(r,s));return a&&(h?r.forEach((t=>{n.push(S(t,!1,s))})):n.push(i)),this._d("path",n,s)}opsToPath(t,e){let s="";for(const n of t.ops){const t="number"==typeof e&&e>=0?n.data.map((t=>+t.toFixed(e))):n.data;switch(n.op){case"move":s+=`M${t[0]} ${t[1]} `;break;case"bcurveTo":s+=`C${t[0]} ${t[1]}, ${t[2]} ${t[3]}, ${t[4]} ${t[5]} `;break;case"lineTo":s+=`L${t[0]} ${t[1]} `}}return s.trim()}toPaths(t){const e=t.sets||[],s=t.options||this.defaultOptions,n=[];for(const t of e){let e=null;switch(t.type){case"path":e={d:this.opsToPath(t),stroke:s.stroke,strokeWidth:s.strokeWidth,fill:tt};break;case"fillPath":e={d:this.opsToPath(t),stroke:tt,strokeWidth:0,fill:s.fill||tt};break;case"fillSketch":e=this.fillSketch(t,s)}e&&n.push(e)}return n}fillSketch(t,e){let s=e.fillWeight;return s<0&&(s=e.strokeWidth/2),{d:this.opsToPath(t),stroke:e.fill||tt,strokeWidth:s,fill:tt}}_mergedShape(t){return t.filter(((t,e)=>0===e||"move"!==t.op))}}class st{constructor(t,e){this.canvas=t,this.ctx=this.canvas.getContext("2d"),this.gen=new et(e)}draw(t){const e=t.sets||[],s=t.options||this.getDefaultOptions(),n=this.ctx,o=t.options.fixedDecimalPlaceDigits;for(const a of e)switch(a.type){case"path":n.save(),n.strokeStyle="none"===s.stroke?"transparent":s.stroke,n.lineWidth=s.strokeWidth,s.strokeLineDash&&n.setLineDash(s.strokeLineDash),s.strokeLineDashOffset&&(n.lineDashOffset=s.strokeLineDashOffset),this._drawToContext(n,a,o),n.restore();break;case"fillPath":{n.save(),n.fillStyle=s.fill||"";const e="curve"===t.shape||"polygon"===t.shape||"path"===t.shape?"evenodd":"nonzero";this._drawToContext(n,a,o,e),n.restore();break}case"fillSketch":this.fillSketch(n,a,s)}}fillSketch(t,e,s){let n=s.fillWeight;n<0&&(n=s.strokeWidth/2),t.save(),s.fillLineDash&&t.setLineDash(s.fillLineDash),s.fillLineDashOffset&&(t.lineDashOffset=s.fillLineDashOffset),t.strokeStyle=s.fill||"",t.lineWidth=n,this._drawToContext(t,e,s.fixedDecimalPlaceDigits),t.restore()}_drawToContext(t,e,s,n="nonzero"){t.beginPath();for(const n of e.ops){const e="number"==typeof s&&s>=0?n.data.map((t=>+t.toFixed(s))):n.data;switch(n.op){case"move":t.moveTo(e[0],e[1]);break;case"bcurveTo":t.bezierCurveTo(e[0],e[1],e[2],e[3],e[4],e[5]);break;case"lineTo":t.lineTo(e[0],e[1])}}"fillPath"===e.type?t.fill(n):t.stroke()}get generator(){return this.gen}getDefaultOptions(){return this.gen.defaultOptions}line(t,e,s,n,o){const a=this.gen.line(t,e,s,n,o);return this.draw(a),a}rectangle(t,e,s,n,o){const a=this.gen.rectangle(t,e,s,n,o);return this.draw(a),a}ellipse(t,e,s,n,o){const a=this.gen.ellipse(t,e,s,n,o);return this.draw(a),a}circle(t,e,s,n){const o=this.gen.circle(t,e,s,n);return this.draw(o),o}linearPath(t,e){const s=this.gen.linearPath(t,e);return this.draw(s),s}polygon(t,e){const s=this.gen.polygon(t,e);return this.draw(s),s}arc(t,e,s,n,o,a,h=!1,r){const i=this.gen.arc(t,e,s,n,o,a,h,r);return this.draw(i),i}curve(t,e){const s=this.gen.curve(t,e);return this.draw(s),s}path(t,e){const s=this.gen.path(t,e);return this.draw(s),s}}const nt="http://www.w3.org/2000/svg";class ot{constructor(t,e){this.svg=t,this.gen=new et(e)}draw(t){const e=t.sets||[],s=t.options||this.getDefaultOptions(),n=this.svg.ownerDocument||window.document,o=n.createElementNS(nt,"g"),a=t.options.fixedDecimalPlaceDigits;for(const h of e){let e=null;switch(h.type){case"path":e=n.createElementNS(nt,"path"),e.setAttribute("d",this.opsToPath(h,a)),e.setAttribute("stroke",s.stroke),e.setAttribute("stroke-width",s.strokeWidth+""),e.setAttribute("fill","none"),s.strokeLineDash&&e.setAttribute("stroke-dasharray",s.strokeLineDash.join(" ").trim()),s.strokeLineDashOffset&&e.setAttribute("stroke-dashoffset",`${s.strokeLineDashOffset}`);break;case"fillPath":e=n.createElementNS(nt,"path"),e.setAttribute("d",this.opsToPath(h,a)),e.setAttribute("stroke","none"),e.setAttribute("stroke-width","0"),e.setAttribute("fill",s.fill||""),"curve"!==t.shape&&"polygon"!==t.shape||e.setAttribute("fill-rule","evenodd");break;case"fillSketch":e=this.fillSketch(n,h,s)}e&&o.appendChild(e)}return o}fillSketch(t,e,s){let n=s.fillWeight;n<0&&(n=s.strokeWidth/2);const o=t.createElementNS(nt,"path");return o.setAttribute("d",this.opsToPath(e,s.fixedDecimalPlaceDigits)),o.setAttribute("stroke",s.fill||""),o.setAttribute("stroke-width",n+""),o.setAttribute("fill","none"),s.fillLineDash&&o.setAttribute("stroke-dasharray",s.fillLineDash.join(" ").trim()),s.fillLineDashOffset&&o.setAttribute("stroke-dashoffset",`${s.fillLineDashOffset}`),o}get generator(){return this.gen}getDefaultOptions(){return this.gen.defaultOptions}opsToPath(t,e){return this.gen.opsToPath(t,e)}line(t,e,s,n,o){const a=this.gen.line(t,e,s,n,o);return this.draw(a)}rectangle(t,e,s,n,o){const a=this.gen.rectangle(t,e,s,n,o);return this.draw(a)}ellipse(t,e,s,n,o){const a=this.gen.ellipse(t,e,s,n,o);return this.draw(a)}circle(t,e,s,n){const o=this.gen.circle(t,e,s,n);return this.draw(o)}linearPath(t,e){const s=this.gen.linearPath(t,e);return this.draw(s)}polygon(t,e){const s=this.gen.polygon(t,e);return this.draw(s)}arc(t,e,s,n,o,a,h=!1,r){const i=this.gen.arc(t,e,s,n,o,a,h,r);return this.draw(i)}curve(t,e){const s=this.gen.curve(t,e);return this.draw(s)}path(t,e){const s=this.gen.path(t,e);return this.draw(s)}}return{canvas:(t,e)=>new st(t,e),svg:(t,e)=>new ot(t,e),generator:t=>new et(t),newSeed:()=>et.newSeed()}}();
+</script>
 <script>
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const norm = s => String(s ?? "").replace(/[‘’ʻʼ`´]/g, "'").toLowerCase().replace(/\s+/g, " ").replace(/^[ .,;:]+|[ .,;:]+$/g, "");
-const SL = [...document.querySelectorAll(".slide")];
+const SEC = [...document.querySelectorAll("section")];
 const NOTES = [
-  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bo'limingiz ishiga yaqin uchta ish qildim, natijalarini ko'rsataman."],
-  ["32 s", "Birinchisi, model o'qitish. Qwen3-4B modelini QLoRA usulida rasmiy xatdan ijrochi va muddatni ajratishga o'rgatdim. Chapda o'qitilmagan model: hujjat kimga yuborilishini ijrochi deb oldi. O'ngda o'qitilgani: to'g'ri topdi. Haqiqiy gaplarda 31 foizdan 100 foizga, bitta GPU'da 10 daqiqada."],
-  ["20 s", "Ikkinchisi, shaxsiy ma'lumot qalqoni. (yozing) Ism, pasport, telefon darhol yashiriladi: AI ularni ko'rmaydi, javob qaytgach joyiga qo'yiladi. Boshqa model yozgan ko'r testda 95-97 foiz."],
+  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bo'limingiz ishiga yaqin uchta ish qildim, qisqacha ko'rsataman."],
+  ["30 s", "Birinchisi, fine-tuning. Muammo: tayyor model hujjat kimga yuborilishini ijrochi deb oladi. Qwen3-4B ni QLoRA bilan 1600 ta misolda o'qitdim: bitta GPU, 10 daqiqa. Real gaplarda 31 foizdan 100 foizga. Jonli sinov: chapda o'qitilmagan model xato, o'ngda o'qitilgani to'g'ri."],
+  ["22 s", "Ikkinchisi, anonimlashtirish. Murojaat LLM ga ketishidan oldin ism, pasport, telefon belgiga almashtiriladi, javob qaytgach asl holiga qaytariladi. (yozing) Uch marta test qildim: 95-97 foiz, oddiy matnda ortiqcha yashirish yo'q."],
   ["18 s", "Uchinchisi, RAG: bot bazasini Gemma 4 ga uladim, model faqat topilgan manbadan yozadi. Rasmiy javobga mos javob 27 foizdan 75 foizga oshdi, zid javob nolga tushdi."],
-  ["12 s", "Hammasi o'z serverda, internetsiz ishlaydi. Keyingi qadam: real murojaatlarda ism va manzilni topadigan model o'qitish. Stajirovkaga tayyorman. Rahmat."],
+  ["12 s", "Keyingi qadam: real murojaatlarda ism va manzil uchun NER modelini o'qitish. Stajirovkaga tayyorman. Rahmat."],
 ];
 const P = new URLSearchParams(location.search).has("p");
 const bc = "BroadcastChannel" in window ? new BroadcastChannel("taqdimot") : null;
 let cur = 0;
 
-/* sahna o'lchami */
-function fit() { const s = Math.min(innerWidth / 1600, innerHeight / 900); $("stage").style.transform = `translate(-50%,-50%) scale(${s})`; }
-addEventListener("resize", fit); fit();
-
-function go(i, from) {
-  cur = Math.max(0, Math.min(SL.length - 1, i));
-  SL.forEach((s, k) => s.classList.toggle("on", k === cur));
-  $("prog").style.width = ((cur + 1) / SL.length * 100) + "%";
-  if (!P) history.replaceState(null, "", "#" + (cur + 1));
-  if (cur === 1) showModel();
-  if (cur === 3) setTimeout(() => document.querySelectorAll("#bars i").forEach(i => i.style.width = i.dataset.w + "%"), 150);
-  else document.querySelectorAll("#bars i").forEach(i => i.style.width = "0");
-  renderPres();
-  if (bc && from !== "bc") bc.postMessage({slide: cur});
+/* ---------- qo'lda chizilgan shakllar (rough.js) ---------- */
+const COL = {"": ["#1e1e1e", null], g: ["#2f9e44", "#b2f2bb"], b: ["#1971c2", "#a5d8ff"], r: ["#e03131", "#ffc9c9"], y: ["#f08c00", "#ffec99"], gr: ["#868e96", "#e9ecef"]};
+let seed = 1;
+const rr = (x, y, w, h, r) => `M${x + r} ${y} L${x + w - r} ${y} Q${x + w} ${y} ${x + w} ${y + r} L${x + w} ${y + h - r} Q${x + w} ${y + h} ${x + w - r} ${y + h} L${x + r} ${y + h} Q${x} ${y + h} ${x} ${y + h - r} L${x} ${y + r} Q${x} ${y} ${x + r} ${y}`;
+function svgFor(el, pad) {
+  let s = el.querySelector(":scope > svg.rsvg");
+  if (!s) { s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.classList.add("rsvg"); el.prepend(s); }
+  s.innerHTML = "";
+  const w = el.offsetWidth, h = el.offsetHeight;
+  s.setAttribute("width", w + pad * 2); s.setAttribute("height", h + pad * 2);
+  s.style.left = -pad + "px"; s.style.top = -pad + "px";
+  return [s, w, h];
 }
+function draw(el) {
+  const kind = el.dataset.rough, [type, c = ""] = kind.split("-");
+  if (!el.dataset.seed) el.dataset.seed = seed++;
+  const opt = {seed: +el.dataset.seed, roughness: 1.2, bowing: 1.1, strokeWidth: 2, stroke: COL[c][0]};
+  let s, w, h, nodes = [];
+  if (type === "box") {
+    [s, w, h] = svgFor(el, 4);
+    const rc = rough.svg(s);
+    nodes.push(rc.path(rr(4, 4, w, h, Math.min(18, h / 4)), {...opt, fill: COL[c][1] ? COL[c][1] : undefined, fillStyle: "hachure", hachureGap: 7, fillWeight: 1.2}));
+  } else if (type === "ell") {
+    [s, w, h] = svgFor(el, 10);
+    nodes.push(rough.svg(s).ellipse(w / 2 + 10, h / 2 + 10, w + 18, h + 12, {...opt, strokeWidth: 2.2}));
+  } else if (type === "und") {
+    [s, w, h] = svgFor(el, 6);
+    nodes.push(rough.svg(s).line(6, h + 4, w + 6, h + 2, {...opt, strokeWidth: 2.6}));
+  } else if (type === "arrow") {
+    [s, w, h] = svgFor(el, 0);
+    const rc = rough.svg(s), y = h / 2;
+    nodes.push(rc.line(4, y, w - 6, y, {...opt, roughness: .9}));
+    nodes.push(rc.line(w - 6, y, w - 18, y - 8, {...opt, roughness: .6}));
+    nodes.push(rc.line(w - 6, y, w - 18, y + 8, {...opt, roughness: .6}));
+  } else if (type === "bar") {
+    [s, w, h] = svgFor(el, 3);
+    nodes.push(rough.svg(s).rectangle(3, 3, w, h, {...opt, fill: COL[c][1], fillStyle: "hachure", hachureGap: 5, fillWeight: 1.4}));
+  }
+  nodes.forEach(n => s.appendChild(n));
+  // slayd hali ko'rinmagan bo'lsa, chiziqlar yashirin turadi va ko'ringanda "chiziladi"
+  if (!el.closest("section").classList.contains("in")) s.querySelectorAll("path").forEach(p => {
+    const L = p.getTotalLength ? p.getTotalLength() : 0;
+    if (L) { p.style.strokeDasharray = L; p.style.strokeDashoffset = L; }
+  });
+}
+// ichidagi narsa o'zgarsa (model javobi keldi, matn yozildi) ramka qayta chiziladi
+const ro = new ResizeObserver(es => es.forEach(en => { if (en.target.offsetWidth) draw(en.target); }));
+const drawAll = () => document.querySelectorAll("[data-rough]").forEach(el => ro.observe(el));
+
+/* ---------- grafiklar ---------- */
+function chart(id, groups) {
+  $(id).innerHTML = groups.map(([n, a, b]) => `<div class="grp"><div class="bars">
+    <div class="bar" data-rough="bar-gr" style="height:${Math.max(a, 1.5)}%"><span class="v">${String(a).replace(".", ",")}%</span></div>
+    ${b === null ? "" : `<div class="bar" data-rough="bar-g" style="height:${Math.max(b, 1.5)}%"><span class="v" style="color:var(--g)">${b}%</span></div>`}
+  </div><div class="n">${n}</div></div>`).join("");
+}
+chart("ch1", [["Ijrochi", 54, 100], ["Muddat", 85, 100], ["Turi", 62, 100], ["Hammasi", 31, 100]]);
+chart("ch3", [["Rasmiy javobga mos", 27.5, 75], ["Rasmiy javobga zid", 7.5, 0], ["«Bazada yo'q» dedi", 42, 100]]);
+$("ch2").innerHTML = [["1-test", 74.9, "gr"], ["2-test", 95.5, "gr"], ["3-test", 95.3, "g"]].map(([n, v, c]) => `<div class="grp"><div class="bars">
+  <div class="bar" data-rough="bar-${c}" style="height:${v}%"><span class="v"${c === "g" ? ' style="color:var(--g)"' : ""}>${String(v).replace(".", ",")}%</span></div></div><div class="n">${n}</div></div>`).join("");
+
+/* ---------- navigatsiya ---------- */
+$("dots").innerHTML = SEC.map((s, i) => `<a href="#s${i}" aria-label="${i + 1}"></a>`).join("");
+const jump = i => { cur = Math.max(0, Math.min(SEC.length - 1, i)); SEC[cur].scrollIntoView({behavior: "smooth"}); };
+document.querySelectorAll("[data-go]").forEach(el => { el.style.cursor = "pointer"; el.onclick = () => jump(+el.dataset.go); });
+const send = i => { if (bc) bc.postMessage({go: Math.max(0, Math.min(SEC.length - 1, i))}); };
 document.addEventListener("keydown", e => {
   if (e.target.tagName === "TEXTAREA") { if (e.key === "Escape") e.target.blur(); return; }
-  if (["ArrowRight", "PageDown", " ", "Enter"].includes(e.key)) { e.preventDefault(); go(cur + 1); }
-  else if (["ArrowLeft", "PageUp", "Backspace"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
-  else if (e.key === "Home") go(0); else if (e.key === "End") go(SL.length - 1);
-  else if (e.key === "f" || e.key === "F") toggleFs();
-  else if (e.key === "p" || e.key === "P") window.open(location.pathname + "?p=1", "suflyor", "width=1000,height=720");
+  const nx = ["ArrowRight", "PageDown"].includes(e.key), pv = ["ArrowLeft", "PageUp"].includes(e.key);
+  if (P) { if (nx) send(cur + 1); if (pv) send(cur - 1); return; }
+  if (nx) { e.preventDefault(); jump(cur + 1); } else if (pv) { e.preventDefault(); jump(cur - 1); }
+  else if (e.key === "f" || e.key === "F") document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+  else if (e.key === "p" || e.key === "P") window.open(location.pathname + "?p=1", "suflyor", "width=1000,height=700");
 });
-const toggleFs = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
-$("pv").onclick = () => go(cur - 1); $("nx").onclick = () => go(cur + 1); $("fs").onclick = toggleFs;
-if (bc) bc.onmessage = e => { if (typeof e.data.slide === "number") go(e.data.slide, "bc"); if (e.data.gpu) setGpu(e.data.gpu); };
+if (bc) bc.onmessage = e => {
+  if (typeof e.data.go === "number" && !P) jump(e.data.go);
+  if (typeof e.data.cur === "number" && P) { cur = e.data.cur; pres(); }
+  if (e.data.gpu && P) gpu(e.data.gpu);
+};
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (!en.isIntersecting) return;
+  const sec = en.target, i = SEC.indexOf(sec);
+  if (!sec.classList.contains("in")) {
+    sec.classList.add("in");
+    sec.querySelectorAll(".rsvg path").forEach((p, k) => setTimeout(() => p.style.strokeDashoffset = 0, 60 + (k % 40) * 18));
+  }
+  if (en.intersectionRatio > .3 || en.boundingClientRect.top < innerHeight * .35) {
+    cur = i; document.querySelectorAll("#dots a").forEach((a, k) => a.classList.toggle("on", k === i));
+    if (bc) bc.postMessage({cur: i});
+    if (i === 1) showModel();
+  }
+}), {threshold: [.15, .3, .6]});
 
-/* suflyor */
+/* ---------- suflyor ---------- */
 let t0 = null;
-function renderPres() {
-  if (!P) return;
-  $("ps").textContent = `${cur + 1} / ${SL.length} · ${NOTES[cur][0]}`;
-  $("pn").textContent = NOTES[cur][1];
-  $("px").textContent = cur + 1 < SL.length ? "Keyingi: " + SL[cur + 1].querySelector(".kick").textContent : "Oxirgi slayd";
-}
+function pres() { $("ps").textContent = `${cur + 1} / ${SEC.length} · ${NOTES[cur][0]}`; $("pn").textContent = NOTES[cur][1];
+  $("px").textContent = cur + 1 < SEC.length ? "Keyingi: " + SEC[cur + 1].querySelector("h1,h2").textContent : "Oxirgi slayd"; }
+function gpu(g) { $("gd").className = "dot " + (g.ok ? "ok" : g.err ? "no" : ""); $("gt").textContent = g.text; }
 if (P) {
-  document.body.classList.add("p");
-  $("pp").onclick = () => go(cur - 1); $("pnx").onclick = () => go(cur + 1);
-  $("pr").onclick = () => { t0 = Date.now(); };
+  document.body.classList.add("p"); pres();
+  $("pp").onclick = () => send(cur - 1); $("pnx").onclick = () => send(cur + 1); $("pr").onclick = () => { t0 = Date.now(); };
   setInterval(() => { if (!t0) return; const s = Math.floor((Date.now() - t0) / 1000);
-    $("tm").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; $("tm").style.color = s > 90 ? "var(--bad)" : ""; }, 250);
+    $("tm").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; $("tm").style.color = s > 90 ? "var(--r)" : ""; }, 250);
 }
-function setGpu(g) { if (!P) return; $("gd").className = "dot " + (g.ok ? "ok" : g.err ? "no" : ""); $("gt").textContent = g.text; }
 
-/* 2-slayd: o'qitilgan model (jonli) */
-const S2 = {text: "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
-  kutilgan: {ijrochi: ["Hududiy adliya boshqarmalari"], muddat: "2026-yil 25-dekabrgacha", muddat_turi: "sana"}};
-const q2 = $("q2"); q2.value = S2.text;
-let cache = {}, expected = S2.kutilgan;
-const row = (k, v, ok) => `<div class="row"><span class="k">${k}</span><span>${v}</span><span class="m">${ok === undefined ? "" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>'}</span></div>`;
+/* ---------- jonli: fine-tuning ---------- */
+const S = {text: "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
+  k: {ijrochi: ["Hududiy adliya boshqarmalari"], muddat: "2026-yil 25-dekabrgacha", muddat_turi: "sana"}};
+const q2 = $("q2"); q2.value = S.text;
+let cache = {}, expected = S.k;
+const fld = (k, v, ok) => `<div class="f"><span class="k">${k}</span><span>${v}</span>${ok === undefined ? "<span></span>" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>'}</div>`;
 function col(r) {
   const j = r.json && typeof r.json === "object" ? r.json : null;
-  if (!j) return row("Natija", '<span class="nil">JSON emas</span>', expected ? false : undefined);
+  if (!j) return fld("Natija", '<span class="nil">JSON emas</span>', expected ? false : undefined);
   const ij = Array.isArray(j.ijrochi) ? j.ijrochi : j.ijrochi ? [j.ijrochi] : [];
-  const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat;
-  const e = expected;
-  return row("Ijrochi", ij.length ? esc(ij.join(", ")) : '<span class="nil">topilmadi</span>',
-             e ? JSON.stringify(ij.map(norm).sort()) === JSON.stringify(e.ijrochi.map(norm).sort()) : undefined) +
-         row("Muddat", md ? esc(md) : '<span class="nil">yo\'q</span>', e ? norm(md) === norm(e.muddat || "") : undefined) +
-         row("Turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
+  const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat, e = expected;
+  return fld("Ijrochi", ij.length ? esc(ij.join(", ")) : '<span class="nil">topilmadi</span>', e ? JSON.stringify(ij.map(norm).sort()) === JSON.stringify(e.ijrochi.map(norm).sort()) : undefined) +
+         fld("Muddat", md ? esc(md) : '<span class="nil">yo\'q</span>', e ? norm(md) === norm(e.muddat || "") : undefined) +
+         fld("Turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
 }
-function paint(d) {
-  $("r0").innerHTML = col(d.oldin); $("r1").innerHTML = col(d.keyin);
+function paint(d) { $("r0").innerHTML = col(d.oldin); $("r1").innerHTML = col(d.keyin);
   $("m0").textContent = (d.oldin.ms / 1000).toFixed(1) + " s"; $("m1").textContent = (d.keyin.ms / 1000).toFixed(1) + " s";
-  $("c0").style.opacity = $("c1").style.opacity = 1;
-}
+  $("c0").style.opacity = $("c1").style.opacity = 1; }
 async function analyse(text, quiet) {
   if (cache[text]) return cache[text];
   const t = Date.now();
-  if (!quiet) { $("go2").disabled = true; $("c0").style.opacity = $("c1").style.opacity = .4; }
-  const tick = quiet ? null : setInterval(() => { $("w2").textContent = `Model ishlayapti… ${Math.round((Date.now() - t) / 1000)} s`; }, 300);
+  if (!quiet) { $("go2").disabled = true; $("c0").style.opacity = $("c1").style.opacity = .35; }
+  const tick = quiet ? null : setInterval(() => { $("w2").textContent = `model ishlayapti · ${Math.round((Date.now() - t) / 1000)} s`; }, 300);
   try {
     const r = await fetch("/adliya/trening/api/tahlil", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({text})});
     if (!r.ok) throw new Error("model javob bermadi");
-    const d = await r.json(); cache[text] = d; return d;
+    return (cache[text] = await r.json());
   } finally { if (tick) { clearInterval(tick); $("w2").textContent = ""; $("go2").disabled = false; } }
 }
-async function showModel() {
-  const text = q2.value.trim();
-  if (cache[text]) return paint(cache[text]);
-  try { paint(await analyse(text)); } catch (e) { $("w2").textContent = "GPU uyg'onmoqda, birozdan keyin qayta bosing"; }
-}
+async function showModel() { const text = q2.value.trim(); if (cache[text]) return paint(cache[text]); try { paint(await analyse(text)); } catch (e) { $("w2").textContent = "GPU uyg'onmoqda"; } }
 $("go2").onclick = async () => { const text = q2.value.trim(); delete cache[text]; try { paint(await analyse(text)); } catch (e) { $("w2").textContent = e.message; } };
-q2.addEventListener("input", () => { expected = norm(q2.value) === norm(S2.text) ? S2.kutilgan : null; $("c0").style.opacity = $("c1").style.opacity = .4; });
+q2.addEventListener("input", () => { expected = norm(q2.value) === norm(S.text) ? S.k : null; $("c0").style.opacity = $("c1").style.opacity = .35; });
 
-/* GPU'ni uyg'otish: sahifa ochilishi bilan 2-slayd natijasi oldindan hisoblanadi */
-if (!P) {
-  const t = Date.now();
-  const msg = g => { setGpu(g); if (bc) bc.postMessage({gpu: g}); };
-  msg({text: "GPU uyg'onmoqda…"});
-  analyse(S2.text, true).then(() => msg({ok: 1, text: `GPU tayyor (${Math.round((Date.now() - t) / 1000)} s)`}))
-                        .catch(() => msg({err: 1, text: "GPU javob bermadi"}));
-}
-
-/* 3-slayd: qalqon (yozgan sari) */
+/* ---------- jonli: anonimlashtirish ---------- */
 const q3 = $("q3");
-q3.value = "Assalomu alaykum. Men Karimov Akmal Rustam o'g'li, pasportim AB4567123, tel +998 90 123 45 67. Bunyodkor ko'chasi, 12-uyda yashayman. Davlat boji qaytarilmadi.";
+q3.value = "Assalomu alaykum. Men Karimov Akmal Rustam o'g'li, pasportim AB4567123, tel +998 90 123 45 67. Bunyodkor ko'chasi, 12-uyda yashayman.";
 let tm3, ac3;
 async function mask() {
   if (ac3) ac3.abort(); ac3 = new AbortController();
@@ -344,20 +435,22 @@ async function mask() {
     const r = await fetch("/adliya/qalqon/api/mask", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({text: q3.value || " "}), signal: ac3.signal});
     if (r.status === 429 || r.status === 503) { setTimeout(mask, 700); return; }
     const d = await r.json();
-    $("o3").innerHTML = esc(d.masked).replace(/\[([A-Z_]+_\d+)\]/g, (m, k) => `<span class="rd">${k}</span>`);
-    $("st3").textContent = `${Object.keys(d.key).length} ta yashirildi · ${d.ms} ms`;
+    $("o3").innerHTML = esc(d.masked).replace(/\[([A-Z_]+_\d+)\]/g, (m, k) => `<span class="tok">${k}</span>`);
+    $("k3").innerHTML = Object.entries(d.key).map(([a, b]) => `<span><span class="tok">${esc(a.slice(1, -1))}</span> ${esc(b)}</span>`).join("");
   } catch (e) {}
 }
 q3.addEventListener("input", () => { clearTimeout(tm3); tm3 = setTimeout(mask, 200); });
 
-/* 4-slayd: ustunlar */
-const CMP = [["Rasmiy javobga mos", 27.5, 75], ["Rasmiy javobga zid", 7.5, 0], ["Bazada yo'q savolga «javob yo'q»", 42, 100]];
-$("bars").innerHTML = CMP.map(([n, a, b]) => `<div class="card"><h3>${n}</h3>
-  <div class="br"><span>RAG'siz</span><span class="t"><i data-w="${a}"></i></span><b>${String(a).replace(".", ",")}%</b></div>
-  <div class="br r"><span>RAG</span><span class="t"><i data-w="${b}"></i></span><b>${b}%</b></div></div>`).join("");
-
-const start = parseInt(location.hash.slice(1), 10);
-document.fonts.ready.then(() => { go(!P && start >= 1 && start <= SL.length ? start - 1 : 0); mask(); });
+/* ---------- ishga tushirish ---------- */
+document.fonts.ready.then(() => {
+  if (!P) { drawAll(); SEC.forEach(s => io.observe(s)); mask(); }
+});
+if (!P) {
+  const t = Date.now(), msg = g => { if (bc) bc.postMessage({gpu: g}); };
+  analyse(S.text, true).then(d => { msg({ok: 1, text: `GPU tayyor (${Math.round((Date.now() - t) / 1000)} s)`}); if (cur === 1) paint(d); })
+                       .catch(() => msg({err: 1, text: "GPU javob bermadi"}));
+  setInterval(() => msg(cache[S.text] ? {ok: 1, text: "GPU tayyor"} : {text: "GPU uyg'onmoqda…"}), 4000);
+}
 </script>
 </body>
 </html>
