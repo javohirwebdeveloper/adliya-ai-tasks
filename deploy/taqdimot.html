@@ -99,7 +99,7 @@ section.in{opacity:1;transform:none}
 .res{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,calc(1.6 * var(--u)),28px);margin-top:8px}
 .res .ch{font-weight:600;font-size:clamp(15px,calc(1.1 * var(--u)),19px);display:flex;justify-content:space-between;margin-bottom:4px}
 .res .after .ch{color:var(--g)}
-.f{display:grid;grid-template-columns:90px 1fr 26px;gap:10px;padding:clamp(4px,.65vh,7px) 0;font-size:clamp(15px,calc(1.05 * var(--u)),18px);border-top:1px dashed #d5d8dc}
+.f{display:grid;grid-template-columns:112px 1fr 26px;gap:10px;padding:clamp(4px,.65vh,7px) 0;font-size:clamp(15px,calc(1.05 * var(--u)),18px);border-top:1px dashed #d5d8dc}
 .f:first-of-type{border-top:0}
 .f .k{color:var(--mu)}
 .ok{color:var(--g);font-weight:600;text-align:right}.no{color:var(--r);font-weight:600;text-align:right}.nil{color:var(--fa)}
@@ -151,7 +151,7 @@ html.kursor,html.kursor *{cursor:none!important}
   <div class="chain">
     <div class="step"><div class="top">31% → 100%</div><div class="box" data-go="1">Fine-tuning<small>Qwen3-4B, QLoRA</small></div></div>
     <div class="gap"></div>
-    <div class="step"><div class="top">95-97%</div><div class="box" data-go="2">Anonimlashtirish<small>shaxsga doir ma'lumot</small></div></div>
+    <div class="step"><div class="top">75% → 95%</div><div class="box" data-go="2">Anonimlashtirish<small>shaxsiy ma'lumotni yashirish</small></div></div>
     <div class="gap"></div>
     <div class="step"><div class="top">27% → 75%</div><div class="box" data-go="3">RAG<small>bot bazasi + Gemma 4</small></div></div>
   </div>
@@ -159,11 +159,11 @@ html.kursor,html.kursor *{cursor:none!important}
 
 <!-- 1 · fine-tuning -->
 <section id="s1">
-  <h2>Fine-tuning: rasmiy xatdan ijrochi va muddat</h2>
+  <h2>Fine-tuning: xatdan ijrochi va muddatni ajratish</h2>
   <div class="chain">
     <div class="step"><div class="top">gap → JSON</div><div class="box">1600 ta misol</div></div>
     <div class="arrow"></div>
-    <div class="step"><div class="top">1.5% parametr</div><div class="box b">Qwen3-4B + LoRA<small>4 bit, asosiy model muzlatilgan</small></div></div>
+    <div class="step"><div class="top">1.5% parametr</div><div class="box b">Qwen3-4B + LoRA<small>4 bit, asosiy model o'zgarmaydi</small></div></div>
     <div class="arrow"></div>
     <div class="step"><div class="top">10 daqiqa</div><div class="box">1 × L4 GPU<small>$0.24</small></div></div>
     <div class="arrow"></div>
@@ -174,13 +174,13 @@ html.kursor,html.kursor *{cursor:none!important}
       <div class="lbl">Muammo</div>
       <div class="sent"><span class="mark g"><span class="note">ijrochi</span>Hududiy adliya boshqarmalari</span> ushbu buyruq ijrosi to'g'risidagi ma'lumotni
         <span class="mark b"><span class="note">muddat</span>2026-yil 25-dekabrgacha</span>
-        <span class="mark r"><span class="note">qabul qiluvchi, ijrochi emas</span>Ijro nazorati bo'limiga</span> taqdim etsin.</div>
-      <div class="lbl" style="margin-top:auto">O'qitilmagan model qabul qiluvchini ijrochi deb oladi</div>
+        <span class="mark r"><span class="note">ijrochi emas</span>Ijro nazorati bo'limiga</span> taqdim etsin.</div>
+      <div class="lbl" style="margin-top:auto">Oddiy model ma'lumot kimga topshirilsa, o'shani ijrochi deb oladi</div>
     </div>
     <div class="box">
-      <div class="lbl">Natija · 13 ta real gap (o'qitishda yo'q)</div>
+      <div class="lbl">Natija · o'qitishda bo'lmagan 13 ta haqiqiy gap</div>
       <div class="chart axis" id="ch1"></div>
-      <div class="legend"><span class="o"><i></i>oldin</span><span class="k"><i></i>keyin</span><span style="margin-left:auto">150 ta yangi gap: 21% → <b style="color:var(--g);font-weight:400">94%</b></span></div>
+      <div class="legend"><span class="o"><i></i>oldin</span><span class="k"><i></i>keyin</span><span style="margin-left:auto">150 ta yangi gapda: 21% → <b style="color:var(--g);font-weight:400">94%</b></span></div>
     </div>
   </div>
   <div class="box live">
@@ -206,7 +206,7 @@ html.kursor,html.kursor *{cursor:none!important}
     <div class="arrow"></div>
     <div class="step"><div class="top">[ISM_1]</div><div class="box">LLM</div></div>
     <div class="arrow"></div>
-    <div class="step"><div class="top">kalit</div><div class="box g">Asl holiga qaytarish<small>Hurmatli Karimov Akmal</small></div></div>
+    <div class="step"><div class="top">javob kelgach</div><div class="box g">Joyiga qaytarish<small>Hurmatli Karimov Akmal</small></div></div>
   </div>
   <div class="box live">
     <div class="lbl">Jonli sinov</div>
@@ -219,21 +219,21 @@ html.kursor,html.kursor *{cursor:none!important}
   </div>
   <div class="grid3">
     <div class="box">
-      <div class="lbl">Test · 3 marta, matnlarni boshqa model yozgan</div>
+      <div class="lbl">3 marta sinov · matnlarni boshqa model yozgan</div>
       <div class="chart axis" id="ch2" style="height:clamp(140px,19vh,200px)"></div>
     </div>
     <div class="box">
-      <div class="lbl">Ortiqcha yashirish</div>
+      <div class="lbl">Oddiy matnda ortiqcha yashirish</div>
       <div class="big" style="margin-top:14px">0 <span style="font-size:.5em;color:var(--mu)">/ 4038 matn</span></div>
-      <div class="lbl" style="margin-top:22px">Yozilish shakllari</div>
+      <div class="lbl" style="margin-top:22px">Har xil yozilishlar</div>
       <div class="big" style="margin-top:10px">333 <span style="font-size:.5em;color:var(--mu)">/ 333</span></div>
     </div>
     <div class="box y">
       <div class="lbl" style="color:var(--ink)">Qanday ishlaydi</div>
-      <h3 style="margin-top:12px">Qoidalar, model emas</h3>
-      <div class="lbl" style="margin-top:6px">format, Luhn, sana, ismlar, kontekst</div>
+      <h3 style="margin-top:12px">Model emas, qoidalar</h3>
+      <div class="lbl" style="margin-top:6px">format, karta tekshiruvi, sana, ismlar, kontekst</div>
       <h3 style="margin-top:20px">Keyingi qadam: NER</h3>
-      <div class="lbl" style="margin-top:6px">qoidalar ~97% da to'xtaydi</div>
+      <div class="lbl" style="margin-top:6px">qolganini topish uchun model kerak</div>
     </div>
   </div>
 </section>
@@ -254,9 +254,9 @@ html.kursor,html.kursor *{cursor:none!important}
   </div>
   <div class="grid2">
     <div class="box">
-      <div class="lbl">Natija · 180 ta test savol</div>
+      <div class="lbl">Natija · 180 ta sinov savoli</div>
       <div class="chart axis" id="ch3"></div>
-      <div class="legend"><span class="o"><i></i>RAG'siz</span><span class="k"><i></i>RAG bilan</span></div>
+      <div class="legend"><span class="o"><i></i>Bazasiz</span><span class="k"><i></i>Baza bilan</span></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:clamp(14px,1.6vw,24px)">
       <div class="box">
@@ -264,11 +264,11 @@ html.kursor,html.kursor *{cursor:none!important}
         <div class="ans">«Bolamiz yo'q, kelishib ajrashmoqchimiz. ZAGSda bo'ladimi?»</div>
       </div>
       <div class="box r">
-        <div class="lbl" style="color:var(--r)">RAG'siz Gemma ✗</div>
+        <div class="lbl" style="color:var(--r)">Bazasiz ✗</div>
         <div class="ans">«…ajrashish faqat sud tartibida amalga oshiriladi»</div>
       </div>
       <div class="box g">
-        <div class="lbl" style="color:var(--g)">RAG bilan ✓ · manba [2]</div>
+        <div class="lbl" style="color:var(--g)">Baza bilan ✓ · manba [2]</div>
         <div class="ans">«FHDYo bo'limiga pasport, nikoh guvohnomasi va boj kvitansiyasi bilan murojaat qilinadi»</div>
       </div>
     </div>
@@ -278,7 +278,7 @@ html.kursor,html.kursor *{cursor:none!important}
 <!-- 4 · keyingi qadam -->
 <section id="s4" class="end">
   <h2>Keyingi qadam</h2>
-  <div class="sub">Haqiqiy murojaatlarda NER modeli</div>
+  <div class="sub">Ism va manzilni topadigan model</div>
   <div class="chain">
     <div class="step"><div class="top">real ma'lumot</div><div class="box">Murojaatlar<small>bo'limdagi matnlar</small></div></div>
     <div class="arrow"></div>
@@ -326,9 +326,9 @@ function chart(id, groups) {
     ${b === null ? "" : `<div class="bar g" style="height:${Math.max(b, 1.5)}%"><span class="v" style="color:var(--g)">${b}%</span></div>`}
   </div><div class="n">${n}</div></div>`).join("");
 }
-chart("ch1", [["Ijrochi", 54, 100], ["Muddat", 85, 100], ["Turi", 62, 100], ["Hammasi", 31, 100]]);
-chart("ch3", [["Rasmiy javobga mos", 27.5, 75], ["Rasmiy javobga zid", 7.5, 0], ["«Bazada yo'q» dedi", 42, 100]]);
-$("ch2").innerHTML = [["1-test", 74.9, "gr"], ["2-test", 95.5, "gr"], ["3-test", 95.3, "g"]].map(([n, v, c]) => `<div class="grp"><div class="bars">
+chart("ch1", [["Ijrochi", 54, 100], ["Muddat", 85, 100], ["Muddat turi", 62, 100], ["Hammasi to'g'ri", 31, 100]]);
+chart("ch3", [["To'g'ri javob", 27.5, 75], ["Rasmiy javobga zid", 7.5, 0], ["«Bazada yo'q» dedi", 42, 100]]);
+$("ch2").innerHTML = [["1-sinov", 74.9, "gr"], ["2-sinov", 95.5, "gr"], ["3-sinov", 95.3, "g"]].map(([n, v, c]) => `<div class="grp"><div class="bars">
   <div class="bar ${c}" style="height:${v}%"><span class="v"${c === "g" ? ' style="color:var(--g)"' : ""}>${String(v).replace(".", ",")}%</span></div></div><div class="n">${n}</div></div>`).join("");
 
 /* ---------- navigatsiya ---------- */
@@ -390,7 +390,7 @@ function col(r) {
   const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat, e = expected;
   return fld("Ijrochi", ij.length ? esc(ij.join(", ")) : '<span class="nil">topilmadi</span>', e ? JSON.stringify(ij.map(norm).sort()) === JSON.stringify(e.ijrochi.map(norm).sort()) : undefined) +
          fld("Muddat", md ? esc(md) : '<span class="nil">yo\'q</span>', e ? norm(md) === norm(e.muddat || "") : undefined) +
-         fld("Turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
+         fld("Muddat turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
 }
 function paint(d) { $("r0").innerHTML = col(d.oldin); $("r1").innerHTML = col(d.keyin);
   $("m0").textContent = (d.oldin.ms / 1000).toFixed(1) + " s"; $("m1").textContent = (d.keyin.ms / 1000).toFixed(1) + " s";
