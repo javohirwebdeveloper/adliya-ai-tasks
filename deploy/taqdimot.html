@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bir hafta, uch natija · Javohir Jumaboyev</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Plex;font-weight:400;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-ext-400-normal.woff2) format("woff2");unicode-range:U+0460-052F}
+@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Plex;font-weight:600;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-sans-cyrillic-ext-600-normal.woff2) format("woff2");unicode-range:U+0460-052F}
+@font-face{font-family:PlexMono;font-weight:500;font-display:block;src:url(/adliya/qalqon/f/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+
+:root{--bg:#f4f3ee;--paper:#fff;--ink:#16181d;--muted:#5e6470;--faint:#8a8f99;--line:#e2e0d8;--track:#e9e7e0;
+  --accent:#0d5b4a;--accent-soft:#e1eee8;--bad:#a3341f;--bad-soft:#f7e8e3;--bar:#1c1e24;
+  --sans:Plex,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:PlexMono,ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:400 24px/1.45 var(--sans);overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;transform-origin:center center}
+.slide{position:absolute;inset:0;padding:72px 96px 96px;display:flex;flex-direction:column;opacity:0;pointer-events:none;
+  transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}
+.slide.on{opacity:1;pointer-events:auto;transform:none}
+.kick{font:600 18px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+h1{font-weight:600;font-size:96px;line-height:1.02;letter-spacing:-.025em;margin:0}
+h2{font-weight:600;font-size:60px;line-height:1.06;letter-spacing:-.02em;margin:0}
+.sub{font-size:28px;color:var(--muted);margin-top:22px}
+.foot{position:absolute;left:96px;right:96px;bottom:40px;display:flex;justify-content:space-between;font-size:18px;color:var(--faint)}
+.big{font-weight:600;font-size:112px;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.big .ar{color:var(--faint);font-weight:400;margin:0 .06em}
+.big .to{color:var(--accent)}
+.lbl{font-size:22px;color:var(--muted);margin-top:12px}
+.pill{display:inline-block;font:600 18px/1 var(--sans);padding:11px 16px;border-radius:999px;background:var(--track);margin:0 8px 8px 0}
+.pill.dark{background:var(--ink);color:#fff}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px}
+.rd{background:var(--bar);color:#f1efe8;font:500 .8em/1 var(--mono);padding:.24em .5em .22em;border-radius:6px;white-space:nowrap;vertical-align:.06em}
+.ok{color:var(--accent);font-weight:600}.no{color:var(--bad);font-weight:600}
+#prog{position:fixed;left:0;bottom:0;height:4px;background:var(--accent);transition:width .45s ease;z-index:5}
+#nav{position:fixed;right:18px;bottom:14px;display:flex;gap:6px;z-index:6;opacity:.35;transition:opacity .2s}
+#nav:hover{opacity:1}
+:fullscreen #nav{display:none}
+#nav button{border:0;background:var(--paper);color:var(--ink);font:600 15px/1 var(--sans);padding:9px 12px;border-radius:8px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+textarea{font:inherit;color:inherit;background:none;border:0;outline:0;resize:none;width:100%}
+.go{border:0;background:var(--ink);color:#fff;font:600 20px/1 var(--sans);padding:16px 24px;border-radius:12px;cursor:pointer}
+.go:disabled{opacity:.5;cursor:wait}
+
+/* 1: sarlavha */
+.s1 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:auto}
+.s1 .trio .card{padding:36px 36px 34px}
+.s1 .trio .big{font-size:76px}
+.s1 .trio .lbl{font-size:24px;color:var(--ink);margin-top:18px;font-weight:600}
+.s1 .trio .lbl small{display:block;font-weight:400;color:var(--muted);font-size:20px;margin-top:4px}
+.motif{margin-top:30px;font-size:30px;color:var(--muted)}
+
+/* 2: model o'qitish */
+.s2 .grid{display:grid;grid-template-columns:520px 1fr;gap:56px;margin-top:34px;flex:1;min-height:0}
+.s2 .stat+.stat{margin-top:38px}
+.s2 .stat .big{font-size:92px}
+.s2 .live{display:flex;flex-direction:column;padding:28px 30px;min-height:0}
+.s2 .q{font-size:24px;line-height:1.45;border-bottom:1px solid var(--line);padding-bottom:18px}
+.s2 .act{display:flex;align-items:center;gap:16px;margin-top:16px}
+.s2 .wait{font-size:18px;color:var(--muted)}
+.s2 .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.s2 .col{border:1px solid var(--line);border-radius:16px;padding:16px 20px;transition:opacity .3s}
+.s2 .col.after{border-color:#b9d3c9;background:#fbfdfc}
+.s2 .ch{font:600 15px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);display:flex;justify-content:space-between}
+.s2 .col.after .ch{color:var(--accent)}
+.s2 .row{display:grid;grid-template-columns:96px 1fr 26px;gap:10px;padding:9px 0;border-top:1px solid #efede7;font-size:20px;align-items:start}
+.s2 .row:first-of-type{border-top:0}
+.s2 .row .k{color:var(--muted);font-size:17px;padding-top:3px}
+.s2 .row .m{text-align:right}
+.s2 .nil{color:var(--faint)}
+
+/* 3: qalqon */
+.s3 .duo{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;margin-top:34px;flex:1;min-height:0}
+.s3 .pane{padding:26px 30px;display:flex;flex-direction:column}
+.s3 .ph{font:600 15px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;display:flex;justify-content:space-between}
+.s3 .ph span{letter-spacing:0;text-transform:none;font-weight:400;font-size:17px;color:var(--muted)}
+.s3 textarea,.s3 .out{font-size:27px;line-height:1.55;flex:1}
+.s3 .out{white-space:pre-wrap}
+.s3 .arrow{display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--faint)}
+.s3 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border-top:1px solid var(--line)}
+.s3 .stats div{padding:18px 0 0}
+.s3 .stats b{display:block;font-size:44px;font-weight:600;letter-spacing:-.02em}
+.s3 .stats span{font-size:19px;color:var(--muted)}
+
+/* 4: RAG */
+.s4 .pipe{display:flex;align-items:center;gap:14px;margin-top:30px;flex-wrap:wrap}
+.s4 .pipe .st{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 20px;font-size:22px;font-weight:600}
+.s4 .pipe .st.acc{background:var(--accent);border-color:var(--accent);color:#fff}
+.s4 .pipe .ar{color:var(--faint);font-size:26px}
+.s4 .bars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.s4 .bars .card{padding:24px 26px}
+.s4 .bars h3{margin:0 0 18px;font-size:22px;font-weight:600}
+.s4 .br{display:grid;grid-template-columns:84px 1fr 82px;align-items:center;gap:12px;margin-top:12px;font-size:18px;color:var(--muted)}
+.s4 .br .t{height:14px;background:var(--track);border-radius:7px;overflow:hidden}
+.s4 .br .t i{display:block;height:100%;width:0;border-radius:7px;background:#a3a8b0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.s4 .br.r{color:var(--ink);font-weight:600}.s4 .br.r .t i{background:var(--accent)}
+.s4 .br b{font-weight:600;font-size:24px;text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+.s4 .ex{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:20px;margin-top:28px}
+.s4 .ex .card{padding:20px 24px;font-size:20px}
+.s4 .ex .h{font:600 14px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;color:var(--faint)}
+.s4 .ex .bad{border-color:#edd3cb;border-left:5px solid var(--bad)}.s4 .ex .bad .h{color:var(--bad)}
+.s4 .ex .good{border-color:#b9d3c9;border-left:5px solid var(--accent)}.s4 .ex .good .h{color:var(--accent)}
+
+/* 5: taklif */
+.s5 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.s5 .steps .card{padding:30px 32px}
+.s5 .steps .n{font:600 18px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.s5 .steps .t{font-size:30px;font-weight:600;margin-top:14px;line-height:1.25}
+.s5 .end{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end}
+.s5 .links{font-size:26px;line-height:1.7}
+.s5 .links b{font-weight:600}
+.s5 .badge{display:inline-flex;align-items:center;gap:12px;font-size:24px;font-weight:600;padding:16px 22px;border-radius:14px;background:var(--accent-soft);color:var(--accent)}
+
+/* suflyor oynasi */
+body.p{overflow:auto;font-size:20px}
+body.p #stage,body.p #nav,body.p #prog{display:none}
+#pres{display:none;max-width:980px;margin:0 auto;padding:28px}
+body.p #pres{display:block}
+#pres .top{display:flex;justify-content:space-between;align-items:center;font-size:18px;color:var(--muted)}
+#pres .tm{font:600 44px/1 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums}
+#pres .note{font-size:34px;line-height:1.45;margin:24px 0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 32px}
+#pres .next{font-size:19px;color:var(--muted)}
+#pres .ctl{display:flex;gap:10px;margin-top:18px}
+#pres .ctl button{border:0;background:var(--ink);color:#fff;font:600 18px/1 var(--sans);padding:14px 20px;border-radius:10px;cursor:pointer}
+#pres .gpu{display:inline-flex;align-items:center;gap:8px}
+#pres .dot{width:12px;height:12px;border-radius:50%;background:#c9a227}
+#pres .dot.ok{background:var(--accent)}#pres .dot.no{background:var(--bad)}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<section class="slide s1">
+  <div class="kick">Adliya AKT · sun'iy intellekt modellarini o'qitish bo'limi</div>
+  <h1>Bir hafta,<br>uch natija</h1>
+  <div class="sub">Javohir Jumaboyev · AI muhandis</div>
+  <div class="trio">
+    <div class="card"><div class="big">31%<span class="ar">→</span><span class="to">100%</span></div>
+      <div class="lbl">Model o'qitish<small>Qwen3-4B, QLoRA</small></div></div>
+    <div class="card"><div class="big"><span class="to">95-97%</span></div>
+      <div class="lbl">Shaxsiy ma'lumot qalqoni<small>ko'r testda yashirildi</small></div></div>
+    <div class="card"><div class="big">27%<span class="ar">→</span><span class="to">75%</span></div>
+      <div class="lbl">RAG<small>bot bazasi + Gemma 4</small></div></div>
+  </div>
+</section>
+
+<section class="slide s2">
+  <div class="kick">01 · Model o'qitish</div>
+  <h2>Topshiriqdan ijrochi va muddat</h2>
+  <div class="grid">
+    <div>
+      <div class="stat"><div class="big">31%<span class="ar">→</span><span class="to">100%</span></div><div class="lbl">13 ta haqiqiy hujjat gapi</div></div>
+      <div class="stat"><div class="big">21%<span class="ar">→</span><span class="to">94%</span></div><div class="lbl">150 ta yangi gap</div></div>
+      <div style="margin-top:40px"><span class="pill dark">Qwen3-4B</span><span class="pill">QLoRA</span><span class="pill">1.5% parametr</span><span class="pill">1 GPU · 10 daqiqa</span></div>
+    </div>
+    <div class="card live">
+      <textarea class="q" id="q2" rows="3" spellcheck="false"></textarea>
+      <div class="act"><button class="go" id="go2" type="button">Tahlil qilish</button><span class="wait" id="w2"></span></div>
+      <div class="cols">
+        <div class="col" id="c0"><div class="ch">O'qitishdan oldin <span id="m0"></span></div><div id="r0"></div></div>
+        <div class="col after" id="c1"><div class="ch">O'qitishdan keyin <span id="m1"></span></div><div id="r1"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide s3">
+  <div class="kick">02 · Shaxsiy ma'lumot qalqoni</div>
+  <h2>AI ism va pasportni ko'rmaydi</h2>
+  <div class="duo">
+    <div class="card pane"><div class="ph">Fuqaro yozadi</div><textarea id="q3" spellcheck="false"></textarea></div>
+    <div class="arrow">→</div>
+    <div class="card pane"><div class="ph">AI ko'radi <span id="st3"></span></div><div class="out" id="o3"></div></div>
+  </div>
+  <div class="stats">
+    <div><b>95-97%</b><span>ko'r testda yashirildi</span></div>
+    <div><b>0</b><span>ortiqcha, 4038 ta matnda</span></div>
+    <div><b>1-3 ms</b><span>bitta matnga, GPU'siz</span></div>
+    <div><b>3</b><span>lotin, kirill, rus</span></div>
+  </div>
+</section>
+
+<section class="slide s4">
+  <div class="kick">03 · RAG</div>
+  <h2>Model faqat manbadan yozadi</h2>
+  <div class="pipe">
+    <span class="st">Savol</span><span class="ar">→</span><span class="st">Qalqon</span><span class="ar">→</span>
+    <span class="st">Bazadan 3 manba</span><span class="ar">→</span><span class="st acc">Gemma 4</span><span class="ar">→</span><span class="st">Javob + manba</span>
+  </div>
+  <div class="bars" id="bars"></div>
+  <div class="ex">
+    <div class="card"><div class="h">Savol</div>«Bolamiz yo'q, kelishib ajrashmoqchimiz. ZAGSda bo'ladimi?»</div>
+    <div class="card bad"><div class="h">RAG'siz Gemma ✗</div>«Faqat sud tartibida»</div>
+    <div class="card good"><div class="h">RAG bilan ✓</div>«FHDYo orqali: pasport, nikoh guvohnomasi, boj kvitansiyasi» · manba [2]</div>
+  </div>
+</section>
+
+<section class="slide s5">
+  <div class="kick">04 · Taklif</div>
+  <h1>1 oylik sinov</h1>
+  <div class="steps">
+    <div class="card"><div class="n">1-2 hafta</div><div class="t">Real murojaatlar, qalqondan o'tkazilgan</div></div>
+    <div class="card"><div class="n">3 hafta</div><div class="t">Ism va manzilni topadigan modelni o'qitish</div></div>
+    <div class="card"><div class="n">4 hafta</div><div class="t">Ko'r test, o'lchangan natija</div></div>
+  </div>
+  <div class="end">
+    <div class="links"><b>javi.uz/adliya</b><br>github.com/javohirwebdeveloper/adliya-ai-tasks<br>+998 97 548 07 10</div>
+    <div class="badge">● O'z serverda, internetsiz</div>
+  </div>
+</section>
+
+</div>
+<div id="prog"></div>
+<div id="nav"><button id="pv" type="button">←</button><button id="nx" type="button">→</button><button id="fs" type="button">⛶</button></div>
+
+<div id="pres">
+  <div class="top"><span id="ps">1 / 5</span><span class="gpu"><span class="dot" id="gd"></span><span id="gt">GPU tekshirilmoqda</span></span><span class="tm" id="tm">0:00</span></div>
+  <div class="note" id="pn"></div>
+  <div class="next" id="px"></div>
+  <div class="ctl"><button id="pp" type="button">← Oldingi</button><button id="pnx" type="button">Keyingi →</button><button id="pr" type="button">Vaqtni boshlash</button></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const norm = s => String(s ?? "").replace(/[‘’ʻʼ`´]/g, "'").toLowerCase().replace(/\s+/g, " ").replace(/^[ .,;:]+|[ .,;:]+$/g, "");
+const SL = [...document.querySelectorAll(".slide")];
+const NOTES = [
+  ["8 s", "Assalomu alaykum, men Javohir Jumaboyev. Suhbatdan keyin bir hafta ichida bo'limingiz ishiga yaqin uchta narsa qildim."],
+  ["32 s", "Birinchisi, model o'qitish. Qwen3-4B modelini QLoRA usulida rasmiy xatdan ijrochi va muddatni ajratishga o'rgatdim. Chapda o'qitilmagan model: hujjat kimga yuborilishini ijrochi deb oldi. O'ngda o'qitilgani: to'g'ri topdi. Haqiqiy gaplarda 31 foizdan 100 foizga, bitta GPU'da 10 daqiqada."],
+  ["20 s", "Ikkinchisi, shaxsiy ma'lumot qalqoni. (yozing) Ism, pasport, telefon darhol yashiriladi: AI ularni ko'rmaydi, javob qaytgach joyiga qo'yiladi. Boshqa model yozgan ko'r testda 95-97 foiz."],
+  ["18 s", "Uchinchisi, RAG: bot bazasini Gemma 4 ga uladim, model faqat topilgan manbadan yozadi. Rasmiy javobga mos javob 27 foizdan 75 foizga oshdi, zid javob nolga tushdi."],
+  ["12 s", "Hammasi o'z serverda, internetsiz ishlaydi. Bir oylik sinov muddatida real murojaatlarda shunday modelni o'qitib, o'lchab beraman. Rahmat."],
+];
+const P = new URLSearchParams(location.search).has("p");
+const bc = "BroadcastChannel" in window ? new BroadcastChannel("taqdimot") : null;
+let cur = 0;
+
+/* sahna o'lchami */
+function fit() { const s = Math.min(innerWidth / 1600, innerHeight / 900); $("stage").style.transform = `translate(-50%,-50%) scale(${s})`; }
+addEventListener("resize", fit); fit();
+
+function go(i, from) {
+  cur = Math.max(0, Math.min(SL.length - 1, i));
+  SL.forEach((s, k) => s.classList.toggle("on", k === cur));
+  $("prog").style.width = ((cur + 1) / SL.length * 100) + "%";
+  if (!P) history.replaceState(null, "", "#" + (cur + 1));
+  if (cur === 1) showModel();
+  if (cur === 3) setTimeout(() => document.querySelectorAll("#bars i").forEach(i => i.style.width = i.dataset.w + "%"), 150);
+  else document.querySelectorAll("#bars i").forEach(i => i.style.width = "0");
+  renderPres();
+  if (bc && from !== "bc") bc.postMessage({slide: cur});
+}
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "TEXTAREA") { if (e.key === "Escape") e.target.blur(); return; }
+  if (["ArrowRight", "PageDown", " ", "Enter"].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft", "PageUp", "Backspace"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") go(0); else if (e.key === "End") go(SL.length - 1);
+  else if (e.key === "f" || e.key === "F") toggleFs();
+  else if (e.key === "p" || e.key === "P") window.open(location.pathname + "?p=1", "suflyor", "width=1000,height=720");
+});
+const toggleFs = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+$("pv").onclick = () => go(cur - 1); $("nx").onclick = () => go(cur + 1); $("fs").onclick = toggleFs;
+if (bc) bc.onmessage = e => { if (typeof e.data.slide === "number") go(e.data.slide, "bc"); if (e.data.gpu) setGpu(e.data.gpu); };
+
+/* suflyor */
+let t0 = null;
+function renderPres() {
+  if (!P) return;
+  $("ps").textContent = `${cur + 1} / ${SL.length} · ${NOTES[cur][0]}`;
+  $("pn").textContent = NOTES[cur][1];
+  $("px").textContent = cur + 1 < SL.length ? "Keyingi: " + SL[cur + 1].querySelector(".kick").textContent : "Oxirgi slayd";
+}
+if (P) {
+  document.body.classList.add("p");
+  $("pp").onclick = () => go(cur - 1); $("pnx").onclick = () => go(cur + 1);
+  $("pr").onclick = () => { t0 = Date.now(); };
+  setInterval(() => { if (!t0) return; const s = Math.floor((Date.now() - t0) / 1000);
+    $("tm").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; $("tm").style.color = s > 90 ? "var(--bad)" : ""; }, 250);
+}
+function setGpu(g) { if (!P) return; $("gd").className = "dot " + (g.ok ? "ok" : g.err ? "no" : ""); $("gt").textContent = g.text; }
+
+/* 2-slayd: o'qitilgan model (jonli) */
+const S2 = {text: "Hududiy adliya boshqarmalari ushbu buyruq ijrosi to'g'risidagi ma'lumotni 2026-yil 25-dekabrgacha Ijro nazorati bo'limiga taqdim etsin.",
+  kutilgan: {ijrochi: ["Hududiy adliya boshqarmalari"], muddat: "2026-yil 25-dekabrgacha", muddat_turi: "sana"}};
+const q2 = $("q2"); q2.value = S2.text;
+let cache = {}, expected = S2.kutilgan;
+const row = (k, v, ok) => `<div class="row"><span class="k">${k}</span><span>${v}</span><span class="m">${ok === undefined ? "" : ok ? '<span class="ok">✓</span>' : '<span class="no">✗</span>'}</span></div>`;
+function col(r) {
+  const j = r.json && typeof r.json === "object" ? r.json : null;
+  if (!j) return row("Natija", '<span class="nil">JSON emas</span>', expected ? false : undefined);
+  const ij = Array.isArray(j.ijrochi) ? j.ijrochi : j.ijrochi ? [j.ijrochi] : [];
+  const md = j.muddat == null || j.muddat === "null" ? "" : j.muddat;
+  const e = expected;
+  return row("Ijrochi", ij.length ? esc(ij.join(", ")) : '<span class="nil">topilmadi</span>',
+             e ? JSON.stringify(ij.map(norm).sort()) === JSON.stringify(e.ijrochi.map(norm).sort()) : undefined) +
+         row("Muddat", md ? esc(md) : '<span class="nil">yo\'q</span>', e ? norm(md) === norm(e.muddat || "") : undefined) +
+         row("Turi", j.muddat_turi ? esc(j.muddat_turi) : '<span class="nil">yo\'q</span>', e ? norm(j.muddat_turi) === norm(e.muddat_turi) : undefined);
+}
+function paint(d) {
+  $("r0").innerHTML = col(d.oldin); $("r1").innerHTML = col(d.keyin);
+  $("m0").textContent = (d.oldin.ms / 1000).toFixed(1) + " s"; $("m1").textContent = (d.keyin.ms / 1000).toFixed(1) + " s";
+  $("c0").style.opacity = $("c1").style.opacity = 1;
+}
+async function analyse(text, quiet) {
+  if (cache[text]) return cache[text];
+  const t = Date.now();
+  if (!quiet) { $("go2").disabled = true; $("c0").style.opacity = $("c1").style.opacity = .4; }
+  const tick = quiet ? null : setInterval(() => { $("w2").textContent = `Model ishlayapti… ${Math.round((Date.now() - t) / 1000)} s`; }, 300);
+  try {
+    const r = await fetch("/adliya/trening/api/tahlil", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({text})});
+    if (!r.ok) throw new Error("model javob bermadi");
+    const d = await r.json(); cache[text] = d; return d;
+  } finally { if (tick) { clearInterval(tick); $("w2").textContent = ""; $("go2").disabled = false; } }
+}
+async function showModel() {
+  const text = q2.value.trim();
+  if (cache[text]) return paint(cache[text]);
+  try { paint(await analyse(text)); } catch (e) { $("w2").textContent = "GPU uyg'onmoqda, birozdan keyin qayta bosing"; }
+}
+$("go2").onclick = async () => { const text = q2.value.trim(); delete cache[text]; try { paint(await analyse(text)); } catch (e) { $("w2").textContent = e.message; } };
+q2.addEventListener("input", () => { expected = norm(q2.value) === norm(S2.text) ? S2.kutilgan : null; $("c0").style.opacity = $("c1").style.opacity = .4; });
+
+/* GPU'ni uyg'otish: sahifa ochilishi bilan 2-slayd natijasi oldindan hisoblanadi */
+if (!P) {
+  const t = Date.now();
+  const msg = g => { setGpu(g); if (bc) bc.postMessage({gpu: g}); };
+  msg({text: "GPU uyg'onmoqda…"});
+  analyse(S2.text, true).then(() => msg({ok: 1, text: `GPU tayyor (${Math.round((Date.now() - t) / 1000)} s)`}))
+                        .catch(() => msg({err: 1, text: "GPU javob bermadi"}));
+}
+
+/* 3-slayd: qalqon (yozgan sari) */
+const q3 = $("q3");
+q3.value = "Assalomu alaykum. Men Karimov Akmal Rustam o'g'li, pasportim AB4567123, tel +998 90 123 45 67. Bunyodkor ko'chasi, 12-uyda yashayman. Davlat boji qaytarilmadi.";
+let tm3, ac3;
+async function mask() {
+  if (ac3) ac3.abort(); ac3 = new AbortController();
+  try {
+    const r = await fetch("/adliya/qalqon/api/mask", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({text: q3.value || " "}), signal: ac3.signal});
+    if (r.status === 429 || r.status === 503) { setTimeout(mask, 700); return; }
+    const d = await r.json();
+    $("o3").innerHTML = esc(d.masked).replace(/\[([A-Z_]+_\d+)\]/g, (m, k) => `<span class="rd">${k}</span>`);
+    $("st3").textContent = `${Object.keys(d.key).length} ta yashirildi · ${d.ms} ms`;
+  } catch (e) {}
+}
+q3.addEventListener("input", () => { clearTimeout(tm3); tm3 = setTimeout(mask, 200); });
+
+/* 4-slayd: ustunlar */
+const CMP = [["Rasmiy javobga mos", 27.5, 75], ["Rasmiy javobga zid", 7.5, 0], ["Bazada yo'q savolga «javob yo'q»", 42, 100]];
+$("bars").innerHTML = CMP.map(([n, a, b]) => `<div class="card"><h3>${n}</h3>
+  <div class="br"><span>RAG'siz</span><span class="t"><i data-w="${a}"></i></span><b>${String(a).replace(".", ",")}%</b></div>
+  <div class="br r"><span>RAG</span><span class="t"><i data-w="${b}"></i></span><b>${b}%</b></div></div>`).join("");
+
+const start = parseInt(location.hash.slice(1), 10);
+document.fonts.ready.then(() => { go(!P && start >= 1 && start <= SL.length ? start - 1 : 0); mask(); });
+</script>
+</body>
+</html>
